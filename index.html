@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Personal blog of MoAfrika Skotch Ntilane">
+    <meta name="author" content="MoAfrika Skotch Ntilane">
+    <title>I Type, What I Like</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap & Custom Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link href="css/styles.css" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            padding-top: 56px;
+            margin: 0;
+        }
+
+        .masthead {
+            background: url('images/myself.jpg') center top/cover no-repeat;
+            min-height: 100vh;
+            color: rgb(141, 69, 69);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            filter: sepia(0.1); 
+        }
+
+        @media (max-width: 768px) {
+            .masthead {
+                min-height: 70vh;
+                background-position: center top;
+            }
+        }
+
+        .masthead h1 {
+            font-family: 'Lora', serif;
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        .masthead p {
+            font-size: 1.25rem;
+        }
+
+        .typewriter {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid white;
+            font-size: inherit;
+            vertical-align: bottom;
+            animation: blinkCursor 0.8s step-end infinite;
+        }
+        .navbar-brand {
+            color: rgba(141, 69, 69, 0.856);
+        }
+        .nav-item :hover {
+            color: rgba(141, 69, 69, 0.856);
+
+        }
+
+        @keyframes blinkCursor {
+            50% {
+                border-color: transparent;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">"A Revolution in Every Word"</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mywrites.html">Javascript and I</a></li>
+                    <li class="nav-item"><a class="nav-link" href="random.html">Random Thoughts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <header class="masthead">
+        <div class="container">
+            <h1>
+                <span class="typewriter" id="typewriter"></span>...what I like!
+            </h1>
+            <p  class="lead bg-light w-60">A Blog by MoAfrika Skotch Ntilane</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <section class="row justify-content-center">
+            <article class="col-md-10 col-lg-8">
+                <div class="post-preview">
+                    <a href="css/post.html">
+                        <h2 class="post-title">WHAT WOULD MAMA DO? (WWMD)</h2>
+                        <p class="post-subtitle">"I feel like I have to continue my mother's work"</p>
+                    </a>
+                    <p class="post-meta">Will be published by <a href="#">MoAfrika Skotch Ntilane</a> on February 11, 2025</p>
+                </div>
+                <hr>
+                <div class="post-preview">
+                    <a href="mywrites.html">
+                        <h2 class="post-title">From Infinite Loops to Tiny Wins: My Love-Hate Relationship with JavaScript</h2>
+                        <p class="post-subtitle">Getting my hands dirty with code.</p>
+                    </a>
+                    <p class="post-meta">Will be published by <a href="#">MoAfrika Skotch Ntilane</a> on January 01, 2025</p>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-end">
+                    <a class="btn btn-primary text-uppercase" href="#">Older Posts →</a>
+                </div>
+            </article>
+        </section>
+    </main>
+    
+    <footer class="border-top py-4 text-center">
+        <div class="container">
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <a href="#" aria-label="Twitter">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook-f fa-2x"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#" aria-label="GitHub">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                </li>
+            </ul>
+            <p class="small text-muted">&copy; 2025 MoAfrika Skotch Ntilane</p>
+        </div>
+    </footer>
+    
+    <script>
+        const text = "I type";
+        let i = 0;
+        let isDeleting = false;
+        const speed = 150;
+        const delayBetweenCycles = 1000;
+        const typewriter = document.getElementById("typewriter");
+
+        function typeEffect() {
+            if (isDeleting) {
+                i--;
+            } else {
+                i++;
+            }
+
+            typewriter.innerHTML = text.substring(0, i);
+
+            if (!isDeleting && i === text.length) {
+                setTimeout(() => isDeleting = true, delayBetweenCycles);
+            } else if (isDeleting && i === 0) {
+                isDeleting = false;
+            }
+
+            setTimeout(typeEffect, isDeleting ? speed / 2 : speed);
+        }
+
+        typeEffect(); 
+    </script>
+</body>
+</html>
