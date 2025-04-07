@@ -1,13 +1,62 @@
+Here is the previous version of the `post.html` file from commit `aa4b683` in the `MoAfrika/myblog` repository:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- ... (keep all other head content the same) ... -->
-    <style>
-        /* ... (keep all other styles the same) ... */
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="A blog exploring various thoughts and ideas." />
+    <meta name="author" content="MoAfrika Skotch Ntilane" />
+    <title>I TYPE, WHAT I LIKE</title>
 
-        /* Updated Masthead with proper image path */
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous" defer></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding-top: 56px;
+            line-height: 1.8;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: 'Lora', serif;
+            margin-bottom: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Navbar */
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-family: 'Lora', serif;
+            font-size: 1.5rem;
+            color: #fff !important;
+        }
+
+        /* Masthead */
         .masthead {
-            background: url('images/2.png') no-repeat center center / cover;
+            background: url('2.png') no-repeat center center / cover;
             height: 100vh;
             display: flex;
             align-items: center;
@@ -17,20 +66,205 @@
             color: white;
         }
 
-        /* Add this for debugging */
-        /* .masthead::after {
-            content: "Image not loading - check path to 2.png";
+        .masthead::before {
+            content: "";
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: red;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .post-heading {
+            position: relative;
+            z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            padding: 0 20px;
+        }
+        
+        .post-heading h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .meta {
+            font-style: italic;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Main Content */
+        main {
+            background-color: #fff;
+            padding: 50px 0;
+        }
+        
+        .container {
+            max-width: 800px;
+        }
+        
+        article {
+            padding: 0 15px;
+        }
+
+        .section-heading {
+            font-size: 1.75rem;
             font-weight: bold;
-            z-index: 100;
-        } */
+            color: #8d4545;
+            margin-top: 2.5rem;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Quotes */
+        .blockquote {
+            font-size: 1.25rem;
+            font-style: italic;
+            color: #555;
+            border-left: 4px solid #8d4545;
+            padding: 1rem 1.5rem;
+            margin: 2rem 0;
+            background-color: #f9f9f9;
+        }
+        
+        .blockquote::before {
+            content: '"';
+            font-size: 3rem;
+            color: #8d4545;
+            opacity: 0.3;
+            line-height: 0;
+            position: relative;
+            top: 1.5rem;
+            left: -0.5rem;
+        }
+
+        /* Links */
+        a {
+            color: #8d4545;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: #6d3535;
+            text-decoration: underline;
+        }
+        
+        .text-blue {
+            color: #2a6496;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        footer a {
+            color: #ffc107;
+        }
+        
+        footer a:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .post-heading h1 {
+                font-size: 2rem;
+            }
+            
+            .masthead {
+                height: 80vh;
+            }
+            
+            .blockquote {
+                font-size: 1.1rem;
+                padding: 0.8rem 1rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- ... (rest of your HTML remains the same) ... -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">"A Revolution in Every Word"</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mywrites.html">Javascript and I</a></li>
+                    <li class="nav-item"><a class="nav-link" href="random.html">Random Thoughts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <header class="masthead">
+        <div class="container">
+            <div class="post-heading">
+                <h1>"What Would Mama Do?": A Legacy Woven in Threads of Wisdom and Love</h1>
+                <span class="meta">Written by <a href="#">MoAfrika Skotch Ntilane</a>, published on April 07, 2025</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <article>
+                <p>Johannesburg, South Africa – Amidst a world that finds itself moving ahead in a hasty rush, What Would Mama Do? speaks to the message that certain things need never leave the[...]
+
+                <blockquote class="blockquote">"When someone has handed down something you received from the ones you love, you recognize that magic of something that truly endures."</blockquote>
+
+                <p>The instant you step into their site, you know this is no ordinary fashion brand. What Would Mama Do? is not selling apparel, it's gathering memories, legacies, and moments tha[...]
+
+                <h2 class="section-heading">What Would Mama Do?</h2>
+
+                <p>It's the feeling of putting on something with a history, something that has been loved before and will be loved again. And that is precisely what What Would Mama Do? embodies. [...]
+
+                <p>The Classic Unisex Zip Hoodie is more than a hoodie. It's a soft hug that speaks of warmth on a chilly evening, comfort on a rainy day, and the silent bond of family. Its simpl[...]
+
+                <p>And let's talk about the Classic Baby Short Sleeve Bodysuit. Perhaps you may not remember your first bodysuit, but you will remember the care with which it was chosen for you. [...]
+
+                <h2 class="section-heading">Continuing Her Legacy</h2>
+
+                <p>Then there's the Polycotton Kids Crewneck T-shirt, the one your child will outgrow and outwear, but will never recall. It's not a T-shirt. It's the uniform of youth. It's the o[...]
+
+                <p>The Toddler Fine Jersey T-Shirt and Toddler Staple T-Shirt are perfect examples of what What Would Mama Do? does best — creating clothing as soft and loving as a mother's hug[...]
+
+                <p>But the magic does not stop with the designs. It's the history behind the brand. What Would Mama Do? is a celebration of mothers everywhere, a reminder to embrace the values th[...]
+
+                <p>So, what sets this brand apart? It's the love that is infused in every piece of clothing, the care that is put into every product, the thoughtfulness in every design. It's not [...]
+
+                <p>As an online shop across the globe, What Would Mama Do? brings these treasures to the entire world. You can be anywhere and join this celebration of heritage and family. In Joh[...]
+
+                <p>Because when you ask yourself the question, "What would Mama do?" she would get the best for her family. She'd select pieces as enduring as her love, ones done with care and bu[...]
+
+                <p>Discover more about the <span class="text-blue">What Would Mama Do? Collective</span>, where legacy, love, and timeless style come together. Visit us at <a href="#" onclick="al[...]
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 MoAfrika Skotch Ntilane. All rights reserved.</p>
+            <div class="social-links mt-3">
+                <a href="https://www.linkedin.com/in/mo-ntilanedev/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin fa-lg mx-2"></i></a>
+                <a href="https://web.facebook.com/MR.D.3.N.Z.O" target="_blank" aria-label="Facebook"><i class="fab fa-facebook fa-lg mx-2"></i></a>
+                <a href="https://github.com/MoAfrika" target="_blank" aria-label="GitHub"><i class="fab fa-github fa-lg mx-2"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+```
