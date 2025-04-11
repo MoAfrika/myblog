@@ -1,197 +1,124 @@
-Here is the previous version of the `post.html` file from commit `aa4b683` in the `MoAfrika/myblog` repository:
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="A blog exploring various thoughts and ideas." />
-    <meta name="author" content="MoAfrika Skotch Ntilane" />
-    <title>I TYPE, WHAT I LIKE</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Where raw thought meets refined expression. A blog by MoAfrika Skotch Ntilane.">
+    <meta name="author" content="MoAfrika Skotch Ntilane">
+    <meta property="og:title" content="I Type, What I Like - Blog by MoAfrika Skotch Ntilane">
+    <meta property="og:description" content="Unfiltered thought. Undeniable voice. From dev diaries to deep truths.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/MoAfrika/my-images/main/og-thumbnail.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://itypewhatilike.com">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <title>How I Finally Understood Recursion (and My Family Tree) - I Type, What I Like</title>
 
     <!-- Font Awesome -->
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     
     <style>
-        /* General Styles */
         body {
             font-family: 'Open Sans', sans-serif;
             background-color: #f0f0f0;
             color: #333;
-            margin: 0;
             padding-top: 56px;
-            line-height: 1.8;
+            margin: 0;
         }
 
-        /* Typography */
-        h1, h2, h3, h4 {
-            font-family: 'Lora', serif;
-            margin-bottom: 1.5rem;
-        }
-        
-        p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-
-        /* Navbar */
-        .navbar {
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .navbar-brand {
-            font-family: 'Lora', serif;
-            font-size: 1.5rem;
-            color: #fff !important;
-        }
-
-        /* Masthead */
         .masthead {
-            background: url('2.png') no-repeat center center / cover;
-            height: 100vh;
+            background: url('https://raw.githubusercontent.com/MoAfrika/my-images/168648f694ec0d4f52e83c28cb316e9bd188db9a/mom%20and%20i.png') center center/cover no-repeat;
+            min-height: 100vh;
+            color: white;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             position: relative;
-            color: white;
         }
 
         .masthead::before {
-            content: "";
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
-        .post-heading {
+        .masthead .container {
             position: relative;
-            z-index: 2;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-            padding: 0 20px;
-        }
-        
-        .post-heading h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .meta {
-            font-style: italic;
-            font-size: 1.1rem;
-            opacity: 0.9;
+            z-index: 1;
         }
 
-        /* Main Content */
-        main {
-            background-color: #fff;
-            padding: 50px 0;
-        }
-        
-        .container {
-            max-width: 800px;
-        }
-        
-        article {
-            padding: 0 15px;
-        }
-
-        .section-heading {
-            font-size: 1.75rem;
-            font-weight: bold;
-            color: #8d4545;
-            margin-top: 2.5rem;
-            border-bottom: 2px solid #f0f0f0;
-            padding-bottom: 0.5rem;
-        }
-
-        /* Quotes */
-        .blockquote {
-            font-size: 1.25rem;
-            font-style: italic;
-            color: #555;
-            border-left: 4px solid #8d4545;
-            padding: 1rem 1.5rem;
-            margin: 2rem 0;
-            background-color: #f9f9f9;
-        }
-        
-        .blockquote::before {
-            content: '"';
+        .masthead h1 {
+            font-family: 'Lora', serif;
             font-size: 3rem;
-            color: #8d4545;
-            opacity: 0.3;
-            line-height: 0;
-            position: relative;
-            top: 1.5rem;
-            left: -0.5rem;
+            font-weight: 700;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
         }
 
-        /* Links */
-        a {
-            color: #8d4545;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        a:hover {
-            color: #6d3535;
-            text-decoration: underline;
-        }
-        
-        .text-blue {
-            color: #2a6496;
+        .navbar-brand {
+            color: rgba(141, 69, 69, 0.856);
+            font-weight: 700;
         }
 
-        /* Footer */
+        .nav-link:hover {
+            color: rgba(141, 69, 69, 0.856) !important;
+        }
+
+        .post-content {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 3rem 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .post-title {
+            font-family: 'Lora', serif;
+            color: #8d4545;
+        }
+
+        .post-subtitle {
+            color: #666;
+            font-weight: 300;
+        }
+
+        .post-meta {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-top: 0.5rem;
+        }
+
         footer {
             background-color: #343a40;
             color: white;
-            padding: 30px 0;
-            text-align: center;
-        }
-        
-        footer a {
-            color: #ffc107;
-        }
-        
-        footer a:hover {
-            color: #fff;
-            text-decoration: none;
+            padding: 2rem 0;
         }
 
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .post-heading h1 {
-                font-size: 2rem;
-            }
-            
-            .masthead {
-                height: 80vh;
-            }
-            
-            .blockquote {
-                font-size: 1.1rem;
-                padding: 0.8rem 1rem;
-            }
+        footer a {
+            color: rgba(255, 255, 255, 0.7);
+            margin: 0 0.5rem;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: white;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container px-4 px-lg-5">
+        <div class="container">
             <a class="navbar-brand" href="index.html">"A Revolution in Every Word"</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
@@ -199,72 +126,71 @@ Here is the previous version of the `post.html` file from commit `aa4b683` in th
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
-                    <li class="nav-item"><a class="nav-link" href="mywrites.html">Javascript and I</a></li>
-                    <li class="nav-item"><a class="nav-link" href="random.html">Random Thoughts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mywrites.html">✦ Code Confessions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="random.html">✦ Mind Dumps & Daydreams</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    
+
     <header class="masthead">
         <div class="container">
-            <div class="post-heading">
-                <h1>"What Would Mama Do?": A Legacy Woven in Threads of Wisdom and Love</h1>
-                <span class="meta">Written by <a href="#">MoAfrika Skotch Ntilane</a>, published on April 07, 2025</span>
-            </div>
+            <h1>How I Finally Understood Recursion (and My Family Tree)</h1>
+            <p class="lead">It took tracing my family’s history to finally understand that recursion isn’t just a function calling itself — it’s a story passed down, one generation at a time.</p>
         </div>
     </header>
 
-    <main>
-        <div class="container">
-            <article>
-                <p>Johannesburg, South Africa – Amidst a world that finds itself moving ahead in a hasty rush, What Would Mama Do? speaks to the message that certain things need never leave the[...]
+    <main class="container my-5">
+        <section class="row justify-content-center">
+            <article class="col-md-10 col-lg-8 post-content">
+                <h2 class="post-title">⚡ How I Finally Understood Recursion (and My Family Tree)</h2>
+                <h3 class="post-subtitle">"It took tracing my family’s history to finally understand that recursion isn’t just a function calling itself — it’s a story passed down, one generation at a time."</h3>
+                <p class="post-meta">by <a href="#">MoAfrika Skotch Ntilane</a> • April 12, 2025</p>
 
-                <blockquote class="blockquote">"When someone has handed down something you received from the ones you love, you recognize that magic of something that truly endures."</blockquote>
+                <hr>
 
-                <p>The instant you step into their site, you know this is no ordinary fashion brand. What Would Mama Do? is not selling apparel, it's gathering memories, legacies, and moments tha[...]
+                <p>For the longest time, I couldn't wrap my head around recursion. It felt like one of those concepts that was just... too abstract. You know, when you're told that a function calls itself, but it doesn't click? I was stuck in that loop for years.</p>
 
-                <h2 class="section-heading">What Would Mama Do?</h2>
+                <p>It wasn’t until I started researching my family history that it finally made sense. Recursion, in its essence, isn’t just a mathematical concept or a programming trick — it’s a story of repetition, of the same pattern coming back around.</p>
 
-                <p>It's the feeling of putting on something with a history, something that has been loved before and will be loved again. And that is precisely what What Would Mama Do? embodies. [...]
+                <p>Here’s how it works: Think about your family tree. Your family is like a recursive function. The first generation (your grandparents) is passed down to the next generation (your parents), and then passed down again to you. Each generation is its own call, passing on a little more of the story, a little more of the code that defines the next one.</p>
 
-                <p>The Classic Unisex Zip Hoodie is more than a hoodie. It's a soft hug that speaks of warmth on a chilly evening, comfort on a rainy day, and the silent bond of family. Its simpl[...]
+                <p>Just like in recursion, the base case is the starting point. It’s the first ancestor you trace, the first function call that defines the rest of the sequence. As you go deeper, you see that each layer builds on the last — sometimes with small tweaks, sometimes with major shifts. But at the core, the same structure repeats. The recursion works because each call brings you closer to the answer — or in my case, to the understanding that everything connects back.</p>
 
-                <p>And let's talk about the Classic Baby Short Sleeve Bodysuit. Perhaps you may not remember your first bodysuit, but you will remember the care with which it was chosen for you. [...]
+                <p>Recursion is a function of memory, of layers, and of time. And when I connected it with the story of my ancestors, it clicked in a way that textbooks never could.</p>
 
-                <h2 class="section-heading">Continuing Her Legacy</h2>
-
-                <p>Then there's the Polycotton Kids Crewneck T-shirt, the one your child will outgrow and outwear, but will never recall. It's not a T-shirt. It's the uniform of youth. It's the o[...]
-
-                <p>The Toddler Fine Jersey T-Shirt and Toddler Staple T-Shirt are perfect examples of what What Would Mama Do? does best — creating clothing as soft and loving as a mother's hug[...]
-
-                <p>But the magic does not stop with the designs. It's the history behind the brand. What Would Mama Do? is a celebration of mothers everywhere, a reminder to embrace the values th[...]
-
-                <p>So, what sets this brand apart? It's the love that is infused in every piece of clothing, the care that is put into every product, the thoughtfulness in every design. It's not [...]
-
-                <p>As an online shop across the globe, What Would Mama Do? brings these treasures to the entire world. You can be anywhere and join this celebration of heritage and family. In Joh[...]
-
-                <p>Because when you ask yourself the question, "What would Mama do?" she would get the best for her family. She'd select pieces as enduring as her love, ones done with care and bu[...]
-
-                <p>Discover more about the <span class="text-blue">What Would Mama Do? Collective</span>, where legacy, love, and timeless style come together. Visit us at <a href="#" onclick="al[...]
+                <div class="d-flex justify-content-end">
+                    <a class="btn btn-outline-dark text-uppercase" href="mywrites.html">Keep Digging Deeper →</a>
+                </div>
             </article>
-        </div>
+        </section>
     </main>
 
-    <footer>
+    <footer class="border-top py-4 text-center">
         <div class="container">
-            <p>&copy; 2025 MoAfrika Skotch Ntilane. All rights reserved.</p>
-            <div class="social-links mt-3">
-                <a href="https://www.linkedin.com/in/mo-ntilanedev/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin fa-lg mx-2"></i></a>
-                <a href="https://web.facebook.com/MR.D.3.N.Z.O" target="_blank" aria-label="Facebook"><i class="fab fa-facebook fa-lg mx-2"></i></a>
-                <a href="https://github.com/MoAfrika" target="_blank" aria-label="GitHub"><i class="fab fa-github fa-lg mx-2"></i></a>
-            </div>
+            <ul class="list-inline mb-3">
+                <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/mo-ntilanedev/" aria-label="Linkedin">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://web.facebook.com/MR.D.3.N.Z.O" aria-label="Facebook">
+                        <i class="fab fa-facebook-f fa-2x"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://github.com/MoAfrika" aria-label="GitHub">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                </li>
+            </ul>
+            <p class="small text-muted mb-0">&copy; 2025 MoAfrika Skotch Ntilane. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-```
