@@ -12,7 +12,7 @@
     <meta property="og:url" content="https://itypewhatilike.com">
     <meta name="twitter:card" content="summary_large_image">
 
-    <title>How I Finally Understood Recursion (and My Family Tree) - I Type, What I Like</title>
+    <title>I Type, What I Like - Articles</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
@@ -58,6 +58,12 @@
             z-index: 1;
         }
 
+        @media (max-width: 768px) {
+            .masthead {
+                min-height: 70vh;
+            }
+        }
+
         .masthead h1 {
             font-family: 'Lora', serif;
             font-size: 3rem;
@@ -65,21 +71,16 @@
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
         }
 
-        .navbar-brand {
-            color: rgba(141, 69, 69, 0.856);
-            font-weight: 700;
+        .masthead p.lead {
+            font-size: 1.25rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
         }
 
-        .nav-link:hover {
-            color: rgba(141, 69, 69, 0.856) !important;
-        }
-
-        .post-content {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding: 3rem 2rem;
-            margin-bottom: 3rem;
+        .post-preview {
+            margin-bottom: 2.5rem;
         }
 
         .post-title {
@@ -137,32 +138,55 @@
 
     <header class="masthead">
         <div class="container">
-            <h1>How I Finally Understood Recursion (and My Family Tree)</h1>
-            <p class="lead">It took tracing my family’s history to finally understand that recursion isn’t just a function calling itself — it’s a story passed down, one generation at a time.</p>
+            <h1>I Type... What I Like!</h1>
+            <p class="lead">Unfiltered thoughts. Undeniable voice. Unmistakably MoAfrika Skotch Ntilane.</p>
         </div>
     </header>
 
     <main class="container my-5">
-        <section class="row justify-content-center">
-            <article class="col-md-10 col-lg-8 post-content">
-                <h2 class="post-title">⚡ How I Finally Understood Recursion (and My Family Tree)</h2>
-                <h3 class="post-subtitle">"It took tracing my family’s history to finally understand that recursion isn’t just a function calling itself — it’s a story passed down, one generation at a time."</h3>
-                <p class="post-meta">by <a href="#">MoAfrika Skotch Ntilane</a> • April 12, 2025</p>
+        <section class="text-center mb-5">
+            <p class="lead fw-semibold">This blog was never meant to fit in.</p>
+            <p class="lead">It types what it likes — from deep dev dives to soul-baring monologues.</p>
+            <p class="lead">Written in code. Wrapped in culture. Rooted in purpose.</p>
+        </section>
 
+        <section class="row justify-content-center">
+            <article class="col-md-10 col-lg-8">
+
+                <!-- Manifesto Article -->
+                <div class="post-preview border-start border-4 border-dark ps-3 mb-5">
+                    <h2 class="post-title">🧠 THE MANIFESTO</h2>
+                    <p class="post-meta">by MoAfrika Skotch Ntilane</p>
+                    <p class="post-subtitle">"I type what I like. No filter. No fluff. No compromise."</p>
+                    <p class="post-meta">This is not a blog. It’s a movement in sans-serif.</p>
+                    <hr>
+                    <p class="lead">What you're reading here isn't just a collection of words. It's a manifesto. A declaration of unapologetic individuality, of thoughts without compromise, of a voice that refuses to be silenced. This blog isn't bound by conventions. It’s raw, it’s real, it’s mine.</p>
+                    <p>When I first sat down to write, it wasn’t about fitting into a mold or following trends. It was about expressing thoughts — my thoughts — in a space that wasn't afraid to push the boundaries. Every article you read here is a piece of my mind, untamed and unsanitized. Every line reflects a belief, a passion, or a question I feel must be explored. If you want polished perfection, you won’t find it here. But if you're after raw thought with a touch of soul, then welcome.</p>
+                    <p>So, let’s get one thing straight: there’s no filter. No fluff. No compromise.</p>
+                </div>
+
+                <!-- Example Post 1 -->
+                <div class="post-preview">
+                    <a href="post.html">
+                        <h2 class="post-title">⚡ How I Finally Understood Recursion (and My Family Tree)</h2>
+                        <h3 class="post-subtitle">"It took tracing my family’s history to finally understand that recursion isn’t just a function calling itself — it’s a story passed down, one generation at a time"</h3>
+                    </a>
+                    <p class="post-meta">by <a href="#">MoAfrika Skotch Ntilane</a> • April 12, 2025</p>
+                </div>
                 <hr>
 
-                <p>For the longest time, I couldn't wrap my head around recursion. It felt like one of those concepts that was just... too abstract. You know, when you're told that a function calls itself, but it doesn't click? I was stuck in that loop for years.</p>
+                <!-- Example Post 2 -->
+                <div class="post-preview">
+                    <a href="mywrites.html">
+                        <h2 class="post-title">🔧 The Mandela Effect and Version Control</h2>
+                        <h3 class="post-subtitle">Version control taught me that reality can fork — and sometimes, just like the Mandela Effect, everyone swears the bug was never there.</h3>
+                    </a>
+                    <p class="post-meta">by <a href="#">MoAfrika Skotch Ntilane</a></p>
+                </div>
+                <hr>
 
-                <p>It wasn’t until I started researching my family history that it finally made sense. Recursion, in its essence, isn’t just a mathematical concept or a programming trick — it’s a story of repetition, of the same pattern coming back around.</p>
-
-                <p>Here’s how it works: Think about your family tree. Your family is like a recursive function. The first generation (your grandparents) is passed down to the next generation (your parents), and then passed down again to you. Each generation is its own call, passing on a little more of the story, a little more of the code that defines the next one.</p>
-
-                <p>Just like in recursion, the base case is the starting point. It’s the first ancestor you trace, the first function call that defines the rest of the sequence. As you go deeper, you see that each layer builds on the last — sometimes with small tweaks, sometimes with major shifts. But at the core, the same structure repeats. The recursion works because each call brings you closer to the answer — or in my case, to the understanding that everything connects back.</p>
-
-                <p>Recursion is a function of memory, of layers, and of time. And when I connected it with the story of my ancestors, it clicked in a way that textbooks never could.</p>
-
-                <div class="d-flex justify-content-end">
-                    <a class="btn btn-outline-dark text-uppercase" href="mywrites.html">Keep Digging Deeper →</a>
+                <div class="d-flex justify-content-end mb-5">
+                    <a class="btn btn-outline-dark text-uppercase" href="#">Keep Digging Deeper →</a>
                 </div>
             </article>
         </section>
@@ -194,3 +218,4 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
