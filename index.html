@@ -3,8 +3,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Personal blog of MoAfrika Skotch Ntilane">
+    <meta name="description" content="Where raw thought meets refined expression. A blog by MoAfrika Skotch Ntilane.">
     <meta name="author" content="MoAfrika Skotch Ntilane">
+    <meta property="og:title" content="I Type, What I Like - Blog by MoAfrika Skotch Ntilane">
+    <meta property="og:description" content="Unfiltered thought. Undeniable voice. From dev diaries to deep truths.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/MoAfrika/my-images/main/og-thumbnail.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://itypewhatilike.com">
+    <meta name="twitter:card" content="summary_large_image">
+
     <title>I Type, What I Like</title>
 
     <!-- Font Awesome -->
@@ -81,30 +88,30 @@
             vertical-align: bottom;
             animation: blinkCursor 0.8s step-end infinite;
         }
-        
+
         .navbar-brand {
             color: rgba(141, 69, 69, 0.856);
             font-weight: 700;
         }
-        
+
         .nav-link:hover {
             color: rgba(141, 69, 69, 0.856) !important;
         }
 
         .post-preview {
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
         }
-        
+
         .post-title {
             font-family: 'Lora', serif;
             color: #8d4545;
         }
-        
+
         .post-subtitle {
             color: #666;
             font-weight: 300;
         }
-        
+
         .post-meta {
             font-size: 0.9rem;
             color: #6c757d;
@@ -116,19 +123,19 @@
                 border-color: transparent;
             }
         }
-        
+
         footer {
             background-color: #343a40;
             color: white;
             padding: 2rem 0;
         }
-        
+
         footer a {
             color: rgba(255, 255, 255, 0.7);
             margin: 0 0.5rem;
             transition: color 0.3s;
         }
-        
+
         footer a:hover {
             color: white;
             text-decoration: none;
@@ -146,49 +153,67 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="mywrites.html">Javascript and I</a></li>
-                    <li class="nav-item"><a class="nav-link" href="random.html">Random Thoughts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mywrites.html">✦ Code Confessions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="random.html">✦ Mind Dumps & Daydreams</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    
+
     <header class="masthead">
         <div class="container">
             <h1>
                 <span class="typewriter" id="typewriter"></span>...what I like!
             </h1>
-            <p class="lead">A Blog by MoAfrika Skotch Ntilane</p>
+            <p class="lead">Unfiltered thoughts. Undeniable voice. Unmistakably MoAfrika Skotch Ntilane.</p>
         </div>
     </header>
 
     <main class="container my-5">
+        <section class="text-center mb-5">
+            <p class="lead fw-semibold">This blog was never meant to fit in.</p>
+            <p class="lead">It types what it likes — from deep dev dives to soul-baring monologues.</p>
+            <p class="lead">Written in code. Wrapped in culture. Rooted in purpose.</p>
+        </section>
+
         <section class="row justify-content-center">
             <article class="col-md-10 col-lg-8">
+
+                <!-- Sticky Manifesto -->
+                <div class="post-preview border-start border-4 border-dark ps-3 mb-5">
+                    <a href="manifesto.html">
+                        <h2 class="post-title">🧠 THE MANIFESTO</h2>
+                        <h3 class="post-subtitle">"I type what I like. No filter. No fluff. No compromise."</h3>
+                    </a>
+                    <p class="post-meta">This is not a blog. It’s a movement in sans-serif.</p>
+                </div>
+
                 <div class="post-preview">
                     <a href="post.html">
-                        <h2 class="post-title">WHAT WOULD MAMA DO? (WWMD)</h2>
-                        <h3 class="post-subtitle">"I feel like I have to continue my mother's work"</h3>
+                        <h2 class="post-title">⚡ WHAT WOULD MAMA DO? (WWMD)</h2>
+                        <h3 class="post-subtitle">"A legacy is not inherited — it's activated."</h3>
                     </a>
-                    <p class="post-meta">Will be published by <a href="#">MoAfrika Skotch Ntilane</a> on February 11, 2025</p>
+                    <p class="post-meta">by <a href="#">MoAfrika Skotch Ntilane</a> • February 11, 2025</p>
                 </div>
                 <hr>
+
                 <div class="post-preview">
                     <a href="mywrites.html">
-                        <h2 class="post-title">From Infinite Loops to Tiny Wins: My Love-Hate Relationship with JavaScript</h2>
-                        <h3 class="post-subtitle">Getting my hands dirty with code.</h3>
+                        <h2 class="post-title">🔧 From Infinite Loops to Tiny Wins</h2>
+                        <h3 class="post-subtitle">My Love-Hate Relationship with JavaScript</h3>
                     </a>
-                    <p class="post-meta"> by <a href="index.html">MoAfrika Skotch Ntilane</a> </p>
+                    <p class="post-meta">by <a href="#">MoAfrika Skotch Ntilane</a></p>
                 </div>
                 <hr>
+
                 <div class="d-flex justify-content-end mb-5">
-                    <a class="btn btn-primary text-uppercase" href="#">Older Posts →</a>
+                    <a class="btn btn-outline-dark text-uppercase" href="#">Keep Digging Deeper →</a>
                 </div>
             </article>
         </section>
     </main>
-    
+
     <footer class="border-top py-4 text-center">
         <div class="container">
             <ul class="list-inline mb-3">
@@ -211,9 +236,9 @@
             <p class="small text-muted mb-0">&copy; 2025 MoAfrika Skotch Ntilane. All rights reserved.</p>
         </div>
     </footer>
-    
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const text = "I type";
             let i = 0;
             let isDeleting = false;
@@ -236,7 +261,6 @@
                 setTimeout(typeEffect, isDeleting ? speed / 2 : speed);
             }
 
-            // Start the typing effect after a brief delay
             setTimeout(typeEffect, 500);
         });
     </script>
