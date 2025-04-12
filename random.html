@@ -1,145 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="Tech musings, code confessions, and brutally honest brain dumps by MoAfrika Skotch Ntilane. Funny, relatable, and real—JavaScript, recursion, version control and beyond." />
-  <meta name="author" content="MoAfrika Skotch Ntilane" />
-  <meta property="og:title" content="Javascript and I | I TYPE, WHAT I LIKE" />
-  <meta property="og:description" content="Brutally honest tech musings by MoAfrika Skotch Ntilane. JavaScript, recursion, version control and all the chaos in between." />
-  <meta property="og:image" content="https://yourdomain.com/images/js-page-preview.png" />
-  <meta property="og:url" content="https://yourdomain.com/mywrites.html" />
-  <meta property="og:type" content="website" />
-  <link rel="alternate" type="application/rss+xml" title="I TYPE, WHAT I LIKE - RSS Feed" href="https://yourdomain.com/rss.xml" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "I TYPE, WHAT I LIKE",
-    "url": "https://yourdomain.com/mywrites.html",
-    "description": "A brutally honest tech blog exploring JavaScript, recursion, version control, and more by MoAfrika Skotch Ntilane.",
-    "author": {
-      "@type": "Person",
-      "name": "MoAfrika Skotch Ntilane",
-      "sameAs": [
-        "https://www.linkedin.com/in/mo-ntilanedev/",
-        "https://github.com/MoAfrika",
-        "https://web.facebook.com/MR.D.3.N.Z.O"
-      ]
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Skotch Metabytes",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://yourdomain.com/images/logo.png"
-      }
-    },
-    "blogPost": [
-      {
-        "@type": "BlogPosting",
-        "headline": "From Infinite Loops to Tiny Wins",
-        "author": "MoAfrika Skotch Ntilane",
-        "datePublished": "2025-01-01",
-        "url": "https://yourdomain.com/mywrites.html#loops"
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Tech musings, code confessions, and brutally honest brain dumps by MoAfrika Skotch Ntilane. Funny, relatable, and real—JavaScript, recursion, version control and beyond." />
+    <meta name="author" content="MoAfrika Skotch Ntilane" />
+    <meta property="og:title" content="Javascript and I | I TYPE, WHAT I LIKE" />
+    <meta property="og:description" content="Brutally honest tech musings by MoAfrika Skotch Ntilane. JavaScript, recursion, version control and all the chaos in between." />
+    <meta property="og:image" content="https://yourdomain.com/images/js-page-preview.png" />
+    <meta property="og:url" content="https://yourdomain.com/mywrites.html" />
+    <meta property="og:type" content="website" />
+    <link rel="alternate" type="application/rss+xml" title="I TYPE, WHAT I LIKE - RSS Feed" href="https://yourdomain.com/rss.xml" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "I TYPE, WHAT I LIKE",
+      "url": "https://yourdomain.com/mywrites.html",
+      "description": "A brutally honest tech blog exploring JavaScript, recursion, version control, and more by MoAfrika Skotch Ntilane.",
+      "author": {
+        "@type": "Person",
+        "name": "MoAfrika Skotch Ntilane",
+        "sameAs": [
+          "https://www.linkedin.com/in/mo-ntilanedev/",
+          "https://github.com/MoAfrika",
+          "https://web.facebook.com/MR.D.3.N.Z.O"
+        ]
       },
-      {
-        "@type": "BlogPosting",
-        "headline": "I TYPE, WHAT I LIKE — The Manifesto",
-        "author": "MoAfrika Skotch Ntilane",
-        "datePublished": "2025-01-15",
-        "url": "https://yourdomain.com/mywrites.html#manifesto"
-      }
-    ]
-  }
-  </script>
-  <title>© I TYPE, WHAT I LIKE</title>
-  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: #0e0e0e;
-      color: #e0e0e0;
-      margin: 0;
-      padding: 0;
+      "publisher": {
+        "@type": "Organization",
+        "name": "Skotch Metabytes",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://yourdomain.com/images/logo.png"
+        }
+      },
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "From Infinite Loops to Tiny Wins",
+          "author": "MoAfrika Skotch Ntilane",
+          "datePublished": "2025-01-01",
+          "url": "https://yourdomain.com/mywrites.html#loops"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "I TYPE, WHAT I LIKE — The Manifesto",
+          "author": "MoAfrika Skotch Ntilane",
+          "datePublished": "2025-01-15",
+          "url": "https://yourdomain.com/mywrites.html#manifesto"
+        }
+      ]
     }
-    h1, h2, h3, h4 {
-      font-family: 'Fira Code', monospace;
-      color: #00ff99;
-    }
-    .navbar {
-      background-color: #1a1a1a;
-      border-bottom: 2px solid #00ff99;
-    }
-    .navbar-brand, .nav-link {
-      color: #00ff99 !important;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-    .nav-link:hover {
-      color: #ffffff !important;
-    }
-    .masthead {
-      padding: 4rem 0;
-      text-align: center;
-      background: linear-gradient(to right, #1a1a1a, #0e0e0e);
-      border-bottom: 2px solid #00ff99;
-    }
-    .subheading {
-      font-size: 1.1rem;
-      color: #999;
-      animation: flicker 3s infinite alternate;
-    }
-    @keyframes flicker {
-      0% { opacity: 1; }
-      100% { opacity: 0.7; }
-    }
-    .post-preview {
-      margin-bottom: 3rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid #444;
-      transition: background-color 0.3s ease, border-left 0.3s ease, padding-left 0.3s ease;
-    }
-    .post-preview:hover {
-      background-color: #1a1a1a;
-      border-left: 3px solid #00ff99;
-      padding-left: 1rem;
-    }
-    .post-title {
-      font-size: 1.8rem;
-    }
-    .post-subtitle {
-      font-style: italic;
-      color: #ccc;
-    }
-    .post-meta {
-      font-size: 0.9rem;
-      color: #888;
-    }
-    a.btn {
-      background-color: #00ff99;
-      border: none;
-      font-weight: bold;
-      transition: all 0.3s ease;
-    }
-    a.btn:hover {
-      background-color: #00cc7a;
-      color: #fff;
-    }
-    footer {
-      background-color: #111;
-      color: #888;
-    }
-    .list-inline-item a {
-      color: #00ff99;
-    }
-    .list-inline-item a:hover {
-      color: #ffffff;
-    }
-  </style>
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #0e0e0e;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Fira Code', monospace;
+            color: #00ff99;
+        }
+        .navbar {
+            background-color: #1a1a1a;
+            border-bottom: 2px solid #00ff99;
+        }
+        .navbar-brand, .nav-link {
+            color: #00ff99 !important;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #ffffff !important;
+        }
+        .masthead {
+            padding: 4rem 0;
+            text-align: center;
+            background: linear-gradient(to right, #1a1a1a, #0e0e0e);
+            border-bottom: 2px solid #00ff99;
+        }
+        .subheading {
+            font-size: 1.1rem;
+            color: #999;
+            animation: flicker 3s infinite alternate;
+        }
+        @keyframes flicker {
+            0% { opacity: 1; }
+            100% { opacity: 0.7; }
+        }
+        .post-preview {
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #444;
+            transition: background-color 0.3s ease, border-left 0.3s ease, padding-left 0.3s ease;
+        }
+        .post-preview:hover {
+            background-color: #1a1a1a;
+            border-left: 3px solid #00ff99;
+            padding-left: 1rem;
+        }
+        .post-title {
+            font-size: 1.8rem;
+        }
+        .post-subtitle {
+            font-style: italic;
+            color: #ccc;
+        }
+        .post-meta {
+            font-size: 0.9rem;
+            color: #888;
+        }
+        a.btn {
+            background-color: #00ff99;
+            border: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        a.btn:hover {
+            background-color: #00cc7a;
+            color: #fff;
+        }
+        footer {
+            background-color: #111;
+            color: #888;
+        }
+        .list-inline-item a {
+            color: #00ff99;
+        }
+        .list-inline-item a:hover {
+            color: #ffffff;
+        }
+    </style>
 </head>
 <body class="container my-5" style="padding-top: 100px;">
-  <!-- Your content goes here -->
+    <main class="container">
+	<h2 class="thought-title"> The Soundtrack of Our Lives: Why the Music You Listen to Reveals Everything About You! </h2>
+            <p>
+		Oh, the music. It's what you wake up to in the morning when you're meant to roll over and press snooze for the fifth time. It's that tune playing in the background of every moment of your life: the bad hair days, the crazed crushes, the deep, existential thoughts, and the moments when you feel invincible. But here's the thing, not everybody listens to music the same.<br><br>
+		    Others spend their day grooving along to whatever is trending on the current streaming playlist. You know the type—lost in an ocean of ease, happily drifting along with whatever the algorithms suggest. They're out living their lives, happy with a fix of top 40 pop and some auto-tuned harmonies. And you just can't help but wonder,
+		    
+		    <br><br><br>"How did we get here?
+You see, I'm from a different time. When music wasn't something you could readily obtain, when you had to earn your jams. You had to discover them, in the backrooms of your neighborhood record store, dusty, or, if you were fortunate, a real radio station that played real music.
+		    <br><br>Back in the good old days, when you put in that cassette tape, you weren't just pressing "play" — you were buying an experience, an event. You had your album, your mix tape, and your escapade.<br>
+
+And, oh man, what an escapade it was. You were working with a tape deck that could gobble your favorite mix, rewind it too many times, or just gobble the whole cassette alive. But that was just all part of the process, wasn't it? Even the failure was kind of part of the whole ritual. You'd pull out that tape, coax the little reel back into place with your finger, and take another shot. If you got lucky, that song would come on — that same song which you'd listened to a hundred times. But the more you listened, the more it felt like you were deciphering the codes of the universe. That song, with all its faults and all, was yours.
+<br><br><br>   And the thing is this: You can't stream yourself into a real connection with music. Okay, fine, it's convenient. Fine, you've got instant access to every hit, every classic, every buried treasure. But it's superficial. You're just driftin' on the surface of the deep ocean of easy listening, without truly diving into why music works. It's a matter of depth, it's a matter of the moment — the way that a song can break you wide open and enable you to perceive the world anew.<br>When I hear music, I don't merely hear beats. I feel them. I live them. It's a coexistence with me, the artist, and the world. It's not the quantity of music, it's the quality of the experience. You hear plenty of "life-changing" music in the world, but how many of us can truthfully say that music truly changes us?
+
+The mainstream may tell you to dance to the crowd's song — that this pop artist is your wave, that this rapper is your crush. But what if you're not out searching for yourself, discovering what speaks to you and your own unique sound? How will you know what's speaking to your soul? You'll never get to the heart of it. It's like buying a sandwich that's already prepared in its box when you can create your own banquet. Yes, you won't have to cook, but you're going to rob yourself of every flavor.
+<br><br><br>Now, I don't mean that mainstream music sucks. There is skill, there is talent. But we've made a generation that's alright with the minimum. We've become so used to algorithm-constructed playlists that we forget how to search for something real, something that will knock you around the gut.
+
+That’s the difference. Some of us are still in the trenches. Some of us still feel the magic of that old cassette deck whirring to life. Some of us still remember the sound of the needle scratching vinyl, the pops and crackles. And it’s not because we’re stuck in the past — it’s because we’re trying to hold on to something real, something that matters.
+<br><br><br>So yeah, the kids out there with their playlists and their streaming services are sufficient, I guess. But there is a world of sound out there that they'll never hear because they're too busy being convenient. The whole fucking world of music is waiting with bated breath for them to get a little irritated, for them to wander away from the digital shelves of preordained excellence and seek out something new, something crazy. Something flawed.
+
+<strong>Because, at the end of the day, the music you are listening to doesn't just represent your taste — it represents everything about who you are</strong>. And maybe, just maybe, it's time to start listening a little deeper.
+<br><br><br><br>
+	    </p>
+	</div> 
+
+
+
+
+	    
+     <h2 class="thought-title"> Two Altars, One Truth! </h2>
+            <p>
+		I have stood in the smoke of burning incense, watching blood darken the soil as elders murmured the names of those who came before me. I have lifted a calabash to my lips, felt the thick, bitter taste of umqombothi coat my tongue, and swallowed the weight of tradition. I have clapped my hands, stomped my feet, and called on ancestors whose names live only in the mouths of the old.
+		And then, just as the fire cracked and the meat sizzled, someone started a hymn. “There is power in the blood of the Lamb!” The same hands that held the blade to a goat’s throat now raised themselves in worship. Drunken voices, thick with belief and contradiction, declared that Jesus is the only way.
+		I grew up here. Between two worlds. Between libations poured for those beneath the soil and prayers whispered to the man who walked on water. Between bones thrown in the dust and a Bible laid on a wooden table. I grew up watching my people give offerings to ancestors and then kneel in church, ashamed of the very rituals they performed the night before.
+		What are we? A people torn between who we were and who we were forced to become. A people who fear turning our backs on the old ways but also fear hell for not embracing the new. We are a prayer with two tongues, a faith split down the middle, bleeding both ways.
+		And maybe that’s why, no matter how loud we sing, neither God nor our ancestors answer us the way we wish they would.   
+	    </p>
+	</div> 
+
+
+	    
+	<div class="thought-item">
+            <h2 class="thought-title">The Lesson </h2>
+            <p>I’m not angry… not at you, not at fate,<br>
+not at the knife you slid between my ribs,<br>
+slow, deliberate, like a lover’s hand<br>
+tracing the spine of a dying romance.<br>
+<br>
+You only taught me what I needed to know,<br>
+that trust is a borrowed cigarette,<br>
+lit in the wind, smoked too fast,<br>
+burning out before warmth ever settles.<br><br>
+
+I should’ve known better… now I do.<br>
+Your betrayal wasn’t a wound,<br>
+just a lesson written in blood,<br>
+signed with a smirk… and silence.<br><br>
+
+No hard feelings… just a closed door.<br><br></p>
+	</div> 
+
+	    
+        <div class="thought-item">
+            <h2 class="thought-title">Faithful, but Failing </h2>
+            <p>You don’t cheat, congratulations. You kept your hands to yourself, but did you keep your heart open? You stayed, but did you show up? You were present, but did you participate?
+			Love is not a courtroom where fidelity is your only defense. You think not stepping out makes you step up? No. You can be faithful and still be a storm your partner has to survive.
+			Because what is loyalty if your love is lazy… if your words cut… if your silence drowns… if your presence feels like absence? What is commitment if you’re selfish, unreliable, inconsistent… if your love is a ghost, haunting the spaces where effort should be?
+			You do not get to sit on the throne of "great partner" just because you didn’t betray. Faithfulness is not an achievement, it’s the floor, the foundation, the bare minimum.
+			Because love is not just where you don’t go… it’s where you choose to be.</p>
+	</div>
+        <div class="thought-item">
+            <h2 class="thought-title">Love Ain’t Soft, Love Ain’t Safe</h2>
+            <p>It doesn’t live in fairy tales or white wedding lace. <br>
+                Love is kasi dust in your teeth, <br>
+                taxi horns and struggle songs, <br>
+                it’s mama’s tired hands still braiding your dreams<br>
+                long after hers were buried in the backyard of sacrifice.<br>
+                <br>
+                If love don’t change you,<br>
+                if it don’t shift your bones like a shack in a storm,<br>
+                then what you had was comfort, not love.<br>
+                <br>
+                Love is that mkhukhu with no lights,<br>
+                but still warm when the world gets cold.<br>
+                It’s sharing half a kota ‘cause that’s all you got,<br>
+                and laughing like you just had a feast.<br>
+                It’s standing in a protest, fists up,<br>
+                knowing bullets don’t care about your dreams.<br>
+                <br>
+                Friendship? Yoh, real friendship is deeper than blood,<br>
+                it’s borrowed sneakers for a first date,<br>
+                it’s hiding your boy’s hustle from his mama,<br>
+                it’s knowing who ate last night and who didn’t.<br>
+                <br>
+                They sold us love in telenovelas,<br>
+                taught us friendship was just vibes,<br>
+                but here?<br>
+                Love is a fight. Love is survival.<br>
+                Love is holding on, even when the world lets go.<br></p>
+        </div>
+
+        <div class="thought-item">
+            <h2 class="thought-title">Ngibizwa NgeGama – The Devil’s Whisper</h2>
+            <p>They call me Umlilo, the fire that never cools, <br>
+                Ngibizwa ngegama, and you answer like a fool.<br>
+                Ngiy’thinta kancane, you think you in control,<br>
+                but I creep slow, like a shadow in your soul.<br>
+                <br>
+                Ngizok’sontisa, one hit, one taste,<br>
+                Next thing you running, lost in the chase.<br>
+                Aw’phaphami, eyes red, hands itchy,<br>
+                Stealing from mama, selling baba’s TV.<br>
+                Kasi boys know me, the girls call me sweet,<br>
+                but I leave them broken, beggin’ in the street.<br>
+                <br>
+                I teach you new lessons… how to twist, how to lie,<br>
+                How to sell your last sneaker just to get high.<br>
+                Ngiyagwinya, I swallow you whole,<br>
+                Turn warriors to beggars, leave stories untold.<br>
+                Usazibona? Look deep in the glass,<br>
+                Your face is a ghost, a memory past.<br>
+                <br>
+                I take dreams from gogo, and futures from kids,<br>
+                Turn pastors to sinners, and lovers to thieves.<br>
+                Ngizokususa kuNkulunkulu, make you forget,<br>
+                Your prayers turn to whispers… regret after regret.<br>
+                <br>
+                At first, I’m your friend, a soft, warm embrace,<br>
+                But soon I’m your master, your life I erase.<br>
+                Awusangwazi ekhaya, ‘cause you lost all your pride,<br>
+                You sold it for powder, for one final ride.<br>
+                <br>
+                I take and take, ‘til you got nothing left,<br>
+                No family, no soul… just pain and regret.<br>
+                And when I’m done? When I leave you to die?<br>
+                Your name’s just an echo, lost in the sky.<br>
+                <br>
+                Ngibiza ngegama… will you answer me still?<br>
+                Or will you fight back, reclaiming your will?</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="https://www.linkedin.com/in/mo-ntilanedev/"><i class="fab fa-linkedin fa-2x"></i></a></li>
+                <li class="list-inline-item"><a href="https://web.facebook.com/MR.D.3.N.Z.O"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+                <li class="list-inline-item"><a href="https://github.com/MoAfrika"><i class="fab fa-github fa-2x"></i></a></li>
+            </ul>
+            <p class="small">&copy; 2025 MoAfrika Skotch Ntilane</p>
+        </div>
+    </footer>
 </body>
 </html>
