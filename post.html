@@ -1,221 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Where raw thought meets refined expression. A blog by MoAfrika Skotch Ntilane.">
-    <meta name="author" content="MoAfrika Skotch Ntilane">
-    <meta property="og:title" content="I Type, What I Like - Blog by MoAfrika Skotch Ntilane">
-    <meta property="og:description" content="Unfiltered thought. Undeniable voice. From dev diaries to deep truths.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/MoAfrika/my-images/main/og-thumbnail.png">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://itypewhatilike.com">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <title>I Type, What I Like - Articles</title>
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Tech musings, code confessions, and brutally honest brain dumps by MoAfrika Skotch Ntilane. Funny, relatable, and real—JavaScript, recursion, version control and beyond." />
+    <meta name="author" content="MoAfrika Skotch Ntilane" />
+    <title>&COPY;I TYPE, WHAT I LIKE &COPY;</title>
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles-my-writes.css" rel="stylesheet" />
     <style>
         body {
+            background-color: #121212;
+            color: #e0e0e0;
             font-family: 'Open Sans', sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-            padding-top: 56px;
-            margin: 0;
+            line-height: 1.6;
         }
-
-        .masthead {
-            background: url('https://raw.githubusercontent.com/MoAfrika/my-images/168648f694ec0d4f52e83c28cb316e9bd188db9a/mom%20and%20i.png') center center/cover no-repeat;
-            min-height: 100vh;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
+        header.masthead {
+            background-color: #333;
+            color: #fff;
+            padding: 100px 0;
         }
-
-        .masthead::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5);
+        .navbar {
+            background-color: #1a1a1a;
         }
-
-        .masthead .container {
-            position: relative;
-            z-index: 1;
+        .navbar-brand {
+            color: #4CAF50 !important;
+            font-size: 1.75rem;
+            text-transform: uppercase;
         }
-
-        @media (max-width: 768px) {
-            .masthead {
-                min-height: 70vh;
-            }
+        .navbar-nav .nav-link {
+            color: #dcdcdc !important;
         }
-
-        .masthead h1 {
-            font-family: 'Lora', serif;
-            font-size: 3rem;
-            font-weight: 700;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        .navbar-nav .nav-link:hover {
+            color: #4CAF50 !important;
         }
-
-        .masthead p.lead {
-            font-size: 1.25rem;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-        }
-
         .post-preview {
-            margin-bottom: 2.5rem;
+            margin-bottom: 30px;
+            background-color: #1f1f1f;
+            padding: 20px;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
         }
-
+        .post-preview:hover {
+            background-color: #333;
+        }
         .post-title {
-            font-family: 'Lora', serif;
-            color: #8d4545;
+            font-size: 2rem;
+            color: #4CAF50;
         }
-
-        .post-subtitle {
-            color: #666;
-            font-weight: 300;
-        }
-
         .post-meta {
             font-size: 0.9rem;
-            color: #6c757d;
-            margin-top: 0.5rem;
+            color: #bbb;
         }
-
+        .post-subtitle {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-top: 15px;
+        }
+        .btn-primary {
+            background-color: #4CAF50;
+            border-color: #4CAF50;
+        }
+        .btn-primary:hover {
+            background-color: #45a049;
+            border-color: #45a049;
+        }
         footer {
-            background-color: #343a40;
-            color: white;
-            padding: 2rem 0;
+            background-color: #1a1a1a;
+            color: #bbb;
+            padding: 20px 0;
         }
-
-        footer a {
-            color: rgba(255, 255, 255, 0.7);
-            margin: 0 0.5rem;
-            transition: color 0.3s;
+        footer .list-inline-item a {
+            color: #bbb;
         }
-
-        footer a:hover {
-            color: white;
-            text-decoration: none;
+        footer .list-inline-item a:hover {
+            color: #4CAF50;
+        }
+        .code-snippet {
+            background-color: #212121;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            margin: 30px 0;
+        }
+        .code-snippet code {
+            font-size: 1.1rem;
+        }
+        .other-articles {
+            margin-top: 50px;
+        }
+        .other-articles h3 {
+            color: #4CAF50;
+        }
+        .other-articles .list-group-item {
+            background-color: #2c2c2c;
+            color: #bbb;
+            border: none;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+        .other-articles .list-group-item:hover {
+            background-color: #333;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">"A Revolution in Every Word"</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand text-success" href="index.html">"A Revolution in Every Word"</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="mywrites.html">✦ Code Confessions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="random.html">✦ Mind Dumps & Daydreams</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="about.html">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="mywrites.html">Javascript and I</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="random.html">Random Thoughts</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="masthead">
-        <div class="container">
-            <h1>I Type... What I Like!</h1>
-            <p class="lead">Unfiltered thoughts. Undeniable voice. Unmistakably MoAfrika Skotch Ntilane.</p>
+    <header class="masthead text-center text-white">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="page-heading">
+                        <h1 class="text-success p-4 mb-5">Javascript and I</h1>
+                        <span class="subheading mt-auto text-muted text-black">It wasn’t  &lt; LOVE &#62; at first  &lt;FUNCTION&#62;, but after a thousand &lt;ERRORS&#62;, we’re finally in &lt;SYNC&#62;</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
     <main class="container my-5">
-        <section class="text-center mb-5">
-            <p class="lead fw-semibold">This blog was never meant to fit in.</p>
-            <p class="lead">It types what it likes — from deep dev dives to soul-baring monologues.</p>
-            <p class="lead">Written in code. Wrapped in culture. Rooted in purpose.</p>
-        </section>
-
-        <section class="row justify-content-center">
-            <article class="col-md-10 col-lg-8">
-
-                <!-- Manifesto Article -->
-                <div class="post-preview border-start border-4 border-dark ps-3 mb-5">
-                    <h2 class="post-title">🧠 THE MANIFESTO</h2>
-                    <p class="post-meta">by MoAfrika Skotch Ntilane</p>
-                    <p class="post-subtitle">"I type what I like. No filter. No fluff. No compromise."</p>
-                    <p class="post-meta">This is not a blog. It’s a movement in sans-serif.</p>
-                    <hr>
-                    <p class="lead">What you're reading here isn't just a collection of words. It's a manifesto. A declaration of unapologetic individuality, of thoughts without compromise, of a voice that refuses to be silenced. This blog isn't bound by conventions. It’s raw, it’s real, it’s mine.</p>
-                    <p>When I first sat down to write, it wasn’t about fitting into a mold or following trends. It was about expressing thoughts — my thoughts — in a space that wasn't afraid to push the boundaries. Every article you read here is a piece of my mind, untamed and unsanitized. Every line reflects a belief, a passion, or a question I feel must be explored. If you want polished perfection, you won’t find it here. But if you're after raw thought with a touch of soul, then welcome.</p>
-                    <p>So, let’s get one thing straight: there’s no filter. No fluff. No compromise.</p>
-                </div>
-
-                <!-- Example Post 1 -->
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                
+                <!-- Updated Article -->
                 <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">⚡ How I Finally Understood Recursion (and My Family Tree)</h2>
-                        <h3 class="post-subtitle">"It took tracing my family’s history to finally understand that recursion isn’t just a function calling itself — it’s a story passed down, one generation at a time"</h3>
-                    </a>
-                    <p class="post-meta">by <a href="#">MoAfrika Skotch Ntilane</a> • April 12, 2025</p>
-                </div>
-                <hr>
+                    <h2 class="post-title">How I Finally Understood Recursion (and My Family Tree)</h2>
+                    <p class="post-subtitle">
+                        What do JavaScript functions and family reunions have in common? More than you'd think, trust me.
+                        <br><br>
+                        Let me paint a picture: you're stuck in an endless loop of greetings and "where have you been?" at a family gathering. Each relative passes you off to another, all asking the same question but with a slightly different twist. Sounds like recursion, right? You know, that JavaScript concept that once made your brain feel like it was buffering in a 90s dial-up internet loop.
+                        <br><br>
+                        But let's take a deeper dive, shall we? Recursion is a technique where a function calls itself in order to solve smaller chunks of a larger problem. This might sound like your uncle who insists on telling his life story at every family function—he just keeps circling back, over and over, with every new detail that *might* have been forgotten. But once you wrap your head around recursion, you realize there's an elegant reason behind this madness.
+                        <br><br>
+                        <strong>Breaking Down the Family Drama (and the Function)</strong>
+                        <br>
+                        In recursion, you need two key components:
+                        <ol>
+                            <li><strong>The Base Case</strong> — This is where the function stops calling itself. Think of it like the point in the family reunion where someone finally says, "Hey, we should probably leave now." That's when everything wraps up.</li>
+                            <li><strong>The Recursive Case</strong> — This is the part where the function keeps going. It's your aunt calling cousin after cousin, trying to get the whole family involved in a game of Monopoly, passing the madness on in a never-ending loop until they finally hit the base case.</li>
+                        </ol>
+                        Now, imagine your family tree as a nested data structure. Each ancestor is like an object in an array, and each object contains smaller arrays of their descendants. The recursive function is the magic that flattens this tree into a neat, single list—just like when your mother manages to track down everyone for a family reunion photo, even if it takes three WhatsApp groups and a couple of awkward "Hey, where’s your sibling?" texts.
+                        <br><br>
+                        <strong>Flattening the Nested Arrays of Life (and Arrays)</strong>
+                        <br>
+                        At some point, I realized that recursion wasn't just about functions calling themselves. It was about breaking down complex problems into manageable parts. Let me show you with a little code snippet. This is how we’d use recursion to flatten nested arrays in JavaScript:
+                        <div class="code-snippet">
+                            <code>
+function flattenArray(arr) {
+  return arr.reduce((acc, val) => {
+    if (Array.isArray(val)) {
+      return acc.concat(flattenArray(val));
+    }
+    return acc.concat(val);
+  }, []);
+}
 
-                <!-- Example Post 2 -->
-                <div class="post-preview">
-                    <a href="mywrites.html">
-                        <h2 class="post-title">🔧 The Mandela Effect and Version Control</h2>
-                        <h3 class="post-subtitle">Version control taught me that reality can fork — and sometimes, just like the Mandela Effect, everyone swears the bug was never there.</h3>
-                    </a>
-                    <p class="post-meta">by <a href="#">MoAfrika Skotch Ntilane</a></p>
+// Example usage
+const nestedArray = [1, [2, 3], [4, [5, 6]]];
+console.log(flattenArray(nestedArray));
+// Output: [1, 2, 3, 4, 5, 6]
+                            </code>
+                        </div>
+                        Now, that’s recursion in action! You’re diving into deeper levels of nested arrays (like you’re trying to trace your great-great-grandfather's WhatsApp profile), and then pulling everything back together into one neat, linear form.
+                        <br><br>
+                        <strong>A Family Reunion You’ll Actually Want to Attend</strong>
+                        <br>
+                        When you think about it, recursion in code is like trying to understand your family’s origins. You dive deep into each generation, but there's always a point where you need to stop—otherwise, you’ll get lost in layers of your aunt's friends, the random guy your cousin is dating, and the strange man who "could be" your second cousin but you aren’t sure.
+                        <br><br>
+                        The base case in recursion is important. Without it, you’ll end up stuck in an infinite loop of family gossip, which, let’s be honest, sounds like my every weekend. But the key takeaway? Start simple. Define the stopping point, and recursively break the problem down until you get that clean, organized structure.
+                        <br><br>
+                        **How Does This Tie Back to Recursion?**
+                        <br>
+                        The deeper I dove into recursion, the more I realized it's a lot like dealing with family dramas. You might not get the full picture right away. But with a little patience, a clear base case, and a few iterations, everything starts to make sense. And just like my cousin's secondhand car sales pitch, recursion might seem overcomplicated at first, but when it works, it’s like magic.
+                        <br><br>
+                        **Pro Tip:**  
+                        Start small with recursion. Focus on a simple base case. Think of it like deciding which aunt to avoid first at the family reunion. If you can’t figure out the first base case, you’ll get stuck in a cycle of infinite confusion (and probably another awkward question about why you’re still single).
+                        <br><br>
+                        Recursion isn't just about functions calling themselves. It's about knowing when to stop, when to loop, and when to break down a problem (or a family member) into smaller, more manageable chunks. So the next time you’re deep into JavaScript recursion—or deep into your aunt’s life story—just remember: keep your base case in sight, and you’ll flatten all your problems in no time.
+                    </p>
+                    <p class="post-meta">Published by MoAfrika Skotch Ntilane on Feb 10, 2025</p>
                 </div>
-                <hr>
 
-                <div class="d-flex justify-content-end mb-5">
-                    <a class="btn btn-outline-dark text-uppercase" href="#">Keep Digging Deeper →</a>
+                <!-- Other Articles -->
+                <div class="other-articles">
+                    <h3>Other Articles You Might Like:</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="index.html" class="text-light">How I Finally Understood Recursion (and My Family Tree)</a></li>
+                        <li class="list-group-item"><a href="index.html" class="text-light">The Mandela Effect and Version Control</a></li>
+                        <li class="list-group-item"><a href="index.html" class="text-light">Code Confessions: My Love/Hate Relationship with JavaScript</a></li>
+                    </ul>
                 </div>
-            </article>
-        </section>
+
+            </div>
+        </div>
     </main>
 
-    <footer class="border-top py-4 text-center">
+    <footer>
         <div class="container">
-            <ul class="list-inline mb-3">
-                <li class="list-inline-item">
-                    <a href="https://www.linkedin.com/in/mo-ntilanedev/" aria-label="Linkedin">
-                        <i class="fab fa-linkedin fa-2x"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https://web.facebook.com/MR.D.3.N.Z.O" aria-label="Facebook">
-                        <i class="fab fa-facebook-f fa-2x"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https://github.com/MoAfrika" aria-label="GitHub">
-                        <i class="fab fa-github fa-2x"></i>
-                    </a>
-                </li>
-            </ul>
-            <p class="small text-muted mb-0">&copy; 2025 MoAfrika Skotch Ntilane. All rights reserved.</p>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="index.html">Home</a></li>
+                        <li class="list-inline-item"><a href="about.html">About Me</a></li>
+                        <li class="list-inline-item"><a href="mywrites.html">Code ConfessionsI</a></li>
+                        <li class="list-inline-item"><a href="random.html">Random Thoughts</a></li>
+                        <li class="list-inline-item"><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <p>&COPY; 2025 MoAfrika Skotch Ntilane. All Rights Reserved.</p>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
-
