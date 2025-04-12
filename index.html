@@ -1,137 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Where raw thought meets refined expression. A blog by MoAfrika Skotch Ntilane.">
+    <meta name="description" content="Tech musings, code confessions, and brutally honest brain dumps by MoAfrika Skotch Ntilane. Funny, relatable, and real—JavaScript, recursion, version control and beyond.">
     <meta name="author" content="MoAfrika Skotch Ntilane">
-    <meta property="og:title" content="I Type, What I Like - Blog by MoAfrika Skotch Ntilane">
-    <meta property="og:description" content="Unfiltered thought. Undeniable voice. From dev diaries to deep truths.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/MoAfrika/my-images/main/og-thumbnail.png">
+    <meta property="og:title" content="Mind Dumps & DayDreams | I TYPE, WHAT I LIKE">
+    <meta property="og:description" content="Brutally honest tech musings by MoAfrika Skotch Ntilane. JavaScript, recursion, version control and all the chaos in between.">
+    <meta property="og:image" content="https://www.whatwouldmamado.store/images/js-page-preview.png">
+    <meta property="og:url" content="https://www.whatwouldmamado.store/mywrites.html">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://itypewhatilike.com">
+    <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
 
-    <title>I Type, What I Like</title>
+    <title>Mind Dumps & DayDreams | I TYPE, WHAT I LIKE</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Open+Sans:wght@300;600&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
     
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     
     <style>
+        :root {
+            --primary-accent: #00ff99;
+            --secondary-accent: #8d4545;
+            --dark-bg: #0e0e0e;
+            --light-text: #e0e0e0;
+            --medium-text: #999;
+            --border-accent: #444;
+        }
+
         body {
             font-family: 'Open Sans', sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
+            background-color: var(--dark-bg);
+            color: var(--light-text);
             padding-top: 56px;
             margin: 0;
+            line-height: 1.6;
         }
 
         .masthead {
-            background: url('https://raw.githubusercontent.com/MoAfrika/my-images/168648f694ec0d4f52e83c28cb316e9bd188db9a/mom%20and%20i.png') center center/cover no-repeat;
-            min-height: 100vh;
+            background: linear-gradient(to right, #1a1a1a, #0e0e0e);
+            min-height: 50vh;
             color: white;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             position: relative;
-        }
-
-        .masthead::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .masthead .container {
-            position: relative;
-            z-index: 1;
-        }
-
-        @media (max-width: 768px) {
-            .masthead {
-                min-height: 70vh;
-            }
+            border-bottom: 2px solid var(--primary-accent);
         }
 
         .masthead h1 {
-            font-family: 'Lora', serif;
+            font-family: 'Fira Code', monospace;
             font-size: 3rem;
-            font-weight: 700;
+            font-weight: 600;
+            color: var(--primary-accent);
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
         }
 
         .masthead p.lead {
             font-size: 1.25rem;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
+            color: var(--medium-text);
+            animation: flicker 3s infinite alternate;
         }
 
-        .typewriter {
-            display: inline-block;
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: 2px solid white;
-            font-size: inherit;
-            vertical-align: bottom;
-            animation: blinkCursor 0.8s step-end infinite;
+        @keyframes flicker {
+            0% { opacity: 1; }
+            100% { opacity: 0.7; }
+        }
+
+        .navbar {
+            background-color: #333;
+            border-bottom: 2px solid var(--primary-accent);
         }
 
         .navbar-brand {
-            color: rgba(141, 69, 69, 0.856);
+            color: var(--primary-accent) !important;
             font-weight: 700;
+            font-family: 'Fira Code', monospace;
+        }
+
+        .nav-link {
+            color: var(--primary-accent) !important;
+            font-weight: 600;
+            transition: color 0.3s ease;
         }
 
         .nav-link:hover {
-            color: rgba(141, 69, 69, 0.856) !important;
+            color: #ffffff !important;
         }
 
         .post-preview {
-            margin-bottom: 2.5rem;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-accent);
+            transition: all 0.3s ease;
         }
 
-        .post-title {
-            font-family: 'Lora', serif;
-            color: #8d4545;
+        .post-preview:hover {
+            background-color: #1a1a1a;
+            border-left: 3px solid var(--primary-accent);
+            padding-left: 1rem;
+        }
+
+        .post-title, 
+        .thought-title {
+            font-family: 'Fira Code', monospace;
+            color: var(--primary-accent);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
         }
 
         .post-subtitle {
-            color: #666;
-            font-weight: 300;
+            font-style: italic;
+            color: #ccc;
         }
 
         .post-meta {
             font-size: 0.9rem;
-            color: #6c757d;
-            margin-top: 0.5rem;
+            color: var(--medium-text);
         }
 
-        @keyframes blinkCursor {
-            50% {
-                border-color: transparent;
-            }
+        .btn-outline-accent {
+            color: var(--primary-accent);
+            border-color: var(--primary-accent);
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-accent:hover {
+            background-color: var(--primary-accent);
+            color: var(--dark-bg);
         }
 
         footer {
-            background-color: #343a40;
-            color: white;
+            background-color: #111;
+            color: var(--medium-text);
             padding: 2rem 0;
+            text-align: center;
+            border-top: 2px solid var(--primary-accent);
         }
 
         footer a {
-            color: rgba(255, 255, 255, 0.7);
+            color: var(--primary-accent);
             margin: 0 0.5rem;
             transition: color 0.3s;
         }
@@ -140,13 +162,57 @@
             color: white;
             text-decoration: none;
         }
+
+        /* Thought items specific styling */
+        .thought-item {
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            background-color: rgba(30, 30, 30, 0.5);
+            border-radius: 5px;
+        }
+
+        .thought-item p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .masthead {
+                min-height: 40vh;
+                padding: 2rem 1rem;
+            }
+            
+            .masthead h1 {
+                font-size: 2rem;
+            }
+            
+            .post-title, 
+            .thought-title {
+                font-size: 1.5rem;
+            }
+            
+            .navbar-collapse {
+                background-color: #222;
+                padding: 1rem;
+                margin-top: 0.5rem;
+            }
+        }
+
+        /* Accessibility focus styles */
+        a:focus, button:focus {
+            outline: 2px solid var(--primary-accent);
+            outline-offset: 2px;
+        }
     </style>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">"A Revolution in Every Word"</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+            <a class="navbar-brand" href="index.html">I TYPE, WHAT I LIKE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -154,72 +220,98 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="mywrites.html">✦ Code Confessions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="random.html">✦ Mind Dumps & Daydreams</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="random.html">✦ Mind Dumps & Daydreams</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!-- Masthead -->
     <header class="masthead">
         <div class="container">
-            <h1>
-                <span class="typewriter" id="typewriter"></span>...what I like!
-            </h1>
-            <p class="lead">Unfiltered thoughts. Undeniable voice. Unmistakably MoAfrika Skotch Ntilane.</p>
+            <h1>JavaScript and I</h1>
+            <p class="lead">How I learned to stop worrying and love the code.</p>
         </div>
     </header>
 
+    <!-- Main Content -->
     <main class="container my-5">
-        <section class="text-center mb-5">
-            <p class="lead fw-semibold">This blog was never meant to fit in.</p>
-            <p class="lead">It types what it likes — from deep dev dives to soul-baring monologues.</p>
-            <p class="lead">Written in code. Wrapped in culture. Rooted in purpose.</p>
-        </section>
-
         <section class="row justify-content-center">
             <article class="col-md-10 col-lg-8">
-
-                <!-- Sticky Manifesto - First Post -->
-                <div class="post-preview border-start border-4 border-dark ps-3 mb-5">
-                    <a href="manifesto.html">
-                        <h2 class="post-title">🧠 THE MANIFESTO</h2>
-                        <h3 class="post-subtitle">"I type what I like. No filter. No fluff. No compromise."</h3>
-                    </a>
-                    <p class="post-meta">This is not a blog. It’s a movement in sans-serif.</p>
-                </div>
-
-                <!-- Other Posts -->
+                <!-- Thought Items -->
                 <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">⚡ How I Finally Understood Recursion (and My Family Tree))</h2>
-                        <h3 class="post-subtitle">"It took tracing my family’s history to finally understand that recursion isn’t just a function calling itself — it’s a story passed down, one generation at a time"</h3>
-                    </a>
-                    <p class="post-meta">by <a href="#">MoAfrika Skotch Ntilane</a> • April 12, 2025</p>
+                    <h2 class="post-title">The Soundtrack of Our Lives: Why the Music You Listen to Reveals Everything About You!</h2>
+                    <p>
+                        I think we can all agree that music shapes us in ways we don't even realize. What we listen to, how we listen, when we listen, says a lot about who we are.
+                        <br><br>
+                        Music has this way of syncing up with our thoughts, our feelings, and even the code we write. It's all about energy, vibe, and those loops that keep repeating. A bit like recursion—if you really think about it.
+                        <br><br>
+                        Growing up, I used to be the guy who was constantly listening to 80s cassette tapes, switching between The Cure and The Doors. Some days it was smooth jazz. Other days, it was gangster rap. My musical taste was eclectic, but always fueled by one thing: expression.
+                    </p>
                 </div>
-                <hr>
 
-                <div class="post-preview">
-                    <a href="mywrites.html">
-                        <h2 class="post-title">🔧 The Mandela Effect and Version Control</h2>
-                        <h3 class="post-subtitle">Version control taught me that reality can fork — and sometimes, just like the Mandela Effect, everyone swears the bug was never there.</h3>
-                    </a>
-                    <p class="post-meta">by <a href="#">MoAfrika Skotch Ntilane</a></p>
+                <div class="thought-item">
+                    <h2 class="thought-title">Two Altars, One Truth!</h2>
+                    <p>
+                        I have stood in the smoke of burning incense, watching blood darken the soil as elders murmured the names of those who came before me. I have lifted a calabash to my lips, felt the thick, bitter taste of umqombothi coat my tongue, and swallowed the weight of tradition. I have clapped my hands, stomped my feet, and called on ancestors whose names live only in the mouths of the old.
+                        <br><br>
+                        And then, just as the fire cracked and the meat sizzled, someone started a hymn. "There is power in the blood of the Lamb!" The same hands that held the blade to a goat's throat now raised themselves in worship. Drunken voices, thick with belief and contradiction, declared that Jesus is the only way.
+                        <br><br>
+                        I grew up here. Between two worlds. Between libations poured for those beneath the soil and prayers whispered to the man who walked on water. Between bones thrown in the dust and a Bible laid on a wooden table. I grew up watching my people give offerings to ancestors and then kneel in church, ashamed of the very rituals they performed the night before.
+                        <br><br>
+                        What are we? A people torn between who we were and who we were forced to become. A people who fear turning our backs on the old ways but also fear hell for not embracing the new. We are a prayer with two tongues, a faith split down the middle, bleeding both ways.
+                        <br><br>
+                        And maybe that's why, no matter how loud we sing, neither God nor our ancestors answer us the way we wish they would.
+                    </p>
                 </div>
-                <hr>
+
+                <div class="thought-item">
+                    <h2 class="thought-title">The Lesson</h2>
+                    <p>
+                        I'm not angry… not at you, not at fate, <br>
+                        not at the knife you slid between my ribs, <br>
+                        slow, deliberate, like a lover's hand <br>
+                        tracing the spine of a dying romance. <br>
+                        <br>
+                        You only taught me what I needed to know, <br>
+                        that trust is a borrowed cigarette, <br>
+                        lit in the wind, smoked too fast, <br>
+                        burning out before warmth ever settles. <br><br>
+                        I should've known better… now I do.<br>
+                        Your betrayal wasn't a wound, <br>
+                        just a lesson written in blood, <br>
+                        signed with a smirk… and silence.<br><br>
+                        No hard feelings… just a closed door.<br><br>
+                    </p>
+                </div>
+
+                <div class="thought-item">
+                    <h2 class="thought-title">Faithful, but Failing</h2>
+                    <p>
+                        You don't cheat, congratulations. You kept your hands to yourself, but did you keep your heart open? You stayed, but did you show up? You were present, but did you participate?
+                        <br><br>
+                        Love is not a courtroom where fidelity is your only defense. You think not stepping out makes you step up? No. You can be faithful and still be a storm your partner has to survive.
+                        <br><br>
+                        Because what is loyalty if your love is lazy… if your words cut… if your silence drowns… if your presence feels like absence? What is faith if the only thing you give is yourself, only when it's convenient, only when it doesn't cost you?
+                        <br><br>
+                        So, I ask again: what is loyalty if it's not love in action? What is it really worth?
+                    </p>
+                </div>
 
                 <div class="d-flex justify-content-end mb-5">
-                    <a class="btn btn-outline-dark text-uppercase" href="#">Keep Digging Deeper →</a>
+                    <a class="btn btn-outline-accent text-uppercase" href="mywrites.html">More Code Confessions →</a>
                 </div>
             </article>
         </section>
     </main>
 
-    <footer class="border-top py-4 text-center">
+    <!-- Footer -->
+    <footer>
         <div class="container">
             <ul class="list-inline mb-3">
                 <li class="list-inline-item">
-                    <a href="https://www.linkedin.com/in/mo-ntilanedev/" aria-label="Linkedin">
+                    <a href="https://www.linkedin.com/in/mo-ntilanedev/" aria-label="LinkedIn">
                         <i class="fab fa-linkedin fa-2x"></i>
                     </a>
                 </li>
@@ -234,37 +326,12 @@
                     </a>
                 </li>
             </ul>
-            <p class="small text-muted mb-0">&copy; 2025 MoAfrika Skotch Ntilane. All rights reserved.</p>
+            <p class="small mb-0">&copy; 2025 MoAfrika Skotch Ntilane. All rights reserved.</p>
+            <p class="small mt-2">Powered by Skotch Metabytes</p>
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const text = "I type";
-            let i = 0;
-            let isDeleting = false;
-            const speed = 150;
-            const delayBetweenCycles = 1000;
-            const typewriter = document.getElementById("typewriter");
-
-            function typeEffect() {
-                const currentText = text.substring(0, i);
-                typewriter.innerHTML = currentText;
-
-                if (!isDeleting && i === text.length) {
-                    setTimeout(() => isDeleting = true, delayBetweenCycles);
-                    return setTimeout(typeEffect, delayBetweenCycles);
-                } else if (isDeleting && i === 0) {
-                    isDeleting = false;
-                }
-
-                i += isDeleting ? -1 : 1;
-                setTimeout(typeEffect, isDeleting ? speed / 2 : speed);
-            }
-
-            setTimeout(typeEffect, 500);
-        });
-    </script>
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
