@@ -11,107 +11,9 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles-my-writes.css" rel="stylesheet" />
-    <style>
-        body {
-            background-color: #121212;
-            color: #e0e0e0;
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.6;
-        }
-        header.masthead {
-            background-color: #333;
-            color: #fff;
-            padding: 100px 0;
-        }
-        .navbar {
-            background-color: #1a1a1a;
-        }
-        .navbar-brand {
-            color: #4CAF50 !important;
-            font-size: 1.75rem;
-            text-transform: uppercase;
-        }
-        .navbar-nav .nav-link {
-            color: #dcdcdc !important;
-        }
-        .navbar-nav .nav-link:hover {
-            color: #4CAF50 !important;
-        }
-        .post-preview {
-            margin-bottom: 30px;
-            background-color: #1f1f1f;
-            padding: 20px;
-            border-radius: 10px;
-            transition: background-color 0.3s ease;
-        }
-        .post-preview:hover {
-            background-color: #333;
-        }
-        .post-title {
-            font-size: 2rem;
-            color: #4CAF50;
-        }
-        .post-meta {
-            font-size: 0.9rem;
-            color: #bbb;
-        }
-        .post-subtitle {
-            font-size: 1.1rem;
-            color: #ccc;
-            margin-top: 15px;
-        }
-        .btn-primary {
-            background-color: #4CAF50;
-            border-color: #4CAF50;
-        }
-        .btn-primary:hover {
-            background-color: #45a049;
-            border-color: #45a049;
-        }
-        footer {
-            background-color: #1a1a1a;
-            color: #bbb;
-            padding: 20px 0;
-        }
-        footer .list-inline-item a {
-            color: #bbb;
-        }
-        footer .list-inline-item a:hover {
-            color: #4CAF50;
-        }
-        .code-snippet {
-            background-color: #212121;
-            color: #f8f8f2;
-            padding: 20px;
-            border-radius: 8px;
-            font-family: 'Courier New', Courier, monospace;
-            overflow-x: auto;
-            white-space: pre-wrap;
-            margin: 30px 0;
-        }
-        .code-snippet code {
-            font-size: 1.1rem;
-        }
-        .other-articles {
-            margin-top: 50px;
-        }
-        .other-articles h3 {
-            color: #4CAF50;
-        }
-        .other-articles .list-group-item {
-            background-color: #2c2c2c;
-            color: #bbb;
-            border: none;
-            font-size: 1.1rem;
-            transition: background-color 0.3s ease;
-        }
-        .other-articles .list-group-item:hover {
-            background-color: #333;
-        }
-    </style>
 </head>
-<body>
-
+<body class="container my-5" style="padding-top: 100px;">
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand text-success" href="index.html">"A Revolution in Every Word"</a>
@@ -120,21 +22,32 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="about.html">About Me</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="mywrites.html">Code Confessions</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="random.html">Mind Dumps & Daydreams</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="contact.html">Contact</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="about.html">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="mywrites.html">Code Confessions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="random.html">Mind Dumps & Daydreams</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="contact.html">Contact</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="masthead text-center text-white">
+    <!-- Masthead Section -->
+    <header class="masthead" style="color: white; background-color: rgb(219, 218, 218);">
         <div class="container position-relative px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
-                    <div class="page-heading">
+                    <div class="page-heading text-center">
                         <h1 class="text-success p-4 mb-5">Javascript and I</h1>
                         <span class="subheading mt-auto text-muted text-black">It wasn’t  &lt; LOVE &#62; at first  &lt;FUNCTION&#62;, but after a thousand &lt;ERRORS&#62;, we’re finally in &lt;SYNC&#62;</span>
                     </div>
@@ -143,100 +56,89 @@
         </div>
     </header>
 
+    <!-- Main Content Section -->
     <main class="container my-5">
         <div class="row justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                
-                <!-- Updated Article -->
+
+                <!-- Article 1 -->
+                <div class="post-preview">
+                    <h2 class="post-title">From Infinite Loops to Tiny Wins: My Love-Hate Relationship with JavaScript</h2>
+                    <p class="post-subtitle">A brutally honest dive into the chaos of learning JavaScript while balancing real life. From loops to promises, it's a messy, rewarding ride.</p>
+                    <p class="post-meta">Published by MoAfrika Skotch Ntilane on Jan 1, 2025</p>
+                </div>
+                <hr>
+
+                <!-- Article 2 -->
+                <div class="post-preview">
+                    <h2 class="post-title">I TYPE, WHAT I LIKE — The Manifesto</h2>
+                    <p class="post-subtitle">No filter. No fluff. No compromise. This is the heartbeat behind every line of code and every keypress. A revolution in syntax and soul.</p>
+                    <p class="post-meta">Published by MoAfrika Skotch Ntilane on Jan 15, 2025</p>
+                </div>
+                <hr>
+
+                <!-- Article 3 -->
                 <div class="post-preview">
                     <h2 class="post-title">How I Finally Understood Recursion (and My Family Tree)</h2>
                     <p class="post-subtitle">
-                        What do JavaScript functions and family reunions have in common? More than you'd think, trust me.
+                        What do JavaScript functions and family reunions have in common? More than you think. A funny, mind-bending journey into recursive logic—and family drama.
                         <br><br>
-                        Let me paint a picture: you're stuck in an endless loop of greetings and "where have you been?" at a family gathering. Each relative passes you off to another, all asking the same question but with a slightly different twist. Sounds like recursion, right? You know, that JavaScript concept that once made your brain feel like it was buffering in a 90s dial-up internet loop.
+                        Picture this: You’re at a family reunion. Auntie calls Uncle who calls Cousin who calls Auntie again... and suddenly you're stuck in a loop of greetings and “where have you beens?” Welcome to recursion.
                         <br><br>
-                        But let's take a deeper dive, shall we? Recursion is a technique where a function calls itself in order to solve smaller chunks of a larger problem. This might sound like your uncle who insists on telling his life story at every family function—he just keeps circling back, over and over, with every new detail that *might* have been forgotten. But once you wrap your head around recursion, you realize there's an elegant reason behind this madness.
+                        Recursion used to fry my brain. A function that calls itself? Why? Just loop it, right? But then I realized—recursion is just a way to break down a big problem into smaller versions of itself. Like how tracing my family tree made me realize I’m just a reused function with different arguments.
                         <br><br>
-                        <strong>Breaking Down the Family Drama (and the Function)</strong>
-                        <br>
-                        In recursion, you need two key components:
-                        <ol>
-                            <li><strong>The Base Case</strong> — This is where the function stops calling itself. Think of it like the point in the family reunion where someone finally says, "Hey, we should probably leave now." That's when everything wraps up.</li>
-                            <li><strong>The Recursive Case</strong> — This is the part where the function keeps going. It's your aunt calling cousin after cousin, trying to get the whole family involved in a game of Monopoly, passing the madness on in a never-ending loop until they finally hit the base case.</li>
-                        </ol>
-                        Now, imagine your family tree as a nested data structure. Each ancestor is like an object in an array, and each object contains smaller arrays of their descendants. The recursive function is the magic that flattens this tree into a neat, single list—just like when your mother manages to track down everyone for a family reunion photo, even if it takes three WhatsApp groups and a couple of awkward "Hey, where’s your sibling?" texts.
+                        The base case? That one ancestor everyone says “was wild back in the day.” The recursive case? Every new generation born into the same drama loop, just with slightly updated variables (read: family WhatsApp groups and midlife crises).
                         <br><br>
-                        <strong>Flattening the Nested Arrays of Life (and Arrays)</strong>
-                        <br>
-                        At some point, I realized that recursion wasn't just about functions calling themselves. It was about breaking down complex problems into manageable parts. Let me show you with a little code snippet. This is how we’d use recursion to flatten nested arrays in JavaScript:
-                        <div class="code-snippet">
-                            <code>
-function flattenArray(arr) {
-  return arr.reduce((acc, val) => {
-    if (Array.isArray(val)) {
-      return acc.concat(flattenArray(val));
-    }
-    return acc.concat(val);
-  }, []);
-}
-
-// Example usage
-const nestedArray = [1, [2, 3], [4, [5, 6]]];
-console.log(flattenArray(nestedArray));
-// Output: [1, 2, 3, 4, 5, 6]
-                            </code>
-                        </div>
-                        Now, that’s recursion in action! You’re diving into deeper levels of nested arrays (like you’re trying to trace your great-great-grandfather's WhatsApp profile), and then pulling everything back together into one neat, linear form.
+                        The magic clicked when I wrote a function to flatten nested arrays. It was just like navigating extended family. You dive deep, peel back each layer, and at the end of it, you’ve got one clean array (or at least a decent family photo). Now I use recursion for all sorts of things: tree structures, algorithms, and explaining life crises.
                         <br><br>
-                        <strong>A Family Reunion You’ll Actually Want to Attend</strong>
-                        <br>
-                        When you think about it, recursion in code is like trying to understand your family’s origins. You dive deep into each generation, but there's always a point where you need to stop—otherwise, you’ll get lost in layers of your aunt's friends, the random guy your cousin is dating, and the strange man who "could be" your second cousin but you aren’t sure.
-                        <br><br>
-                        The base case in recursion is important. Without it, you’ll end up stuck in an infinite loop of family gossip, which, let’s be honest, sounds like my every weekend. But the key takeaway? Start simple. Define the stopping point, and recursively break the problem down until you get that clean, organized structure.
-                        <br><br>
-                        **How Does This Tie Back to Recursion?**
-                        <br>
-                        The deeper I dove into recursion, the more I realized it's a lot like dealing with family dramas. You might not get the full picture right away. But with a little patience, a clear base case, and a few iterations, everything starts to make sense. And just like my cousin's secondhand car sales pitch, recursion might seem overcomplicated at first, but when it works, it’s like magic.
-                        <br><br>
-                        **Pro Tip:**  
-                        Start small with recursion. Focus on a simple base case. Think of it like deciding which aunt to avoid first at the family reunion. If you can’t figure out the first base case, you’ll get stuck in a cycle of infinite confusion (and probably another awkward question about why you’re still single).
-                        <br><br>
-                        Recursion isn't just about functions calling themselves. It's about knowing when to stop, when to loop, and when to break down a problem (or a family member) into smaller, more manageable chunks. So the next time you’re deep into JavaScript recursion—or deep into your aunt’s life story—just remember: keep your base case in sight, and you’ll flatten all your problems in no time.
+                        My tip? Start with the base case. Always. Forget that, and you'll get stuck deeper than a cousin explaining their crypto startup.
                     </p>
                     <p class="post-meta">Published by MoAfrika Skotch Ntilane on Feb 10, 2025</p>
                 </div>
+                <hr>
 
-                <!-- Other Articles -->
-                <div class="other-articles">
-                    <h3>Other Articles You Might Like:</h3>
-                    <ul class="list-group">
-                        <li class="list-group-item"><a href="index.html" class="text-light">Code Confessions: My Love/Hate Relationship with JavaScript</a></li>
-                        <li class="list-group-item"><a href="index.html" class="text-light">Mind Dumps & Daydreams: The Mandela Effect and Version Control</a></li>
-                    </ul>
+                <!-- Article 4 -->
+                <div class="post-preview">
+                    <h2 class="post-title">The Mandela Effect and Version Control</h2>
+                    <p class="post-subtitle">Ever gaslit yourself over a git branch? You're not alone. Exploring the spooky overlaps between memory glitches and merging conflicts. Git good—before you get lost in the multiverse.</p>
+                    <p class="post-meta">Published by MoAfrika Skotch Ntilane on Mar 3, 2025</p>
                 </div>
+                <hr>
 
+                <!-- Older Posts Link -->
+                <div class="d-flex justify-content-end">
+                    <a class="btn btn-primary text-uppercase" href="#">Older Posts →</a>
+                </div>
             </div>
         </div>
     </main>
 
-    <footer>
+    <!-- Footer Section -->
+    <footer class="border-top py-4 text-center">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <ul class="list-inline">
-                        <li class="list-inline-item"><a href="index.html">Home</a></li>
-                        <li class="list-inline-item"><a href="about.html">About Me</a></li>
-                        <li class="list-inline-item"><a href="mywrites.html">Code Confessions</a></li>
-                        <li class="list-inline-item"><a href="random.html">Mind Dumps & Daydreams</a></li>
-                        <li class="list-inline-item"><a href="contact.html">Contact</a></li>
-                    </ul>
-                    <p>&COPY; 2025 MoAfrika Skotch Ntilane. All Rights Reserved.</p>
-                </div>
-            </div>
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/mo-ntilanedev/" aria-label="Linkedin">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://web.facebook.com/MR.D.3.N.Z.O" aria-label="Facebook">
+                        <i class="fab fa-facebook-f fa-2x"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://github.com/MoAfrika" aria-label="GitHub">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                </li>
+            </ul>
+            <p class="small text-muted">&copy; 2025 MoAfrika Skotch Ntilane</p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
