@@ -185,7 +185,211 @@
             That’s the difference. Some of us are still in the trenches. Some of us still feel the magic of that old cassette deck whirring to life. Some of us still remember the sound of the needle scratching vinyl, the pops and crackles. And it’s not because we’re stuck in the past — it’s because we’re trying to hold on to something real, something that matters.
             <br><br><br>So yeah, the kids out there with their playlists and their streaming services are sufficient, I guess. But there is a world of sound out there that they'll never hear because they're too busy being convenient. The whole fucking world of music is waiting with bated breath for them to get real about what they listen to. Go ahead, put that first mixtape into a cassette deck, and try and tell me that the only truth is what comes from a curated list.<br>
         </p>
-	         <h2 class="thought-title"> Two Altars, One Truth! </h2>
+
+
+  
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Tech musings, code confessions, and brutally honest brain dumps by MoAfrika Skotch Ntilane. Funny, relatable, and real—JavaScript, recursion, version control and beyond." />
+    <meta name="author" content="MoAfrika Skotch Ntilane" />
+    <meta property="og:title" content="Javascript and I | I TYPE, WHAT I LIKE" />
+    <meta property="og:description" content="Brutally honest tech musings by MoAfrika Skotch Ntilane. JavaScript, recursion, version control and all the chaos in between." />
+    <meta property="og:image" content="https://www.whatwouldmamado.store/images/js-page-preview.png" />
+    <meta property="og:url" content="https://www.whatwouldmamado.store/mywrites.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <link rel="alternate" type="application/rss+xml" title="I TYPE, WHAT I LIKE - RSS Feed" href="https://www.whatwouldmamado.store/rss.xml" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "I TYPE, WHAT I LIKE",
+      "url": "https://yourdomain.com/mywrites.html",
+      "description": "A brutally honest tech blog exploring JavaScript, recursion, version control, and more by MoAfrika Skotch Ntilane.",
+      "author": {
+        "@type": "Person",
+        "name": "MoAfrika Skotch Ntilane",
+        "sameAs": [
+          "https://www.linkedin.com/in/mo-ntilanedev/",
+          "https://github.com/MoAfrika",
+          "https://web.facebook.com/MR.D.3.N.Z.O"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Skotch Metabytes",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://yourdomain.com/images/logo.png"
+        }
+      },
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "From Infinite Loops to Tiny Wins",
+          "author": "MoAfrika Skotch Ntilane",
+          "datePublished": "2025-01-01",
+          "url": "https://yourdomain.com/mywrites.html#loops"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "I TYPE, WHAT I LIKE — The Manifesto",
+          "author": "MoAfrika Skotch Ntilane",
+          "datePublished": "2025-01-15",
+          "url": "https://yourdomain.com/mywrites.html#manifesto"
+        }
+      ]
+    }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #0e0e0e;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Fira Code', monospace;
+            color: #00ff99;
+        }
+        .navbar {
+            background-color: #1a1a1a;
+            border-bottom: 2px solid #00ff99;
+        }
+        .navbar-brand, .nav-link {
+            color: #00ff99 !important;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #ffffff !important;
+        }
+        .masthead {
+            padding: 4rem 0;
+            text-align: center;
+            background: linear-gradient(to right, #1a1a1a, #0e0e0e);
+            border-bottom: 2px solid #00ff99;
+        }
+        .subheading {
+            font-size: 1.1rem;
+            color: #999;
+            animation: flicker 3s infinite alternate;
+        }
+        @keyframes flicker {
+            0% { opacity: 1; }
+            100% { opacity: 0.7; }
+        }
+        .post-preview {
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #444;
+            transition: background-color 0.3s ease, border-left 0.3s ease, padding-left 0.3s ease;
+        }
+        .post-preview:hover {
+            background-color: #1a1a1a;
+            border-left: 3px solid #00ff99;
+            padding-left: 1rem;
+        }
+        .post-title {
+            font-size: 1.8rem;
+        }
+        .post-subtitle {
+            font-style: italic;
+            color: #ccc;
+        }
+        .post-meta {
+            font-size: 0.9rem;
+            color: #888;
+        }
+        a.btn {
+            background-color: #00ff99;
+            border: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        a.btn:hover {
+            background-color: #00cc7a;
+            color: #fff;
+        }
+        footer {
+            background-color: #111;
+            color: #888;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        footer .list-inline-item {
+            margin-right: 15px;
+        }
+        .list-inline-item a {
+            color: #00ff99;
+        }
+        .list-inline-item a:hover {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header/Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">SKOTCH METABYTES</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mywrites.html">My Writes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Masthead Section -->
+    <header class="masthead">
+        <h1 class="text-uppercase">Javascript and I</h1>
+        <p class="subheading">How I learned to stop worrying and love the code.</p>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container my-5">
+        <section>
+            <h2 class="thought-title"> The Soundtrack of Our Lives: Why the Music You Listen to Reveals Everything About You! </h2>
+            <p>
+                I think we can all agree that music shapes us in ways we don't even realize. What we listen to, how we listen, when we listen, says a lot about who we are.
+                <br><br>
+                Music has this way of syncing up with our thoughts, our feelings, and even the code we write. It’s all about energy, vibe, and those loops that keep repeating. A bit like recursion—if you really think about it.
+                <br><br>
+                Growing up, I used to be the guy who was constantly listening to 80s cassette tapes, switching between The Cure and The Doors. Some days it was smooth jazz. Other days, it was gangster rap. My musical taste was eclectic, but always fueled by one thing: expression.
+            </p>
+			         <h2 class="thought-title"> Two Altars, One Truth! </h2>
             <p>
 		I have stood in the smoke of burning incense, watching blood darken the soil as elders murmured the names of those who came before me. I have lifted a calabash to my lips, felt the thick, bitter taste of umqombothi coat my tongue, and swallowed the weight of tradition. I have clapped my hands, stomped my feet, and called on ancestors whose names live only in the mouths of the old.
 		And then, just as the fire cracked and the meat sizzled, someone started a hymn. “There is power in the blood of the Lamb!” The same hands that held the blade to a goat’s throat now raised themselves in worship. Drunken voices, thick with belief and contradiction, declared that Jesus is the only way.
@@ -296,17 +500,22 @@ No hard feelings… just a closed door.<br><br></p>
                 Ngibiza ngegama… will you answer me still?<br>
                 Or will you fight back, reclaiming your will?</p>
         </div>
-
-        <footer>
-            <div class="container">
-                <ul class="list-inline">
-                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/mo-ntilanedev/"><i class="fab fa-linkedin fa-2x"></i></a></li>
-                    <li class="list-inline-item"><a href="https://web.facebook.com/MR.D.3.N.Z.O"><i class="fab fa-facebook-f fa-2x"></i></a></li>
-                    <li class="list-inline-item"><a href="https://github.com/MoAfrika"><i class="fab fa-github fa-2x"></i></a></li>
-                </ul>
-                <p class="small">&copy; 2025 MoAfrika Skotch Ntilane</p>
-            </div>
-        </footer>
+        </section>
     </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="https://www.linkedin.com/in/mo-ntilanedev/"><i class="fab fa-linkedin fa-2x"></i></a></li>
+                <li class="list-inline-item"><a href="https://web.facebook.com/MR.D.3.N.Z.O"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+                <li class="list-inline-item"><a href="https://github.com/MoAfrika"><i class="fab fa-github fa-2x"></i></a></li>
+            </ul>
+            <p class="small">&copy; 2025 MoAfrika Skotch Ntilane</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
