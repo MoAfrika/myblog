@@ -11,9 +11,35 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles-my-writes.css" rel="stylesheet" />
+    <style>
+        /* Custom styling for blurred background */
+        .masthead {
+            background-image: url('/mnt/data/A_photograph_captures_a_multigenerational_African_.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            height: 100vh;
+            filter: blur(8px);
+        }
+        .masthead .container {
+            position: relative;
+            z-index: 1;
+        }
+        .masthead .page-heading {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .post-preview code {
+            display: block;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body class="container my-5" style="padding-top: 100px;">
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand text-success" href="index.html">"A Revolution in Every Word"</a>
@@ -22,28 +48,18 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="about.html">About Me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="mywrites.html">Code Confessions</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="random.html">Mind Dumps & Daydreams</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="contact.html">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="about.html">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="mywrites.html">Javascript and I</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="random.html">Random Thoughts</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Masthead Section -->
-    <header class="masthead" style="color: white; background-color: rgb(219, 218, 218);">
+    <!-- Masthead with blurred background -->
+    <header class="masthead">
         <div class="container position-relative px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
@@ -56,7 +72,6 @@
         </div>
     </header>
 
-    <!-- Main Content Section -->
     <main class="container my-5">
         <div class="row justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
@@ -105,7 +120,6 @@
                 </div>
                 <hr>
 
-                <!-- Older Posts Link -->
                 <div class="d-flex justify-content-end">
                     <a class="btn btn-primary text-uppercase" href="#">Older Posts →</a>
                 </div>
@@ -113,7 +127,6 @@
         </div>
     </main>
 
-    <!-- Footer Section -->
     <footer class="border-top py-4 text-center">
         <div class="container">
             <ul class="list-inline">
@@ -137,7 +150,6 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
 </body>
