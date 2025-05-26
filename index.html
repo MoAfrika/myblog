@@ -3,27 +3,32 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Tech musings, code confessions, and brutally honest brain dumps by MoAfrika Skotch Ntilane. Funny, relatable, and real—JavaScript, recursion, version control and beyond.">
     <meta name="author" content="MoAfrika Skotch Ntilane">
-    <meta property="og:title" content="Mind Dumps & DayDreams | I TYPE, WHAT I LIKE">
-    <meta property="og:description" content="Brutally honest tech musings by MoAfrika Skotch Ntilane. JavaScript, recursion, version control and all the chaos in between.">
-    <meta property="og:image" content="https://www.whatwouldmamado.store/images/js-page-preview.png">
-    <meta property="og:url" content="https://www.whatwouldmamado.store/mywrites.html">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_US">
-    <meta name="twitter:card" content="summary_large_image">
 
-    <title>Mind Dumps & DayDreams | I TYPE, WHAT I LIKE</title>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.whatwouldmamado.store/">
+    <meta property="og:title" content="MoAfrika Skotch Ntilane | I TYPE, WHAT I LIKE">
+    <meta property="og:description" content="Brutally honest tech musings by MoAfrika Skotch Ntilane. JavaScript, recursion, version control and all the chaos in between.">
+    <meta property="og:image" content="https://www.whatwouldmamado.store/images/site-preview.png"> <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.whatwouldmamado.store/">
+    <meta name="twitter:title" content="MoAfrika Skotch Ntilane | I TYPE, WHAT I LIKE">
+    <meta name="twitter:description" content="Brutally honest tech musings by MoAfrika Skotch Ntilane. JavaScript, recursion, version control and all the chaos in between.">
+    <meta name="twitter:image" content="https://www.whatwouldmamado.store/images/site-preview.png">
+
+    <title>MoAfrika Skotch Ntilane | I TYPE, WHAT I LIKE</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzpU0Wqf/Ww+c3t3C3m5f5z5j5a5d5e5f5g5h5i5j5k5l5m5n5o5p5q5r5s5t5u5v5w5x5y5z5A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
 
     <style>
+        /* Variables */
         :root {
             --primary-accent: #00ff99;
             --secondary-accent: #8d4545;
@@ -31,17 +36,35 @@
             --light-text: #e0e0e0;
             --medium-text: #999;
             --border-accent: #444;
-            --subtle-shadow: rgba(0, 255, 153, 0.15);
+            --subtle-shadow: rgba(0, 255, 153, 0.15); /* A softer shadow based on accent */
+            --post-card-bg: #1a1a1a;
+            --post-card-hover-bg: #2a2a2a;
         }
 
+        /* Base Styles */
         body {
             font-family: 'Open Sans', sans-serif;
             background-color: var(--dark-bg);
             color: var(--light-text);
-            padding-top: 56px;
+            padding-top: 70px; /* Increased padding-top to ensure navbar is visible */
             margin: 0;
-            line-height: 1.7;
-            overflow-x: hidden;
+            line-height: 1.7; /* Slightly increased line height for readability */
+            overflow-x: hidden; /* Prevent horizontal scroll from subtle transforms */
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Fira Code', monospace;
+            color: var(--primary-accent);
+        }
+
+        a {
+            color: var(--primary-accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #ffffff;
         }
 
         /* Scroll Progress Bar */
@@ -50,50 +73,20 @@
             top: 0;
             left: 0;
             width: 0%;
-            height: 3px;
+            height: 3px; /* Subtle height */
             background-color: var(--primary-accent);
-            z-index: 1050;
-            transition: width 0.1s linear;
+            z-index: 1050; /* Above navbar */
+            transition: width 0.1s linear; /* Smooth progress update */
         }
 
-        .masthead {
-            background: linear-gradient(135deg, #1a1a1a 0%, #0e0e0e 100%);
-            min-height: 50vh;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-            border-bottom: 2px solid var(--primary-accent);
-        }
-
-        .masthead h1 {
-            font-family: 'Fira Code', monospace;
-            font-size: 3.2rem;
-            font-weight: 600;
-            color: var(--primary-accent);
-            text-shadow: 0 0 10px var(--primary-accent), 0 0 20px rgba(0, 255, 153, 0.5);
-            transition: text-shadow 0.5s ease-in-out;
-        }
-
-        .masthead p.lead {
-            font-size: 1.35rem;
-            color: var(--medium-text);
-            animation: flicker 3s infinite alternate;
-        }
-
-        @keyframes flicker {
-            0% { opacity: 1; }
-            100% { opacity: 0.7; }
-        }
-
+        /* Navbar */
         .navbar {
-            background-color: rgba(34, 34, 34, 0.9);
+            background-color: rgba(34, 34, 34, 0.9); /* Slightly transparent background */
             border-bottom: 2px solid var(--primary-accent);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+            backdrop-filter: blur(5px); /* Frosted glass effect for modern feel */
+            -webkit-backdrop-filter: blur(5px); /* Safari support */
+            z-index: 1060; /* Ensure navbar is on top */
         }
 
         .navbar-brand {
@@ -101,6 +94,7 @@
             font-weight: 700;
             font-family: 'Fira Code', monospace;
             transition: color 0.3s ease;
+            font-size: 1.5rem;
         }
         .navbar-brand:hover {
             color: #ffffff !important;
@@ -110,15 +104,16 @@
             color: var(--primary-accent) !important;
             font-weight: 600;
             transition: color 0.3s ease, transform 0.2s ease;
-            position: relative;
+            position: relative; /* For underline effect */
+            padding: 0.5rem 1rem !important; /* Adjust padding for better spacing */
         }
 
         .nav-link:hover {
             color: #ffffff !important;
-            transform: translateY(-2px);
+            transform: translateY(-2px); /* Slight lift on hover */
         }
 
-        .nav-link::after {
+        .nav-link::after { /* Underline effect */
             content: '';
             position: absolute;
             width: 0%;
@@ -134,6 +129,142 @@
             width: 100%;
         }
 
+        /* Masthead (Hero Section) */
+        .masthead {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0e0e0e 100%); /* Smoother angled gradient */
+            min-height: 70vh; /* Increased height for homepage impact */
+            color: white;
+            position: relative;
+            border-bottom: 2px solid var(--primary-accent);
+        }
+
+        .masthead h1 {
+            font-family: 'Fira Code', monospace;
+            font-size: 3.8rem; /* Larger for homepage impact */
+            font-weight: 600;
+            color: var(--primary-accent);
+            text-shadow: 0 0 10px var(--primary-accent), 0 0 20px rgba(0, 255, 153, 0.5); /* Subtle glow effect */
+            transition: text-shadow 0.5s ease-in-out;
+        }
+
+        .masthead p.lead {
+            font-size: 1.5rem; /* Slightly larger */
+            color: var(--medium-text);
+            animation: flicker 3s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 1; }
+            100% { opacity: 0.7; }
+        }
+
+        /* Buttons */
+        .btn-outline-accent {
+            color: var(--primary-accent);
+            border-color: var(--primary-accent);
+            transition: all 0.3s ease, transform 0.2s ease;
+            padding: 0.75rem 1.75rem; /* More prominent button */
+            font-weight: 600;
+            border-radius: 5px; /* Slightly rounded corners */
+        }
+
+        .btn-outline-accent:hover {
+            background-color: var(--primary-accent);
+            color: var(--dark-bg);
+            transform: translateY(-2px); /* Subtle lift on hover */
+            box-shadow: 0 5px 15px var(--subtle-shadow); /* Soft shadow */
+        }
+
+        .btn-outline-accent-secondary {
+            color: var(--secondary-accent);
+            border-color: var(--secondary-accent);
+            transition: all 0.3s ease, transform 0.2s ease;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 4px;
+        }
+
+        .btn-outline-accent-secondary:hover {
+            background-color: var(--secondary-accent);
+            color: var(--dark-bg);
+            transform: translateY(-1px);
+            box-shadow: 0 3px 8px rgba(141, 69, 69, 0.3);
+        }
+
+        /* Recent Posts Section (Homepage Specific) */
+        #recent-posts {
+            background-color: var(--dark-bg); /* Ensure consistent background */
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            margin-bottom: 3.5rem;
+            text-shadow: 0 0 8px rgba(0, 255, 153, 0.3);
+        }
+
+        .post-card {
+            background-color: var(--post-card-bg);
+            border-radius: 8px;
+            overflow: hidden; /* Ensures image corners match card */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%; /* Ensure cards are same height in a row */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .post-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 10px 25px var(--subtle-shadow);
+        }
+
+        .post-card-img {
+            width: 100%;
+            height: 200px; /* Fixed height for image consistency */
+            object-fit: cover; /* Ensures image covers area without distortion */
+            border-bottom: 2px solid var(--border-accent);
+        }
+
+        .post-card-body {
+            padding: 1.5rem;
+            flex-grow: 1; /* Allows body to expand and push footer down */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .post-card-title {
+            font-size: 1.6rem;
+            margin-bottom: 0.8rem;
+            line-height: 1.3;
+            color: var(--primary-accent);
+        }
+        .post-card-title a {
+            color: var(--primary-accent); /* Override global link color for titles */
+        }
+        .post-card-title a:hover {
+            color: #ffffff;
+        }
+
+        .post-card-excerpt {
+            font-size: 1rem;
+            color: var(--light-text);
+            margin-bottom: 1rem;
+            flex-grow: 1; /* Allows excerpt to take available space */
+        }
+
+        .post-card-meta {
+            font-size: 0.85rem;
+            color: var(--medium-text);
+            margin-top: auto; /* Pushes meta and button to the bottom */
+            margin-bottom: 1rem;
+        }
+
+        .post-card-meta .meta-item {
+            margin-right: 15px;
+        }
+
+        /* Post Preview (if used on other pages, included for full scope) */
         .post-preview {
             margin-bottom: 3.5rem;
             padding-bottom: 1.5rem;
@@ -149,13 +280,11 @@
             box-shadow: 0 8px 20px var(--subtle-shadow);
         }
 
-        /* Improved paragraph spacing within posts */
         .post-preview p {
             margin-bottom: 1.25rem;
         }
 
-        .post-title,
-        .thought-title {
+        .post-title {
             font-family: 'Fira Code', monospace;
             color: var(--primary-accent);
             font-size: 2rem;
@@ -176,22 +305,41 @@
             margin-top: 1rem;
         }
 
-        .btn-outline-accent {
-            color: var(--primary-accent);
+
+        /* Thought items specific styling (if used on other pages, included for full scope) */
+        .thought-item {
+            margin-bottom: 3.5rem;
+            padding: 2.2rem;
+            background-color: rgba(30, 30, 30, 0.7);
+            border-radius: 10px;
+            border: 1px solid var(--border-accent);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s ease;
+        }
+
+        .thought-item:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 30px rgba(0, 255, 153, 0.35);
             border-color: var(--primary-accent);
-            transition: all 0.3s ease, transform 0.2s ease;
-            padding: 0.75rem 1.5rem;
-            font-weight: 600;
-            border-radius: 5px;
         }
 
-        .btn-outline-accent:hover {
-            background-color: var(--primary-accent);
-            color: var(--dark-bg);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px var(--subtle-shadow);
+        .thought-item p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--light-text);
+            margin-bottom: 1.25rem;
+        }
+        .thought-item p:last-of-type {
+            margin-bottom: 0;
         }
 
+        .thought-title {
+            font-size: 2.1rem;
+            margin-bottom: 1.2rem;
+        }
+
+
+        /* Footer */
         footer {
             background-color: #111;
             color: var(--medium-text);
@@ -213,51 +361,43 @@
             transform: translateY(-3px) scale(1.1);
         }
 
-        /* Thought items specific styling */
-        .thought-item {
-            margin-bottom: 3.5rem;
-            padding: 2.2rem; /* Slightly more padding */
-            background-color: rgba(30, 30, 30, 0.7); /* Slightly darker background */
-            border-radius: 10px; /* More rounded corners */
-            border: 1px solid var(--border-accent);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* Deeper shadow */
-            transition: all 0.4s ease; /* Slower transition for a smoother feel */
+        /* Accessibility focus styles */
+        a:focus, button:focus, .nav-link:focus, .btn:focus {
+            outline: 2px solid var(--primary-accent);
+            outline-offset: 3px;
+            box-shadow: 0 0 0 4px rgba(0, 255, 153, 0.3);
         }
-
-        .thought-item:hover {
-            transform: translateY(-7px); /* More pronounced lift */
-            box-shadow: 0 12px 30px rgba(0, 255, 153, 0.35); /* Accentuated shadow on hover */
-            border-color: var(--primary-accent);
-        }
-
-        .thought-item p {
-            font-size: 1.05rem;
-            line-height: 1.8;
-            color: var(--light-text);
-            margin-bottom: 1.25rem; /* Increased spacing between paragraphs */
-        }
-        .thought-item p:last-of-type {
-            margin-bottom: 0; /* Remove bottom margin for the last paragraph */
-        }
-
-        .thought-title {
-            font-size: 2.1rem; /* Slightly larger thought titles */
-            margin-bottom: 1.2rem;
-        }
-
 
         /* Responsive adjustments */
-        @media (max-width: 768px) {
+        @media (max-width: 991.98px) { /* Adjust for Bootstrap's lg breakpoint for card columns */
+            .post-card {
+                height: auto; /* Allow height to adjust on smaller screens */
+            }
+            .post-card-img {
+                height: 180px;
+            }
+        }
+
+        @media (max-width: 767.98px) { /* Adjust for Bootstrap's md breakpoint */
             .masthead {
-                min-height: 35vh;
+                min-height: 45vh; /* Slightly smaller on mobile */
                 padding: 2rem 1rem;
             }
 
             .masthead h1 {
-                font-size: 2.2rem;
+                font-size: 2.8rem;
             }
             .masthead p.lead {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 2.5rem;
+            }
+
+            .post-card-title {
+                font-size: 1.4rem;
             }
 
             .post-title,
@@ -266,34 +406,60 @@
             }
 
             .thought-item {
-                padding: 1.5rem;
+                padding: 1.5rem; /* Reduce padding on mobile */
             }
 
             .navbar-collapse {
-                background-color: rgba(34, 34, 34, 0.95);
+                background-color: rgba(34, 34, 34, 0.98); /* More opaque on mobile for dropdown */
                 padding: 1rem;
                 margin-top: 0.5rem;
                 border-radius: 5px;
                 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             }
             .nav-link::after {
-                bottom: -2px;
+                bottom: -2px; /* Adjust underline position for mobile */
+            }
+
+            .btn-lg {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+            .btn-outline-accent.ms-3 {
+                margin-left: 0 !important; /* Stack buttons on mobile */
+                margin-top: 1rem;
             }
         }
 
-        /* Accessibility focus styles */
-        a:focus, button:focus, .nav-link:focus {
-            outline: 2px solid var(--primary-accent);
-            outline-offset: 3px;
-            box-shadow: 0 0 0 4px rgba(0, 255, 153, 0.3);
+        @media (max-width: 575.98px) { /* Adjust for Bootstrap's sm breakpoint */
+            .masthead h1 {
+                font-size: 2.2rem;
+            }
+            .masthead p.lead {
+                font-size: 1rem;
+            }
+            .post-card-img {
+                height: 150px;
+            }
+            .post-card-body {
+                padding: 1rem;
+            }
+            .post-card-title {
+                font-size: 1.2rem;
+            }
+            .post-card-excerpt {
+                font-size: 0.9rem;
+            }
+            .post-card-meta {
+                font-size: 0.75rem;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div id="progressBar"></div>
+    <div id="progressBar" aria-hidden="true"></div>
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Main navigation">
         <div class="container">
             <a class="navbar-brand" href="index.html">I TYPE, WHAT I LIKE</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -301,121 +467,102 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="mywrites.html">✦ Code Confessions</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="random.html">✦ Mind Dumps & Daydreams</a></li>
+                    <li class="nav-item"><a class="nav-link" href="random.html">✦ Mind Dumps & Daydreams</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="masthead">
+    <header class="masthead d-flex align-items-center justify-content-center text-center">
         <div class="container">
-            <h1>JavaScript and I</h1>
-            <p class="lead">How I learned to stop worrying and love the code.</p>
+            <h1 class="display-3">MoAfrika Skotch Ntilane</h1>
+            <p class="lead mt-3 mb-4">Tech musings, code confessions, and brutally honest brain dumps.</p>
+            <a href="#recent-posts" class="btn btn-lg btn-outline-accent">Explore My Thoughts ↓</a>
         </div>
     </header>
 
-    <main class="container my-5">
-        <section class="row justify-content-center">
-            <article class="col-md-10 col-lg-8">
-                <div class="post-preview">
-                    <h2 class="post-title">The Soundtrack of Our Lives: Why the Music You Listen to Reveals Everything About You!</h2>
-                    <p>
-                        I think we can all agree that music shapes us in ways we don't even realize. What we listen to, how we listen, when we listen, says a lot about who we are.
-                    </p>
-                    <p>
-                        Music has this way of syncing up with our thoughts, our feelings, and even the code we write. It's all about energy, vibe, and those loops that keep repeating. A bit like recursion—if you really think about it.
-                    </p>
-                    <p>
-                        Growing up, I used to be the guy who was constantly listening to 80s cassette tapes, switching between The Cure and The Doors. Some days it was smooth jazz. Other days, it was gangster rap. My musical taste was eclectic, but always fueled by one thing: expression.
-                    </p>
-                </div>
+    <main>
+        <section id="recent-posts" class="container py-5 my-5">
+            <h2 class="text-center mb-5 section-title">Recent Musings & Code Confessions</h2>
+            <div class="row gx-5">
+                <article class="col-md-6 col-lg-4 mb-5">
+                    <div class="post-card">
+                        <a href="mywrites.html#the-soundtrack">
+                            <img src="https://via.placeholder.com/400x250/00ff99/0e0e0e?text=Music+Code" class="img-fluid post-card-img" alt="Abstract image representing music notes and code lines">
+                        </a>
+                        <div class="post-card-body">
+                            <h3 class="post-card-title"><a href="mywrites.html#the-soundtrack">The Soundtrack of Our Lives: Why the Music You Listen to Reveals Everything About You!</a></h3>
+                            <p class="post-card-excerpt">Music shapes us in ways we don't even realize. What we listen to, how we listen, when we listen, says a lot about who we are. It's all about energy, vibe, and those loops that keep repeating – a bit like recursion...</p>
+                            <div class="post-card-meta">
+                                <span class="meta-item"><i class="far fa-calendar-alt"></i> Published on May 20, 2025</span>
+                                <span class="meta-item"><i class="far fa-clock"></i> 3 min read</span>
+                            </div>
+                            <a href="mywrites.html#the-soundtrack" class="btn btn-sm btn-outline-accent-secondary mt-3">Read More →</a>
+                        </div>
+                    </div>
+                </article>
 
-                <div class="thought-item">
-                    <h2 class="thought-title">Two Altars, One Truth!</h2>
-                    <p>
-                        I have stood in the smoke of burning incense, watching blood darken the soil as elders murmured the names of those who came before me. I have lifted a calabash to my lips, felt the thick, bitter taste of umqombothi coat my tongue, and swallowed the weight of tradition. I have clapped my hands, stomped my feet, and called on ancestors whose names live only in the mouths of the old.
-                    </p>
-                    <p>
-                        And then, just as the fire cracked and the meat sizzled, someone started a hymn. "There is power in the blood of the Lamb!" The same hands that held the blade to a goat's throat now raised themselves in worship. Drunken voices, thick with belief and contradiction, declared that Jesus is the only way.
-                    </p>
-                    <p>
-                        I grew up here. Between two worlds. Between libations poured for those beneath the soil and prayers whispered to the man who walked on water. Between bones thrown in the dust and a Bible laid on a wooden table. I grew up watching my people give offerings to ancestors and then kneel in church, ashamed of the very rituals they performed the night before.
-                    </p>
-                    <p>
-                        What are we? A people torn between who we were and who we were forced to become. A people who fear turning our backs on the old ways but also fear hell for not embracing the new. We are a prayer with two tongues, a faith split down the middle, bleeding both ways.
-                    </p>
-                    <p>
-                        And maybe that's why, no matter how loud we sing, neither God nor our ancestors answer us the way we wish they would.
-                    </p>
-                </div>
+                <article class="col-md-6 col-lg-4 mb-5">
+                    <div class="post-card">
+                        <a href="random.html#two-altars">
+                            <img src="https://via.placeholder.com/400x250/8d4545/0e0e0e?text=Faith+Conflict" class="img-fluid post-card-img" alt="Abstract image showing two converging paths or symbols of faith">
+                        </a>
+                        <div class="post-card-body">
+                            <h3 class="post-card-title"><a href="random.html#two-altars">Two Altars, One Truth!</a></h3>
+                            <p class="post-card-excerpt">I have stood in the smoke of burning incense, watching blood darken the soil as elders murmured the names of those who came before me. And then, someone started a hymn. "There is power in the blood of the Lamb!"...</p>
+                            <div class="post-card-meta">
+                                <span class="meta-item"><i class="far fa-calendar-alt"></i> Published on May 15, 2025</span>
+                                <span class="meta-item"><i class="far fa-clock"></i> 4 min read</span>
+                            </div>
+                            <a href="random.html#two-altars" class="btn btn-sm btn-outline-accent-secondary mt-3">Read More →</a>
+                        </div>
+                    </div>
+                </article>
 
-                <div class="thought-item">
-                    <h2 class="thought-title">The Lesson</h2>
-                    <p>
-                        I'm not angry… not at you, not at fate, <br>
-                        not at the knife you slid between my ribs, <br>
-                        slow, deliberate, like a lover's hand <br>
-                        tracing the spine of a dying romance.
-                    </p>
-                    <p>
-                        You only taught me what I needed to know, <br>
-                        that trust is a borrowed cigarette, <br>
-                        lit in the wind, smoked too fast, <br>
-                        burning out before warmth ever settles.
-                    </p>
-                    <p>
-                        I should've known better… now I do.<br>
-                        Your betrayal wasn't a wound, <br>
-                        just a lesson written in blood, <br>
-                        signed with a smirk… and silence.
-                    </p>
-                    <p>
-                        No hard feelings… just a closed door.
-                    </p>
-                </div>
+                <article class="col-md-6 col-lg-4 mb-5">
+                    <div class="post-card">
+                        <a href="random.html#the-lesson">
+                            <img src="https://via.placeholder.com/400x250/00ff99/0e0e0e?text=Life+Lesson" class="img-fluid post-card-img" alt="Abstract image of a path leading into the distance, representing life lessons">
+                        </a>
+                        <div class="post-card-body">
+                            <h3 class="post-card-title"><a href="random.html#the-lesson">The Lesson</a></h3>
+                            <p class="post-card-excerpt">I'm not angry… not at you, not at fate, not at the knife you slid between my ribs, slow, deliberate, like a lover's hand tracing the spine of a dying romance. You only taught me what I needed to know...</p>
+                            <div class="post-card-meta">
+                                <span class="meta-item"><i class="far fa-calendar-alt"></i> Published on May 10, 2025</span>
+                                <span class="meta-item"><i class="far fa-clock"></i> 2 min read</span>
+                            </div>
+                            <a href="random.html#the-lesson" class="btn btn-sm btn-outline-accent-secondary mt-3">Read More →</a>
+                        </div>
+                    </div>
+                </article>
 
-                <div class="thought-item">
-                    <h2 class="thought-title">Faithful, but Failing</h2>
-                    <p>
-                        You don't cheat, congratulations. You kept your hands to yourself, but did you keep your heart open? You stayed, but did you show up? You were present, but did you participate?
-                    </p>
-                    <p>
-                        Love is not a courtroom where fidelity is your only defense. You think not stepping out makes you step up? No. You can be faithful and still be a storm your partner has to survive.
-                    </p>
-                    <p>
-                        Because what is loyalty if your love is lazy… if your words cut… if your silence drown… if your presence feels like absence? What is faith if the only thing you give is yourself, only when it's convenient, only when it doesn't cost you?
-                    </p>
-                    <p>
-                        So, I ask again: what is loyalty if it's not love in action? What is it really worth?
-                    </p>
                 </div>
-
-                <div class="d-flex justify-content-end mb-5">
-                    <a class="btn btn-outline-accent text-uppercase" href="random.html">More Mind Dumps & Daydreams →</a>
-                </div>
-            </article>
+            <div class="text-center mt-4">
+                <a class="btn btn-lg btn-outline-accent" href="mywrites.html">View All Code Confessions →</a>
+                <a class="btn btn-lg btn-outline-accent ms-3" href="random.html">View All Mind Dumps & Daydreams →</a>
+            </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="py-5">
         <div class="container">
             <ul class="list-inline mb-3">
                 <li class="list-inline-item">
-                    <a href="https://www.linkedin.com/in/mo-ntilanedev/" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/mo-ntilanedev/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
                         <i class="fab fa-linkedin fa-2x"></i>
                     </a>
                 </li>
                 <li class="list-inline-item">
-                    <a href="https://web.facebook.com/MR.D.3.N.Z.O" aria-label="Facebook">
+                    <a href="https://web.facebook.com/MR.D.3.N.Z.O" target="_blank" rel="noopener noreferrer" aria-label="Facebook Profile">
                         <i class="fab fa-facebook-f fa-2x"></i>
                     </a>
                 </li>
                 <li class="list-inline-item">
-                    <a href="https://github.com/MoAfrika" aria-label="GitHub">
+                    <a href="https://github.com/MoAfrika" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
                         <i class="fab fa-github fa-2x"></i>
                     </a>
                 </li>
@@ -434,6 +581,30 @@
             var scrolled = (winScroll / height) * 100;
             document.getElementById("progressBar").style.width = scrolled + "%";
         };
+
+        // Function to calculate read time (placeholder)
+        // You would call this function for each article and dynamically update the 'min read' text.
+        function calculateReadTime(text) {
+            const wordsPerMinute = 200; // Average reading speed
+            const words = text.trim().split(/\s+/).length;
+            const minutes = Math.ceil(words / wordsPerMinute);
+            return minutes;
+        }
+
+        // Smooth scroll for "Explore My Thoughts" button (if not handled by Bootstrap's scrollspy)
+        document.addEventListener('DOMContentLoaded', function() {
+            const exploreBtn = document.querySelector('.masthead .btn');
+            if (exploreBtn) {
+                exploreBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
     </script>
 </body>
-</html>
+
+    </html>
