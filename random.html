@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Tech musings, code confessions, and brutally honest brain dumps by MoAfrika Skotch Ntilane. Funny, relatable, and real—JavaScript, recursion, version control and beyond." />
+    <meta name="description" content="Dive into the unfiltered mind of MoAfrika Skotch Ntilane. 'Mind Dumps & DayDreams' offers raw insights, cultural reflections, poetic jabs, and truths that hit hard. Expect the unexpected." />
     <meta name="author" content="MoAfrika Skotch Ntilane" />
     <meta property="og:title" content="Mind Dumps & DayDreams | I TYPE, WHAT I LIKE" />
-    <meta property="og:description" content="Brutally honest tech musings by MoAfrika Skotch Ntilane. JavaScript, recursion, version control and all the chaos in between." />
-    <meta property="og:image" content="https://www.whatwouldmamado.store/images/js-page-preview.png" />
-    <meta property="og:url" content="https://www.whatwouldmamado.store/mywrites.html" />
+    <meta property="og:description" content="Beyond the code: Explore MoAfrika Skotch Ntilane's 'Mind Dumps & DayDreams' – a collection of raw thoughts, cultural critiques, and poetic truths. Unfiltered and unforgettable." />
+    <meta property="og:image" content="https://www.whatwouldmamado.store/images/js-page-preview.png" /> {/* Consider a more generic image for this page if js-page-preview is too specific */}
+    <meta property="og:url" content="https://www.whatwouldmamado.store/random.html" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
     <link rel="alternate" type="application/rss+xml" title="I TYPE, WHAT I LIKE - RSS Feed" href="https://www.whatwouldmamado.store/rss.xml" />
@@ -17,9 +17,9 @@
     {
       "@context": "https://schema.org",
       "@type": "Blog",
-      "name": "I TYPE, WHAT I LIKE",
-      "url": "https://www.whatwouldmamado.store/mywrites.html",
-      "description": "A brutally honest tech blog exploring JavaScript, recursion, version control, and more by MoAfrika Skotch Ntilane.",
+      "name": "I TYPE, WHAT I LIKE - Mind Dumps & DayDreams",
+      "url": "https://www.whatwouldmamado.store/random.html",
+      "description": "A collection of raw thoughts, cultural critiques, and poetic truths from MoAfrika Skotch Ntilane.",
       "author": {
         "@type": "Person",
         "name": "MoAfrika Skotch Ntilane",
@@ -40,17 +40,24 @@
       "blogPost": [
         {
           "@type": "BlogPosting",
-          "headline": "From Infinite Loops to Tiny Wins",
+          "headline": "Two Altars, One Truth!",
           "author": "MoAfrika Skotch Ntilane",
-          "datePublished": "2025-01-01",
-          "url": "https://www.whatwouldmamado.store/mywrites.html#loops"
+          "datePublished": "2025-05-20",
+          "url": "https://www.whatwouldmamado.store/random.html#two-altars"
         },
         {
           "@type": "BlogPosting",
-          "headline": "I TYPE, WHAT I LIKE — The Manifesto",
+          "headline": "The Lesson",
           "author": "MoAfrika Skotch Ntilane",
-          "datePublished": "2025-01-15",
-          "url": "https://www.whatwouldmamado.store/mywrites.html#manifesto"
+          "datePublished": "2025-05-15",
+          "url": "https://www.whatwouldmamado.store/random.html#the-lesson"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Faithful, but Failing",
+          "author": "MoAfrika Skotch Ntilane",
+          "datePublished": "2025-05-10",
+          "url": "https://www.whatwouldmamado.store/random.html#faithful-failing"
         }
       ]
     }
@@ -60,7 +67,7 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX'); // Replace G-XXXXXXXXXX
+      gtag('config', 'G-XXXXXXXXXX'); // Replace G-XXXXXXXXXX with your actual Google Analytics ID
     </script>
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
@@ -105,7 +112,7 @@
             padding-bottom: 4px; 
         }
         .masthead {
-            padding: 4rem 0;
+            padding: 5rem 0; /* Increased padding slightly */
             text-align: center;
             background: linear-gradient(to right, #1a1a1a, #0e0e0e);
             border-bottom: 2px solid #00ff99;
@@ -113,56 +120,52 @@
         .masthead h1 { 
             font-family: 'Fira Code', monospace;
             color: #00ff99;
+            font-size: 2.8rem; /* Adjusted for impact */
+            text-transform: uppercase;
         }
         .subheading {
             font-family: 'Open Sans', sans-serif; 
-            font-size: 1.1rem;
-            color: #b0b0b0; 
+            font-size: 1.2rem; /* Increased size */
+            color: #c0c0c0; /* Slightly brighter */
             animation: flicker 3s infinite alternate;
+            margin-top: 0.5rem;
         }
         @keyframes flicker {
-            0%, 100% { opacity: 0.8; } 
-            50% { opacity: 1; }
+            0%, 100% { opacity: 0.7; text-shadow: 0 0 2px #00ff99; } 
+            50% { opacity: 1; text-shadow: 0 0 5px #00ff99; }
         }
-        .post-preview { 
+        .post-preview-intro { /* For the introductory paragraph about music */
             margin-bottom: 3rem;
             padding-bottom: 1rem;
             border-bottom: 1px solid #444;
-            transition: background-color 0.3s ease, border-left 0.3s ease, padding-left 0.3s ease;
         }
-        .post-preview:hover {
-            background-color: #1a1a1a;
-            border-left: 3px solid #00ff99;
-            padding-left: 1rem;
-        }
-        .post-title { 
-            font-size: 1.8rem; 
+        .post-preview-intro h2 { /* If the music intro gets its own title */
+             font-size: 1.8rem; 
             margin-bottom: 0.75rem; 
-        }
-        .post-subtitle { 
-            font-style: italic;
-            color: #ccc;
-        }
-        .post-meta { 
-            font-size: 0.9rem;
-            color: #888;
         }
 
         main section p {
             line-height: 1.7; 
             color: #c0c0c0; 
             margin-bottom: 1.5rem; 
+            font-size: 1.05rem; /* Slightly larger body text */
         }
         main section .thought-item { 
             background-color: #151515; 
-            padding: 1.5rem;
-            border-left: 3px solid #00ff99;
-            margin-bottom: 2rem;
+            padding: 2rem; /* Increased padding */
+            border-left: 4px solid #00ff99; /* Thicker border */
+            margin-bottom: 2.5rem; /* Increased margin */
             border-radius: 4px; 
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
-        main section .thought-item h2 { 
-            font-size: 1.5rem; 
+        main section .thought-item:hover {
+            background-color: #1f1f1f;
+            transform: translateY(-3px);
+        }
+        main section .thought-item h2.thought-title { /* More specific selector for thought titles */
+            font-size: 1.7rem; /* Adjusted */
             margin-top: 0; 
+            margin-bottom: 1rem;
         }
 
         a.btn { 
@@ -172,11 +175,13 @@
             font-weight: bold;
             font-family: 'Fira Code', monospace; 
             transition: all 0.3s ease;
-            padding: 0.5rem 1rem;
+            padding: 0.6rem 1.2rem; /* Slightly larger button */
         }
         a.btn:hover {
-            background-color: #00cc7a;
+            background-color: #00dd88; /* Brighter hover */
             color: #000000; 
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 255, 153, 0.2);
         }
 
         footer.site-footer { 
@@ -203,17 +208,9 @@
             color: #00ff99; 
             transition: color 0.3s ease, transform 0.3s ease;
         }
-        .footer-social-icons .social-icon-link:hover i.fa-facebook-f {
+        .footer-social-icons .social-icon-link:hover i { /* General hover for all icons */
             color: #ffffff; 
-            transform: scale(1.1);
-        }
-        .footer-social-icons .social-icon-link:hover i.fa-github {
-            color: #ffffff; 
-            transform: scale(1.1);
-        }
-        .footer-social-icons .social-icon-link:hover i.fa-linkedin-in {
-            color: #ffffff; 
-            transform: scale(1.1);
+            transform: scale(1.15); /* Slightly more pop */
         }
          .footer-social-icons .social-icon-link:focus i { 
             outline: 2px solid #00ff99;
@@ -290,23 +287,25 @@
 
     <header class="masthead">
         <div class="container"> 
-            <h1 class="text-uppercase">JavaScript and I</h1>
-            <p class="subheading">How I learned to stop worrying and love the code.</p>
+            <h1>RAW THOUGHTS, NO CHASER</h1>
+            <p class="subheading">Stray musings, sharp truths, and the occasional existential Molotov.</p>
         </div>
     </header>
 
     <main class="container my-5">
         <section>
-            <h2 class="post-title">The Soundtrack of Our Lives: Why the Music You Listen to Reveals Everything About You!</h2>
-            <p>
-                I think we can all agree that music shapes us in ways we don't even realize. What we listen to, how we listen, when we listen, says a lot about who we are.
-                <br><br>
-                Music has this way of syncing up with our thoughts, our feelings, and even the code we write. It’s all about energy, vibe, and those loops that keep repeating. A bit like recursion—if you really think about it.
-                <br><br>
-                Growing up, I used to be the guy who was constantly listening to 80s cassette tapes, switching between The Cure and The Doors. Some days it was smooth jazz. Other days, it was gangster rap. My musical taste was eclectic, but always fueled by one thing: expression.
-            </p>
+            <div class="post-preview-intro">
+                <h2 class="post-title">The Sonic Wallpaper of My Skull</h2>
+                <p>
+                    Let's be real: your playlist is your biography set to a beat. What you blast in your headphones, what rattles your car windows, what seeps into the silent hum of your code – that’s not just background noise, that's your soul's OCR scan getting transcribed note by bloody note.
+                    <br><br>
+                    Music isn't just mood; it's a mirror. It syncs with the glorious chaos in our heads, the jagged rhythm of our heartbreaks, the relentless loops of our obsessions (yeah, recursion, I'm looking at you again, you beautiful, infuriating bastard). It’s the energy, the vibe, the unspeakable truth thumping through the bassline like a secret code.
+                    <br><br>
+                    My own sonic journey? A glorious mess. Picture a kid mainlining 80s angst via The Cure, then flipping the tape to summon Jim Morrison’s ghost before breakfast. Some dawns broke with the velvet insurgency of smooth jazz; others rode in on the raw, unapologetic pulse of gangster rap. "Eclectic" doesn't quite cut it. "Symphony of a beautifully fractured mind" might be closer. But every track, every genre switch, every volume crank was a clawing for one thing: to make the inside *audible*. To give the ghosts a soundtrack.
+                </p>
+            </div>
             
-            <div class="thought-item"> 
+            <div class="thought-item" id="two-altars"> 
                 <h2 class="thought-title">Two Altars, One Truth!</h2> 
                 <p>
                     I have stood in the smoke of burning incense, watching blood darken the soil as elders murmured the names of those who came before me. I have lifted a calabash to my lips, felt the thick, bitter taste of umqombothi coat my tongue, and swallowed the weight of tradition. I have clapped my hands, stomped my feet, and called on ancestors whose names live only in the mouths of the old.
@@ -317,7 +316,7 @@
                 </p>
             </div>
             
-            <div class="thought-item">
+            <div class="thought-item" id="the-lesson">
                 <h2 class="thought-title">The Lesson</h2>
                 <p>
                     I’m not angry… not at you, not at fate, <br>
@@ -337,7 +336,7 @@
                 </p>
             </div>
 
-            <div class="thought-item">
+            <div class="thought-item" id="faithful-failing">
                 <h2 class="thought-title">Faithful, but Failing</h2>
                 <p>
                     You don’t cheat, congratulations. You kept your hands to yourself, but did you keep your heart open? You stayed, but did you show up? You were present, but did you participate?
@@ -390,7 +389,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // Custom JavaScript for your blog - Monday, May 26, 2025
-        console.log("Blog 'Mind Dumps & DayDreams' loaded successfully!");
+        console.log("Mind Dumps & DayDreams: Synapses firing. Page loaded. You're welcome.");
     </script>
 </body>
 </html>
