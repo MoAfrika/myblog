@@ -34,7 +34,7 @@
         "name": "Skotch Metabytes",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://www.whatwouldmamado.store/images/logo.png"
+          "url": "https://www.whatwouldmamado.store/images/logo.png" /* Assuming this is the Skotch Metabytes logo */
         }
       },
       "blogPost": [
@@ -55,38 +55,53 @@
       ]
     }
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+      gtag('config', 'G-XXXXXXXXXX'); // Replace G-XXXXXXXXXX
     </script>
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
         body {
             font-family: 'Open Sans', sans-serif;
+            font-weight: 400; /* Added for better readability */
             background-color: #0e0e0e;
             color: #e0e0e0;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
-        h1, h2, h3, h4 {
+        main {
+            flex-grow: 1; /* Ensures main content pushes footer down */
+        }
+        h1, h2, h3, h4, h5, h6 { /* Applied to all heading levels for consistency */
             font-family: 'Fira Code', monospace;
             color: #00ff99;
+            font-weight: 600; /* Added for Fira Code */
         }
         .navbar {
-            background-color: #333;
+            background-color: #1c1c1c; /* Slightly lighter than body for subtle separation */
             border-bottom: 2px solid #00ff99;
         }
         .navbar-brand, .nav-link {
+            font-family: 'Fira Code', monospace; /* Consistent with headings */
             color: #00ff99 !important;
-            font-weight: bold;
+            font-weight: 600; /* Bold for Fira Code */
             transition: color 0.3s ease;
         }
-        .nav-link:hover {
+        .nav-link:hover, .navbar-brand:hover {
             color: #ffffff !important;
+        }
+        .nav-link.active { /* Style for active nav link */
+            color: #ffffff !important;
+            border-bottom: 2px solid #00ff99; /* Optional: highlight active link */
+            padding-bottom: 4px; /* Adjust if border is added */
         }
         .masthead {
             padding: 4rem 0;
@@ -94,16 +109,21 @@
             background: linear-gradient(to right, #1a1a1a, #0e0e0e);
             border-bottom: 2px solid #00ff99;
         }
+        .masthead h1 { /* Ensure masthead H1 uses Fira Code and color */
+            font-family: 'Fira Code', monospace;
+            color: #00ff99;
+        }
         .subheading {
+            font-family: 'Open Sans', sans-serif; /* Subheadings might look better in Open Sans */
             font-size: 1.1rem;
-            color: #999;
+            color: #b0b0b0; /* Slightly lighter gray for subheading */
             animation: flicker 3s infinite alternate;
         }
         @keyframes flicker {
-            0% { opacity: 1; }
-            100% { opacity: 0.7; }
+            0%, 100% { opacity: 0.8; } /* Adjusted opacity for subtlety */
+            50% { opacity: 1; }
         }
-        .post-preview {
+        .post-preview { /* This class is not used in the provided HTML main content, consider applying it if you have previews */
             margin-bottom: 3rem;
             padding-bottom: 1rem;
             border-bottom: 1px solid #444;
@@ -114,48 +134,138 @@
             border-left: 3px solid #00ff99;
             padding-left: 1rem;
         }
-        .post-title {
-            font-size: 1.8rem;
+        .post-title { /* Used for <h2> in main */
+            font-size: 1.8rem; /* Maintained */
+            margin-bottom: 0.75rem; /* Added spacing */
         }
-        .post-subtitle {
+        .post-subtitle { /* This class is not used, but good to have if needed */
             font-style: italic;
             color: #ccc;
         }
-        .post-meta {
+        .post-meta { /* This class is not used, but good to have if needed */
             font-size: 0.9rem;
             color: #888;
         }
-        a.btn {
+
+        /* Main content text styling */
+        main section p {
+            line-height: 1.7; /* Increased line height for readability */
+            color: #c0c0c0; /* Slightly lighter than default for better contrast on dark bg */
+            margin-bottom: 1.5rem; /* Consistent paragraph spacing */
+        }
+        main section .thought-item { /* Styling for the div wrapping some thoughts */
+            background-color: #151515; /* Slightly different background for thought items */
+            padding: 1.5rem;
+            border-left: 3px solid #00ff99;
+            margin-bottom: 2rem;
+            border-radius: 4px; /* Soften edges */
+        }
+        main section .thought-item h2 { /* Specific styling for titles within thought-item */
+            font-size: 1.5rem; /* Slightly smaller than main post titles */
+            margin-top: 0; /* Remove default top margin if it's the first element */
+        }
+
+        a.btn { /* Bootstrap button override if needed, or for custom buttons */
             background-color: #00ff99;
             border: none;
+            color: #0e0e0e; /* Dark text on bright button */
             font-weight: bold;
+            font-family: 'Fira Code', monospace; /* Consistent font */
             transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
         }
         a.btn:hover {
             background-color: #00cc7a;
-            color: #fff;
+            color: #000000; /* Black text on hover for clarity */
         }
-        footer {
+
+        /* --- Enhanced Footer Styles --- */
+        footer.site-footer { /* Renamed for clarity if you have other footers */
             background-color: #111;
-            color: #888;
-            padding: 2rem 0;
+            color: #999; /* Slightly brighter than original #888 for better readability */
+            padding: 2.5rem 0; /* Adjusted padding */
             text-align: center;
             border-top: 2px solid #00ff99;
+            margin-top: 3rem; /* Ensure space from main content */
         }
-        footer .list-inline-item {
-            margin-right: 15px;
+
+        .footer-content-wrapper { /* New wrapper for content inside footer */
+             /* Bootstrap container class will handle max-width and padding */
         }
-        .list-inline-item a {
+
+        /* Social Media Icons in Footer */
+        .footer-social-icons {
+            margin-bottom: 1.5rem; /* Space below icons */
+        }
+        .footer-social-icons .list-inline-item {
+            margin: 0 10px; /* Horizontal spacing for icons */
+        }
+        .footer-social-icons .social-icon-link i {
+            font-size: 1.8rem; /* Slightly larger icons for better visibility */
+            color: #00ff99; /* Accent color for icons */
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .footer-social-icons .social-icon-link:hover i.fa-facebook-f {
+            color: #ffffff; /* White on hover */
+            transform: scale(1.1);
+        }
+        .footer-social-icons .social-icon-link:hover i.fa-github {
+            color: #ffffff; /* White on hover */
+            transform: scale(1.1);
+        }
+        .footer-social-icons .social-icon-link:hover i.fa-linkedin-in {
+            color: #ffffff; /* White on hover */
+            transform: scale(1.1);
+        }
+        /* Add more specific hover states if other icons are added */
+         .footer-social-icons .social-icon-link:focus i { /* Accessibility focus state */
+            outline: 2px solid #00ff99;
+            outline-offset: 3px;
+            border-radius: 2px; /* if icons are not perfectly round */
+        }
+
+
+        /* Footer Links (Privacy, Terms, Help) */
+        .footer-legal-links {
+            margin-bottom: 1rem;
+        }
+        .footer-legal-links .list-inline-item {
+            margin: 0 7px; /* Horizontal spacing for text links */
+        }
+        .footer-legal-links a {
+            color: #00ff99; /* Accent color for links */
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+        .footer-legal-links a:hover {
+            color: #ffffff; /* White on hover */
+            text-decoration: underline;
+        }
+
+        /* Copyright and Powered by Text */
+        .footer-copyright-poweredby {
+            font-size: 0.85rem;
+            color: #aaa; /* Slightly lighter than main footer text for subtlety */
+            line-height: 1.5;
+        }
+        .footer-copyright-poweredby .powered-by-link { /* Specific class for "Powered by" link */
             color: #00ff99;
+            text-decoration: none;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
         }
-        .list-inline-item a:hover {
+        .footer-copyright-poweredby .powered-by-link:hover {
             color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-copyright-poweredby span.separator { /* For the pipe or other separator */
+            margin: 0 8px;
+            color: #777;
         }
     </style>
 </head>
 
 <body>
-    <!-- Header/Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">I TYPE, WHAT I LIKE</a>
@@ -163,7 +273,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
@@ -174,7 +284,7 @@
                         <a class="nav-link" href="mywrites.html">Code Confessions</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="random.html">Mind Dumps & DayDreams</a>
+                        <a class="nav-link active" aria-current="page" href="random.html">Mind Dumps & DayDreams</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
@@ -184,13 +294,12 @@
         </div>
     </nav>
 
-    <!-- Masthead Section -->
     <header class="masthead">
-        <h1 class="text-uppercase">JavaScript and I</h1>
-        <p class="subheading">How I learned to stop worrying and love the code.</p>
+        <div class="container"> <h1 class="text-uppercase">JavaScript and I</h1>
+            <p class="subheading">How I learned to stop worrying and love the code.</p>
+        </div>
     </header>
 
-    <!-- Main Content Section -->
     <main class="container my-5">
         <section>
             <h2 class="post-title">The Soundtrack of Our Lives: Why the Music You Listen to Reveals Everything About You!</h2>
@@ -201,14 +310,15 @@
                 <br><br>
                 Growing up, I used to be the guy who was constantly listening to 80s cassette tapes, switching between The Cure and The Doors. Some days it was smooth jazz. Other days, it was gangster rap. My musical taste was eclectic, but always fueled by one thing: expression.
             </p>
-            <h2 class="thought-title">Two Altars, One Truth!</h2>
-            <p>
-                I have stood in the smoke of burning incense, watching blood darken the soil as elders murmured the names of those who came before me. I have lifted a calabash to my lips, felt the thick, bitter taste of umqombothi coat my tongue, and swallowed the weight of tradition. I have clapped my hands, stomped my feet, and called on ancestors whose names live only in the mouths of the old.
-                And then, just as the fire cracked and the meat sizzled, someone started a hymn. “There is power in the blood of the Lamb!” The same hands that held the blade to a goat’s throat now raised themselves in worship. Drunken voices, thick with belief and contradiction, declared that Jesus is the only way.
-                I grew up here. Between two worlds. Between libations poured for those beneath the soil and prayers whispered to the man who walked on water. Between bones thrown in the dust and a Bible laid on a wooden table. I grew up watching my people give offerings to ancestors and then kneel in church, ashamed of the very rituals they performed the night before.
-                What are we? A people torn between who we were and who we were forced to become. A people who fear turning our backs on the old ways but also fear hell for not embracing the new. We are a prayer with two tongues, a faith split down the middle, bleeding both ways.
-                And maybe that’s why, no matter how loud we sing, neither God nor our ancestors answer us the way we wish they would.
-            </p>
+            
+            <div class="thought-item"> <h2 class="thought-title">Two Altars, One Truth!</h2> <p>
+                    I have stood in the smoke of burning incense, watching blood darken the soil as elders murmured the names of those who came before me. I have lifted a calabash to my lips, felt the thick, bitter taste of umqombothi coat my tongue, and swallowed the weight of tradition. I have clapped my hands, stomped my feet, and called on ancestors whose names live only in the mouths of the old.
+                    And then, just as the fire cracked and the meat sizzled, someone started a hymn. “There is power in the blood of the Lamb!” The same hands that held the blade to a goat’s throat now raised themselves in worship. Drunken voices, thick with belief and contradiction, declared that Jesus is the only way.
+                    I grew up here. Between two worlds. Between libations poured for those beneath the soil and prayers whispered to the man who walked on water. Between bones thrown in the dust and a Bible laid on a wooden table. I grew up watching my people give offerings to ancestors and then kneel in church, ashamed of the very rituals they performed the night before.
+                    What are we? A people torn between who we were and who we were forced to become. A people who fear turning our backs on the old ways but also fear hell for not embracing the new. We are a prayer with two tongues, a faith split down the middle, bleeding both ways.
+                    And maybe that’s why, no matter how loud we sing, neither God nor our ancestors answer us the way we wish they would.
+                </p>
+            </div>
             
             <div class="thought-item">
                 <h2 class="thought-title">The Lesson</h2>
@@ -239,18 +349,61 @@
                     So, I ask again: what is loyalty if it’s not love in action? What is it really worth?
                 </p>
             </div>
-            
-            <footer>
-                <ul class="list-inline">
-                    <li class="list-inline-item"><a href="#">Privacy</a></li>
-                    <li class="list-inline-item"><a href="#">Terms</a></li>
-                    <li class="list-inline-item"><a href="#">Help</a></li>
-                </ul>
-                <p>&copy; 2025 MoAfrika Skotch Ntilane | Powered by Skotch Metabytes</p>
-            </footer>
         </section>
     </main>
 
-</body>
+    <footer class="site-footer">
+        <div class="container footer-content-wrapper"> {/* */}
+            <div class="footer-social-icons">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="https://web.facebook.com/MR.D.3.N.Z.O" aria-label="Follow MoAfrika on Facebook" target="_blank" rel="noopener noreferrer" class="social-icon-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://github.com/MoAfrika" aria-label="View MoAfrika's GitHub profile" target="_blank" rel="noopener noreferrer" class="social-icon-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.linkedin.com/in/mo-ntilanedev/" aria-label="Connect with MoAfrika on LinkedIn" target="_blank" rel="noopener noreferrer" class="social-icon-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                    </ul>
+            </div>
 
+            <div class="footer-legal-links">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="privacy.html">Privacy</a></li> {/* Update href to actual path */}
+                    <li class="list-inline-item"><a href="terms.html">Terms</a></li>   {/* Update href to actual path */}
+                    <li class="list-inline-item"><a href="help.html">Help</a></li>     {/* Update href to actual path */}
+                </ul>
+            </div>
+
+            <div class="footer-copyright-poweredby">
+                <span>&copy; 2025 MoAfrika Skotch Ntilane.</span>
+                <span class="separator">|</span>
+                <span>Powered by <a href="https://www.whatwouldmamado.store/" target="_blank" rel="noopener noreferrer" class="powered-by-link">Skotch Metabytes</a></span> {/* Example link for Skotch Metabytes, please update */}
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // You can add any custom JavaScript for your blog here
+        console.log("Blog 'Mind Dumps & DayDreams' loaded successfully!");
+
+        // Example: Smooth scroll for anchor links if you add them
+        // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        //     anchor.addEventListener('click', function (e) {
+        //         e.preventDefault();
+        //         document.querySelector(this.getAttribute('href')).scrollIntoView({
+        //             behavior: 'smooth'
+        //         });
+        //     });
+        // });
+    </script>
+</body>
 </html>
