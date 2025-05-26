@@ -34,7 +34,7 @@
         "name": "Skotch Metabytes",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://www.whatwouldmamado.store/images/logo.png" /* Assuming this is the Skotch Metabytes logo */
+          "url": "https://www.whatwouldmamado.store/images/logo.png"
         }
       },
       "blogPost": [
@@ -55,7 +55,8 @@
       ]
     }
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> <script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -68,7 +69,7 @@
     <style>
         body {
             font-family: 'Open Sans', sans-serif;
-            font-weight: 400; /* Added for better readability */
+            font-weight: 400;
             background-color: #0e0e0e;
             color: #e0e0e0;
             margin: 0;
@@ -78,30 +79,30 @@
             min-height: 100vh;
         }
         main {
-            flex-grow: 1; /* Ensures main content pushes footer down */
+            flex-grow: 1; 
         }
-        h1, h2, h3, h4, h5, h6 { /* Applied to all heading levels for consistency */
+        h1, h2, h3, h4, h5, h6 {
             font-family: 'Fira Code', monospace;
             color: #00ff99;
-            font-weight: 600; /* Added for Fira Code */
+            font-weight: 600;
         }
         .navbar {
-            background-color: #1c1c1c; /* Slightly lighter than body for subtle separation */
+            background-color: #1c1c1c; 
             border-bottom: 2px solid #00ff99;
         }
         .navbar-brand, .nav-link {
-            font-family: 'Fira Code', monospace; /* Consistent with headings */
+            font-family: 'Fira Code', monospace; 
             color: #00ff99 !important;
-            font-weight: 600; /* Bold for Fira Code */
+            font-weight: 600; 
             transition: color 0.3s ease;
         }
         .nav-link:hover, .navbar-brand:hover {
             color: #ffffff !important;
         }
-        .nav-link.active { /* Style for active nav link */
+        .nav-link.active { 
             color: #ffffff !important;
-            border-bottom: 2px solid #00ff99; /* Optional: highlight active link */
-            padding-bottom: 4px; /* Adjust if border is added */
+            border-bottom: 2px solid #00ff99; 
+            padding-bottom: 4px; 
         }
         .masthead {
             padding: 4rem 0;
@@ -109,21 +110,21 @@
             background: linear-gradient(to right, #1a1a1a, #0e0e0e);
             border-bottom: 2px solid #00ff99;
         }
-        .masthead h1 { /* Ensure masthead H1 uses Fira Code and color */
+        .masthead h1 { 
             font-family: 'Fira Code', monospace;
             color: #00ff99;
         }
         .subheading {
-            font-family: 'Open Sans', sans-serif; /* Subheadings might look better in Open Sans */
+            font-family: 'Open Sans', sans-serif; 
             font-size: 1.1rem;
-            color: #b0b0b0; /* Slightly lighter gray for subheading */
+            color: #b0b0b0; 
             animation: flicker 3s infinite alternate;
         }
         @keyframes flicker {
-            0%, 100% { opacity: 0.8; } /* Adjusted opacity for subtlety */
+            0%, 100% { opacity: 0.8; } 
             50% { opacity: 1; }
         }
-        .post-preview { /* This class is not used in the provided HTML main content, consider applying it if you have previews */
+        .post-preview { 
             margin-bottom: 3rem;
             padding-bottom: 1rem;
             border-bottom: 1px solid #444;
@@ -134,122 +135,115 @@
             border-left: 3px solid #00ff99;
             padding-left: 1rem;
         }
-        .post-title { /* Used for <h2> in main */
-            font-size: 1.8rem; /* Maintained */
-            margin-bottom: 0.75rem; /* Added spacing */
+        .post-title { 
+            font-size: 1.8rem; 
+            margin-bottom: 0.75rem; 
         }
-        .post-subtitle { /* This class is not used, but good to have if needed */
+        .post-subtitle { 
             font-style: italic;
             color: #ccc;
         }
-        .post-meta { /* This class is not used, but good to have if needed */
+        .post-meta { 
             font-size: 0.9rem;
             color: #888;
         }
 
-        /* Main content text styling */
         main section p {
-            line-height: 1.7; /* Increased line height for readability */
-            color: #c0c0c0; /* Slightly lighter than default for better contrast on dark bg */
-            margin-bottom: 1.5rem; /* Consistent paragraph spacing */
+            line-height: 1.7; 
+            color: #c0c0c0; 
+            margin-bottom: 1.5rem; 
         }
-        main section .thought-item { /* Styling for the div wrapping some thoughts */
-            background-color: #151515; /* Slightly different background for thought items */
+        main section .thought-item { 
+            background-color: #151515; 
             padding: 1.5rem;
             border-left: 3px solid #00ff99;
             margin-bottom: 2rem;
-            border-radius: 4px; /* Soften edges */
+            border-radius: 4px; 
         }
-        main section .thought-item h2 { /* Specific styling for titles within thought-item */
-            font-size: 1.5rem; /* Slightly smaller than main post titles */
-            margin-top: 0; /* Remove default top margin if it's the first element */
+        main section .thought-item h2 { 
+            font-size: 1.5rem; 
+            margin-top: 0; 
         }
 
-        a.btn { /* Bootstrap button override if needed, or for custom buttons */
+        a.btn { 
             background-color: #00ff99;
             border: none;
-            color: #0e0e0e; /* Dark text on bright button */
+            color: #0e0e0e; 
             font-weight: bold;
-            font-family: 'Fira Code', monospace; /* Consistent font */
+            font-family: 'Fira Code', monospace; 
             transition: all 0.3s ease;
             padding: 0.5rem 1rem;
         }
         a.btn:hover {
             background-color: #00cc7a;
-            color: #000000; /* Black text on hover for clarity */
+            color: #000000; 
         }
 
-        /* --- Enhanced Footer Styles --- */
-        footer.site-footer { /* Renamed for clarity if you have other footers */
+        footer.site-footer { 
             background-color: #111;
-            color: #999; /* Slightly brighter than original #888 for better readability */
-            padding: 2.5rem 0; /* Adjusted padding */
+            color: #999; 
+            padding: 2.5rem 0; 
             text-align: center;
             border-top: 2px solid #00ff99;
-            margin-top: 3rem; /* Ensure space from main content */
+            margin-top: 3rem; 
         }
 
-        .footer-content-wrapper { /* New wrapper for content inside footer */
-             /* Bootstrap container class will handle max-width and padding */
+        .footer-content-wrapper { 
+            /* Uses Bootstrap's .container class for max-width and padding via HTML */
         }
 
-        /* Social Media Icons in Footer */
         .footer-social-icons {
-            margin-bottom: 1.5rem; /* Space below icons */
+            margin-bottom: 1.5rem; 
         }
         .footer-social-icons .list-inline-item {
-            margin: 0 10px; /* Horizontal spacing for icons */
+            margin: 0 10px; 
         }
         .footer-social-icons .social-icon-link i {
-            font-size: 1.8rem; /* Slightly larger icons for better visibility */
-            color: #00ff99; /* Accent color for icons */
+            font-size: 1.8rem; 
+            color: #00ff99; 
             transition: color 0.3s ease, transform 0.3s ease;
         }
         .footer-social-icons .social-icon-link:hover i.fa-facebook-f {
-            color: #ffffff; /* White on hover */
+            color: #ffffff; 
             transform: scale(1.1);
         }
         .footer-social-icons .social-icon-link:hover i.fa-github {
-            color: #ffffff; /* White on hover */
+            color: #ffffff; 
             transform: scale(1.1);
         }
         .footer-social-icons .social-icon-link:hover i.fa-linkedin-in {
-            color: #ffffff; /* White on hover */
+            color: #ffffff; 
             transform: scale(1.1);
         }
-        /* Add more specific hover states if other icons are added */
-         .footer-social-icons .social-icon-link:focus i { /* Accessibility focus state */
+         .footer-social-icons .social-icon-link:focus i { 
             outline: 2px solid #00ff99;
             outline-offset: 3px;
-            border-radius: 2px; /* if icons are not perfectly round */
+            border-radius: 2px; 
         }
 
-
-        /* Footer Links (Privacy, Terms, Help) */
         .footer-legal-links {
             margin-bottom: 1rem;
         }
         .footer-legal-links .list-inline-item {
-            margin: 0 7px; /* Horizontal spacing for text links */
+            margin: 0 7px; 
         }
         .footer-legal-links a {
-            color: #00ff99; /* Accent color for links */
+            color: #00ff99; 
             text-decoration: none;
             font-size: 0.9rem;
             transition: color 0.3s ease, text-decoration 0.3s ease;
         }
         .footer-legal-links a:hover {
-            color: #ffffff; /* White on hover */
+            color: #ffffff; 
             text-decoration: underline;
         }
 
-        /* Copyright and Powered by Text */
         .footer-copyright-poweredby {
             font-size: 0.85rem;
-            color: #aaa; /* Slightly lighter than main footer text for subtlety */
+            color: #aaa; 
             line-height: 1.5;
         }
-        .footer-copyright-poweredby .powered-by-link { /* Specific class for "Powered by" link */
+        .footer-copyright-poweredby .powered-by-link { 
             color: #00ff99;
             text-decoration: none;
             transition: color 0.3s ease, text-decoration 0.3s ease;
@@ -258,7 +252,7 @@
             color: #ffffff;
             text-decoration: underline;
         }
-        .footer-copyright-poweredby span.separator { /* For the pipe or other separator */
+        .footer-copyright-poweredby span.separator { 
             margin: 0 8px;
             color: #777;
         }
@@ -295,7 +289,8 @@
     </nav>
 
     <header class="masthead">
-        <div class="container"> <h1 class="text-uppercase">JavaScript and I</h1>
+        <div class="container"> 
+            <h1 class="text-uppercase">JavaScript and I</h1>
             <p class="subheading">How I learned to stop worrying and love the code.</p>
         </div>
     </header>
@@ -311,7 +306,9 @@
                 Growing up, I used to be the guy who was constantly listening to 80s cassette tapes, switching between The Cure and The Doors. Some days it was smooth jazz. Other days, it was gangster rap. My musical taste was eclectic, but always fueled by one thing: expression.
             </p>
             
-            <div class="thought-item"> <h2 class="thought-title">Two Altars, One Truth!</h2> <p>
+            <div class="thought-item"> 
+                <h2 class="thought-title">Two Altars, One Truth!</h2> 
+                <p>
                     I have stood in the smoke of burning incense, watching blood darken the soil as elders murmured the names of those who came before me. I have lifted a calabash to my lips, felt the thick, bitter taste of umqombothi coat my tongue, and swallowed the weight of tradition. I have clapped my hands, stomped my feet, and called on ancestors whose names live only in the mouths of the old.
                     And then, just as the fire cracked and the meat sizzled, someone started a hymn. “There is power in the blood of the Lamb!” The same hands that held the blade to a goat’s throat now raised themselves in worship. Drunken voices, thick with belief and contradiction, declared that Jesus is the only way.
                     I grew up here. Between two worlds. Between libations poured for those beneath the soil and prayers whispered to the man who walked on water. Between bones thrown in the dust and a Bible laid on a wooden table. I grew up watching my people give offerings to ancestors and then kneel in church, ashamed of the very rituals they performed the night before.
@@ -353,7 +350,7 @@
     </main>
 
     <footer class="site-footer">
-        <div class="container footer-content-wrapper"> {/* */}
+        <div class="container footer-content-wrapper"> 
             <div class="footer-social-icons">
                 <ul class="list-inline">
                     <li class="list-inline-item">
@@ -371,39 +368,29 @@
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                     </li>
-                    </ul>
+                </ul>
             </div>
 
             <div class="footer-legal-links">
                 <ul class="list-inline">
-                    <li class="list-inline-item"><a href="privacy.html">Privacy</a></li> {/* Update href to actual path */}
-                    <li class="list-inline-item"><a href="terms.html">Terms</a></li>   {/* Update href to actual path */}
-                    <li class="list-inline-item"><a href="help.html">Help</a></li>     {/* Update href to actual path */}
+                    <li class="list-inline-item"><a href="privacy.html">Privacy</a></li> 
+                    <li class="list-inline-item"><a href="terms.html">Terms</a></li>   
+                    <li class="list-inline-item"><a href="help.html">Help</a></li>     
                 </ul>
             </div>
 
             <div class="footer-copyright-poweredby">
                 <span>&copy; 2025 MoAfrika Skotch Ntilane.</span>
                 <span class="separator">|</span>
-                <span>Powered by <a href="https://www.whatwouldmamado.store/" target="_blank" rel="noopener noreferrer" class="powered-by-link">Skotch Metabytes</a></span> {/* Example link for Skotch Metabytes, please update */}
+                <span>Powered by <a href="https://www.whatwouldmamado.store/" target="_blank" rel="noopener noreferrer" class="powered-by-link">Skotch Metabytes</a></span> 
             </div>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // You can add any custom JavaScript for your blog here
+        // Custom JavaScript for your blog - Monday, May 26, 2025
         console.log("Blog 'Mind Dumps & DayDreams' loaded successfully!");
-
-        // Example: Smooth scroll for anchor links if you add them
-        // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        //     anchor.addEventListener('click', function (e) {
-        //         e.preventDefault();
-        //         document.querySelector(this.getAttribute('href')).scrollIntoView({
-        //             behavior: 'smooth'
-        //         });
-        //     });
-        // });
     </script>
 </body>
 </html>
