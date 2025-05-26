@@ -16,14 +16,10 @@
 
     <title>Mind Dumps & DayDreams | I TYPE, WHAT I LIKE</title>
 
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Open+Sans:wght@300;600&display=swap" as="style">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" as="style">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
 
@@ -35,7 +31,7 @@
             --light-text: #e0e0e0;
             --medium-text: #999;
             --border-accent: #444;
-            --subtle-shadow: rgba(0, 255, 153, 0.15); /* A softer shadow based on accent */
+            --subtle-shadow: rgba(0, 255, 153, 0.15);
         }
 
         body {
@@ -44,8 +40,8 @@
             color: var(--light-text);
             padding-top: 56px;
             margin: 0;
-            line-height: 1.7; /* Slightly increased line height for readability */
-            overflow-x: hidden; /* Prevent horizontal scroll from subtle transforms */
+            line-height: 1.7;
+            overflow-x: hidden;
         }
 
         /* Scroll Progress Bar */
@@ -54,14 +50,14 @@
             top: 0;
             left: 0;
             width: 0%;
-            height: 3px; /* Subtle height */
+            height: 3px;
             background-color: var(--primary-accent);
-            z-index: 1050; /* Above navbar */
-            transition: width 0.1s linear; /* Smooth progress update */
+            z-index: 1050;
+            transition: width 0.1s linear;
         }
 
         .masthead {
-            background: linear-gradient(135deg, #1a1a1a 0%, #0e0e0e 100%); /* Smoother angled gradient */
+            background: linear-gradient(135deg, #1a1a1a 0%, #0e0e0e 100%);
             min-height: 50vh;
             color: white;
             display: flex;
@@ -74,15 +70,15 @@
 
         .masthead h1 {
             font-family: 'Fira Code', monospace;
-            font-size: 3.2rem; /* Slightly larger for impact */
+            font-size: 3.2rem;
             font-weight: 600;
             color: var(--primary-accent);
-            text-shadow: 0 0 10px var(--primary-accent), 0 0 20px rgba(0, 255, 153, 0.5); /* Subtle glow effect */
+            text-shadow: 0 0 10px var(--primary-accent), 0 0 20px rgba(0, 255, 153, 0.5);
             transition: text-shadow 0.5s ease-in-out;
         }
 
         .masthead p.lead {
-            font-size: 1.35rem; /* Slightly larger */
+            font-size: 1.35rem;
             color: var(--medium-text);
             animation: flicker 3s infinite alternate;
         }
@@ -93,11 +89,11 @@
         }
 
         .navbar {
-            background-color: rgba(34, 34, 34, 0.9); /* Slightly transparent background */
+            background-color: rgba(34, 34, 34, 0.9);
             border-bottom: 2px solid var(--primary-accent);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-            backdrop-filter: blur(5px); /* Frosted glass effect for modern feel */
-            -webkit-backdrop-filter: blur(5px); /* Safari support */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
         }
 
         .navbar-brand {
@@ -114,15 +110,15 @@
             color: var(--primary-accent) !important;
             font-weight: 600;
             transition: color 0.3s ease, transform 0.2s ease;
-            position: relative; /* For underline effect */
+            position: relative;
         }
 
         .nav-link:hover {
             color: #ffffff !important;
-            transform: translateY(-2px); /* Slight lift on hover */
+            transform: translateY(-2px);
         }
 
-        .nav-link::after { /* Underline effect */
+        .nav-link::after {
             content: '';
             position: absolute;
             width: 0%;
@@ -139,7 +135,7 @@
         }
 
         .post-preview {
-            margin-bottom: 3.5rem; /* Increased spacing */
+            margin-bottom: 3.5rem;
             padding-bottom: 1.5rem;
             border-bottom: 1px solid var(--border-accent);
             transition: all 0.3s ease;
@@ -148,29 +144,34 @@
         .post-preview:hover {
             background-color: #1a1a1a;
             border-left: 3px solid var(--primary-accent);
-            padding-left: 1.5rem; /* Slightly more padding on hover */
-            transform: translateY(-3px); /* Subtle lift */
-            box-shadow: 0 8px 20px var(--subtle-shadow); /* Soft shadow */
+            padding-left: 1.5rem;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px var(--subtle-shadow);
+        }
+
+        /* Improved paragraph spacing within posts */
+        .post-preview p {
+            margin-bottom: 1.25rem;
         }
 
         .post-title,
         .thought-title {
             font-family: 'Fira Code', monospace;
             color: var(--primary-accent);
-            font-size: 2rem; /* Slightly larger */
+            font-size: 2rem;
             margin-bottom: 1rem;
-            line-height: 1.3; /* Better heading readability */
+            line-height: 1.3;
         }
 
         .post-subtitle {
             font-style: italic;
             color: #ccc;
-            margin-top: -0.5rem; /* Pull closer to title */
+            margin-top: -0.5rem;
             margin-bottom: 1.5rem;
         }
 
         .post-meta {
-            font-size: 0.95rem; /* Slightly larger */
+            font-size: 0.95rem;
             color: var(--medium-text);
             margin-top: 1rem;
         }
@@ -179,67 +180,76 @@
             color: var(--primary-accent);
             border-color: var(--primary-accent);
             transition: all 0.3s ease, transform 0.2s ease;
-            padding: 0.75rem 1.5rem; /* More prominent button */
+            padding: 0.75rem 1.5rem;
             font-weight: 600;
-            border-radius: 5px; /* Slightly rounded corners */
+            border-radius: 5px;
         }
 
         .btn-outline-accent:hover {
             background-color: var(--primary-accent);
             color: var(--dark-bg);
-            transform: translateY(-2px); /* Subtle lift on hover */
-            box-shadow: 0 5px 15px var(--subtle-shadow); /* Soft shadow */
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px var(--subtle-shadow);
         }
 
         footer {
             background-color: #111;
             color: var(--medium-text);
-            padding: 2.5rem 0; /* More vertical padding */
+            padding: 2.5rem 0;
             text-align: center;
             border-top: 2px solid var(--primary-accent);
         }
 
         footer a {
             color: var(--primary-accent);
-            margin: 0 0.75rem; /* More spacing for icons */
+            margin: 0 0.75rem;
             transition: color 0.3s, transform 0.2s;
-            display: inline-block; /* Allow transform */
+            display: inline-block;
         }
 
         footer a:hover {
             color: white;
             text-decoration: none;
-            transform: translateY(-3px) scale(1.1); /* Lift and slight enlarge */
+            transform: translateY(-3px) scale(1.1);
         }
 
         /* Thought items specific styling */
         .thought-item {
-            margin-bottom: 3.5rem; /* Increased spacing */
-            padding: 2rem; /* More padding */
-            background-color: rgba(30, 30, 30, 0.6); /* Slightly darker background */
-            border-radius: 8px; /* More rounded corners */
-            border: 1px solid var(--border-accent); /* Subtle border */
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Deeper shadow */
-            transition: all 0.3s ease;
+            margin-bottom: 3.5rem;
+            padding: 2.2rem; /* Slightly more padding */
+            background-color: rgba(30, 30, 30, 0.7); /* Slightly darker background */
+            border-radius: 10px; /* More rounded corners */
+            border: 1px solid var(--border-accent);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* Deeper shadow */
+            transition: all 0.4s ease; /* Slower transition for a smoother feel */
         }
 
         .thought-item:hover {
-            transform: translateY(-5px); /* More pronounced lift */
-            box-shadow: 0 10px 25px rgba(0, 255, 153, 0.25); /* Accentuated shadow on hover */
-            border-color: var(--primary-accent); /* Accent border on hover */
+            transform: translateY(-7px); /* More pronounced lift */
+            box-shadow: 0 12px 30px rgba(0, 255, 153, 0.35); /* Accentuated shadow on hover */
+            border-color: var(--primary-accent);
         }
 
         .thought-item p {
-            font-size: 1.05rem; /* Slightly larger text */
+            font-size: 1.05rem;
             line-height: 1.8;
             color: var(--light-text);
-            margin-bottom: 1rem; /* Spacing between paragraphs */
+            margin-bottom: 1.25rem; /* Increased spacing between paragraphs */
         }
+        .thought-item p:last-of-type {
+            margin-bottom: 0; /* Remove bottom margin for the last paragraph */
+        }
+
+        .thought-title {
+            font-size: 2.1rem; /* Slightly larger thought titles */
+            margin-bottom: 1.2rem;
+        }
+
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .masthead {
-                min-height: 35vh; /* Slightly smaller on mobile */
+                min-height: 35vh;
                 padding: 2rem 1rem;
             }
 
@@ -256,26 +266,26 @@
             }
 
             .thought-item {
-                padding: 1.5rem; /* Reduce padding on mobile */
+                padding: 1.5rem;
             }
 
             .navbar-collapse {
-                background-color: rgba(34, 34, 34, 0.95); /* More opaque on mobile for dropdown */
+                background-color: rgba(34, 34, 34, 0.95);
                 padding: 1rem;
                 margin-top: 0.5rem;
                 border-radius: 5px;
                 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             }
             .nav-link::after {
-                bottom: -2px; /* Adjust underline position for mobile */
+                bottom: -2px;
             }
         }
 
         /* Accessibility focus styles */
         a:focus, button:focus, .nav-link:focus {
             outline: 2px solid var(--primary-accent);
-            outline-offset: 3px; /* Increased offset for visibility */
-            box-shadow: 0 0 0 4px rgba(0, 255, 153, 0.3); /* Soft glow for focus */
+            outline-offset: 3px;
+            box-shadow: 0 0 0 4px rgba(0, 255, 153, 0.3);
         }
     </style>
 </head>
@@ -315,9 +325,11 @@
                     <h2 class="post-title">The Soundtrack of Our Lives: Why the Music You Listen to Reveals Everything About You!</h2>
                     <p>
                         I think we can all agree that music shapes us in ways we don't even realize. What we listen to, how we listen, when we listen, says a lot about who we are.
-                        <br><br>
+                    </p>
+                    <p>
                         Music has this way of syncing up with our thoughts, our feelings, and even the code we write. It's all about energy, vibe, and those loops that keep repeating. A bit like recursion—if you really think about it.
-                        <br><br>
+                    </p>
+                    <p>
                         Growing up, I used to be the guy who was constantly listening to 80s cassette tapes, switching between The Cure and The Doors. Some days it was smooth jazz. Other days, it was gangster rap. My musical taste was eclectic, but always fueled by one thing: expression.
                     </p>
                 </div>
@@ -326,13 +338,17 @@
                     <h2 class="thought-title">Two Altars, One Truth!</h2>
                     <p>
                         I have stood in the smoke of burning incense, watching blood darken the soil as elders murmured the names of those who came before me. I have lifted a calabash to my lips, felt the thick, bitter taste of umqombothi coat my tongue, and swallowed the weight of tradition. I have clapped my hands, stomped my feet, and called on ancestors whose names live only in the mouths of the old.
-                        <br><br>
+                    </p>
+                    <p>
                         And then, just as the fire cracked and the meat sizzled, someone started a hymn. "There is power in the blood of the Lamb!" The same hands that held the blade to a goat's throat now raised themselves in worship. Drunken voices, thick with belief and contradiction, declared that Jesus is the only way.
-                        <br><br>
+                    </p>
+                    <p>
                         I grew up here. Between two worlds. Between libations poured for those beneath the soil and prayers whispered to the man who walked on water. Between bones thrown in the dust and a Bible laid on a wooden table. I grew up watching my people give offerings to ancestors and then kneel in church, ashamed of the very rituals they performed the night before.
-                        <br><br>
+                    </p>
+                    <p>
                         What are we? A people torn between who we were and who we were forced to become. A people who fear turning our backs on the old ways but also fear hell for not embracing the new. We are a prayer with two tongues, a faith split down the middle, bleeding both ways.
-                        <br><br>
+                    </p>
+                    <p>
                         And maybe that's why, no matter how loud we sing, neither God nor our ancestors answer us the way we wish they would.
                     </p>
                 </div>
@@ -343,17 +359,22 @@
                         I'm not angry… not at you, not at fate, <br>
                         not at the knife you slid between my ribs, <br>
                         slow, deliberate, like a lover's hand <br>
-                        tracing the spine of a dying romance. <br>
-                        <br>
+                        tracing the spine of a dying romance.
+                    </p>
+                    <p>
                         You only taught me what I needed to know, <br>
                         that trust is a borrowed cigarette, <br>
                         lit in the wind, smoked too fast, <br>
-                        burning out before warmth ever settles. <br><br>
+                        burning out before warmth ever settles.
+                    </p>
+                    <p>
                         I should've known better… now I do.<br>
                         Your betrayal wasn't a wound, <br>
                         just a lesson written in blood, <br>
-                        signed with a smirk… and silence.<br><br>
-                        No hard feelings… just a closed door.<br><br>
+                        signed with a smirk… and silence.
+                    </p>
+                    <p>
+                        No hard feelings… just a closed door.
                     </p>
                 </div>
 
@@ -361,17 +382,20 @@
                     <h2 class="thought-title">Faithful, but Failing</h2>
                     <p>
                         You don't cheat, congratulations. You kept your hands to yourself, but did you keep your heart open? You stayed, but did you show up? You were present, but did you participate?
-                        <br><br>
+                    </p>
+                    <p>
                         Love is not a courtroom where fidelity is your only defense. You think not stepping out makes you step up? No. You can be faithful and still be a storm your partner has to survive.
-                        <br><br>
+                    </p>
+                    <p>
                         Because what is loyalty if your love is lazy… if your words cut… if your silence drown… if your presence feels like absence? What is faith if the only thing you give is yourself, only when it's convenient, only when it doesn't cost you?
-                        <br><br>
+                    </p>
+                    <p>
                         So, I ask again: what is loyalty if it's not love in action? What is it really worth?
                     </p>
                 </div>
 
                 <div class="d-flex justify-content-end mb-5">
-                    <a class="btn btn-outline-accent text-uppercase" href="mywrites.html">More Code Confessions →</a>
+                    <a class="btn btn-outline-accent text-uppercase" href="random.html">More Mind Dumps & Daydreams →</a>
                 </div>
             </article>
         </section>
