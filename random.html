@@ -67,9 +67,9 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX'); // Replace G-XXXXXXXXXX with your actual Google Analytics ID
+      gtag('config', 'G-XXXXXXXXXX');
     </script>
-    <title>Mind Dumps & DayDreams | I TYPE, WHAT I LIKE</title> {/* Added a title for this page */}
+    <title>Mind Dumps & DayDreams | I TYPE, WHAT I LIKE</title>
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
@@ -78,17 +78,17 @@
 
     <style>
         :root {
-            --bs-info-rgb: 13, 202, 240; /* Bootstrap's default info color RGB */
-            --accent-color-info: #0dcaf0; /* Bootstrap's default info color HEX */
+            --bs-info-rgb: 13, 202, 240; 
+            --accent-color-info: #0dcaf0; 
         }
 
         body {
             font-family: 'Open Sans', sans-serif;
             font-weight: 400;
-            background-color: #f8f9fa; /* Light grey background like About page */
-            color: #212529; /* Default dark text color for light background */
+            background-color: #f8f9fa; 
+            color: #212529; 
             margin: 0;
-            padding-top: 56px; /* Assuming a fixed navbar of 56px height */
+            padding-top: 56px; 
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -97,18 +97,17 @@
             flex-grow: 1; 
         }
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'Lora', serif; /* Lora for headings */
+            font-family: 'Lora', serif; 
             font-weight: 700;
-            color: #343a40; /* Dark heading color */
+            color: #343a40; 
         }
-        /* Navbar styling to match "About" page */
+        
         .navbar {
-            background-color: #212529 !important; /* Bootstrap bg-dark */
-            /* border-bottom: 1px solid var(--accent-color-info); Optional: if you want an accent border */
+            background-color: #212529 !important; 
         }
         .navbar-brand {
             font-family: 'Lora', serif; 
-            color: var(--accent-color-info) !important; /* text-info */
+            color: var(--accent-color-info) !important; 
             font-weight: bold; 
             letter-spacing: 0.5px;
         }
@@ -117,7 +116,7 @@
         }
         .nav-link {
             font-family: 'Open Sans', sans-serif; 
-            color: rgba(255,255,255,.55) !important; /* Default for navbar-dark */
+            color: rgba(255,255,255,.55) !important; 
             font-weight: 600; 
             transition: color 0.3s ease;
         }
@@ -126,82 +125,75 @@
         }
         .nav-link.active { 
             color: #ffffff !important;
-            /* border-bottom: 2px solid var(--accent-color-info); Optional for active link */
         }
 
-        /* Masthead with Hero Image - Styled like "About" page */
         .masthead {
-            /* IMPORTANT: REPLACE THIS PLACEHOLDER URL with your actual hero image */
             background-image: url('https://via.placeholder.com/1920x1080.png/343A40/FFFFFF?text=Mind+Dumps+Hero');
-            background-color: rgba(0, 0, 0, 0.65); /* Dark overlay/fallback */
+            background-color: rgba(0, 0, 0, 0.65); 
             background-size: cover;                
             background-position: center center;    
             background-repeat: no-repeat;          
             color: white;
-            padding: 120px 0; /* Adjusted padding */
+            padding: 120px 0; 
             text-align: center;
             position: relative; 
         }
-        .masthead .page-heading h1 { /* Renamed class for consistency with About page if needed, or use .masthead h1 */
+        .masthead .page-heading h1 { 
             font-family: 'Lora', serif;
-            color: var(--accent-color-info) !important; /* text-info for main title */
+            color: var(--accent-color-info) !important; 
             font-size: 3.2rem; 
             font-weight: bold;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
         }
-        .masthead .subheading { /* Subheading on masthead */
+        .masthead .subheading { 
             font-family: 'Open Sans', sans-serif; 
             font-size: 1.3rem; 
             color: #f8f9fa !important;
-            background-color: rgba(0, 0, 0, 0.7); /* Darker strip for contrast like About page */
+            background-color: rgba(0, 0, 0, 0.7); 
             padding: 8px 15px; 
             display: inline-block;
             border-radius: 5px;
             font-style: italic; 
             margin-top: 0.5rem;
-            /* Removed flicker animation to match About page style */
         }
 
-        /* Intro section for the "Sonic Wallpaper" part */
         .post-preview-intro { 
             margin-bottom: 2.5rem;
             padding: 1.5rem;
-            background-color: #ffffff; /* White card background */
+            background-color: #ffffff; 
             border-radius: 0.25rem;
             box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
         }
         .post-preview-intro h2 { 
              font-size: 1.8rem; 
             margin-bottom: 1rem; 
-            color: #343a40; /* Standard dark heading */
+            color: #343a40; 
         }
         .post-preview-intro p {
             line-height: 1.7; 
-            color: #495057; /* Slightly lighter than main text for differentiation if needed */
+            color: #495057; 
             margin-bottom: 1rem; 
             font-size: 1.05rem;
         }
 
-        /* Styling for individual "Thought Items" to match light theme */
         .thought-item { 
-            background-color: #ffffff; /* White card background */
+            background-color: #ffffff; 
             padding: 2rem; 
-            border: 1px solid #dee2e6; /* Light border */
-            /* border-left: 4px solid var(--accent-color-info); Optional accent border */
+            border: 1px solid #dee2e6; 
             margin-bottom: 2.5rem; 
             border-radius: 0.25rem; 
-            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Subtle shadow */
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); 
         }
         .thought-item h2.thought-title { 
             font-family: 'Lora', serif;
             font-size: 1.7rem; 
             margin-top: 0; 
             margin-bottom: 1rem;
-            color: var(--accent-color-info); /* Accent color for thought titles */
+            color: var(--accent-color-info); 
         }
         .thought-item p {
             line-height: 1.7; 
-            color: #343a40; /* Dark text for readability */
+            color: #343a40; 
             margin-bottom: 1rem; 
             font-size: 1.05rem;
         }
@@ -209,9 +201,7 @@
             margin-bottom: 0;
         }
 
-
-        /* Buttons - General style, can be Bootstrap's default or lightly customized */
-        a.btn-custom-accent { /* Example for a custom button if needed */
+        a.btn-custom-accent { 
             background-color: var(--accent-color-info);
             border-color: var(--accent-color-info);
             color: #ffffff; 
@@ -221,19 +211,18 @@
             padding: 0.6rem 1.2rem;
         }
         a.btn-custom-accent:hover {
-            background-color: #0b9ebd; /* Darker shade of info */
+            background-color: #0b9ebd; 
             border-color: #0a8fad;
             color: #ffffff; 
             transform: translateY(-2px);
         }
 
-        /* Footer styling to match "About" page (bg-light) */
         footer.site-footer { 
-            background-color: #e9ecef; /* Bootstrap bg-light equivalent */
-            color: #6c757d; /* Muted text color */
+            background-color: #e9ecef; 
+            color: #6c757d; 
             padding: 2.5rem 0; 
             text-align: center;
-            border-top: 1px solid #dee2e6; /* Light border top */
+            border-top: 1px solid #dee2e6; 
             margin-top: 3rem; 
         }
         .footer-social-icons .list-inline-item {
@@ -241,15 +230,15 @@
         }
         .footer-social-icons .social-icon-link i {
             font-size: 1.8rem; 
-            color: #343a40; /* Dark icons for light footer */
+            color: #343a40; 
             transition: color 0.3s ease, transform 0.3s ease;
         }
         .footer-social-icons .social-icon-link:hover i {
-            color: var(--accent-color-info); /* Accent color on hover */
+            color: var(--accent-color-info); 
             transform: scale(1.15); 
         }
         .footer-legal-links a {
-            color: #343a40; /* Dark links */
+            color: #343a40; 
             text-decoration: none;
             font-size: 0.9rem;
         }
@@ -262,7 +251,7 @@
             color: #6c757d; 
         }
         .footer-copyright-poweredby .powered-by-link { 
-            color: #343a40; /* Dark link */
+            color: #343a40; 
             text-decoration: none;
         }
         .footer-copyright-poweredby .powered-by-link:hover {
@@ -273,7 +262,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top"> {/* Added fixed-top for consistency */}
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">I TYPE, WHAT I LIKE</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -302,10 +291,10 @@
     </nav>
 
     <header class="masthead">
-        <div class="container position-relative px-4 px-lg-5"> {/* Added classes from About page masthead for consistency */}
-            <div class="row gx-4 gx-lg-5 justify-content-center"> {/* Added classes from About page masthead */}
-                <div class="col-md-10 col-lg-8 col-xl-7"> {/* Added classes from About page masthead */}
-                    <div class="page-heading"> {/* Mirrored class structure from About page */}
+        <div class="container position-relative px-4 px-lg-5"> 
+            <div class="row gx-4 gx-lg-5 justify-content-center"> 
+                <div class="col-md-10 col-lg-8 col-xl-7"> 
+                    <div class="page-heading"> 
                         <h1>RAW THOUGHTS, NO CHASER</h1>
                         <p class="subheading">Stray musings, sharp truths, and the occasional existential Molotov.</p>
                     </div>
@@ -315,11 +304,11 @@
     </header>
 
     <main class="container my-5">
-        <section> {/* Removed col-md-10 etc. from here, content blocks will control width */}
+        <section> 
             <div class="row justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <div class="post-preview-intro">
-                        <h2>The Sonic Wallpaper of My Skull</h2> {/* Consistent heading tag */}
+                        <h2>The Sonic Wallpaper of My Skull</h2> 
                         <p>
                             Let's be real: your playlist is your biography set to a beat. What you blast in your headphones, what rattles your car windows, what seeps into the silent hum of your code – that’s not just background noise, that's your soul's OCR scan getting transcribed note by bloody note.
                             <br><br>
@@ -426,10 +415,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Custom JavaScript for your blog
         console.log("Mind Dumps & DayDreams: Re-skinned. Page loaded.");
 
-        // Simple script to set current year in footer
         document.addEventListener('DOMContentLoaded', function() {
             const yearSpan = document.getElementById('currentYear');
             if (yearSpan) {
@@ -438,4 +425,4 @@
         });
     </script>
 </body>
-                            </html>
+</html>
