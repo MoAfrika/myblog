@@ -80,7 +80,7 @@
             background-color: #0e0e0e;
             color: #e0e0e0;
             margin: 0;
-            padding: 0;
+            padding: 0; /* Removed body padding-top here, navbar is not fixed-top in your HTML */
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -111,29 +111,56 @@
             border-bottom: 2px solid #00ff99; 
             padding-bottom: 4px; 
         }
+
+        /* Masthead with Hero Image */
         .masthead {
-            padding: 5rem 0; /* Increased padding slightly */
+            padding: 7rem 0; /* Increased padding for more hero presence */
             text-align: center;
-            background: linear-gradient(to right, #1a1a1a, #0e0e0e);
+            /* background: linear-gradient(to right, #1a1a1a, #0e0e0e); /* OLD - Replaced by image and overlay */
+            /* IMPORTANT: Replace with your actual hero image URL */
+            background-image: url('https://via.placeholder.com/1920x1080.png/0E0E0E/00FF99?text=Your+Green+Hero+Image');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            position: relative; /* For overlay positioning */
             border-bottom: 2px solid #00ff99;
+            color: #FFFFFF; /* Ensure text is white by default on hero */
         }
+        .masthead::before { /* Overlay for text readability */
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(14, 14, 14, 0.7); /* Dark overlay, using your body bg color with alpha */
+            z-index: 1;
+        }
+        .masthead .container { /* Ensure content is above overlay */
+            position: relative;
+            z-index: 2;
+        }
+
         .masthead h1 { 
             font-family: 'Fira Code', monospace;
-            color: #00ff99;
-            font-size: 2.8rem; /* Adjusted for impact */
+            color: #00ff99; /* Green accent for title */
+            font-size: 3.2rem; /* Adjusted for impact with hero image */
             text-transform: uppercase;
+            text-shadow: 0 0 8px rgba(0, 255, 153, 0.5); /* Subtle green glow */
         }
-        .subheading {
+        .masthead .subheading { /* Subheading on masthead */
             font-family: 'Open Sans', sans-serif; 
-            font-size: 1.2rem; /* Increased size */
-            color: #c0c0c0; /* Slightly brighter */
+            font-size: 1.3rem; /* Increased size */
+            color: #e0e0e0; /* Brighter for readability on overlay */
             animation: flicker 3s infinite alternate;
             margin-top: 0.5rem;
+            text-shadow: 0 0 3px rgba(0,0,0,0.7); /* Shadow for readability */
         }
         @keyframes flicker {
-            0%, 100% { opacity: 0.7; text-shadow: 0 0 2px #00ff99; } 
-            50% { opacity: 1; text-shadow: 0 0 5px #00ff99; }
+            0%, 100% { opacity: 0.8; text-shadow: 0 0 3px #00ff99, 0 0 3px rgba(0,0,0,0.7); } 
+            50% { opacity: 1; text-shadow: 0 0 6px #00ff99, 0 0 3px rgba(0,0,0,0.7); }
         }
+
         .post-preview-intro { /* For the introductory paragraph about music */
             margin-bottom: 3rem;
             padding-bottom: 1rem;
@@ -379,7 +406,7 @@
             </div>
 
             <div class="footer-copyright-poweredby">
-                <span>&copy; 2025 MoAfrika Skotch Ntilane.</span>
+                <span>&copy; <span id="currentYear">2025</span> MoAfrika Skotch Ntilane.</span>
                 <span class="separator">|</span>
                 <span>Powered by <a href="https://www.whatwouldmamado.store/" target="_blank" rel="noopener noreferrer" class="powered-by-link">Skotch Metabytes</a></span> 
             </div>
@@ -390,6 +417,14 @@
     <script>
         // Custom JavaScript for your blog - Monday, May 26, 2025
         console.log("Mind Dumps & DayDreams: Synapses firing. Page loaded. You're welcome.");
+
+        // Simple script to set current year in footer, if you prefer it dynamic
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearSpan = document.getElementById('currentYear');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
     </script>
 </body>
 </html>
