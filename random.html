@@ -8,7 +8,7 @@
     <meta name="author" content="MoAfrika Skotch Ntilane" />
     <meta property="og:title" content="Mind Dumps & DayDreams | I TYPE, WHAT I LIKE" />
     <meta property="og:description" content="Beyond the code: Explore MoAfrika Skotch Ntilane's 'Mind Dumps & DayDreams' – a collection of raw thoughts, cultural critiques, and poetic truths. Unfiltered and unforgettable." />
-    <meta property="og:image" content="https://www.whatwouldmamado.store/images/js-page-preview.png" /> {/* Consider a more generic image for this page if js-page-preview is too specific */}
+    <meta property="og:image" content="https://www.whatwouldmamado.store/images/js-page-preview.png" />
     <meta property="og:url" content="https://www.whatwouldmamado.store/random.html" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
@@ -69,18 +69,26 @@
       gtag('js', new Date());
       gtag('config', 'G-XXXXXXXXXX'); // Replace G-XXXXXXXXXX with your actual Google Analytics ID
     </script>
+    <title>Mind Dumps & DayDreams | I TYPE, WHAT I LIKE</title> {/* Added a title for this page */}
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+        :root {
+            --bs-info-rgb: 13, 202, 240; /* Bootstrap's default info color RGB */
+            --accent-color-info: #0dcaf0; /* Bootstrap's default info color HEX */
+        }
+
         body {
             font-family: 'Open Sans', sans-serif;
             font-weight: 400;
-            background-color: #0e0e0e;
-            color: #e0e0e0;
+            background-color: #f8f9fa; /* Light grey background like About page */
+            color: #212529; /* Default dark text color for light background */
             margin: 0;
-            padding: 0; /* Removed body padding-top here, navbar is not fixed-top in your HTML */
+            padding-top: 56px; /* Assuming a fixed navbar of 56px height */
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -89,202 +97,183 @@
             flex-grow: 1; 
         }
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'Fira Code', monospace;
-            color: #00ff99;
-            font-weight: 600;
+            font-family: 'Lora', serif; /* Lora for headings */
+            font-weight: 700;
+            color: #343a40; /* Dark heading color */
         }
+        /* Navbar styling to match "About" page */
         .navbar {
-            background-color: #1c1c1c; 
-            border-bottom: 2px solid #00ff99;
+            background-color: #212529 !important; /* Bootstrap bg-dark */
+            /* border-bottom: 1px solid var(--accent-color-info); Optional: if you want an accent border */
         }
-        .navbar-brand, .nav-link {
-            font-family: 'Fira Code', monospace; 
-            color: #00ff99 !important;
+        .navbar-brand {
+            font-family: 'Lora', serif; 
+            color: var(--accent-color-info) !important; /* text-info */
+            font-weight: bold; 
+            letter-spacing: 0.5px;
+        }
+        .navbar-brand:hover {
+            color: #ffffff !important;
+        }
+        .nav-link {
+            font-family: 'Open Sans', sans-serif; 
+            color: rgba(255,255,255,.55) !important; /* Default for navbar-dark */
             font-weight: 600; 
             transition: color 0.3s ease;
         }
-        .nav-link:hover, .navbar-brand:hover {
-            color: #ffffff !important;
+        .nav-link:hover {
+            color: rgba(255,255,255,.75) !important;
         }
         .nav-link.active { 
             color: #ffffff !important;
-            border-bottom: 2px solid #00ff99; 
-            padding-bottom: 4px; 
+            /* border-bottom: 2px solid var(--accent-color-info); Optional for active link */
         }
 
-        /* Masthead with Hero Image */
+        /* Masthead with Hero Image - Styled like "About" page */
         .masthead {
-            padding: 7rem 0; /* Increased padding for more hero presence */
+            /* IMPORTANT: REPLACE THIS PLACEHOLDER URL with your actual hero image */
+            background-image: url('https://via.placeholder.com/1920x1080.png/343A40/FFFFFF?text=Mind+Dumps+Hero');
+            background-color: rgba(0, 0, 0, 0.65); /* Dark overlay/fallback */
+            background-size: cover;                
+            background-position: center center;    
+            background-repeat: no-repeat;          
+            color: white;
+            padding: 120px 0; /* Adjusted padding */
             text-align: center;
-            /* background: linear-gradient(to right, #1a1a1a, #0e0e0e); /* OLD - Replaced by image and overlay */
-            /* IMPORTANT: Replace with your actual hero image URL */
-            background-image: url('https://via.placeholder.com/1920x1080.png/0E0E0E/00FF99?text=Your+Green+Hero+Image');
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            position: relative; /* For overlay positioning */
-            border-bottom: 2px solid #00ff99;
-            color: #FFFFFF; /* Ensure text is white by default on hero */
+            position: relative; 
         }
-        .masthead::before { /* Overlay for text readability */
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(14, 14, 14, 0.7); /* Dark overlay, using your body bg color with alpha */
-            z-index: 1;
-        }
-        .masthead .container { /* Ensure content is above overlay */
-            position: relative;
-            z-index: 2;
-        }
-
-        .masthead h1 { 
-            font-family: 'Fira Code', monospace;
-            color: #00ff99; /* Green accent for title */
-            font-size: 3.2rem; /* Adjusted for impact with hero image */
-            text-transform: uppercase;
-            text-shadow: 0 0 8px rgba(0, 255, 153, 0.5); /* Subtle green glow */
+        .masthead .page-heading h1 { /* Renamed class for consistency with About page if needed, or use .masthead h1 */
+            font-family: 'Lora', serif;
+            color: var(--accent-color-info) !important; /* text-info for main title */
+            font-size: 3.2rem; 
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
         }
         .masthead .subheading { /* Subheading on masthead */
             font-family: 'Open Sans', sans-serif; 
-            font-size: 1.3rem; /* Increased size */
-            color: #e0e0e0; /* Brighter for readability on overlay */
-            animation: flicker 3s infinite alternate;
+            font-size: 1.3rem; 
+            color: #f8f9fa !important;
+            background-color: rgba(0, 0, 0, 0.7); /* Darker strip for contrast like About page */
+            padding: 8px 15px; 
+            display: inline-block;
+            border-radius: 5px;
+            font-style: italic; 
             margin-top: 0.5rem;
-            text-shadow: 0 0 3px rgba(0,0,0,0.7); /* Shadow for readability */
-        }
-        @keyframes flicker {
-            0%, 100% { opacity: 0.8; text-shadow: 0 0 3px #00ff99, 0 0 3px rgba(0,0,0,0.7); } 
-            50% { opacity: 1; text-shadow: 0 0 6px #00ff99, 0 0 3px rgba(0,0,0,0.7); }
+            /* Removed flicker animation to match About page style */
         }
 
-        .post-preview-intro { /* For the introductory paragraph about music */
-            margin-bottom: 3rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #444;
+        /* Intro section for the "Sonic Wallpaper" part */
+        .post-preview-intro { 
+            margin-bottom: 2.5rem;
+            padding: 1.5rem;
+            background-color: #ffffff; /* White card background */
+            border-radius: 0.25rem;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
         }
-        .post-preview-intro h2 { /* If the music intro gets its own title */
+        .post-preview-intro h2 { 
              font-size: 1.8rem; 
-            margin-bottom: 0.75rem; 
+            margin-bottom: 1rem; 
+            color: #343a40; /* Standard dark heading */
+        }
+        .post-preview-intro p {
+            line-height: 1.7; 
+            color: #495057; /* Slightly lighter than main text for differentiation if needed */
+            margin-bottom: 1rem; 
+            font-size: 1.05rem;
         }
 
-        main section p {
-            line-height: 1.7; 
-            color: #c0c0c0; 
-            margin-bottom: 1.5rem; 
-            font-size: 1.05rem; /* Slightly larger body text */
+        /* Styling for individual "Thought Items" to match light theme */
+        .thought-item { 
+            background-color: #ffffff; /* White card background */
+            padding: 2rem; 
+            border: 1px solid #dee2e6; /* Light border */
+            /* border-left: 4px solid var(--accent-color-info); Optional accent border */
+            margin-bottom: 2.5rem; 
+            border-radius: 0.25rem; 
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Subtle shadow */
         }
-        main section .thought-item { 
-            background-color: #151515; 
-            padding: 2rem; /* Increased padding */
-            border-left: 4px solid #00ff99; /* Thicker border */
-            margin-bottom: 2.5rem; /* Increased margin */
-            border-radius: 4px; 
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        main section .thought-item:hover {
-            background-color: #1f1f1f;
-            transform: translateY(-3px);
-        }
-        main section .thought-item h2.thought-title { /* More specific selector for thought titles */
-            font-size: 1.7rem; /* Adjusted */
+        .thought-item h2.thought-title { 
+            font-family: 'Lora', serif;
+            font-size: 1.7rem; 
             margin-top: 0; 
             margin-bottom: 1rem;
+            color: var(--accent-color-info); /* Accent color for thought titles */
+        }
+        .thought-item p {
+            line-height: 1.7; 
+            color: #343a40; /* Dark text for readability */
+            margin-bottom: 1rem; 
+            font-size: 1.05rem;
+        }
+        .thought-item p:last-child {
+            margin-bottom: 0;
         }
 
-        a.btn { 
-            background-color: #00ff99;
-            border: none;
-            color: #0e0e0e; 
+
+        /* Buttons - General style, can be Bootstrap's default or lightly customized */
+        a.btn-custom-accent { /* Example for a custom button if needed */
+            background-color: var(--accent-color-info);
+            border-color: var(--accent-color-info);
+            color: #ffffff; 
             font-weight: bold;
-            font-family: 'Fira Code', monospace; 
+            font-family: 'Open Sans', sans-serif; 
             transition: all 0.3s ease;
-            padding: 0.6rem 1.2rem; /* Slightly larger button */
+            padding: 0.6rem 1.2rem;
         }
-        a.btn:hover {
-            background-color: #00dd88; /* Brighter hover */
-            color: #000000; 
+        a.btn-custom-accent:hover {
+            background-color: #0b9ebd; /* Darker shade of info */
+            border-color: #0a8fad;
+            color: #ffffff; 
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 255, 153, 0.2);
         }
 
+        /* Footer styling to match "About" page (bg-light) */
         footer.site-footer { 
-            background-color: #111;
-            color: #999; 
+            background-color: #e9ecef; /* Bootstrap bg-light equivalent */
+            color: #6c757d; /* Muted text color */
             padding: 2.5rem 0; 
             text-align: center;
-            border-top: 2px solid #00ff99;
+            border-top: 1px solid #dee2e6; /* Light border top */
             margin-top: 3rem; 
-        }
-
-        .footer-content-wrapper { 
-            /* Uses Bootstrap's .container class for max-width and padding via HTML */
-        }
-
-        .footer-social-icons {
-            margin-bottom: 1.5rem; 
         }
         .footer-social-icons .list-inline-item {
             margin: 0 10px; 
         }
         .footer-social-icons .social-icon-link i {
             font-size: 1.8rem; 
-            color: #00ff99; 
+            color: #343a40; /* Dark icons for light footer */
             transition: color 0.3s ease, transform 0.3s ease;
         }
-        .footer-social-icons .social-icon-link:hover i { /* General hover for all icons */
-            color: #ffffff; 
-            transform: scale(1.15); /* Slightly more pop */
-        }
-         .footer-social-icons .social-icon-link:focus i { 
-            outline: 2px solid #00ff99;
-            outline-offset: 3px;
-            border-radius: 2px; 
-        }
-
-        .footer-legal-links {
-            margin-bottom: 1rem;
-        }
-        .footer-legal-links .list-inline-item {
-            margin: 0 7px; 
+        .footer-social-icons .social-icon-link:hover i {
+            color: var(--accent-color-info); /* Accent color on hover */
+            transform: scale(1.15); 
         }
         .footer-legal-links a {
-            color: #00ff99; 
+            color: #343a40; /* Dark links */
             text-decoration: none;
             font-size: 0.9rem;
-            transition: color 0.3s ease, text-decoration 0.3s ease;
         }
         .footer-legal-links a:hover {
-            color: #ffffff; 
+            color: var(--accent-color-info); 
             text-decoration: underline;
         }
-
         .footer-copyright-poweredby {
             font-size: 0.85rem;
-            color: #aaa; 
-            line-height: 1.5;
+            color: #6c757d; 
         }
         .footer-copyright-poweredby .powered-by-link { 
-            color: #00ff99;
+            color: #343a40; /* Dark link */
             text-decoration: none;
-            transition: color 0.3s ease, text-decoration 0.3s ease;
         }
         .footer-copyright-poweredby .powered-by-link:hover {
-            color: #ffffff;
+            color: var(--accent-color-info);
             text-decoration: underline;
-        }
-        .footer-copyright-poweredby span.separator { 
-            margin: 0 8px;
-            color: #777;
         }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top"> {/* Added fixed-top for consistency */}
         <div class="container">
             <a class="navbar-brand" href="index.html">I TYPE, WHAT I LIKE</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -313,64 +302,86 @@
     </nav>
 
     <header class="masthead">
-        <div class="container"> 
-            <h1>RAW THOUGHTS, NO CHASER</h1>
-            <p class="subheading">Stray musings, sharp truths, and the occasional existential Molotov.</p>
+        <div class="container position-relative px-4 px-lg-5"> {/* Added classes from About page masthead for consistency */}
+            <div class="row gx-4 gx-lg-5 justify-content-center"> {/* Added classes from About page masthead */}
+                <div class="col-md-10 col-lg-8 col-xl-7"> {/* Added classes from About page masthead */}
+                    <div class="page-heading"> {/* Mirrored class structure from About page */}
+                        <h1>RAW THOUGHTS, NO CHASER</h1>
+                        <p class="subheading">Stray musings, sharp truths, and the occasional existential Molotov.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
     <main class="container my-5">
-        <section>
-            <div class="post-preview-intro">
-                <h2 class="post-title">The Sonic Wallpaper of My Skull</h2>
-                <p>
-                    Let's be real: your playlist is your biography set to a beat. What you blast in your headphones, what rattles your car windows, what seeps into the silent hum of your code – that’s not just background noise, that's your soul's OCR scan getting transcribed note by bloody note.
-                    <br><br>
-                    Music isn't just mood; it's a mirror. It syncs with the glorious chaos in our heads, the jagged rhythm of our heartbreaks, the relentless loops of our obsessions (yeah, recursion, I'm looking at you again, you beautiful, infuriating bastard). It’s the energy, the vibe, the unspeakable truth thumping through the bassline like a secret code.
-                    <br><br>
-                    My own sonic journey? A glorious mess. Picture a kid mainlining 80s angst via The Cure, then flipping the tape to summon Jim Morrison’s ghost before breakfast. Some dawns broke with the velvet insurgency of smooth jazz; others rode in on the raw, unapologetic pulse of gangster rap. "Eclectic" doesn't quite cut it. "Symphony of a beautifully fractured mind" might be closer. But every track, every genre switch, every volume crank was a clawing for one thing: to make the inside *audible*. To give the ghosts a soundtrack.
-                </p>
+        <section> {/* Removed col-md-10 etc. from here, content blocks will control width */}
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="post-preview-intro">
+                        <h2>The Sonic Wallpaper of My Skull</h2> {/* Consistent heading tag */}
+                        <p>
+                            Let's be real: your playlist is your biography set to a beat. What you blast in your headphones, what rattles your car windows, what seeps into the silent hum of your code – that’s not just background noise, that's your soul's OCR scan getting transcribed note by bloody note.
+                            <br><br>
+                            Music isn't just mood; it's a mirror. It syncs with the glorious chaos in our heads, the jagged rhythm of our heartbreaks, the relentless loops of our obsessions (yeah, recursion, I'm looking at you again, you beautiful, infuriating bastard). It’s the energy, the vibe, the unspeakable truth thumping through the bassline like a secret code.
+                            <br><br>
+                            My own sonic journey? A glorious mess. Picture a kid mainlining 80s angst via The Cure, then flipping the tape to summon Jim Morrison’s ghost before breakfast. Some dawns broke with the velvet insurgency of smooth jazz; others rode in on the raw, unapologetic pulse of gangster rap. "Eclectic" doesn't quite cut it. "Symphony of a beautifully fractured mind" might be closer. But every track, every genre switch, every volume crank was a clawing for one thing: to make the inside *audible*. To give the ghosts a soundtrack.
+                        </p>
+                    </div>
+                </div>
             </div>
             
-            <div class="thought-item" id="two-altars"> 
-                <h2 class="thought-title">Two Altars, One Truth!</h2> 
-                <p>
-                    I have stood in the smoke of burning incense, watching blood darken the soil as elders murmured the names of those who came before me. I have lifted a calabash to my lips, felt the thick, bitter taste of umqombothi coat my tongue, and swallowed the weight of tradition. I have clapped my hands, stomped my feet, and called on ancestors whose names live only in the mouths of the old.
-                    And then, just as the fire cracked and the meat sizzled, someone started a hymn. “There is power in the blood of the Lamb!” The same hands that held the blade to a goat’s throat now raised themselves in worship. Drunken voices, thick with belief and contradiction, declared that Jesus is the only way.
-                    I grew up here. Between two worlds. Between libations poured for those beneath the soil and prayers whispered to the man who walked on water. Between bones thrown in the dust and a Bible laid on a wooden table. I grew up watching my people give offerings to ancestors and then kneel in church, ashamed of the very rituals they performed the night before.
-                    What are we? A people torn between who we were and who we were forced to become. A people who fear turning our backs on the old ways but also fear hell for not embracing the new. We are a prayer with two tongues, a faith split down the middle, bleeding both ways.
-                    And maybe that’s why, no matter how loud we sing, neither God nor our ancestors answer us the way we wish they would.
-                </p>
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="thought-item" id="two-altars"> 
+                        <h2 class="thought-title">Two Altars, One Truth!</h2> 
+                        <p>
+                            I have stood in the smoke of burning incense, watching blood darken the soil as elders murmured the names of those who came before me. I have lifted a calabash to my lips, felt the thick, bitter taste of umqombothi coat my tongue, and swallowed the weight of tradition. I have clapped my hands, stomped my feet, and called on ancestors whose names live only in the mouths of the old.
+                            And then, just as the fire cracked and the meat sizzled, someone started a hymn. “There is power in the blood of the Lamb!” The same hands that held the blade to a goat’s throat now raised themselves in worship. Drunken voices, thick with belief and contradiction, declared that Jesus is the only way.
+                            I grew up here. Between two worlds. Between libations poured for those beneath the soil and prayers whispered to the man who walked on water. Between bones thrown in the dust and a Bible laid on a wooden table. I grew up watching my people give offerings to ancestors and then kneel in church, ashamed of the very rituals they performed the night before.
+                            What are we? A people torn between who we were and who we were forced to become. A people who fear turning our backs on the old ways but also fear hell for not embracing the new. We are a prayer with two tongues, a faith split down the middle, bleeding both ways.
+                            And maybe that’s why, no matter how loud we sing, neither God nor our ancestors answer us the way we wish they would.
+                        </p>
+                    </div>
+                </div>
             </div>
             
-            <div class="thought-item" id="the-lesson">
-                <h2 class="thought-title">The Lesson</h2>
-                <p>
-                    I’m not angry… not at you, not at fate, <br>
-                    not at the knife you slid between my ribs, <br>
-                    slow, deliberate, like a lover’s hand <br>
-                    tracing the spine of a dying romance. <br>
-                    <br>
-                    You only taught me what I needed to know, <br>
-                    that trust is a borrowed cigarette, <br>
-                    lit in the wind, smoked too fast, <br>
-                    burning out before warmth ever settles. <br><br>
-                    I should’ve known better… now I do.<br>
-                    Your betrayal wasn’t a wound, <br>
-                    just a lesson written in blood, <br>
-                    signed with a smirk… and silence.<br><br>
-                    No hard feelings… just a closed door.<br><br>
-                </p>
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="thought-item" id="the-lesson">
+                        <h2 class="thought-title">The Lesson</h2>
+                        <p>
+                            I’m not angry… not at you, not at fate, <br>
+                            not at the knife you slid between my ribs, <br>
+                            slow, deliberate, like a lover’s hand <br>
+                            tracing the spine of a dying romance. <br>
+                            <br>
+                            You only taught me what I needed to know, <br>
+                            that trust is a borrowed cigarette, <br>
+                            lit in the wind, smoked too fast, <br>
+                            burning out before warmth ever settles. <br><br>
+                            I should’ve known better… now I do.<br>
+                            Your betrayal wasn’t a wound, <br>
+                            just a lesson written in blood, <br>
+                            signed with a smirk… and silence.<br><br>
+                            No hard feelings… just a closed door.<br><br>
+                        </p>
+                    </div>
+                </div>
             </div>
 
-            <div class="thought-item" id="faithful-failing">
-                <h2 class="thought-title">Faithful, but Failing</h2>
-                <p>
-                    You don’t cheat, congratulations. You kept your hands to yourself, but did you keep your heart open? You stayed, but did you show up? You were present, but did you participate?
-                    Love is not a courtroom where fidelity is your only defense. You think not stepping out makes you step up? No. You can be faithful and still be a storm your partner has to survive.
-                    Because what is loyalty if your love is lazy… if your words cut… if your silence drowns… if your presence feels like absence? What is faith if the only thing you give is yourself, only when it’s convenient, only when it doesn't cost you?
-                    So, I ask again: what is loyalty if it’s not love in action? What is it really worth?
-                </p>
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="thought-item" id="faithful-failing">
+                        <h2 class="thought-title">Faithful, but Failing</h2>
+                        <p>
+                            You don’t cheat, congratulations. You kept your hands to yourself, but did you keep your heart open? You stayed, but did you show up? You were present, but did you participate?
+                            Love is not a courtroom where fidelity is your only defense. You think not stepping out makes you step up? No. You can be faithful and still be a storm your partner has to survive.
+                            Because what is loyalty if your love is lazy… if your words cut… if your silence drowns… if your presence feels like absence? What is faith if the only thing you give is yourself, only when it’s convenient, only when it doesn't cost you?
+                            So, I ask again: what is loyalty if it’s not love in action? What is it really worth?
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -415,10 +426,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Custom JavaScript for your blog - Monday, May 26, 2025
-        console.log("Mind Dumps & DayDreams: Synapses firing. Page loaded. You're welcome.");
+        // Custom JavaScript for your blog
+        console.log("Mind Dumps & DayDreams: Re-skinned. Page loaded.");
 
-        // Simple script to set current year in footer, if you prefer it dynamic
+        // Simple script to set current year in footer
         document.addEventListener('DOMContentLoaded', function() {
             const yearSpan = document.getElementById('currentYear');
             if (yearSpan) {
@@ -427,4 +438,4 @@
         });
     </script>
 </body>
-</html>
+                            </html>
