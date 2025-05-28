@@ -15,7 +15,7 @@
         :root {
             --primary-bg: #0e0e0e;
             --secondary-bg: #1c1c1c; /* Navbar, Footer */
-            --tertiary-bg: #222;   /* Masthead (non-hero), Form inputs */
+            --tertiary-bg: #222;     /* Masthead (non-hero), Form inputs */
             --tertiary-bg-lighter: #2a2a2a; /* For cards, distinct sections */
             --accent-color: #ffc107;
             --accent-hover: #e0a800;
@@ -125,13 +125,15 @@
 
         /* Hero Section (Index Page Masthead) */
         .hero-section {
-            padding: calc(var(--header-padding-y) + 2rem) 0; 
+            padding: calc(var(--header-padding-y) + 2rem) 0;  
             background-image: url('https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Neon%20Halo%20Portrait%20with%20Digital%20Overlays.png');
-            background-size: cover;
+            background-size: contain; /* MODIFIED: Was cover */
             background-position: center center;
-            background-repeat: no-repeat;
+            background-repeat: no-repeat; /* Ensures no tiling if image is smaller */
             position: relative;
             color: white; /* Text color for hero */
+            /* You might want to set a specific background-color here if the overlay doesn't cover all cases */
+            /* e.g., background-color: var(--primary-bg); */
         }
         .hero-overlay {
             position: absolute;
@@ -193,8 +195,10 @@
         .post-preview-card .card-img-top {
             border-top-left-radius: 0.375rem;
             border-top-right-radius: 0.375rem;
-            object-fit: cover; /* Ensures image covers area */
-            max-height: 200px; /* Or desired height */
+            object-fit: contain; /* MODIFIED: Was cover - Ensures image is fully visible */
+            max-height: 200px; 
+            width: 100%; /* ADDED: Ensure image element takes full width for contain to work as expected */
+            background-color: var(--primary-bg); /* ADDED: Background for letterboxing if image aspect ratio differs */
         }
         .post-preview-card .card-body {
             padding: 1.5rem;
@@ -489,4 +493,4 @@
         */
     </script>
 </body>
-                                                                                   </html>
+</html>
