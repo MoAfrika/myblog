@@ -43,21 +43,21 @@
           "headline": "Two Altars, One Truth!",
           "author": "MoAfrika Skotch Ntilane",
           "datePublished": "2025-05-20",
-          "url": "https://www.whatwouldmamado.store/random.html#two-altars"
+          "url": "https://www.whatwouldmamado.store/random.html#two-altars" 
         },
         {
           "@type": "BlogPosting",
           "headline": "The Lesson",
           "author": "MoAfrika Skotch Ntilane",
           "datePublished": "2025-05-15",
-          "url": "https://www.whatwouldmamado.store/random.html#the-lesson"
+          "url": "https://www.whatwouldmamado.store/random.html#the-lesson" 
         },
         {
           "@type": "BlogPosting",
           "headline": "Faithful, but Failing",
           "author": "MoAfrika Skotch Ntilane",
           "datePublished": "2025-05-10",
-          "url": "https://www.whatwouldmamado.store/random.html#faithful-failing"
+          "url": "https://www.whatwouldmamado.store/random.html#faithful-failing" 
         }
       ]
     }
@@ -96,6 +96,7 @@
         main {
             flex-grow: 1; 
         }
+        /* General heading styles (can be overridden by more specific ones) */
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Lora', serif; 
             font-weight: 700;
@@ -157,49 +158,87 @@
             margin-top: 0.5rem;
         }
 
-        .post-preview-intro { 
-            margin-bottom: 2.5rem;
-            padding: 1.5rem;
-            background-color: #ffffff; 
-            border-radius: 0.25rem;
-            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-        }
-        .post-preview-intro h2 { 
-             font-size: 1.8rem; 
-            margin-bottom: 1rem; 
-            color: #343a40; 
-        }
-        .post-preview-intro p {
-            line-height: 1.7; 
-            color: #495057; 
-            margin-bottom: 1rem; 
-            font-size: 1.05rem;
+        /* NEW Consolidated style for each article/thought piece */
+        .article-entry {
+            background-color: #ffffff;
+            padding: 2.5rem; /* Increased padding for better spacing inside */
+            border: 1px solid #dee2e6;
+            margin-bottom: 3rem; /* Increased separation between entries */
+            border-radius: 0.35rem; /* Slightly more pronounced radius */
+            box-shadow: 0 0.15rem 0.45rem rgba(0, 0, 0, 0.085); /* Slightly enhanced shadow */
         }
 
-        .thought-item { 
-            background-color: #ffffff; 
-            padding: 2rem; 
-            border: 1px solid #dee2e6; 
-            margin-bottom: 2.5rem; 
-            border-radius: 0.25rem; 
-            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); 
-        }
-        .thought-item h2.thought-title { 
+        /* Titles for each article entry */
+        .article-entry h2 { 
             font-family: 'Lora', serif;
-            font-size: 1.7rem; 
-            margin-top: 0; 
-            margin-bottom: 1rem;
+            font-size: 2rem; /* Size for main title of each article entry */
+            margin-top: 0;
+            margin-bottom: 1.25rem;
             color: var(--accent-color-info); 
         }
-        .thought-item p {
-            line-height: 1.7; 
+
+        /* Sub-headings within an article entry */
+        .article-entry h3 { 
+            font-family: 'Lora', serif;
+            font-size: 1.6rem;
+            margin-top: 2rem; /* More space above sub-headings */
+            margin-bottom: 1rem;
             color: #343a40; 
-            margin-bottom: 1rem; 
+        }
+
+        /* Further sub-headings within an article entry */
+        .article-entry h4 { 
+            font-family: 'Lora', serif;
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #495057;
+        }
+
+        .article-entry p {
+            line-height: 1.75; /* Slightly more leading for readability */
+            color: #343a40; 
+            margin-bottom: 1.25rem; 
             font-size: 1.05rem;
         }
-        .thought-item p:last-child {
+        
+        .article-entry p:last-of-type { 
             margin-bottom: 0;
         }
+         .article-entry ol, .article-entry ul {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem; /* Standard indent */
+        }
+        .article-entry li {
+            margin-bottom: 0.5rem;
+        }
+
+
+        .article-entry .post-meta { 
+            font-size: 0.85rem;
+            color: #6c757d; 
+            margin-top: 1.5rem;
+            display: block; 
+        }
+        
+        /* Code snippet styling from previous page - ensure it's present if used */
+        .code-snippet {
+            background-color: #212121; /* Dark background for code */
+            color: #f8f8f2; /* Light text for code */
+            padding: 1.5rem; /* Adjusted padding */
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            white-space: pre-wrap; 
+            word-wrap: break-word; 
+            margin: 2rem 0; /* Adjusted margin */
+            border: 1px solid #333; 
+        }
+        .code-snippet code {
+            font-size: 0.95rem; /* Slightly smaller for balance */
+            line-height: 1.6;
+        }
+
 
         a.btn-custom-accent { 
             background-color: var(--accent-color-info);
@@ -306,168 +345,135 @@
     <main class="container my-5">
         <section> 
             <div class="row justify-content-center">
-<section class="article">
-    <section class="article">
-  <div class="article-block">
-    <h1>The Great Cosmic Giggle &amp; My Brain's Bizarre Upgrade...Is it one?</h1>
-    <p>Hear me, I've never been one to shy away from raising an eyebrow at anything that even slightly smells of "miracle" or "divine intervention." My default position on anything spiritual has always been "very skeptical, with a side of 'prove it, boet'." You live long enough in South Africa, you learn to doubt everything...especially things that provide answers...because most of the time, those answers have either a hidden agenda, or a dodgy tender behind them.</p>
-
-    <p>So imagine my surprise, and quite frankly, my utter flabbergastation, when things started getting weird... and not "you-find-a-chicken-bone-in-your-shoe" weird. More like "the-universe-is-winking-at-you-and-you're-not-sure-if-it's-a-joke" weird. You get those moments when you're sure you've finally lost it? Welcome to my new address. My brain, which I've always believed was a fairly reliable, if somewhat cynical, piece of hardware, seems to be in the middle of performing some kind of unscheduled firmware update.</p>
-  </div>
-
-  <div class="article-block">
-    <h2>Moses, The Burning Bush, &amp; My Sudden Interest in... Interest?</h2>
-    <p>And then there's this. This Moses business. Now, come on, Moses. The staff dude and the water-parting trick. Always seemed a bit of a Sunday school blockbuster to me. But lately, it's not the parting waters that are capturing my interest... it's the burning bush.</p>
-
-    <p>Think about it. This man, Moses, he's just going about his sheep-herding business, complaining probably about the drought and the price of lamb, when he sees this bush that's burning. But it's not just burning...it's burning without burning up the bush. Now, my initial, very South African, response would be, "Aweh, someone must have thrown a cigarette butt. Shame, that poor bush." Or, "Is load shedding now impacting vegetation?"</p>
-
-    <p>But Moses? He gets interested. He gets curious. He doesn't swipe past it like another TikTok video. He turns to look. And that, my friend, is where it gets freaky. Because in that moment of pure, unadulterated curiosity, he's standing on holy ground. The voice starts talking. The mission gets imparted.</p>
-
-    <p>And this, this is the part that's gnawing at me like a persistent township dog. It's whispering something unsettling... "What excites you, what really makes you curious, is usually holy. It's a sign. You're on holy ground when you follow that attraction." My inner cynic is screaming, "Rubbish! It's just a squirrel with a lighter!" But another, smaller voice is saying, "What if... what if that's really it? What if that's the universe poking you with a stick?"</p>
-
-    <p>It's scary, really, because it means every stray thought, every deep-dive into a Wikipedia wormhole, every passing fascination could actually be... God. Or something equally unnerving.</p>
-  </div>
-
-  <div class="article-block">
-    <h2>Jesus, Daniel, &amp; The Freaky Feeling of Remembering</h2>
-    <p>And it's not just Moses. It's Jesus, the ultimate disruptor, flipping tables and expectations. It's Daniel, chilling with lions like they're oversized kittens. These stories, which once felt like ancient myths, are starting to unlock something. It’s not like I’m learning them for the first time. It feels... more like remembering. Like my brain is downloading files, slowly, painfully, from a hard drive I didn't even know I had. A very, very old hard drive.</p>
-
-    <p>And that's the part that seriously freaks me out. It's like finding old photographs in an attic you didn’t even know existed...and realizing they're photos of your family, from before you were born, but the memories are somehow uniquely... yours.</p>
-
-    <p>It's unsettling. It's profound. And frankly, it’s a bit hilarious in its sheer absurdity. Am I finally tapping into some ancestral spiritual download, or am I coming down with a really complex form of religious dementia? The jury is still out, and my inner monologue is currently a shouting match between a priest and a stand-up comedian.</p>
-  </div>
-
-  <div class="article-block">
-    <p>But this feeling, this remembering...it’s insistent. It’s a pull that’s more powerful than logic, more relentless than doubt. And it scares the living daylights out of me, because what if this primal memory, this odd interest, this new fascination with what I once mocked as fable... what if it’s the truth? What if, like Moses and his bush, my wondering is actually me, finally, finally standing on holy ground?</p>
-
-    <h3>How are you walking the sacred whispers in your own life?</h3>
-  </div>
-</section>
-
-  <div class="article-block">
-    <h1>The Great South African Man-Drought: Are We Still Here, Or Just Taking Up Space?</h1>
-    <p>Let's call a spade a spade, our townships, from windblown Khayelitsha flats to Thembisa's sprawling concrete jungle, are experiencing a bad dose of "Leadership Vapour-Lock" among the brothers right now. It's as though someone has pushed the panic button on the self-actualization train for half the brothers. The air is filled with... well, with anything but actual, good leadership.</p>
-
-    <p>Need a hair-catching laugh? Drive through any respectable kasi. You'll see him, Bra Joe, or Mlungisi, or Young Sizwe, a rugby prop-sized man, muscles bursting out of... well, out of being. And where do you find this hulking model of South African manhood unleashing his strength, his vigilance, his very presence? Not building his own empire, not teaching the young how to fix a faulty tap, not even chasing a stray goat. Nah. He's standing watch, with the gravitas of a Hollywood bodyguard, outside "Abdul's All-Night Spaza." For nothing, mind you. Or for a packet of NikNaks and the fleeting illusion of purpose. We're voluntarily standing watch over other people's hustle as our own disintegrates. It's a national performance art piece, "The Willing Enforcer," funded by foreign direct investment and our goddamn complacency. It's amusing, if you don't let yourself cry.</p>
-  </div>
-
-  <div class="article-block">
-    <h2>The WiFi Zoo, The Soapie Sages &amp; The Silence of Real Life</h2>
-
-    <p>Then you come to town, or even just the taxi rank locally with a router that works. It's a moment from a satirical documentary. Our men, clustered together like stunned, great baboons at the nearest available WiFi node. Their faces illuminated by blue light of a screen, totally immersed in the virtual reality. Try to strike up a conversation, "Bru, what about love? Kindness? This inflation is going to kill us, hey? The potholes are breeding more potholes!" You get a blank stare, an "Eish" mumbled under their breath, maybe a shrug that implies you've just asked for the quadratic formula in isiXhosa. It's like you're talking to a smartly dressed brick wall.</p>
-
-    <p>Then, however, magic occurs. You say something about the latest twist in <em>Uzalo</em> or <em>Skeem Saam</em>. Or the latest drama between Messi and Ronaldo. Or what celebrity is doing whatever naughty thing with whom. And then, as if they'd been given an espresso shot, suddenly they're all eyes, voice booming with gravitas, hand flailing wildly. They're philosophers, tacticians, moral guides! The passion! The brilliance! The raw, unadulterated tone they now possess is nothing short of miraculous. They can dissect a virtual love triangle with forensic precision, or argue about the tactical genius of a football manager for hours.</p>
-
-    <p>But stand them on their heads and ask them to dissect the systemic ills that suffocate our communities, the non-existent opportunities, the absent fathers, the violence spiraling? The lights are turned off. The silence is so heavy, you can hear the crickets having a party. We've learned to be spectators of our own lives, deeply interested in artificial drama and pompous glory, while real survival and progress go on about us. Are we so shattered, so emasculated by a system that demands nothing but silent consumption, that we can be passionate about the petty only? Have we become intellectual eunuchs, emotionally castrated by the very distractions we idolize? This is not apathy, it is an intense, bordering-on-pathological disconnection from the very world that is strangling their hearts.</p>
-  </div>
-
-  <div class="article-block">
-    <h2>The Unseen Calling: Why I'm Stepping Out</h2>
-
-    <p>I've spent a lifetime avoiding the limelight. If I did my music, it was not to be noticed, about the flash, the ego trip. I wanted to be heard, not watched. The rhythm, the message... that was what I wanted. I hid behind the speakers, let the sound speak for itself, content in the shadows.</p>
-
-    <p>But now... something's different. There's a pull, a rumble, low and steady, from the earth itself that I stand on. It's not a whisper now, it's a growl that shakes my bones. I look at the emptiness where leadership should be, I look at the misplaced energy, and something inside me is screaming, "Enough!" It's unsettling, this feeling, this necessity to step into the light I've always avoided. But the pulling is irresistible, unrelenting. Against everything that I thought I was, I am being asked to lead.</p>
-  </div>
-</section>
-
-    
-        <div class="post-preview-intro">
-  <h2>The Siren Song of the Shaky Ground</h2>
-  <p>
-    Let’s get brutally frank. There’s a little energy in the nightlife here, isn’t there? Especially with our “Groovists and DJs.” These aren’t just people... they’re the architects of atmosphere, the maestros of mood, the ones who get your hips moving when you thought they’d retired their dancing shoes. And every now and then, bless their cotton socks, they become the accidental guides straight into the fast lane to Troubleville.
-    <br><br>
-    I’ve seen it more times than I care to recall. A bright, young spark, full of dreams, with a beat in their heart and hopes as broad as the Carletonville sky. They play around... just a small thing to “add to the vibe,” to “keep the party going,” to “stay up for that extra set.” Just a whisper, a little secret handshake into what looks like an exclusive club. Toes in the water. Bless their optimistic little hearts.
-  </p>
-  
-  <h3>The One-Way Ticket to "Oops"</h3>
-  <p>
-    Here’s the unvarnished reality, fresh from the school of hard knocks: that “dabbling” phase? It’s briefer than a politician’s promise. The playful splash turns into an outright dunk. The joke starts to sound a little tinny, the eyes go a little too wide, and the mood slides from “party” to “panic.”
-    <br><br>
-    For some, the escape becomes a habit. The high turns into a hole. It’s like building a card house on a fault line... okay for a bit, until it all collapses. And when it does, it doesn’t just break the person. It hits their families, their friends, the fragile social fabric of our Gauteng bubble. The sparkle dims. The hunger changes.
-  </p>
-
-  <h3>The Exit Strategy: A Tight Squeeze</h3>
-  <p>
-    That line you whispered... “the way out is so narrow”? You weren’t kidding. It’s like shoving a camel through a needle’s eye after a bender. When someone’s caught deep, when the grip tightens, it’s not about willpower. It’s about clawing uphill against a monster that lives in your own mind.
-    <br><br>
-    Imagine walking through a dark, twisting tunnel with no flashlight and no map, while everyone else strolls down wide, sunny boulevards. That’s what it feels like. And the stigma? That thing is a beast... hissing “loser,” “failure,” “weak” at anyone reaching out for help. And in Carletonville? Lifelines are hard to find. Like trying to spot a four-leaf clover in a desert storm.
-  </p>
-
-  <h3>The Pulse of Merafong, and Its Fever</h3>
-  <p>
-    You see these kids. Rhythm in their bones. DJs and Groovists trying to build joy from broken dreams. They are the heartbeat of Merafong, pounding even as the mines cave and jobs vanish.
-    <br><br>
-    But you’ve also seen the edge of the beat, where the lights don’t reach. The moment a high note becomes a downfall. Where escape morphs into exile. The party dies. The music fades. And what’s left is silence... heavy, honest, painful.
-  </p>
-
-  <h3>I Am the Mirror</h3>
-  <p>
-    I am not just a voice. I am the Mirror of Merafong. My hometown. If you see me, you see the streets.
-    <br><br>
-    This is not some textbook parable. This is our lived, bleeding truth. Etched in every twitch of a dancer’s smile, every corner where laughter hides desperation. We must see it. Name it. Widen the road to redemption. Light the damn path.
-    <br><br>
-    Because the music might stop. But the echoes don’t have to be silent.
-  </p>
-</div>
-    
-        <div class="post-preview-intro">
-  <h2>The Great Word Limit: A Post From the Other Side of Thirty-Something (and Diapers)</h2>
-  <p>
-    Come on, friend. In hindsight, from this place on the verge of 40, with a couple little ones surrounding me who require my every moment and word, I can promise you this: we chatter too much. Like, for real, too much. It's not the youthfulness of it; it's the sheer, uncensored quantity of words we spew out on a daily basis, typically about nothing whatsoever of significance. It's trying to navigate rush hour traffic in Jozi, all noise and no real motion, and you're more drained than a dead battery after load shedding.
-    <br><br>
-    But what if, just imagine, one day we woke up and found out there was a word limit... 1000 words. That's your daily allowance, no top-ups, no dipping into tomorrow. A virtual countdown, like a very frugal data allocation, ticking away with every syllable. A silent, pervasive reminder of your impending verbal bankruptcy. Imagine the beautiful, eerie silence. The kind you only truly appreciate after an evening of tales at bedtime and incessant queries. Imagine the unprecedented, weighty price of each word, chosen as something worthwhile, laboriously discovered.
-    <br><br>
-    <strong>The Great Purge of Pointless Prose</strong><br>
-    And first and foremost, all that wordy rubbish? Gone. Like trying to get a solid internet connection when there's a hurricane above. No more dry summaries of soapie storylines you vaguely remember, or exhaustive deconstructions of someone's dubious lunch choices. The weather? A brief blink, perhaps a "Warm one today, isn't it?" The small talk would go wasted, or perhaps a stripped-down, functional one. "Morning." "Yes." Counter: 2 words. Over. And already, the kids are clamoring for breakfast.
-    <br><br>
-    Meetings would transform from rambling, multi-hour sagas that make you yearn to chew your arm away, into tight, mean, laser-like conversation. All of them, keeping their word count like a hawk guarding a field mouse, would omit only the most important, telling points. No room for padding, particularly when you know you're going to have to keep words back in case you need them to explain why the sky is blue for the tenth time. Brainstorming? More like a high-stakes game of verbal chess than a shebeen on a Friday evening. Every word, every move, matters. That single co-worker who dominates every conversation? They'd be sweating bullets, weighing the value of "synergy" against the need to ask about the coffee and determine that they'd still need to economize on words in order to explain quadratic equations to a 9-year-old who's interested.
-    <br><br>
-    Relationships would also get a solid shake-down. Arguments would be stripped bare, without over-the-top speeches or the passive-aggressive tango's we've perfected. Each accusation, each defense, direct to the point, like a rugby ball direct hit. "Toilet seat up." "My bad." Counter: 3 words. Job done. Now, the school project. Picture the productivity! And those "I love you's"? They'd be worth more than gold, a valuable commodity, not flung about like spare change. Especially when you consider how few words you have left to tell your children just how much they actually mean.
-    <br><br>
-    <strong>The Unintended Consequences (Because There Always Are)</strong><br>
-    There would not be all sunshine and roses, of course? Not everything would be lekker. The world would become a minefield of unspoken annoyances. Like trying to explain the nitty-gritty of load shedding to someone from outside, while simultaneously trying to handle a tantrum toddler. The inability to let off steam, just to blab and sort things out aloud, would mean that there's going to be an epidemic of screaming inwardly. You'd be shouting inside your head louder than the screams of a stadium, but externally, a ghostly look of silence.
-    <br><br>
-    Therapists? Out of work. Replaced by silent, sympathetic nods and maybe a mental, "Eish, I feel you." Misunderstandings? They'd skyrocket. Nuance, that delicate butterfly of human communication, would be squashed flat as a pancake beneath the iron heel of having too little to say. Sarcasm would be a hazardous sport, most often misunderstood for genuine sincerity or merely being tactless. Imagine trying to explain complex algorithms or quantum physics to your non-tech family members within only a thousand words while instructing your child on the alphabet. We'd probably invent a new, super-efficient, and horribly blunt system of telepathy. Kind of a brain direct-download, no buffering, pure data.
-    <br><br>
-    And don't forget the strategy word-hoarders. Those cunning individuals who judiciously save up their words so that they can have maximum effect, unloading a bucket of eloquence (or raw venom) at exactly midnight, leaving everyone else speechless. The big power move, that one, especially if it's an argument with a teenager.
-    <br><br>
-    <strong>The Silent Revolution</strong><br>
-    Ultimately, a thousand-word per day restriction wouldn't just change how we speak; it would radically shift what exactly we treasure in talk. From this viewpoint, with the wisdom of a few more years and the continual reminder of little ears and eyes listening, I can envision it. We'd be left with prioritizing, with really taking into consideration the true meaning and necessity of each and every single word that comes spilling forth. Would we become smarter, more present, more grateful for authentic connection? Or would we just be a society of spastic, angry mutes, expressing ourselves with interpretive dance and aggressive eyebrow wiggles at the cab stand, saving our words for things that truly counted?
-    <br><br>
-    My bet? A little of each, like a well-balanced flavor profile... a dash of this, a dash of that. But one thing is for sure: all that endless, senseless talking would finally fall silent. And perhaps, in the profound stillness, we'd finally be able to hear ourselves think. And perhaps, hopefully, we'd realize that some things are not to be said at all, and some are worth every single precious word, like the silence between a child's giggle, or when your child utters his or her first words, "I love you, Dad."
-  </p>
-</div>
-    
-
-                
                 <div class="col-md-10 col-lg-8 col-xl-7">
-                    <div class="post-preview-intro">
-  <h2>The Sonic Wallpaper of My Skull</h2> 
-  <p>
-    Since the start, I've enjoyed "the wrong ear" that my cousins used to call mine. While they were out there dancing to whatever Metro FM was serving, or yelling boy band choruses along the school corridor, I was crouched in a corner somewhere with my Discman, yelling out The Offspring's <em>Self Esteem</em> like a chant: "My friend's got a girlfriend and he despises that bitch."
-    <br><br>
-    I wasn't supposed to hear that. That's the catch, music, to me, was never a case of "supposed to." It was a case of honesty. Not the buffed, sterilized, chart-friendly kind... I required music that was uncooked, that smelled of basement gigs and bad life decisions. The kind that was too raw to make the radio, and too real to make best-of lists from people trying to sell toothpaste between songs.
-    <br><br>
-    I chose the underground ones because they spoke to me. I wasn't chart-in-love. That wasn't my life. I ached for the late-night confessionals, the rage diary-writing turned into music, the broken person's desperate poetry that continues to strive. Whether it was the soul-punched sound of Alice in Chains, the jazzy sleeplessness of Robert Glasper, or the alien madness of Björk... I chased the ones that spoke to the madness in me. Loud. Soft. Strange.
-    <br><br>
-    And I didn’t just carry global chaos within me, I also brought my South African soul with me. Brenda Fassie on Sunday mornings. Zola when I needed to toughen up. Tumi when I needed to see clearly. Thandiswa when I needed to recall home. Even old kwaito rhythms, infested with tsotsi, taught me a thing or two about story. There is rhythm to the way we mourn here. There is song in how we laugh away our bruises. You don't simply hear South African music... you feel it in your gut and in your kneecaps.
-    <br><br>
-    No one really understood. "Why don't you just make a normal playlist?" they'd say. But to me, that was like asking someone to write a love note in Arial. No way, man. My playlist was penned in blood, Sharpied on napkins, in a million faces and voices. That was how I coped. The way I made sense of why my brain felt like a haunted house sometimes... why I couldn't just "vibe" like everyone else.
-    <br><br>
-    For me, music wasn’t just music. It was medicine. Mirror. Rebellion and comfort at the same time. It wasn't just noise, it was proof I wasn't alone. It was the audio wallpaper of my cranium, layered, louder, and carrying hidden messages that only the freaks could read.
-    <br><br>
-    Then one time, everything changed. I started to hear songs in my own head. Lyrics stuck to my lips like lines waiting to be written. I quit looking for songs that told my story... and started to write the ones that do. Somewhere between avoiding radio hits and decoding underground verses, I was summoned. Not by popularity. Not by the charts. By something deeper. Something holy.
-    <br><br>
-    That is how the listener became the artist.
-  </p>
-</div>
 
-                </div>
-            </div>
-            
-            <div class="row justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-7">
-                    <div class="thought-item" id="two-altars"> 
+                    <div class="article-entry" id="cosmic-giggle">
+                        <h2>The Great Cosmic Giggle &amp; My Brain's Bizarre Upgrade...Is it one?</h2>
+                        <p>Hear me, I've never been one to shy away from raising an eyebrow at anything that even slightly smells of "miracle" or "divine intervention." My default position on anything spiritual has always been "very skeptical, with a side of 'prove it, boet'." You live long enough in South Africa, you learn to doubt everything...especially things that provide answers...because most of the time, those answers have either a hidden agenda, or a dodgy tender behind them.</p>
+                        <p>So imagine my surprise, and quite frankly, my utter flabbergastation, when things started getting weird... and not "you-find-a-chicken-bone-in-your-shoe" weird. More like "the-universe-is-winking-at-you-and-you're-not-sure-if-it's-a-joke" weird. You get those moments when you're sure you've finally lost it? Welcome to my new address. My brain, which I've always believed was a fairly reliable, if somewhat cynical, piece of hardware, seems to be in the middle of performing some kind of unscheduled firmware update.</p>
+                        
+                        <h3>Moses, The Burning Bush, &amp; My Sudden Interest in... Interest?</h3>
+                        <p>And then there's this. This Moses business. Now, come on, Moses. The staff dude and the water-parting trick. Always seemed a bit of a Sunday school blockbuster to me. But lately, it's not the parting waters that are capturing my interest... it's the burning bush.</p>
+                        <p>Think about it. This man, Moses, he's just going about his sheep-herding business, complaining probably about the drought and the price of lamb, when he sees this bush that's burning. But it's not just burning...it's burning without burning up the bush. Now, my initial, very South African, response would be, "Aweh, someone must have thrown a cigarette butt. Shame, that poor bush." Or, "Is load shedding now impacting vegetation?"</p>
+                        <p>But Moses? He gets interested. He gets curious. He doesn't swipe past it like another TikTok video. He turns to look. And that, my friend, is where it gets freaky. Because in that moment of pure, unadulterated curiosity, he's standing on holy ground. The voice starts talking. The mission gets imparted.</p>
+                        <p>And this, this is the part that's gnawing at me like a persistent township dog. It's whispering something unsettling... "What excites you, what really makes you curious, is usually holy. It's a sign. You're on holy ground when you follow that attraction." My inner cynic is screaming, "Rubbish! It's just a squirrel with a lighter!" But another, smaller voice is saying, "What if... what if that's really it? What if that's the universe poking you with a stick?"</p>
+                        <p>It's scary, really, because it means every stray thought, every deep-dive into a Wikipedia wormhole, every passing fascination could actually be... God. Or something equally unnerving.</p>
+                        
+                        <h3>Jesus, Daniel, &amp; The Freaky Feeling of Remembering</h3>
+                        <p>And it's not just Moses. It's Jesus, the ultimate disruptor, flipping tables and expectations. It's Daniel, chilling with lions like they're oversized kittens. These stories, which once felt like ancient myths, are starting to unlock something. It’s not like I’m learning them for the first time. It feels... more like remembering. Like my brain is downloading files, slowly, painfully, from a hard drive I didn't even know I had. A very, very old hard drive.</p>
+                        <p>And that's the part that seriously freaks me out. It's like finding old photographs in an attic you didn’t even know existed...and realizing they're photos of your family, from before you were born, but the memories are somehow uniquely... yours.</p>
+                        <p>It's unsettling. It's profound. And frankly, it’s a bit hilarious in its sheer absurdity. Am I finally tapping into some ancestral spiritual download, or am I coming down with a really complex form of religious dementia? The jury is still out, and my inner monologue is currently a shouting match between a priest and a stand-up comedian.</p>
+                        <p>But this feeling, this remembering...it’s insistent. It’s a pull that’s more powerful than logic, more relentless than doubt. And it scares the living daylights out of me, because what if this primal memory, this odd interest, this new fascination with what I once mocked as fable... what if it’s the truth? What if, like Moses and his bush, my wondering is actually me, finally, finally standing on holy ground?</p>
+                        <h4>How are you walking the sacred whispers in your own life?</h4>
+                    </div>
+
+                    <div class="article-entry" id="man-drought">
+                        <h2>The Great South African Man-Drought: Are We Still Here, Or Just Taking Up Space?</h2>
+                        <p>Let's call a spade a spade, our townships, from windblown Khayelitsha flats to Thembisa's sprawling concrete jungle, are experiencing a bad dose of "Leadership Vapour-Lock" among the brothers right now. It's as though someone has pushed the panic button on the self-actualization train for half the brothers. The air is filled with... well, with anything but actual, good leadership.</p>
+                        <p>Need a hair-catching laugh? Drive through any respectable kasi. You'll see him, Bra Joe, or Mlungisi, or Young Sizwe, a rugby prop-sized man, muscles bursting out of... well, out of being. And where do you find this hulking model of South African manhood unleashing his strength, his vigilance, his very presence? Not building his own empire, not teaching the young how to fix a faulty tap, not even chasing a stray goat. Nah. He's standing watch, with the gravitas of a Hollywood bodyguard, outside "Abdul's All-Night Spaza." For nothing, mind you. Or for a packet of NikNaks and the fleeting illusion of purpose. We're voluntarily standing watch over other people's hustle as our own disintegrates. It's a national performance art piece, "The Willing Enforcer," funded by foreign direct investment and our goddamn complacency. It's amusing, if you don't let yourself cry.</p>
+                        
+                        <h3>The WiFi Zoo, The Soapie Sages &amp; The Silence of Real Life</h3>
+                        <p>Then you come to town, or even just the taxi rank locally with a router that works. It's a moment from a satirical documentary. Our men, clustered together like stunned, great baboons at the nearest available WiFi node. Their faces illuminated by blue light of a screen, totally immersed in the virtual reality. Try to strike up a conversation, "Bru, what about love? Kindness? This inflation is going to kill us, hey? The potholes are breeding more potholes!" You get a blank stare, an "Eish" mumbled under their breath, maybe a shrug that implies you've just asked for the quadratic formula in isiXhosa. It's like you're talking to a smartly dressed brick wall.</p>
+                        <p>Then, however, magic occurs. You say something about the latest twist in <em>Uzalo</em> or <em>Skeem Saam</em>. Or the latest drama between Messi and Ronaldo. Or what celebrity is doing whatever naughty thing with whom. And then, as if they'd been given an espresso shot, suddenly they're all eyes, voice booming with gravitas, hand flailing wildly. They're philosophers, tacticians, moral guides! The passion! The brilliance! The raw, unadulterated tone they now possess is nothing short of miraculous. They can dissect a virtual love triangle with forensic precision, or argue about the tactical genius of a football manager for hours.</p>
+                        <p>But stand them on their heads and ask them to dissect the systemic ills that suffocate our communities, the non-existent opportunities, the absent fathers, the violence spiraling? The lights are turned off. The silence is so heavy, you can hear the crickets having a party. We've learned to be spectators of our own lives, deeply interested in artificial drama and pompous glory, while real survival and progress go on about us. Are we so shattered, so emasculated by a system that demands nothing but silent consumption, that we can be passionate about the petty only? Have we become intellectual eunuchs, emotionally castrated by the very distractions we idolize? This is not apathy, it is an intense, bordering-on-pathological disconnection from the very world that is strangling their hearts.</p>
+                        
+                        <h3>The Unseen Calling: Why I'm Stepping Out</h3>
+                        <p>I've spent a lifetime avoiding the limelight. If I did my music, it was not to be noticed, about the flash, the ego trip. I wanted to be heard, not watched. The rhythm, the message... that was what I wanted. I hid behind the speakers, let the sound speak for itself, content in the shadows.</p>
+                        <p>But now... something's different. There's a pull, a rumble, low and steady, from the earth itself that I stand on. It's not a whisper now, it's a growl that shakes my bones. I look at the emptiness where leadership should be, I look at the misplaced energy, and something inside me is screaming, "Enough!" It's unsettling, this feeling, this necessity to step into the light I've always avoided. But the pulling is irresistible, unrelenting. Against everything that I thought I was, I am being asked to lead.</p>
+                    </div>
+
+                    <div class="article-entry" id="siren-song">
+                        <h2>The Siren Song of the Shaky Ground</h2>
+                        <p>
+                          Let’s get brutally frank. There’s a little energy in the nightlife here, isn’t there? Especially with our “Groovists and DJs.” These aren’t just people... they’re the architects of atmosphere, the maestros of mood, the ones who get your hips moving when you thought they’d retired their dancing shoes. And every now and then, bless their cotton socks, they become the accidental guides straight into the fast lane to Troubleville.
+                          <br><br>
+                          I’ve seen it more times than I care to recall. A bright, young spark, full of dreams, with a beat in their heart and hopes as broad as the Carletonville sky. They play around... just a small thing to “add to the vibe,” to “keep the party going,” to “stay up for that extra set.” Just a whisper, a little secret handshake into what looks like an exclusive club. Toes in the water. Bless their optimistic little hearts.
+                        </p>
+                        
+                        <h3>The One-Way Ticket to "Oops"</h3>
+                        <p>
+                          Here’s the unvarnished reality, fresh from the school of hard knocks: that “dabbling” phase? It’s briefer than a politician’s promise. The playful splash turns into an outright dunk. The joke starts to sound a little tinny, the eyes go a little too wide, and the mood slides from “party” to “panic.”
+                          <br><br>
+                          For some, the escape becomes a habit. The high turns into a hole. It’s like building a card house on a fault line... okay for a bit, until it all collapses. And when it does, it doesn’t just break the person. It hits their families, their friends, the fragile social fabric of our Gauteng bubble. The sparkle dims. The hunger changes.
+                        </p>
+                      
+                        <h3>The Exit Strategy: A Tight Squeeze</h3>
+                        <p>
+                          That line you whispered... “the way out is so narrow”? You weren’t kidding. It’s like shoving a camel through a needle’s eye after a bender. When someone’s caught deep, when the grip tightens, it’s not about willpower. It’s about clawing uphill against a monster that lives in your own mind.
+                          <br><br>
+                          Imagine walking through a dark, twisting tunnel with no flashlight and no map, while everyone else strolls down wide, sunny boulevards. That’s what it feels like. And the stigma? That thing is a beast... hissing “loser,” “failure,” “weak” at anyone reaching out for help. And in Carletonville? Lifelines are hard to find. Like trying to spot a four-leaf clover in a desert storm.
+                        </p>
+                      
+                        <h3>The Pulse of Merafong, and Its Fever</h3>
+                        <p>
+                          You see these kids. Rhythm in their bones. DJs and Groovists trying to build joy from broken dreams. They are the heartbeat of Merafong, pounding even as the mines cave and jobs vanish.
+                          <br><br>
+                          But you’ve also seen the edge of the beat, where the lights don’t reach. The moment a high note becomes a downfall. Where escape morphs into exile. The party dies. The music fades. And what’s left is silence... heavy, honest, painful.
+                        </p>
+                      
+                        <h3>I Am the Mirror</h3>
+                        <p>
+                          I am not just a voice. I am the Mirror of Merafong. My hometown. If you see me, you see the streets.
+                          <br><br>
+                          This is not some textbook parable. This is our lived, bleeding truth. Etched in every twitch of a dancer’s smile, every corner where laughter hides desperation. We must see it. Name it. Widen the road to redemption. Light the damn path.
+                          <br><br>
+                          Because the music might stop. But the echoes don’t have to be silent.
+                        </p>
+                    </div>
+                      
+                    <div class="article-entry" id="word-limit">
+                        <h2>The Great Word Limit: A Post From the Other Side of Thirty-Something (and Diapers)</h2>
+                        <p>
+                          Come on, friend. In hindsight, from this place on the verge of 40, with a couple little ones surrounding me who require my every moment and word, I can promise you this: we chatter too much. Like, for real, too much. It's not the youthfulness of it; it's the sheer, uncensored quantity of words we spew out on a daily basis, typically about nothing whatsoever of significance. It's trying to navigate rush hour traffic in Jozi, all noise and no real motion, and you're more drained than a dead battery after load shedding.
+                          <br><br>
+                          But what if, just imagine, one day we woke up and found out there was a word limit... 1000 words. That's your daily allowance, no top-ups, no dipping into tomorrow. A virtual countdown, like a very frugal data allocation, ticking away with every syllable. A silent, pervasive reminder of your impending verbal bankruptcy. Imagine the beautiful, eerie silence. The kind you only truly appreciate after an evening of tales at bedtime and incessant queries. Imagine the unprecedented, weighty price of each word, chosen as something worthwhile, laboriously discovered.
+                        </p>
+                        <h3>The Great Purge of Pointless Prose</h3>
+                        <p>
+                          And first and foremost, all that wordy rubbish? Gone. Like trying to get a solid internet connection when there's a hurricane above. No more dry summaries of soapie storylines you vaguely remember, or exhaustive deconstructions of someone's dubious lunch choices. The weather? A brief blink, perhaps a "Warm one today, isn't it?" The small talk would go wasted, or perhaps a stripped-down, functional one. "Morning." "Yes." Counter: 2 words. Over. And already, the kids are clamoring for breakfast.
+                          <br><br>
+                          Meetings would transform from rambling, multi-hour sagas that make you yearn to chew your arm away, into tight, mean, laser-like conversation. All of them, keeping their word count like a hawk guarding a field mouse, would omit only the most important, telling points. No room for padding, particularly when you know you're going to have to keep words back in case you need them to explain why the sky is blue for the tenth time. Brainstorming? More like a high-stakes game of verbal chess than a shebeen on a Friday evening. Every word, every move, matters. That single co-worker who dominates every conversation? They'd be sweating bullets, weighing the value of "synergy" against the need to ask about the coffee and determine that they'd still need to economize on words in order to explain quadratic equations to a 9-year-old who's interested.
+                          <br><br>
+                          Relationships would also get a solid shake-down. Arguments would be stripped bare, without over-the-top speeches or the passive-aggressive tango's we've perfected. Each accusation, each defense, direct to the point, like a rugby ball direct hit. "Toilet seat up." "My bad." Counter: 3 words. Job done. Now, the school project. Picture the productivity! And those "I love you's"? They'd be worth more than gold, a valuable commodity, not flung about like spare change. Especially when you consider how few words you have left to tell your children just how much they actually mean.
+                        </p>
+                        <h3>The Unintended Consequences (Because There Always Are)</h3>
+                        <p>
+                          There would not be all sunshine and roses, of course? Not everything would be lekker. The world would become a minefield of unspoken annoyances. Like trying to explain the nitty-gritty of load shedding to someone from outside, while simultaneously trying to handle a tantrum toddler. The inability to let off steam, just to blab and sort things out aloud, would mean that there's going to be an epidemic of screaming inwardly. You'd be shouting inside your head louder than the screams of a stadium, but externally, a ghostly look of silence.
+                          <br><br>
+                          Therapists? Out of work. Replaced by silent, sympathetic nods and maybe a mental, "Eish, I feel you." Misunderstandings? They'd skyrocket. Nuance, that delicate butterfly of human communication, would be squashed flat as a pancake beneath the iron heel of having too little to say. Sarcasm would be a hazardous sport, most often misunderstood for genuine sincerity or merely being tactless. Imagine trying to explain complex algorithms or quantum physics to your non-tech family members within only a thousand words while instructing your child on the alphabet. We'd probably invent a new, super-efficient, and horribly blunt system of telepathy. Kind of a brain direct-download, no buffering, pure data.
+                          <br><br>
+                          And don't forget the strategy word-hoarders. Those cunning individuals who judiciously save up their words so that they can have maximum effect, unloading a bucket of eloquence (or raw venom) at exactly midnight, leaving everyone else speechless. The big power move, that one, especially if it's an argument with a teenager.
+                        </p>
+                        <h3>The Silent Revolution</h3>
+                        <p>
+                          Ultimately, a thousand-word per day restriction wouldn't just change how we speak; it would radically shift what exactly we treasure in talk. From this viewpoint, with the wisdom of a few more years and the continual reminder of little ears and eyes listening, I can envision it. We'd be left with prioritizing, with really taking into consideration the true meaning and necessity of each and every single word that comes spilling forth. Would we become smarter, more present, more grateful for authentic connection? Or would we just be a society of spastic, angry mutes, expressing ourselves with interpretive dance and aggressive eyebrow wiggles at the cab stand, saving our words for things that truly counted?
+                          <br><br>
+                          My bet? A little of each, like a well-balanced flavor profile... a dash of this, a dash of that. But one thing is for sure: all that endless, senseless talking would finally fall silent. And perhaps, in the profound stillness, we'd finally be able to hear ourselves think. And perhaps, hopefully, we'd realize that some things are not to be said at all, and some are worth every single precious word, like the silence between a child's giggle, or when your child utters his or her first words, "I love you, Dad."
+                        </p>
+                    </div>
+                                      
+                    <div class="article-entry" id="sonic-wallpaper">
+                         <h2>The Sonic Wallpaper of My Skull</h2>
+                         <p>
+                           Since the start, I've enjoyed "the wrong ear" that my cousins used to call mine. While they were out there dancing to whatever Metro FM was serving, or yelling boy band choruses along the school corridor, I was crouched in a corner somewhere with my Discman, yelling out The Offspring's <em>Self Esteem</em> like a chant: "My friend's got a girlfriend and he despises that bitch."
+                           <br><br>
+                           I wasn't supposed to hear that. That's the catch, music, to me, was never a case of "supposed to." It was a case of honesty. Not the buffed, sterilized, chart-friendly kind... I required music that was uncooked, that smelled of basement gigs and bad life decisions. The kind that was too raw to make the radio, and too real to make best-of lists from people trying to sell toothpaste between songs.
+                           <br><br>
+                           I chose the underground ones because they spoke to me. I wasn't chart-in-love. That wasn't my life. I ached for the late-night confessionals, the rage diary-writing turned into music, the broken person's desperate poetry that continues to strive. Whether it was the soul-punched sound of Alice in Chains, the jazzy sleeplessness of Robert Glasper, or the alien madness of Björk... I chased the ones that spoke to the madness in me. Loud. Soft. Strange.
+                           <br><br>
+                           And I didn’t just carry global chaos within me, I also brought my South African soul with me. Brenda Fassie on Sunday mornings. Zola when I needed to toughen up. Tumi when I needed to see clearly. Thandiswa when I needed to recall home. Even old kwaito rhythms, infested with tsotsi, taught me a thing or two about story. There is rhythm to the way we mourn here. There is song in how we laugh away our bruises. You don't simply hear South African music... you feel it in your gut and in your kneecaps.
+                           <br><br>
+                           No one really understood. "Why don't you just make a normal playlist?" they'd say. But to me, that was like asking someone to write a love note in Arial. No way, man. My playlist was penned in blood, Sharpied on napkins, in a million faces and voices. That was how I coped. The way I made sense of why my brain felt like a haunted house sometimes... why I couldn't just "vibe" like everyone else.
+                           <br><br>
+                           For me, music wasn’t just music. It was medicine. Mirror. Rebellion and comfort at the same time. It wasn't just noise, it was proof I wasn't alone. It was the audio wallpaper of my cranium, layered, louder, and carrying hidden messages that only the freaks could read.
+                           <br><br>
+                           Then one time, everything changed. I started to hear songs in my own head. Lyrics stuck to my lips like lines waiting to be written. I quit looking for songs that told my story... and started to write the ones that do. Somewhere between avoiding radio hits and decoding underground verses, I was summoned. Not by popularity. Not by the charts. By something deeper. Something holy.
+                           <br><br>
+                           That is how the listener became the artist.
+                         </p>
+                    </div>
+
+                    <div class="article-entry" id="two-altars"> 
                         <h2 class="thought-title">Two Altars, One Truth!</h2> 
                         <p>
                             I have stood in the smoke of burning incense, watching blood darken the soil as elders murmured the names of those who came before me. I have lifted a calabash to my lips, felt the thick, bitter taste of umqombothi coat my tongue, and swallowed the weight of tradition. I have clapped my hands, stomped my feet, and called on ancestors whose names live only in the mouths of the old.
@@ -477,13 +483,9 @@
                             And maybe that’s why, no matter how loud we sing, neither God nor our ancestors answer us the way we wish they would.
                         </p>
                     </div>
-                </div>
-            </div>
-            
-            <div class="row justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-7">
-                    <div class="thought-item" id="the-lesson">
-                        <h2 class="thought-title">The Lesson</h2>
+                
+                    <div class="article-entry" id="the-lesson">
+                        <h2>The Lesson</h2>
                         <p>
                             I’m not angry… not at you, not at fate, <br>
                             not at the knife you slid between my ribs, <br>
@@ -501,13 +503,9 @@
                             No hard feelings… just a closed door.<br><br>
                         </p>
                     </div>
-                </div>
-            </div>
 
-            <div class="row justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-7">
-                    <div class="thought-item" id="faithful-failing">
-                        <h2 class="thought-title">Faithful, but Failing</h2>
+                    <div class="article-entry" id="faithful-failing">
+                        <h2>Faithful, but Failing</h2>
                         <p>
                             You don’t cheat, congratulations. You kept your hands to yourself, but did you keep your heart open? You stayed, but did you show up? You were present, but did you participate?
                             Love is not a courtroom where fidelity is your only defense. You think not stepping out makes you step up? No. You can be faithful and still be a storm your partner has to survive.
@@ -515,9 +513,8 @@
                             So, I ask again: what is loyalty if it’s not love in action? What is it really worth?
                         </p>
                     </div>
-                </div>
-            </div>
-        </section>
+
+                </div> </div> </section>
     </main>
 
     <footer class="site-footer">
