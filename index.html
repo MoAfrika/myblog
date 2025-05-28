@@ -1,983 +1,496 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-    <meta charset="utf-8" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-    <meta name="description" content="Welcome to 'I TYPE, WHAT I LIKE' - Unfiltered thoughts, code confessions, and mind dumps from MoAfrika Skotch Ntilane." />
-
-    <meta name="author" content="MoAfrika Skotch Ntilane" />
-
-    <title>I TYPE, WHAT I LIKE | MoAfrika Skotch Ntilane</title>
-
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-
-
-    <style>
-
-        :root {
-
-            --primary-bg: #0e0e0e;
-
-            --secondary-bg: #1c1c1c; /* Navbar, Footer */
-
-            --tertiary-bg: #222;   /* Masthead (non-hero), Form inputs */
-
-            --tertiary-bg-lighter: #2a2a2a; /* For cards, distinct sections */
-
-            --accent-color: #ffc107;
-
-            --accent-hover: #e0a800;
-
-            --text-color: #e0e0e0;
-
-            --text-muted: #aaa;
-
-            --text-white-75: rgba(255, 255, 255, 0.75);
-
-            --subheading-color: #f0f0f0;
-
-            --form-border-color: #444;
-
-            --btn-text-color: #212529; /* Dark text for yellow buttons */
-
-            --card-border-color: #383838;
-
-
-
-            --heading-font: 'Lora', serif;
-
-            --body-font: 'Open Sans', sans-serif;
-
-
-
-            --base-padding: 1rem;
-
-            --header-padding-y: 5rem; /* For standard mastheads */
-
-            --footer-padding-y: 2rem;
-
-
-
-            --navbar-height: 70px; /* Approximate navbar height for body padding-top */
-
-        }
-
-
-
-        body {
-
-            background-color: var(--primary-bg);
-
-            color: var(--text-color);
-
-            font-family: var(--body-font);
-
-            line-height: 1.7;
-
-            display: flex;
-
-            flex-direction: column;
-
-            min-height: 100vh;
-
-            padding-top: var(--navbar-height); /* For fixed-top navbar */
-
-        }
-
-
-
-        main {
-
-            flex-grow: 1;
-
-        }
-
-
-
-        h1, h2, h3, h4, h5, h6 {
-
-            font-family: var(--heading-font);
-
-            color: var(--accent-color); /* Default heading color to accent */
-
-        }
-
-        h1.page-title, .page-heading h1, .site-heading h1 { /* Specific for main titles */
-
-            font-size: 3rem;
-
-            font-weight: 700;
-
-        }
-
-        h2.section-title {
-
-            font-size: 2.25rem;
-
-            margin-bottom: 1.5rem;
-
-            color: var(--accent-color);
-
-        }
-
-
-
-        p {
-
-            line-height: 1.8;
-
-            margin-bottom: 1.25rem;
-
-        }
-
-        .lead {
-
-            font-size: 1.25rem;
-
-            font-weight: 300;
-
-        }
-
-        .text-white-75 { /* Bootstrap override/enhancement if needed */
-
-            color: var(--text-white-75) !important;
-
-        }
-
-
-
-
-
-        /* Navigation */
-
-        .navbar {
-
-            background-color: var(--secondary-bg);
-
-            border-bottom: 1px solid var(--accent-color);
-
-            transition: background-color 0.3s ease-in-out;
-
-        }
-
-        .navbar-brand {
-
-            font-family: var(--heading-font);
-
-            font-weight: bold;
-
-            color: var(--accent-color) !important; /* Important to override BS if needed */
-
-            padding-top: 0.5rem;
-
-            padding-bottom: 0.5rem;
-
-        }
-
-        .navbar-brand:hover {
-
-            color: var(--accent-hover) !important;
-
-        }
-
-        .nav-link {
-
-            color: var(--accent-color);
-
-            font-weight: 500;
-
-            letter-spacing: 0.05em;
-
-            transition: color 0.2s ease-in-out;
-
-        }
-
-        .nav-link:hover {
-
-            color: var(--accent-hover);
-
-        }
-
-        .nav-link.active {
-
-            color: var(--accent-hover) !important; /* Make active distinct */
-
-            border-bottom: 2px solid var(--accent-hover);
-
-        }
-
-
-
-
-
-        /* Standard Masthead (like Contact Page) */
-
-        header.masthead {
-
-            background-color: var(--tertiary-bg);
-
-            padding: var(--header-padding-y) 0;
-
-            border-bottom: 1px solid var(--form-border-color);
-
-        }
-
-        .page-heading .subheading { /* For contact page or similar */
-
-            font-family: var(--body-font);
-
-            font-size: 1.25rem;
-
-            font-style: italic;
-
-            color: var(--subheading-color);
-
-        }
-
-
-
-        /* Hero Section (Index Page Masthead) */
-
-        .hero-section {
-
-            padding: calc(var(--header-padding-y) + 2rem) 0; 
-
-            background-image: url('https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Neon%20Halo%20Portrait%20with%20Digital%20Overlays.png');
-
-            background-size: cover;
-
-            background-position: center center;
-
-            background-repeat: no-repeat;
-
-            position: relative;
-
-            color: white; /* Text color for hero */
-
-        }
-
-        .hero-overlay {
-
-            position: absolute;
-
-            top: 0;
-
-            left: 0;
-
-            right: 0;
-
-            bottom: 0;
-
-            background-color: rgba(0, 0, 0, 0.2); /* Dark overlay for text readability */
-
-            z-index: 1;
-
-        }
-
-        .hero-section .container { /* Ensure content is above overlay */
-
-            z-index: 2;
-
-            position: relative;
-
-        }
-
-        .site-heading h1 {
-
-            font-size: 3.5rem; /* Larger for hero */
-
-            color: white; /* Override default accent for hero h1 */
-
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-
-        }
-
-        .site-heading .subheading {
-
-            font-size: 1.5rem;
-
-            font-weight: 300;
-
-            line-height: 1.5;
-
-            display: block;
-
-            margin: 1rem 0 2rem;
-
-            color: var(--subheading-color);
-
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-
-        }
-
-
-
-
-
-        /* Main Content Sections */
-
-        .intro-preview .lead {
-
-            color: var(--text-white-75);
-
-        }
-
-        hr.accent-hr {
-
-            border: 0;
-
-            height: 2px;
-
-            background-color: var(--accent-color);
-
-            opacity: 0.75;
-
-            width: 80px;
-
-            margin: 2rem auto;
-
-        }
-
-
-
-        /* Post Preview Cards */
-
-        .post-preview-card {
-
-            background-color: var(--tertiary-bg-lighter);
-
-            border: 1px solid var(--card-border-color);
-
-            border-radius: 0.375rem; /* Bootstrap's default card radius */
-
-            color: var(--text-color);
-
-            height: 100%; /* For equal height cards in a row */
-
-            display: flex;
-
-            flex-direction: column;
-
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-
-        }
-
-        .post-preview-card:hover {
-
-            transform: translateY(-5px);
-
-            box-shadow: 0 0.5rem 1rem rgba(255, 193, 7, 0.15); /* Using accent color with low opacity */
-
-        }
-
-        .post-preview-card .card-img-top {
-
-            border-top-left-radius: 0.375rem;
-
-            border-top-right-radius: 0.375rem;
-
-            object-fit: cover; /* Ensures image covers area */
-
-            max-height: 200px; /* Or desired height */
-
-        }
-
-        .post-preview-card .card-body {
-
-            padding: 1.5rem;
-
-            flex-grow: 1; /* Allows body to expand */
-
-            display: flex;
-
-            flex-direction: column;
-
-        }
-
-        .post-preview-card .card-title {
-
-            font-size: 1.5rem;
-
-            color: var(--accent-color);
-
-            margin-bottom: 0.75rem;
-
-        }
-
-        .post-preview-card .card-text {
-
-            color: var(--text-white-75);
-
-            font-size: 0.95rem;
-
-            flex-grow: 1; /* Pushes button to bottom */
-
-        }
-
-        .post-preview-card .post-meta {
-
-            font-size: 0.85rem;
-
-            color: var(--text-muted);
-
-            margin-bottom: 1rem;
-
-        }
-
-        .post-preview-card .btn-outline-warning {
-
-            margin-top: auto; /* Pushes button to bottom */
-
-        }
-
-
-
-
-
-        /* About CTA Section */
-
-        .about-cta-preview {
-
-            border: 1px solid var(--card-border-color);
-
-        }
-
-
-
-
-
-        /* Buttons */
-
-        .btn {
-
-            font-family: var(--body-font);
-
-            font-weight: bold;
-
-            letter-spacing: 0.05em;
-
-            padding: 0.75rem 1.5rem;
-
-            transition: all 0.3s ease-in-out;
-
-            border-radius: 0.25rem; /* Slightly softer edges */
-
-        }
-
-        .btn-warning { /* Bootstrap class, enhanced */
-
-            background-color: var(--accent-color);
-
-            border-color: var(--accent-color);
-
-            color: var(--btn-text-color);
-
-        }
-
-        .btn-warning:hover, .btn-warning:focus {
-
-            background-color: var(--accent-hover);
-
-            border-color: var(--accent-hover);
-
-            color: var(--btn-text-color);
-
-            transform: translateY(-2px);
-
-            box-shadow: 0 4px 8px rgba(255, 193, 7, 0.3); /* Using accent color with opacity */
-
-        }
-
-        .btn-outline-warning {
-
-            color: var(--accent-color);
-
-            border-color: var(--accent-color);
-
-        }
-
-        .btn-outline-warning:hover, .btn-outline-warning:focus {
-
-            color: var(--btn-text-color);
-
-            background-color: var(--accent-color);
-
-            border-color: var(--accent-color);
-
-            box-shadow: 0 4px 8px rgba(255, 193, 7, 0.2); /* Using accent color with opacity */
-
-        }
-
-        .btn-outline-light { /* For dark backgrounds */
-
-            color: #f8f9fa;
-
-            border-color: #f8f9fa;
-
-        }
-
-        .btn-outline-light:hover {
-
-            color: var(--primary-bg);
-
-            background-color: #f8f9fa;
-
-            border-color: #f8f9fa;
-
-        }
-
-
-
-
-
-        /* Forms (Primarily for Contact Page, but good to keep consistent) */
-
-        .form-label {
-
-            font-weight: 600;
-
-            color: var(--accent-color);
-
-        }
-
-        .form-control {
-
-            background-color: var(--tertiary-bg-lighter);
-
-            border: 1px solid var(--form-border-color);
-
-            color: var(--text-color);
-
-            padding: 0.75rem 1rem;
-
-        }
-
-        .form-control:focus {
-
-            background-color: #333; /* Darken on focus */
-
-            border-color: var(--accent-color);
-
-            color: var(--text-color);
-
-            box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25); /* Using accent color's RGB for shadow */
-
-        }
-
-        .form-control::placeholder {
-
-            color: var(--text-muted);
-
-            opacity: 0.7;
-
-        }
-
-        .needs-validation .form-control:invalid { /* Style for invalid fields */
-
-            border-color: #dc3545; /* Bootstrap danger color */
-
-        }
-
-        .invalid-feedback { /* Style for Bootstrap validation messages */
-
-            color: #dc3545;
-
-            font-size: 0.875em;
-
-            font-style: italic;
-
-        }
-
-        #formSubmissionFeedback.alert { /* For contact form feedback */
-
-            text-align: center;
-
-            font-weight: bold;
-
-        }
-
-
-
-
-
-        /* Footer */
-
-        .site-footer {
-
-            background-color: var(--secondary-bg);
-
-            border-top: 1px solid var(--accent-color);
-
-            padding: var(--footer-padding-y) 0;
-
-        }
-
-        .site-footer .social-icons a i {
-
-            color: var(--accent-color);
-
-            transition: color 0.3s ease, transform 0.2s ease;
-
-            font-size: 1.5rem;
-
-        }
-
-        .site-footer .social-icons a:hover i {
-
-            color: var(--accent-hover);
-
-            transform: scale(1.1);
-
-        }
-
-        .site-footer .copyright-text {
-
-            color: var(--text-muted);
-
-            font-size: 0.9rem;
-
-        }
-
-
-
-
-
-        /* Utility classes */
-
-        .text-accent {
-
-            color: var(--accent-color) !important;
-
-        }
-
-
-
-
-
-        /* Responsive Adjustments */
-
-        @media (max-width: 768px) {
-
-            .site-heading h1, h1.page-title {
-
-                font-size: 2.5rem;
-
-            }
-
-            .site-heading .subheading, .page-heading .subheading {
-
-                font-size: 1.15rem;
-
-            }
-
-            .hero-section {
-
-                padding: var(--header-padding-y) 0; /* Adjust padding on smaller screens */
-
-            }
-
-        }
-
-    </style>
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Welcome to 'I TYPE, WHAT I LIKE' - Unfiltered thoughts, code confessions, and mind dumps from MoAfrika Skotch Ntilane." />
+    <meta name="author" content="MoAfrika Skotch Ntilane" />
+    <title>I TYPE, WHAT I LIKE | MoAfrika Skotch Ntilane</title>
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-bg: #0e0e0e;
+            --secondary-bg: #1c1c1c; /* Navbar, Footer */
+            --tertiary-bg: #222;     /* Masthead (non-hero), Form inputs */
+            --tertiary-bg-lighter: #2a2a2a; /* For cards, distinct sections */
+            --accent-color: #ffc107;
+            --accent-hover: #e0a800;
+            --text-color: #e0e0e0;
+            --text-muted: #aaa;
+            --text-white-75: rgba(255, 255, 255, 0.75);
+            --subheading-color: #f0f0f0;
+            --form-border-color: #444;
+            --btn-text-color: #212529; /* Dark text for yellow buttons */
+            --card-border-color: #383838;
+
+            --heading-font: 'Lora', serif;
+            --body-font: 'Open Sans', sans-serif;
+
+            --base-padding: 1rem;
+            --header-padding-y: 5rem; /* For standard mastheads */
+            --footer-padding-y: 2rem;
+
+            --navbar-height: 70px; /* Approximate navbar height for body padding-top */
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            font-family: var(--body-font);
+            line-height: 1.7;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding-top: var(--navbar-height); /* For fixed-top navbar */
+        }
+
+        main {
+            flex-grow: 1;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--heading-font);
+            color: var(--accent-color); /* Default heading color to accent */
+        }
+        h1.page-title, .page-heading h1, .site-heading h1 { /* Specific for main titles */
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        h2.section-title {
+            font-size: 2.25rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        p {
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+        }
+        .lead {
+            font-size: 1.25rem;
+            font-weight: 300;
+        }
+        .text-white-75 { /* Bootstrap override/enhancement if needed */
+            color: var(--text-white-75) !important;
+        }
+
+
+        /* Navigation */
+        .navbar {
+            background-color: var(--secondary-bg);
+            border-bottom: 1px solid var(--accent-color);
+            transition: background-color 0.3s ease-in-out;
+        }
+        .navbar-brand {
+            font-family: var(--heading-font);
+            font-weight: bold;
+            color: var(--accent-color) !important; /* Important to override BS if needed */
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        .navbar-brand:hover {
+            color: var(--accent-hover) !important;
+        }
+        .nav-link {
+            color: var(--accent-color);
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            transition: color 0.2s ease-in-out;
+        }
+        .nav-link:hover {
+            color: var(--accent-hover);
+        }
+        .nav-link.active {
+            color: var(--accent-hover) !important; /* Make active distinct */
+            border-bottom: 2px solid var(--accent-hover);
+        }
+
+
+        /* Standard Masthead (like Contact Page) */
+        header.masthead {
+            background-color: var(--tertiary-bg);
+            padding: var(--header-padding-y) 0;
+            border-bottom: 1px solid var(--form-border-color);
+        }
+        .page-heading .subheading { /* For contact page or similar */
+            font-family: var(--body-font);
+            font-size: 1.25rem;
+            font-style: italic;
+            color: var(--subheading-color);
+        }
+
+        /* Hero Section (Index Page Masthead) */
+        .hero-section {
+            padding: calc(var(--header-padding-y) + 2rem) 0;  
+            background-image: url('https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Neon%20Halo%20Portrait%20with%20Digital%20Overlays.png');
+            background-size: contain; /* MODIFIED: Was cover */
+            background-position: center center;
+            background-repeat: no-repeat; /* Ensures no tiling if image is smaller */
+            position: relative;
+            color: white; /* Text color for hero */
+            /* You might want to set a specific background-color here if the overlay doesn't cover all cases */
+            /* e.g., background-color: var(--primary-bg); */
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.2); /* Dark overlay for text readability */
+            z-index: 1;
+        }
+        .hero-section .container { /* Ensure content is above overlay */
+            z-index: 2;
+            position: relative;
+        }
+        .site-heading h1 {
+            font-size: 3.5rem; /* Larger for hero */
+            color: white; /* Override default accent for hero h1 */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .site-heading .subheading {
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 1.5;
+            display: block;
+            margin: 1rem 0 2rem;
+            color: var(--subheading-color);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+
+        /* Main Content Sections */
+        .intro-preview .lead {
+            color: var(--text-white-75);
+        }
+        hr.accent-hr {
+            border: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            opacity: 0.75;
+            width: 80px;
+            margin: 2rem auto;
+        }
+
+        /* Post Preview Cards */
+        .post-preview-card {
+            background-color: var(--tertiary-bg-lighter);
+            border: 1px solid var(--card-border-color);
+            border-radius: 0.375rem; /* Bootstrap's default card radius */
+            color: var(--text-color);
+            height: 100%; /* For equal height cards in a row */
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .post-preview-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0.5rem 1rem rgba(255, 193, 7, 0.15); /* Using accent color with low opacity */
+        }
+        .post-preview-card .card-img-top {
+            border-top-left-radius: 0.375rem;
+            border-top-right-radius: 0.375rem;
+            object-fit: contain; /* MODIFIED: Was cover - Ensures image is fully visible */
+            max-height: 200px; 
+            width: 100%; /* ADDED: Ensure image element takes full width for contain to work as expected */
+            background-color: var(--primary-bg); /* ADDED: Background for letterboxing if image aspect ratio differs */
+        }
+        .post-preview-card .card-body {
+            padding: 1.5rem;
+            flex-grow: 1; /* Allows body to expand */
+            display: flex;
+            flex-direction: column;
+        }
+        .post-preview-card .card-title {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-bottom: 0.75rem;
+        }
+        .post-preview-card .card-text {
+            color: var(--text-white-75);
+            font-size: 0.95rem;
+            flex-grow: 1; /* Pushes button to bottom */
+        }
+        .post-preview-card .post-meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+        .post-preview-card .btn-outline-warning {
+            margin-top: auto; /* Pushes button to bottom */
+        }
+
+
+        /* About CTA Section */
+        .about-cta-preview {
+            border: 1px solid var(--card-border-color);
+        }
+
+
+        /* Buttons */
+        .btn {
+            font-family: var(--body-font);
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            padding: 0.75rem 1.5rem;
+            transition: all 0.3s ease-in-out;
+            border-radius: 0.25rem; /* Slightly softer edges */
+        }
+        .btn-warning { /* Bootstrap class, enhanced */
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: var(--btn-text-color);
+        }
+        .btn-warning:hover, .btn-warning:focus {
+            background-color: var(--accent-hover);
+            border-color: var(--accent-hover);
+            color: var(--btn-text-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(255, 193, 7, 0.3); /* Using accent color with opacity */
+        }
+        .btn-outline-warning {
+            color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+        .btn-outline-warning:hover, .btn-outline-warning:focus {
+            color: var(--btn-text-color);
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            box-shadow: 0 4px 8px rgba(255, 193, 7, 0.2); /* Using accent color with opacity */
+        }
+        .btn-outline-light { /* For dark backgrounds */
+            color: #f8f9fa;
+            border-color: #f8f9fa;
+        }
+        .btn-outline-light:hover {
+            color: var(--primary-bg);
+            background-color: #f8f9fa;
+            border-color: #f8f9fa;
+        }
+
+
+        /* Forms (Primarily for Contact Page, but good to keep consistent) */
+        .form-label {
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+        .form-control {
+            background-color: var(--tertiary-bg-lighter);
+            border: 1px solid var(--form-border-color);
+            color: var(--text-color);
+            padding: 0.75rem 1rem;
+        }
+        .form-control:focus {
+            background-color: #333; /* Darken on focus */
+            border-color: var(--accent-color);
+            color: var(--text-color);
+            box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25); /* Using accent color's RGB for shadow */
+        }
+        .form-control::placeholder {
+            color: var(--text-muted);
+            opacity: 0.7;
+        }
+        .needs-validation .form-control:invalid { /* Style for invalid fields */
+            border-color: #dc3545; /* Bootstrap danger color */
+        }
+        .invalid-feedback { /* Style for Bootstrap validation messages */
+            color: #dc3545;
+            font-size: 0.875em;
+            font-style: italic;
+        }
+        #formSubmissionFeedback.alert { /* For contact form feedback */
+            text-align: center;
+            font-weight: bold;
+        }
+
+
+        /* Footer */
+        .site-footer {
+            background-color: var(--secondary-bg);
+            border-top: 1px solid var(--accent-color);
+            padding: var(--footer-padding-y) 0;
+        }
+        .site-footer .social-icons a i {
+            color: var(--accent-color);
+            transition: color 0.3s ease, transform 0.2s ease;
+            font-size: 1.5rem;
+        }
+        .site-footer .social-icons a:hover i {
+            color: var(--accent-hover);
+            transform: scale(1.1);
+        }
+        .site-footer .copyright-text {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+
+        /* Utility classes */
+        .text-accent {
+            color: var(--accent-color) !important;
+        }
+
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .site-heading h1, h1.page-title {
+                font-size: 2.5rem;
+            }
+            .site-heading .subheading, .page-heading .subheading {
+                font-size: 1.15rem;
+            }
+            .hero-section {
+                padding: var(--header-padding-y) 0; /* Adjust padding on smaller screens */
+            }
+        }
+    </style>
 </head>
-
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-
-        <div class="container">
-
-            <a class="navbar-brand p-1" href="index.html">I TYPE, WHAT I LIKE</a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-
-                <span class="navbar-toggler-icon"></span>
-
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-
-                <ul class="navbar-nav ms-auto">
-
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
-
-                    <li class="nav-item"><a class="nav-link" href="mywrites.html">Code Confessions</a></li>
-
-                    <li class="nav-item"><a class="nav-link" href="random.html">Mind Dumps & DayDreams</a></li>
-
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-    </nav>
-
-
-
-    <header class="masthead hero-section">
-
-        <div class="hero-overlay"></div>
-
-        <div class="container position-relative px-4 px-lg-5">
-
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-
-                <div class="col-md-10 col-lg-8 col-xl-7 text-center">
-
-                    <div class="site-heading">
-
-                        <h1>I TYPE, WHAT I LIKE</h1>
-
-                        <span class="subheading">Unfiltered thoughts from the digital wilderness. <br>Brace yourself.</span>
-
-                        <div class="mt-4">
-
-                            <a href="mywrites.html" class="btn btn-warning btn-lg">Explore My Writes</a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </header>
-
-
-
-    <main class="container my-5">
-
-        <div class="row justify-content-center">
-
-            <div class="col-md-10 col-lg-8">
-
-                <section class="intro-preview mb-5 text-center">
-
-                    <h2>Welcome to the Asylum (of Thoughts)</h2>
-
-                    <p class="lead text-white-75">
-
-                        You've stumbled into my corner of the internet. Here, the code is occasionally clean, the thoughts are frequently messy, and the Oxford comma is non-negotiable. Expect rants, revelations, and the random ramblings of a self-proclaimed digital prophet.
-
-                    </p>
-
-                    <hr class="my-4 accent-hr">
-
-                </section>
-
-
-
-                <section class="recent-posts-preview mb-5">
-
-                    <h2 class="text-center mb-4 section-title">Fresh From The Keyboard</h2>
-
-                    <div class="row">
-
-                        <div class="col-md-6 mb-4">
-
-                            <div class="post-preview-card">
-
-                                <img src="https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Futuristic%20AR%20Portrait%20in%20Neon%20Blues.png" class="card-img-top" alt="Placeholder image for blog post">
-
-                                <div class="card-body">
-
-                                    <h3 class="card-title">My Latest Existential Crisis (and how JavaScript made it worse)</h3>
-
-                                    <p class="card-text text-white-75">A deep dive into the void where asynchronous operations meet the futility of existence. You know, the usual.</p>
-
-                                    <p class="post-meta">Dropping on <span class="text-warning">June 01, 2025</span></p>
-
-                                    <a href="#" class="btn btn-outline-warning">Read More &raquo;</a>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-md-6 mb-4">
-
-                            <div class="post-preview-card">
-
-                                <img src="https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Afro-Futuristic%20Glitch%20Walker.png" class="card-img-top" alt="Placeholder image for blog post">
-
-                                <div class="card-body">
-
-                                    <h3 class="card-title">Why 'Mind Dumps' Are My Secret Superpower</h3>
-
-                                    <p class="card-text text-white-75">It's not hoarding if it's digital, right? Exploring the therapeutic chaos of spilling your brain onto a page.</p>
-
-                                    <p class="post-meta">Dropping on <span class="text-warning">June 16, 2025</span></p>
-
-                                    <a href="#" class="btn btn-outline-warning">Read More &raquo;</a>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        </div>
-
-                    <div class="text-center mt-3">
-
-                        <a href="mywrites.html" class="btn btn-warning">See All Scribblings</a>
-
-                    </div>
-
-                </section>
-
-
-
-                <section class="about-cta-preview text-center p-4 rounded" style="background-color: var(--tertiary-bg-lighter);">
-
-                    <h2 class="section-title">Curious About The Scribe?</h2>
-
-                    <p class="lead text-white-75">
-
-                        Learn more about the method (and madness) behind these musings. Or, if you're feeling brave, drop me a line.
-
-                    </p>
-
-                    <a href="about.html" class="btn btn-outline-light me-2">Meet MoAfrika</a>
-
-                    <a href="contact.html" class="btn btn-warning">Holler At Me</a>
-
-                </section>
-
-
-
-            </div>
-
-        </div>
-
-    </main>
-
-
-
-    <footer class="site-footer py-4 text-center">
-
-        <div class="container">
-
-            <ul class="list-inline social-icons mb-3">
-
-                <li class="list-inline-item mx-2">
-
-                    <a href="https://www.linkedin.com/in/mo-ntilanedev/" aria-label="Connect on Linkedin" target="_blank" rel="noopener noreferrer">
-
-                        <i class="fab fa-linkedin fa-2x"></i>
-
-                    </a>
-
-                </li>
-
-                <li class="list-inline-item mx-2">
-
-                    <a href="https://web.facebook.com/MR.D.3.N.Z.O" aria-label="Find on Facebook" target="_blank" rel="noopener noreferrer">
-
-                        <i class="fab fa-facebook-f fa-2x"></i>
-
-                    </a>
-
-                </li>
-
-                <li class="list-inline-item mx-2">
-
-                    <a href="https://github.com/MoAfrika" aria-label="Peek at GitHub" target="_blank" rel="noopener noreferrer">
-
-                        <i class="fab fa-github fa-2x"></i>
-
-                    </a>
-
-                </li>
-
-            </ul>
-
-            <p class="copyright-text mt-2">&copy; <span id="currentYear"></span> MoAfrika Skotch Ntilane. Go on, make my inbox less boring.</p>
-
-        </div>
-
-    </footer>
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    
-
-    <script>
-
-        // Simple script to set current year in footer
-
-        document.addEventListener('DOMContentLoaded', function() {
-
-            const yearSpan = document.getElementById('currentYear');
-
-            if (yearSpan) {
-
-                yearSpan.textContent = new Date().getFullYear();
-
-            }
-
-            console.log("Index page fully loaded and scripts active. The digital wilderness awaits your exploration.");
-
-        });
-
-
-
-        // If you had other global scripts from a 'js/scripts.js', you would embed them here.
-
-        // For example, if you had a navbar shrink function:
-
-        /*
-
-        window.addEventListener('scroll', event => {
-
-            const mainNav = document.querySelector('nav.navbar');
-
-            if (mainNav) {
-
-                if (window.scrollY === 0) {
-
-                    mainNav.classList.remove('navbar-scrolled');
-
-                } else {
-
-                    mainNav.classList.add('navbar-scrolled');
-
-                }
-
-            }
-
-        });
-
-        // And add relevant CSS for .navbar-scrolled if needed
-
-        */
-
-    </script>
-
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand p-1" href="index.html">I TYPE, WHAT I LIKE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mywrites.html">Code Confessions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="random.html">Mind Dumps & DayDreams</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="masthead hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7 text-center">
+                    <div class="site-heading">
+                        <h1>I TYPE, WHAT I LIKE</h1>
+                        <span class="subheading">Unfiltered thoughts from the digital wilderness. <br>Brace yourself.</span>
+                        <div class="mt-4">
+                            <a href="mywrites.html" class="btn btn-warning btn-lg">Explore My Writes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-8">
+                <section class="intro-preview mb-5 text-center">
+                    <h2>Welcome to the Asylum (of Thoughts)</h2>
+                    <p class="lead text-white-75">
+                        You've stumbled into my corner of the internet. Here, the code is occasionally clean, the thoughts are frequently messy, and the Oxford comma is non-negotiable. Expect rants, revelations, and the random ramblings of a self-proclaimed digital prophet.
+                    </p>
+                    <hr class="my-4 accent-hr">
+                </section>
+
+                <section class="recent-posts-preview mb-5">
+                    <h2 class="text-center mb-4 section-title">Fresh From The Keyboard</h2>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="post-preview-card">
+                                <img src="https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Futuristic%20AR%20Portrait%20in%20Neon%20Blues.png" class="card-img-top" alt="Placeholder image for blog post">
+                                <div class="card-body">
+                                    <h3 class="card-title">My Latest Existential Crisis (and how JavaScript made it worse)</h3>
+                                    <p class="card-text text-white-75">A deep dive into the void where asynchronous operations meet the futility of existence. You know, the usual.</p>
+                                    <p class="post-meta">Dropping on <span class="text-warning">June 01, 2025</span></p>
+                                    <a href="#" class="btn btn-outline-warning">Read More &raquo;</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="post-preview-card">
+                                <img src="https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Afro-Futuristic%20Glitch%20Walker.png" class="card-img-top" alt="Placeholder image for blog post">
+                                <div class="card-body">
+                                    <h3 class="card-title">Why 'Mind Dumps' Are My Secret Superpower</h3>
+                                    <p class="card-text text-white-75">It's not hoarding if it's digital, right? Exploring the therapeutic chaos of spilling your brain onto a page.</p>
+                                    <p class="post-meta">Dropping on <span class="text-warning">June 16, 2025</span></p>
+                                    <a href="#" class="btn btn-outline-warning">Read More &raquo;</a>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    <div class="text-center mt-3">
+                        <a href="mywrites.html" class="btn btn-warning">See All Scribblings</a>
+                    </div>
+                </section>
+
+                <section class="about-cta-preview text-center p-4 rounded" style="background-color: var(--tertiary-bg-lighter);">
+                    <h2 class="section-title">Curious About The Scribe?</h2>
+                    <p class="lead text-white-75">
+                        Learn more about the method (and madness) behind these musings. Or, if you're feeling brave, drop me a line.
+                    </p>
+                    <a href="about.html" class="btn btn-outline-light me-2">Meet MoAfrika</a>
+                    <a href="contact.html" class="btn btn-warning">Holler At Me</a>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer py-4 text-center">
+        <div class="container">
+            <ul class="list-inline social-icons mb-3">
+                <li class="list-inline-item mx-2">
+                    <a href="https://www.linkedin.com/in/mo-ntilanedev/" aria-label="Connect on Linkedin" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                    <a href="https://web.facebook.com/MR.D.3.N.Z.O" aria-label="Find on Facebook" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook-f fa-2x"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                    <a href="https://github.com/MoAfrika" aria-label="Peek at GitHub" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                </li>
+            </ul>
+            <p class="copyright-text mt-2">&copy; <span id="currentYear"></span> MoAfrika Skotch Ntilane. Go on, make my inbox less boring.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Simple script to set current year in footer
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearSpan = document.getElementById('currentYear');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+            console.log("Index page fully loaded and scripts active. The digital wilderness awaits your exploration.");
+        });
+
+        // If you had other global scripts from a 'js/scripts.js', you would embed them here.
+        // For example, if you had a navbar shrink function:
+        /*
+        window.addEventListener('scroll', event => {
+            const mainNav = document.querySelector('nav.navbar');
+            if (mainNav) {
+                if (window.scrollY === 0) {
+                    mainNav.classList.remove('navbar-scrolled');
+                } else {
+                    mainNav.classList.add('navbar-scrolled');
+                }
+            }
+        });
+        // And add relevant CSS for .navbar-scrolled if needed
+        */
+    </script>
 </body>
-
-                                                                                   </html>
+</html>
