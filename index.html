@@ -127,13 +127,21 @@
         .hero-section {
             padding: calc(var(--header-padding-y) + 2rem) 0;  
             background-image: url('https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Neon%20Halo%20Portrait%20with%20Digital%20Overlays.png');
-            background-size: contain; /* MODIFIED: Was cover */
-            background-position: center center;
-            background-repeat: no-repeat; /* Ensures no tiling if image is smaller */
+            /* --- IMAGE SIZING CHOICE --- */
+            /* Option 1: Show FULL image (recommended if "fully visible" is critical for this specific image) */
+            /* This will show the entire portrait image, but likely with empty bars on sides in a landscape hero. */
+            background-size: contain;
+            background-repeat: no-repeat; /* Crucial for 'contain' */
+            
+            /* Option 2: Fill hero space (more common for hero design, but will crop portrait image) */
+            /* background-size: cover; */
+            
+            background-position: center center; /* Applies to both 'contain' and 'cover' */
             position: relative;
             color: white; /* Text color for hero */
-            /* You might want to set a specific background-color here if the overlay doesn't cover all cases */
-            /* e.g., background-color: var(--primary-bg); */
+            /* The hero-overlay div provides a semi-transparent layer. */
+            /* The background of .hero-section itself (var(--primary-bg) by default if not overridden here) */
+            /* will show in letterboxed areas if 'contain' is used and image doesn't fill dimensions. */
         }
         .hero-overlay {
             position: absolute;
@@ -195,10 +203,12 @@
         .post-preview-card .card-img-top {
             border-top-left-radius: 0.375rem;
             border-top-right-radius: 0.375rem;
-            object-fit: contain; /* MODIFIED: Was cover - Ensures image is fully visible */
-            max-height: 200px; 
-            width: 100%; /* ADDED: Ensure image element takes full width for contain to work as expected */
-            background-color: var(--primary-bg); /* ADDED: Background for letterboxing if image aspect ratio differs */
+            object-fit: contain; /* MODIFIED: Ensures full image visibility */
+            max-height: 200px;   /* Constrains the image area height */
+            width: 100%;         /* Ensures image element spans card width for layout context */
+                                 /* The image will scale to fit, maintaining aspect ratio. */
+            background-color: var(--tertiary-bg-lighter); /* ADDED: Better background for letterboxing, blends with card */
+                                                      /* You could also use var(--secondary-bg) for a slightly darker letterbox */
         }
         .post-preview-card .card-body {
             padding: 1.5rem;
