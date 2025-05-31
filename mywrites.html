@@ -3,16 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="MoAfrika Skotch Ntilane tackles the bewildering beast of JavaScript recursion with brutally honest humor. If you've ever felt your brain melt, this is for you. Part code confession, part therapy session." />
+    <meta name="description" content="MoAfrika Skotch Ntilane tackles JavaScript concepts with brutally honest humor. If you've ever felt your brain melt trying to understand recursion, this is for you." />
     <meta name="author" content="MoAfrika Skotch Ntilane" />
-    <title>How I Finally Understood Recursion (and My Family Tree) | I TYPE, WHAT I LIKE</title>
+    <title>JavaScript & Recursion: A Dysfunctional Love Story | I TYPE, WHAT I LIKE</title>
 
-    <link rel="canonical" href="https://your-awesome-blog.com/code-confessions/how-i-understood-recursion.html" />
-    <meta property="og:title" content="How I Finally Understood Recursion (and My Family Tree) | I TYPE, WHAT I LIKE" />
-    <meta property="og:description" content="MoAfrika Skotch Ntilane tackles the bewildering beast of JavaScript recursion with brutally honest humor." />
+    <link rel="canonical" href="https://motypewhatilike.com/code-confessions/javascript-recursion" />
+    <meta property="og:title" content="JavaScript & Recursion: A Dysfunctional Love Story | I TYPE, WHAT I LIKE" />
+    <meta property="og:description" content="MoAfrika Skotch Ntilane tackles JavaScript concepts with brutally honest humor." />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://your-awesome-blog.com/code-confessions/how-i-understood-recursion.html" />
-    <meta property="og:image" content="https://your-awesome-blog.com/assets/images/blog/recursion-og.jpg" />
+    <meta property="og:url" content="https://motypewhatilike.com/code-confessions/javascript-recursion" />
+    <meta property="og:image" content="https://motypewhatilike.com/assets/images/blog/recursion-og.jpg" />
     <meta property="og:image:alt" content="Conceptual image for JavaScript recursion article" />
     <meta property="og:site_name" content="I TYPE, WHAT I LIKE" />
     <meta property="article:published_time" content="2025-04-11T10:00:00+02:00" />
@@ -26,27 +26,27 @@
       "@type": "BlogPosting",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://your-awesome-blog.com/code-confessions/how-i-understood-recursion.html"
+        "@id": "https://motypewhatilike.com/code-confessions/javascript-recursion"
       },
-      "headline": "How I Finally Understood Recursion (and My Family Tree)",
-      "description": "MoAfrika Skotch Ntilane tackles the bewildering beast of JavaScript recursion with brutally honest humor. If you've ever felt your brain melt, this is for you. Part code confession, part therapy session.",
+      "headline": "JavaScript & Recursion: A Dysfunctional Love Story",
+      "description": "MoAfrika Skotch Ntilane tackles JavaScript concepts with brutally honest humor. If you've ever felt your brain melt trying to understand recursion, this is for you.",
       "image": {
         "@type": "ImageObject",
-        "url": "https://your-awesome-blog.com/assets/images/blog/recursion-og.jpg",
+        "url": "https://motypewhatilike.com/assets/images/blog/recursion-og.jpg",
         "width": 1200,
         "height": 630
       },
       "author": {
         "@type": "Person",
         "name": "MoAfrika Skotch Ntilane",
-        "url": "https://your-awesome-blog.com/about.html"
+        "url": "https://motypewhatilike.com/about"
       },
       "publisher": {
         "@type": "Organization",
         "name": "I TYPE, WHAT I LIKE",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://your-awesome-blog.com/assets/images/logo.png",
+          "url": "https://motypewhatilike.com/assets/images/logo.png",
           "width": 200,
           "height": 60
         }
@@ -56,13 +56,13 @@
     }
     </script>
 
-    <link rel="icon" type="image/x-icon" href="https://your-awesome-blog.com/favicon.ico" />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <link rel="icon" type="image/x-icon" href="https://motypewhatilike.com/favicon.ico" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KE3JX4QY2P"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+      gtag('config', 'G-KE3JX4QY2P');
     </script>
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
@@ -90,7 +90,6 @@
             --text-code: #f8f8f2;
             --text-masthead-sub: rgba(255, 255, 255, 0.85);
 
-
             --border-subtle: #333;
             --border-list: #383838;
 
@@ -115,19 +114,24 @@
 
         h1, h2, h3, h4, h5, h6 {
             font-family: var(--font-heading);
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
         }
         
         .navbar {
             background-color: var(--secondary-bg) !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
         .navbar-brand {
             color: var(--accent-color) !important;
             font-size: 1.5rem;
             text-transform: uppercase;
             font-weight: bold;
+            letter-spacing: 1px;
         }
         .navbar-nav .nav-link {
             color: var(--text-secondary) !important;
+            padding: 0.5rem 1rem;
         }
         .navbar-nav .nav-link:hover,
         .navbar-nav .nav-link.active {
@@ -138,116 +142,165 @@
         }
 
         header.masthead {
-            background-image: url("https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Futuristic%20AR%20Portrait%20in%20Neon%20Blues.png");
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("https://raw.githubusercontent.com/MoAfrika/my-images/main/Futuristic%20AR%20Portrait%20in%20Neon%20Blues.png");
             background-size: cover;
             background-position: center;
-            padding: 120px 0;
-            color: white; 
+            padding: 100px 0 80px;
+            color: white;
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--accent-color);
         }
         .page-heading h1 {
             font-size: 2.8rem;
             font-weight: 700;
-            color: var(--accent-color); 
+            color: var(--accent-color);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+            margin-bottom: 1rem;
         }
         .page-heading .subheading {
             font-size: 1.2rem;
             font-style: italic;
             line-height: 1.5;
             color: var(--text-masthead-sub);
+            max-width: 700px;
+            margin: 0 auto;
         }
         .page-heading .text-light-emphasis {
              color: var(--text-masthead-sub) !important;
         }
 
-
         .article-content-wrapper {
-            margin-bottom: 35px;
+            margin-bottom: 40px;
             background-color: var(--content-bg);
-            padding: 25px;
+            padding: 30px;
             border-radius: 10px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         .article-content-wrapper:hover {
             background-color: var(--content-hover-bg);
             transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
         }
         .post-title { 
             font-size: 2.2rem;
             color: var(--accent-color);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
         }
         .post-subtitle { 
             font-size: 1.15rem;
             color: var(--text-subtle);
             margin-top: 0;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             font-style: italic;
             line-height: 1.6;
         }
         .post-meta {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: var(--text-muted);
-            margin-bottom: 1.5rem; 
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-subtle);
+            padding-bottom: 1rem;
         }
         
         .article-body h3 {
             color: var(--heading-accent-color-alt);
             font-size: 1.6rem;
-            margin-top: 30px;
-            margin-bottom: 15px;
+            margin-top: 2.5rem;
+            margin-bottom: 1.25rem;
             font-weight: 600;
+            position: relative;
+            padding-left: 15px;
+        }
+        .article-body h3:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.4em;
+            height: 0.8em;
+            width: 5px;
+            background: var(--accent-color);
         }
         .article-body p {
             font-size: 1.1rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
+            line-height: 1.8;
         }
-         .article-body ol, .article-body ul {
-            padding-left: 1.5rem;
+        .article-body ol, .article-body ul {
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
         }
         .article-body li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
         }
         .article-body strong {
             font-weight: bold;
+            color: var(--text-secondary);
+        }
+        .article-body em {
+            font-style: italic;
+            color: var(--text-subtle);
         }
         .article-body h4.concluding-thought {
             font-family: var(--font-heading);
-            font-size: 1.3rem;
-            margin-top: 1.75rem;
-            margin-bottom: 0.75rem;
+            font-size: 1.4rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
             color: var(--text-muted);
             font-style: italic;
             font-weight: 600;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 15px;
         }
-        
+        .article-body blockquote {
+            border-left: 4px solid var(--accent-color);
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            background-color: rgba(76, 175, 80, 0.1);
+            font-style: italic;
+            color: var(--text-subtle);
+        }
 
         .btn-primary {
             background-color: var(--accent-color);
             border-color: var(--accent-color);
             font-weight: bold;
             color: var(--primary-bg);
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
         }
         .btn-primary:hover {
             background-color: var(--accent-hover-color);
             border-color: var(--accent-hover-color);
-             color: var(--primary-bg);
+            color: var(--primary-bg);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         
         footer.site-footer {
             background-color: var(--secondary-bg);
             color: var(--text-muted);
-            padding: 30px 0;
+            padding: 40px 0;
             border-top: 1px solid var(--accent-color);
+            margin-top: 60px;
         }
         footer.site-footer .list-inline-item a {
             color: var(--text-muted);
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            display: inline-block;
         }
         footer.site-footer .list-inline-item a:hover {
             color: var(--accent-color);
+            transform: translateY(-3px);
         }
         footer.site-footer .fa-2x {
             font-size: 1.8em;
+        }
+        footer.site-footer .small {
+            font-size: 0.9rem;
         }
 
         .code-snippet {
@@ -261,38 +314,59 @@
             word-wrap: break-word;
             margin: 30px 0;
             border: 1px solid var(--border-subtle);
+            line-height: 1.6;
+            position: relative;
+        }
+        .code-snippet:before {
+            content: "JS";
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: var(--accent-color);
+            color: var(--primary-bg);
+            padding: 2px 10px;
+            font-size: 0.8rem;
+            border-radius: 0 0 0 4px;
+            font-family: var(--font-body);
         }
         .code-snippet code {
             font-size: 1rem;
-            line-height: var(--line-height-code);
             background-color: transparent;
             padding: 0;
+            white-space: pre;
         }
 
         .other-articles-section {
             margin-top: 50px;
-            padding: 20px;
+            padding: 25px;
             background-color: var(--content-bg);
             border-radius: 10px;
+            border: 1px solid var(--border-subtle);
         }
         .other-articles-section h3 {
             color: var(--accent-color);
             font-size: 1.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
         }
         .other-articles-section .list-group-item {
             background-color: var(--list-item-bg);
             color: var(--text-muted);
             border: 1px solid var(--border-list);
             font-size: 1.05rem;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
+            margin-bottom: 10px;
+            border-radius: 5px !important;
         }
         .other-articles-section .list-group-item a {
             color: var(--text-secondary);
             text-decoration: none;
+            display: block;
+            padding: 10px 15px;
         }
         .other-articles-section .list-group-item:hover {
             background-color: var(--list-item-hover-bg);
+            transform: translateX(5px);
         }
         .other-articles-section .list-group-item a:hover {
             color: var(--accent-color);
@@ -300,7 +374,31 @@
         hr.article-divider {
             border-top: 1px solid var(--border-subtle);
             opacity: 0.5;
-            margin: 2.5rem 0;
+            margin: 3rem 0;
+        }
+
+        @media (max-width: 768px) {
+            header.masthead {
+                padding: 80px 0 60px;
+            }
+            .page-heading h1 {
+                font-size: 2.2rem;
+            }
+            .page-heading .subheading {
+                font-size: 1rem;
+            }
+            .post-title {
+                font-size: 1.8rem;
+            }
+            .post-subtitle {
+                font-size: 1rem;
+            }
+            .article-content-wrapper {
+                padding: 20px;
+            }
+            .article-body h3 {
+                font-size: 1.4rem;
+            }
         }
     </style>
 </head>
@@ -317,7 +415,7 @@
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="about.html">About Me</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 hover-success active" href="mywrites.html" aria-current="page">Code Confessions</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="random.html">Mind Dumps & DayDreams</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="random.html">Mind Dumps</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 hover-success" href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -330,7 +428,7 @@
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <div class="page-heading">
                         <h1>JavaScript &amp; I: A Dysfunctional Love Story</h1>
-                        <span class="subheading text-light-emphasis">It wasn’t &lt;LOVE&gt; at first &lt;FUNCTION&gt;, but after a thousand &lt;ERRORS&gt;, we’re finally in &lt;SYNC&gt;. Mostly.</span>
+                        <span class="subheading text-light-emphasis">It wasn't &lt;LOVE&gt; at first &lt;FUNCTION&gt;, but after a thousand &lt;ERRORS&gt;, we're finally in &lt;SYNC&gt;. Mostly.</span>
                     </div>
                 </div>
             </div>
@@ -339,88 +437,80 @@
 
     <main class="container my-5">
         <div class="row justify-content-center">
-            <div class="col-md-10 col-lg-8 col-xl-7 article-content">
-    <div class="post-preview">
-        <div class="col-md-10 col-lg-8 col-xl-7">
-        <article class="article-entry" id="javascript-in-the-trenches">
-            <h2 class="post-title">JavaScript in the Trenches: Code Like Kasi Does, Think Like a Genius</h2>
-            <p class="post-meta">By MoAfrika Skotch Ntilane on May 31, 2025</p>
-
-            <p>Let us begin, Mo. No filters and no fluff. We will tackle the ins and outs of JavaScript, where pragmatic reasoning meets progressive coding, where form follows function enough for lead engineers but is understood by your cousin in the backseat of the Quantum. It is cutting-edge, passionate, and technical, and unapologetically <strong>you</strong>.</p>
-
-            <h3>My JavaScript Origin Story</h3>
-            <p>My JavaScript education did not take place in the air-conditioned classroom with neat chairs. I learned JavaScript during load-shedding timetables and from downloaded Udemy lessons that were outside of my budget to stream. I learned about variables during candlelight, debugged during power cuts, and wrote functions during periods between frying vetkoek and reloading data with borrowed airtime.</p>
-            <p>At that point, all seemed compromised, and rather surprisingly, so did JavaScript...</p>
-
-            <h3><strong>Let Us Be Frank, JavaScript Is Both an Aesthetic and a Challenge</strong></h3>
-            <p>You ever work with a language that makes you feel like you’re both the genius and the fool? That’s JavaScript. It gives you superpowers, but also leaves you in a corner crying because <code>null</code> is an object, but <code>typeof NaN</code> is “number”, and somehow <code>[] == ![]</code> evaluates to true.</p>
-            <p>Make it make sense, right?</p>
-            <p>However, the above statement is probably true for people whose lives while growing up were full of improvisation. Those people who grew up living mainly on peanut butter as their sole source of nutrition fall into that group. So too do people who drew power from a neighboring home just to finish a design project. To them, <em>consistency is a luxury</em> and <em>chaos is a teacher</em>.</p>
-            <p>JavaScript is that cousin who shows up late, borrows your charger, and still helps you finish the assignment before the deadline. Annoying, confusing... but ultimately clutch.</p>
-
-            <h3>The Good Stuff — What Makes JavaScript Great</h3>
-            <p>It is not broken, it just is Kasi logic. Let us talk about what makes JavaScript great. The good stuff. The useful bits.</p>
-            <ul>
-                <li><strong>Dynamic Typing:</strong> You don’t need to declare types upfront, which is freedom if you know what you’re doing, and a minefield if you don’t...</li>
-                <li><strong>First-Class Functions:</strong> JavaScript treats functions as first-class; they can be passed as arguments to functions, stored in variables, and returned from functions. This allows for the construction of higher-order functions, callbacks, and many principles used in functional programming.</li>
-                <li><strong>Closures:</strong> If ever, you've hidden snacks from siblings, you understand what a closure is. A function maintains its context even after being moved, just like childhood memories...</li>
-                <li><strong>Event Loop:</strong> Behind this all lies the handling of asynchronous operations. When the browser is idle, JavaScript basically says, "Do not worry... I'll be right back."</li>
-            </ul>
-            <p>It is a teach-hustle kind of language. It penalizes sloppiness while rewarding sharpness.</p>
-
-            <h3>The Personal Dimension</h3>
-            <p>I’ve worked with Python... it’s clean. I’ve touched Ruby... it’s elegant. But JavaScript? JavaScript feels like the code equivalent of navigating Johannesburg traffic — fast, unpredictable, and full of rogue brilliance.</p>
-            <p>Clarity is not necessarily provided in this context. One must infer the tone and read between the lines. Similarly, JavaScript forces people to move beyond shallow observations, predict possible pitfalls, and understand that expectations and reality might depart from each other...</p>
-            <p>Somehow, that feeling feels like home.</p>
-
-            <h3><strong>To the Taxi Driver and the Technical Lead</strong></h3>
-            <p>I write JavaScript in the same way I do rap: intuitively, with rhythm and passion. Some lines are a testament to grace, others to brute force. Some days I write a neat async function, other days I end up rushing to fix something with three nested callbacks and a prayer.</p>
-            <p>Nevertheless, the fact remains that it works.</p>
-            <p>And it serves.</p>
-            <p>This is the beauty of its use. Whether you're developing a billion-dollar Software as a Service (SaaS) product or teaching a nephew to code a to-do list program, JavaScript is adaptable to your skill set.</p>
-
-            <h3><strong>What Accounts for My Continued Affection?</strong></h3>
-            <p>Because it’s a survivor’s language. It’s not perfect, but it adapts. Like us.</p>
-            <p>We did not learn with steady access to fiber optics and ergonomic seating, but with spotty Wi-Fi and unyielding drive. JavaScript is not about being perfect, but rather curiosity, grit, and repetition...</p>
-            <p>It takes people with the capacity for seeing through eccentricities and making it beautiful nonetheless.</p>
-            <p>People like you. People like me.</p>
-
-            <h3>Concluding Reflection</h3>
-            <p>Before commencing the save process and expectant hopes for successful compilation...</p>
-            <p>JavaScript is not always going to seem sensible, but neither is life. But still, we carry on. We debug. We use <code>console.log</code>. We do refactoring. We try again.</p>
-            <p>Amongst the complex web of callbacks, promises, and carefully designed <code>if</code> statements, there is something of artistry to be found.</p>
-            <p>And freedom.</p>
-            <p>And proof that brilliance doesn’t need permission... just execution.</p>
-
-            <h4 class="concluding-thought">Let’s keep building. Kasi style.</h4>
-        </article>
-    </div>
-    </div>
-</div>
-
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <article class="article-content-wrapper">
                     <div class="post-preview">
+                        <h2 class="post-title">JavaScript in the Trenches: Code Like Kasi Does, Think Like a Genius</h2>
+                        <p class="post-subtitle">
+                            Where pragmatic reasoning meets progressive coding—understood by lead engineers and your cousin alike.
+                        </p>
+                        <p class="post-meta">Published by MoAfrika Skotch Ntilane on May 31, 2025</p>
+                        <div class="article-body">
+                            <p>Let me begin with no filters and no fluff. We're tackling JavaScript where form follows function enough for lead engineers but is understood by your cousin in the backseat of the Quantum. This is cutting-edge, passionate, technical, and unapologetically <strong>real</strong>.</p>
+
+                            <h3>My JavaScript Origin Story</h3>
+                            <p>My JavaScript education didn't happen in air-conditioned classrooms with neat chairs. I learned JavaScript during load-shedding schedules and from downloaded Udemy lessons I couldn't afford to stream. I discovered variables by candlelight, debugged during power cuts, and wrote functions between frying vetkoek and reloading data with borrowed airtime.</p>
+                            <p>At that moment, everything seemed compromised—and surprisingly, so did JavaScript.</p>
+
+                            <h3>Let's Be Frank: JavaScript Is Both Beautiful and Maddening</h3>
+                            <p>Ever worked with a language that makes you feel like both a genius and a fool simultaneously? That's JavaScript. It gives you superpowers but also leaves you crying in a corner because <code>null</code> is an object, <code>typeof NaN</code> is "number", and somehow <code>[] == ![]</code> evaluates to true.</p>
+                            <p>Make it make sense, right?</p>
+                            <p>But this chaos resonates with those who grew up improvising—people who survived on peanut butter as their main protein source, who siphoned electricity from neighbors to finish projects. To us, <em>consistency is a luxury</em> and <em>chaos is a teacher</em>.</p>
+                            <p>JavaScript is that cousin who shows up late, borrows your charger, and still helps you finish the assignment before deadline. Annoying? Yes. Confusing? Absolutely. But ultimately clutch.</p>
+
+                            <h3>The Good Stuff—What Makes JavaScript Great</h3>
+                            <p>It's not broken—it's township logic. Let's talk about what makes JavaScript shine:</p>
+                            <ul>
+                                <li><strong>Dynamic Typing:</strong> No type declarations mean freedom if you're disciplined, and landmines if you're not.</li>
+                                <li><strong>First-Class Functions:</strong> Functions can be passed around like variables—this enables callbacks, higher-order functions, and functional programming patterns.</li>
+                                <li><strong>Closures:</strong> If you've ever hidden snacks from siblings, you understand closures. Functions remember their context even when executed elsewhere.</li>
+                                <li><strong>Event Loop:</strong> JavaScript's asynchronous nature means it can handle multiple operations without blocking—like a street vendor juggling customers while keeping orders straight.</li>
+                            </ul>
+                            <p>It's a language that punishes sloppiness but rewards sharp thinking—much like navigating life without a safety net.</p>
+
+                            <h3>The Personal Connection</h3>
+                            <p>I've worked with Python—it's clean. I've touched Ruby—it's elegant. But JavaScript? JavaScript feels like coding through Johannesburg traffic—unpredictable, occasionally terrifying, but full of rogue brilliance.</p>
+                            <p>You can't take things at face value. You learn to read between the lines, anticipate edge cases, and understand that expectations often diverge from reality. Somehow, that feels like home.</p>
+
+                            <h3>To the Taxi Driver and the Technical Lead</h3>
+                            <p>I write JavaScript like I rap—intuitively, with rhythm and raw energy. Some lines showcase elegance, others brute force. Some days I craft beautiful async functions, other days I hack together nested callbacks with a prayer.</p>
+                            <p>But it works. And it serves.</p>
+                            <p>That's the beauty—whether you're building enterprise SaaS or teaching a nephew to make a to-do app, JavaScript meets you where you are.</p>
+
+                            <h3>Why I Keep Coming Back</h3>
+                            <p>Because it's a survivor's language. Imperfect but adaptable—like us.</p>
+                            <p>We didn't learn with fiber optics and ergonomic chairs but with spotty Wi-Fi and relentless drive. JavaScript isn't about perfection—it's about curiosity, grit, and iteration.</p>
+                            <p>It rewards those who see past its quirks to the power beneath—people like you. People like me.</p>
+
+                            <h4 class="concluding-thought">Let's keep building. Kasi style.</h4>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-content-wrapper mt-5">
+                    <div class="post-preview">
                         <h2 class="post-title">How I Finally Tamed Recursion (and Survived My Family Tree)</h2>
                         <p class="post-subtitle">
-                            Ever felt like JavaScript recursion was a cryptic puzzle designed by a mischievous sprite, while your family tree felt like… well, also a cryptic puzzle designed by mischievous sprites? You're in the right place.
+                            Where JavaScript meets genealogy in a spectacular collision of logic and family drama.
                         </p>
                         <p class="post-meta">Published by MoAfrika Skotch Ntilane on April 11, 2025</p>
                         <div class="article-body">
-                            <p>Let me paint you a picture: you're at the mandatory annual family gathering, trapped in an endless loop of cheek-pinches and the dreaded, "So, what are you *really* doing with your life?" Each relative hands you off to the next, each interrogation a slight variation of the last. Familiar, right? That, my friend, is the soul-crushing horror and surprising elegance of recursion... a JavaScript concept that once made my brain feel like it was trying to download a 4K movie over a 90s dial-up connection powered by a hamster on a treadmill.</p>
+                            <p>Picture this: You're at the annual family gathering, trapped in an endless loop of cheek-pinches and "So, what are you <em>really</em> doing with your life?" Each relative hands you off to the next, each interrogation a slight variation of the last. Sound familiar? That, my friend, is recursion—a JavaScript concept that once made my brain feel like it was buffering a 4K movie on dial-up.</p>
                             
-                            <p>So, you wanna dance with recursion? Brace yourself. It’s that notorious JavaScript maneuver where a function, in a spectacular display of self-obsession, calls *itself* to chip away at a behemoth problem. Sounds a bit like that one uncle at every family gathering, doesn't it? The one who traps you in a conversational vortex, recounting the same fishing trip story from 1978, each time with a 'newly remembered'...and increasingly improbable...detail involving a one-eyed badger. Initially, it feels like your brain's trying to untangle a string of Christmas lights that's been through a blender. But trust me, there's a sliver of twisted genius to its looping logic, once you stop screaming internally.</p>
+                            <h3>Recursion: The Family Reunion of Programming</h3>
+                            <p>Recursion is when a function calls <em>itself</em> to solve smaller instances of the same problem. Like that uncle who retells his fishing story with increasingly improbable details ("...and then the one-eyed badger showed up!"). Initially baffling, but there's method to the madness.</p>
 
-                            <h3>Dissecting the Drama (and the Function)</h3>
-                            <p>To survive the recursive onslaught (and the family reunion), you need two critical escape hatches:</p>
+                            <h3>The Two Pillars of Recursive Survival</h3>
                             <ol>
-                                <li><strong>The Base Case:</strong> This is your sanity-saving exit strategy. It’s the point where the function mercifully stops calling itself. Think of it as spotting the dessert table and making a direct, unwavering beeline, thereby ending all circular conversations. "Right, gotta go!"... that’s your base case saving your social bacon.</li>
-                                <li><strong>The Recursive Case:</strong> This is the part where the madness continues, the function bravely (or foolishly) dives deeper. It’s your Great Aunt Mildred passing you from cousin to second-cousin-twice-removed, each one needing to "just quickly ask you something" about their phone/computer/life choices, until you finally hit that sweet, sweet base case (or fake an emergency call).</li>
+                                <li><strong>Base Case:</strong> Your escape clause—the condition that stops the recursion. Like spotting the dessert table and making a beeline to avoid more small talk.</li>
+                                <li><strong>Recursive Case:</strong> Where the function calls itself with a modified input. Like Aunt Mildred passing you from cousin to cousin until you hit the base case (or fake a phone emergency).</li>
                             </ol>
-                            <p>Now, picture your glorious, sprawling family tree: a chaotic, nested nightmare of data. Each ancestor is a bloated object in an array, spawning their own sub-arrays of descendants, who then spawn *their* own. It’s lineages all the way down, a matryoshka doll of existential dread. Recursion is the slightly unhinged genealogist function that bravely dives into this mess and drags everyone out, kicking and screaming, into one beautifully flat, orderly list. Think of your mom on a mission to orchestrate the annual family photo: three frantic WhatsApp groups, a flurry of guilt-trip texts ("Your great-aunt Mildred won't be around forever, you know!"), and a dozen awkward 'So, where *is* your perpetually AWOL sibling?' calls later, she somehow gets (most) everyone smiling. That’s recursion, with more passive aggression and a higher risk of someone crying.</p>
 
-                            <h3>Flattening Life's Nested Arrays (and Actual Arrays)</h3>
-                            <p>At some point, amidst the tears and existential crises, I realized recursion wasn't just a function throwing a party for itself. It was about dismantling complex beasts into chewable chunks. Behold, the magic in action. This is how we’d use recursion to flatten those pesky nested arrays in JavaScript, much like trying to get a straight answer about who ate the last piece of cake:</p>
+                            <p>Now imagine your family tree—a nested nightmare where each ancestor contains their own array of descendants. Recursion is the function that bravely flattens this chaos into order, much like your mom organizing the annual family photo through three WhatsApp groups and guilt trips.</p>
+
+                            <h3>Flattening Arrays (and Family Drama)</h3>
+                            <p>Here's how we'd recursively flatten nested arrays—like getting straight answers about who ate the last cake:</p>
+                            
                             <div class="code-snippet">
                                 <code>
 function flattenArrayLikeMyPatience(arr) {
@@ -434,37 +524,50 @@ function flattenArrayLikeMyPatience(arr) {
 
 const nestedArrayFromHeck = [1, ['two', 3], [4, ['five', [6, 'seven']]]];
 console.log(flattenArrayLikeMyPatience(nestedArrayFromHeck));
+// Output: [1, "two", 3, 4, "five", 6, "seven"]
                                 </code>
                             </div>
-                            <p>See? Pure, unadulterated recursion! You’re spelunking through layers of nested arrays (like navigating your grandpa's garage), and then heroically yanking everything back into a single, glorious, flat structure. Victory, however fleeting, is sweet.</p>
 
-                            <h3>A Family Reunion You Might Actually Understand (Eventually)</h3>
-                            <p>When you stare into the abyss of recursion, it’s uncannily like trying to map your family's convoluted history. You plunge into each generation, but there’s always a critical point where you *must* stop, lest you get swallowed by distant cousins thrice removed, their dubious life partners, and the neighbor who "might as well be family."</p>
-                            <p>That base case? It's not just important; it's your tether to reality. Without it, you're in an infinite loop of passive-aggressive small talk and existential dread, which, let's be brutally honest, sounds like my typical Tuesday. The key takeaway? Start simple. Define that stopping point. Then, and only then, recursively break the problem down until that tangled mess starts to resemble something organized. Or at least, less actively hostile.</p>
-                            
-                            <h3>The Punchline: Recursion's Twisted Wisdom</h3>
-                            <p>The deeper I plummeted into the recursive rabbit hole, the more I realized it’s a mirror image of navigating family politics. You won't grasp the full, horrifying picture immediately. But with a vat of coffee, a clearly defined "nope, not going there" base case, and several thousand iterations of banging your head against the keyboard, it all begins to (sort of) make sense. And just like my cousin's pyramid scheme pitch, recursion might seem ludicrously overcomplicated at first, but when it *finally* clicks, it’s like witnessing a minor miracle. Or successfully assembling IKEA furniture.</p>
-                            
-                            <h3>My Hard-Earned, Battle-Scarred Pro Tip:</h3>
-                            <p>When you first wade into the recursive swamp, *start small*. Nail down your base case with the ferocity of a starving man defending his last slice of pizza. Seriously. Your base case is your lifeline, your emergency exit, your 'nope-out-of-here' button. Think of it as identifying the *one* aunt you absolutely *must* avoid at the family reunion to maintain your sanity and liver function. Get that wrong, and you're doomed to an infinite loop of awkward cheek-pinching, unsolicited life advice, and probing questions about your romantic prospects (or lack thereof, thanks Aunt Carol). Get it right, and you live to code another day, slightly less traumatized.</p>
-                            
-                            <p>So, there you have it. Recursion: it's not just a function theatrically re-invoking itself like a diva demanding an encore. It's a brutal, beautiful lesson in knowing when to dive deep, when to pull the plug, and how to chop up a monstrous problem (or, you know, a particularly tenacious family anecdote) into bite-sized, digestible pieces. The next time you find yourself wrestling with JavaScript's recursive coils, or cornered by Great Aunt Mildred recounting her gallbladder surgery for the seventh time, just breathe. Find your base case. And remember, with enough strategy (and maybe a stiff drink), you can flatten *any* nested nightmare into something resembling order. Or at least, something you can finally walk away from with your sanity mostly intact.</p>
+                            <p>We're spelunking through nested arrays (like Grandpa's garage) and flattening everything into one orderly list. Victory!</p>
+
+                            <h3>The Family Reunion Algorithm</h3>
+                            <p>Mapping your family tree recursively mirrors actual reunions:</p>
+                            <ul>
+                                <li><strong>Base Case:</strong> "No, I won't explain blockchain to Uncle Thabo again."</li>
+                                <li><strong>Recursive Case:</strong> Each generation spawns its own drama until you hit the base case or the wine runs out.</li>
+                            </ul>
+
+                            <blockquote>
+                                Recursion teaches us that every complex problem is just simpler problems stacked in a trench coat pretending to be adult.
+                            </blockquote>
+
+                            <h3>My Battle-Scarred Advice</h3>
+                            <p>When starting with recursion:</p>
+                            <ol>
+                                <li><strong>Define your base case first</strong>—your escape route from infinite loops (or Aunt Carol).</li>
+                                <li><strong>Start small</strong>—solve a trivial case before tackling the monstrosity.</li>
+                                <li><strong>Trust the process</strong>—each recursive call should move toward the base case.</li>
+                            </ol>
+
+                            <h4 class="concluding-thought">
+                                Recursion, like family, is messy but beautiful. Now if you'll excuse me, I need to console.log my way out of this reunion.
+                            </h4>
                         </div>
                     </div>
                 </article>
 
                 <section class="other-articles-section">
-                    <h3>Other Screams from the Void You Might Enjoy:</h3>
+                    <h3>More Screams From the Void</h3>
                     <ul class="list-group">
-                        <li class="list-group-item"><a href="javascript-in-the-trenches.html">JavaScript in the Trenches: Code Like Kasi Does</a></li>
-                        <li class="list-group-item"><a href="mandela-effect-git-blame.html">The Mandela Effect and Why Your `git blame` History is a Lie</a></li>
-                        <li class="list-group-item"><a href="javascript-toxic-relationship.html">JavaScript: My Toxic Relationship I Can't Quit</a></li>
+                        <li class="list-group-item"><a href="promises-and-curry.html">Promises and Bunny Chow: Async JavaScript for the Hangry</a></li>
+                        <li class="list-group-item"><a href="git-blame-mandela.html">The Mandela Effect and Why Your Git History Lies</a></li>
+                        <li class="list-group-item"><a href="javascript-toxic-love.html">JavaScript: The Toxic Relationship I Can't Quit</a></li>
                     </ul>
                 </section>
 
                 <hr class="article-divider">
                 <div class="d-flex justify-content-end mb-4">
-                    <a class="btn btn-primary text-uppercase" href="mywrites.html">&larr; Older Screeds</a>
+                    <a class="btn btn-primary text-uppercase" href="mywrites.html">&larr; Older Posts</a>
                 </div>
             </div>
         </div>
@@ -473,22 +576,22 @@ console.log(flattenArrayLikeMyPatience(nestedArrayFromHeck));
     <footer class="site-footer text-center">
         <div class="container">
             <ul class="list-inline">
-                <li class="list-inline-item mx-2">
-                    <a href="https://www.linkedin.com/in/mo-ntilanedev/" aria-label="Linkedin" target="_blank" rel="noopener noreferrer">
+                <li class="list-inline-item mx-3">
+                    <a href="https://www.linkedin.com/in/mo-ntilanedev/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-linkedin fa-2x"></i>
                     </a>
                 </li>
-                <li class="list-inline-item mx-2">
-                    <a href="https://web.facebook.com/MRskotch01" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-facebook fa-2x"></i>
+                <li class="list-inline-item mx-3">
+                    <a href="https://twitter.com/MoAfrikaDev" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-twitter fa-2x"></i>
                     </a>
                 </li>
-                <li class="list-inline-item mx-2">
+                <li class="list-inline-item mx-3">
                      <a href="https://github.com/MoAfrika" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-github fa-2x"></i>
                     </a>
                 </li>
-                <li class="list-inline-item mx-2">
+                <li class="list-inline-item mx-3">
                     <a href="mailto:skotchmetabytes@gmail.com" aria-label="Email">
                         <i class="fas fa-envelope fa-2x"></i>
                     </a>
@@ -498,15 +601,21 @@ console.log(flattenArrayLikeMyPatience(nestedArrayFromHeck));
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const yearSpan = document.getElementById('currentYear');
-            if (yearSpan) {
-                yearSpan.textContent = new Date().getFullYear();
-            }
+            // Set current year
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Add smooth scrolling to all links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
         });
     </script>
 </body>
