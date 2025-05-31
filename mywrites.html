@@ -17,10 +17,12 @@
             color: #e0e0e0;
             font-family: 'Open Sans', sans-serif;
             line-height: 1.7; /* Slightly increased for readability */
+            padding-top: 80px; /* Added for fixed-top navbar */
         }
         header.masthead {
-            img-url("src="https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Futuristic%20AR%20Portrait%20in%20Neon%20Blues.png");
-            
+            background-image: url("https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Futuristic%20AR%20Portrait%20in%20Neon%20Blues.png");
+            background-size: cover; /* Ensures the image covers the area */
+            background-position: center; /* Centers the image */
             padding: 120px 0; /* Adjusted padding */
         }
         .navbar {
@@ -47,6 +49,7 @@
         .page-heading h1 {
             font-size: 2.8rem; /* Adjusted for new title length */
             font-weight: 700;
+            /* Color for H1 is handled by text-success class in HTML */
         }
         .page-heading .subheading {
             font-size: 1.2rem;
@@ -161,7 +164,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand text-success" href="index.html">My Keyboard, My Manifesto.</a>
+            <a class="navbar-brand" href="index.html">My Keyboard, My Manifesto.</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
