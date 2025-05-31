@@ -43,10 +43,32 @@
             border-bottom: 2px solid #ffc107;
         }
         header.masthead {
-            background-color: #222;
-            padding: 5rem 0; /* More padding */
+            /* MODIFIED FOR HERO IMAGE */
+            background-image: url('https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Copilot_20250531_191009.png'); /* REPLACE with your image path/URL */
+            background-size: cover; /* Ensures the image covers the area */
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            position: relative; /* Important for potential overlay later */
+            padding: 7rem 0; /* Adjusted padding, can be tweaked */
             border-bottom: 1px solid #444;
         }
+        /* Optional: Add an overlay to make text more readable if needed */
+        header.masthead::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay, adjust opacity (0.0 to 1.0) as needed */
+            z-index: 1; /* Ensure overlay is behind the text */
+        }
+
+        .page-heading {
+            position: relative; /* Ensure text is above the overlay */
+            z-index: 2;
+        }
+
         .page-heading h1 {
             font-family: 'Lora', serif; /* Lora for main headings */
             font-size: 3rem;
@@ -117,7 +139,7 @@
         </div>
     </nav>
 
-    <header class="masthead" style="background-color: #222;">
+    <header class="masthead"> {/* Removed inline style here as it's now in the <style> block */}
         <div class="container position-relative px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7 text-center">
