@@ -1,505 +1,607 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Welcome to 'I TYPE, WHAT I LIKE' - Unfiltered thoughts, code confessions, and mind dumps from MoAfrika Skotch Ntilane." />
-    <meta name="author" content="MoAfrika Skotch Ntilane" />
-    <title>I TYPE, WHAT I LIKE | MoAfrika Skotch Ntilane - Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I TYPE, WHAT I LIKE | MoAfrika Skotch Ntilane</title>
+    <meta name="description" content="Unfiltered thoughts, code confessions, and mind dumps from the digital wilderness. A personal blog by MoAfrika Skotch Ntilane.">
+    <meta name="author" content="MoAfrika Skotch Ntilane">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- Corrected Font Awesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <style>
+        body {
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            font-family: 'Open Sans', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6, .font-lora {
+            font-family: 'Lora', serif;
+        }
+        .text-amber-400 { color: #fbbF24; }
+        .bg-amber-400 { background-color: #fbbF24; }
+        .border-amber-400 { border-color: #fbbF24; }
+        .hover\:bg-amber-500:hover { background-color: #f59e0b; }
+        .hover\:border-amber-500:hover { border-color: #f59e0b; }
+        .hover\:text-amber-400:hover { color: #fbbF24; }
 
-    <link rel="canonical" href="https://your-awesome-blog.com/index.html" />
-    <meta property="og:title" content="I TYPE, WHAT I LIKE | MoAfrika Skotch Ntilane - Blog" />
-    <meta property="og:description" content="Welcome to 'I TYPE, WHAT I LIKE' - Unfiltered thoughts, code confessions, and mind dumps from MoAfrika Skotch Ntilane." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://your-awesome-blog.com/index.html" />
-    <meta property="og:image" content="https://your-awesome-blog.com/assets/images/og-home-image.jpg" />
-    <meta property="og:image:alt" content="I TYPE, WHAT I LIKE Blog - MoAfrika Skotch Ntilane" />
-    <meta property="og:site_name" content="I TYPE, WHAT I LIKE" />
-    <meta property="og:locale" content="en_US" />
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "I TYPE, WHAT I LIKE",
-      "url": "https://your-awesome-blog.com/",
-      "description": "Unfiltered thoughts, code confessions, and mind dumps from MoAfrika Skotch Ntilane.",
-      "author": {
-        "@type": "Person",
-        "name": "MoAfrika Skotch Ntilane",
-        "url": "https://your-awesome-blog.com/about.html",
-         "sameAs": [
-          "https://www.linkedin.com/in/mo-ntilanedev/",
-          "https://github.com/MoAfrika",
-          "https://web.facebook.com/MR.D.3.N.Z.O"
-        ]
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "I TYPE, WHAT I LIKE",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://your-awesome-blog.com/assets/images/logo.png",
-          "width": 200,
-          "height": 60
-        }
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://your-awesome-blog.com/search?q={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-
-    <link rel="icon" type="image/x-icon" href="https://your-awesome-blog.com/favicon.ico" />
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-        :root {
-            --primary-bg: #0e0e0e;
-            --secondary-bg: #1c1c1c;
-            --tertiary-bg: #222;
-            --tertiary-bg-lighter: #2a2a2a;
-            --accent-color: #ffc107;
-            --accent-hover: #e0a800;
-            --text-color: #e0e0e0;
-            --text-muted: #aaa;
-            --text-white-75: rgba(255, 255, 255, 0.75);
-            --subheading-color: #f0f0f0;
-            --form-border-color: #444;
-            --btn-text-color: #212529;
-            --card-border-color: #383838;
-
-            --heading-font: 'Lora', serif;
-            --body-font: 'Open Sans', sans-serif;
-
-            --navbar-height: 70px;
-            --header-padding-y: 5rem;
-            --footer-padding-y: 2rem;
-        }
-
-        body {
-            background-color: var(--primary-bg);
-            color: var(--text-color);
-            font-family: var(--body-font);
-            line-height: 1.7;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            padding-top: var(--navbar-height);
-        }
-
-        main {
-            flex-grow: 1;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: var(--heading-font);
-            color: var(--accent-color);
-        }
-        h1.page-title, .page-heading h1, .site-heading h1 {
-            font-size: 3rem;
-            font-weight: 700;
-        }
-        h2.section-title {
-            font-size: 2.25rem;
-            margin-bottom: 1.5rem;
-        }
-
-        p {
-            line-height: 1.8;
-            margin-bottom: 1.25rem;
-        }
-        .lead {
-            font-size: 1.25rem;
-            font-weight: 300;
-        }
-        .text-white-75 {
-            color: var(--text-white-75) !important;
-        }
-
-        .navbar {
-            background-color: var(--secondary-bg);
-            border-bottom: 1px solid var(--accent-color);
-            transition: background-color 0.3s ease-in-out;
-        }
-        .navbar-brand {
-            font-family: var(--heading-font);
-            font-weight: bold;
-            color: var(--accent-color) !important;
-            padding-top: 0.5rem;
-            padding-bottom: 0.5rem;
-        }
-        .navbar-brand:hover {
-            color: var(--accent-hover) !important;
-        }
-        .nav-link {
-            color: var(--text-white-75);
-            font-weight: 500;
-            letter-spacing: 0.05em;
-            transition: color 0.2s ease-in-out;
-        }
-         .nav-link:hover {
-            color: var(--accent-color);
-        }
-        .nav-link.active {
-            color: var(--accent-color) !important;
-            font-weight: 700;
-        }
-        
-        header.masthead.hero-section {
-            padding: calc(var(--header-padding-y) + 2rem) 0;  
-            background-image: url('https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Green%20Code%20and%20Retro%20Sedan%20(1).png');
-            background-size: cover; 
-            background-position: center center;
-            position: relative;
-            color: white;
-        }
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.4);
-            z-index: 1;
-        }
-        .hero-section .container {
-            z-index: 2;
-            position: relative;
-        }
-        .site-heading h1 {
-            font-size: 3.5rem;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-        }
-        .site-heading .subheading {
-            font-size: 1.5rem;
-            font-weight: 300;
-            line-height: 1.5;
-            display: block;
-            margin: 1rem 0 2rem;
-            color: var(--subheading-color);
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
-        }
-
-        .intro-preview .lead {
-            color: var(--text-white-75);
-        }
-        hr.accent-hr {
-            border: 0;
-            height: 2px;
-            background-color: var(--accent-color);
-            opacity: 0.75;
-            width: 80px;
-            margin: 2rem auto;
-        }
-
-        .post-preview-card {
-            background-color: var(--tertiary-bg-lighter);
-            border: 1px solid var(--card-border-color);
-            border-radius: 0.375rem;
-            color: var(--text-color);
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-        }
-        .post-preview-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0.5rem 1rem rgba(var(--accent-color), 0.15);
-        }
-        .post-preview-card .card-img-top {
-            border-top-left-radius: calc(0.375rem - 1px);
-            border-top-right-radius: calc(0.375rem - 1px);
-            object-fit: cover; 
-            height: 200px;
-            width: 100%;
-            background-color: var(--tertiary-bg); 
-        }
-        .post-preview-card .card-body {
-            padding: 1.5rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .post-preview-card .card-title {
-            font-size: 1.5rem;
-            color: var(--accent-color);
-            margin-bottom: 0.75rem;
-        }
-        .post-preview-card .card-text {
-            color: var(--text-white-75);
-            font-size: 0.95rem;
-            flex-grow: 1;
-        }
-        .post-preview-card .post-meta {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-bottom: 1rem;
-        }
-        .post-preview-card .btn-outline-warning {
-            margin-top: auto;
-        }
-        
-        .about-cta-section {
-            background-color: var(--tertiary-bg-lighter);
-            border: 1px solid var(--card-border-color);
-            border-radius: 0.375rem;
-        }
-
-        .btn {
-            font-family: var(--body-font);
-            font-weight: bold;
-            letter-spacing: 0.05em;
-            padding: 0.75rem 1.5rem;
-            transition: all 0.3s ease-in-out;
-            border-radius: 0.25rem;
-        }
-        .btn-warning {
-            background-color: var(--accent-color);
-            border-color: var(--accent-color);
-            color: var(--btn-text-color);
-        }
-        .btn-warning:hover, .btn-warning:focus {
-            background-color: var(--accent-hover);
-            border-color: var(--accent-hover);
-            color: var(--btn-text-color);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(255, 193, 7, 0.3);
-        }
-        .btn-outline-warning {
-            color: var(--accent-color);
-            border-color: var(--accent-color);
-        }
-        .btn-outline-warning:hover, .btn-outline-warning:focus {
-            color: var(--btn-text-color);
-            background-color: var(--accent-color);
-            border-color: var(--accent-color);
-            box-shadow: 0 4px 8px rgba(255, 193, 7, 0.2);
-        }
-        .btn-outline-light {
-            color: #f8f9fa;
-            border-color: #f8f9fa;
-        }
-        .btn-outline-light:hover {
-            color: var(--primary-bg);
-            background-color: #f8f9fa;
-            border-color: #f8f9fa;
-        }
-
-        .site-footer {
-            background-color: var(--secondary-bg);
-            border-top: 1px solid var(--accent-color);
-            padding: var(--footer-padding-y) 0;
-        }
-        .site-footer .social-icons a i {
-            color: var(--accent-color);
-            transition: color 0.3s ease, transform 0.2s ease;
-            font-size: 1.5rem;
-        }
-        .site-footer .social-icons a:hover i {
-            color: var(--accent-hover);
-            transform: scale(1.1);
-        }
-        .site-footer .copyright-text {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        .text-accent {
-            color: var(--accent-color) !important;
-        }
-        /* New CSS for the Thought Piece */
-        .thought-piece-card {
-            background-color: var(--tertiary-bg);
-            padding: 2.5rem;
-            border: 1px solid var(--card-border-color);
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        }
-        .thought-piece-card h3 {
-            font-size: 1.75rem;
-            color: var(--accent-color);
-            margin-bottom: 1.25rem;
-            font-weight: 700;
-        }
-        .thought-piece-card p {
-            font-size: 1rem;
-            color: var(--text-white-75);
-            line-height: 1.8;
-            margin-bottom: 1rem;
-        }
-
-
-        @media (max-width: 768px) {
-            .site-heading h1, h1.page-title {
-                font-size: 2.5rem;
-            }
-            .site-heading .subheading, .page-heading .subheading {
-                font-size: 1.15rem;
-            }
-            header.masthead.hero-section {
-                padding: calc(var(--header-padding-y) - 1rem) 0;
-            }
-        }
-    </style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.9)), url('https://placehold.co/1920x1080/0a0a0a/0a0a0a');
+            background-size: cover;
+            background-position: center;
+        }
+        .glass-effect {
+            background: rgba(20, 20, 20, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .modal-content-area {
+            max-height: 80vh;
+        }
+        /* Spinner for loading state */
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #fbbF24;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s ease-in-out infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand p-1" href="index.html">I TYPE, WHAT I LIKE</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
-                    <li class="nav-item"><a class="nav-link" href="mywrites.html">Code Confessions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="random.html">Mind Dumps & DayDreams</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<body class="antialiased">
 
-    <header class="masthead hero-section">
-        <div class="hero-overlay"></div>
-        <div class="container position-relative px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-7 text-center">
-                    <div class="site-heading">
-                        <h1>I TYPE, WHAT I LIKE</h1>
-                        <span class="subheading">Unfiltered thoughts from the digital wilderness. <br>Brace yourself.</span>
-                        <div class="mt-4">
-                            <a href="mywrites.html" class="btn btn-warning btn-lg">Explore My Writes</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <!-- Header & Navigation -->
+    <header id="home" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-effect">
+        <div class="container mx-auto px-6 py-3">
+            <nav class="flex items-center justify-between">
+                <a href="#home" class="text-2xl font-lora font-bold text-amber-400">I TYPE, WHAT I LIKE</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#articles" class="text-gray-300 hover:text-amber-400 transition">Articles</a>
+                    <a href="#about" class="text-gray-300 hover:text-amber-400 transition">About</a>
+                    <a href="#oracle" class="text-gray-300 hover:text-amber-400 transition">The Oracle</a>
+                    <a href="#contact" class="text-gray-300 hover:text-amber-400 transition">Contact</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-gray-300 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </nav>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#articles" class="block py-2 text-gray-300 hover:text-amber-400 transition">Articles</a>
+            <a href="#about" class="block py-2 text-gray-300 hover:text-amber-400 transition">About</a>
+            <a href="#oracle" class="block py-2 text-gray-300 hover:text-amber-400 transition">The Oracle</a>
+            <a href="#contact" class="block py-2 text-gray-300 hover:text-amber-400 transition">Contact</a>
+        </div>
+    </header>
 
-    <main class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-md-10 col-lg-8">
-                <section class="intro-preview mb-5 text-center">
-                    <h2 class="section-title">Welcome to the Asylum (of Thoughts)</h2>
-                    <p class="lead text-white-75">
-                        You've stumbled into my corner of the internet. Here, the code is occasionally clean, the thoughts are frequently messy, and the Oxford comma is non-negotiable. Expect rants, revelations, and the random ramblings of a self-proclaimed digital prophet.
-                    </p>
-                    <hr class="my-4 accent-hr">
-                </section>
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center justify-center pt-20">
+        <div class="text-center text-white px-6">
+            <h1 class="text-5xl md:text-7xl font-bold font-lora leading-tight mb-4">I TYPE, WHAT I LIKE.</h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+                Unfiltered thoughts from the digital wilderness. Code confessions, mind dumps, and raw truths. Brace yourself.
+            </p>
+            <a href="#articles" class="mt-8 inline-block bg-amber-400 text-gray-900 font-bold py-3 px-8 rounded-lg text-lg hover:bg-amber-500 transition-transform transform hover:scale-105">Explore The Scribblings</a>
+        </div>
+    </section>
 
-                <section class="recent-posts-preview mb-5">
-                    <h2 class="text-center mb-4 section-title">Fresh From The Keyboard</h2>
-                    <div class="row">
-                        
-                        <div class="col-md-6 col-lg-4 mb-4">
-                            <div class="post-preview-card">
-                                <img src="https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Copilot_20250531_145236.png" alt="Measuring SEO Success concept with charts">
-                                <div class="card-body d-flex flex-column">
-                                    <h3 class="card-title">Measuring SEO Success for Small Businesses</h3>
-                                    <p class="card-text text-white-75">
-                                        How do you know if your SEO is actually working? Unpacking metrics with real-life examples and a touch of humor.
-                                    </p>
-                                    <p class="post-meta">Posted on <span class="text-warning">May 30, 2025</span></p>
-                                    <a href="post.html" class="btn btn-outline-warning mt-auto">Read More &raquo;</a>
-                                </div>
-                            </div>
-                        </div>
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16 md:py-24">
+        
+        <!-- Articles Section -->
+        <section id="articles">
+            <h2 class="text-4xl font-bold text-center font-lora mb-4">Fresh From The Keyboard</h2>
+            <div class="max-w-lg mx-auto mb-12">
+                <input type="text" id="search-filter" class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:border-amber-400" placeholder="Search articles by title or keyword...">
+            </div>
+            <div id="articles-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Articles will be injected here by JavaScript -->
+            </div>
+             <p id="no-articles-found" class="text-center text-gray-500 text-lg mt-12 hidden">No articles match your search. The void stares back...</p>
+        </section>
 
-                        <div class="col-md-6 col-lg-4 mb-4">
-                            <div class="post-preview-card">
-                                <img src="https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Afro-Futuristic%20Glitch%20Walker.png" class="card-img-top" alt="Abstract image representing an existential crisis and JavaScript code">
-                                <div class="card-body d-flex flex-column">
-                                    <h3 class="card-title">My Latest Existential Crisis (and how JavaScript made it worse)</h3>
-                                    <p class="card-text text-white-75">A deep dive into the void where asynchronous operations meet the futility of existence. You know, the usual.</p>
-                                    <p class="post-meta">Dropping on <span class="text-warning">June 10, 2025</span></p>
-                                    <a href="#" class="btn btn-outline-warning mt-auto">Read More &raquo;</a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-6 col-lg-4 mb-4">
-                            <div class="post-preview-card">
-                                <img src="https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Cascading%20Code%20and%20Contemplation.png" class="card-img-top" alt="Image representing thoughts and ideas for Mind Dumps article">
-                                <div class="card-body d-flex flex-column">
-                                    <h3 class="card-title">"Braai Day, Pray Day, What Day? The Watering Down of South African Holidays</h3>
-                                    <p class="card-text text-white-75">"Ah, Youth Day....or as it’s now known, ‘National Check If the Liquor Store Is Open Day.’<br>
-                                    In South Africa, holidays have lost their meaning—now they’re just days off. Ask someone what June 16th means, and you’ll either get a blank stare or "Braai Day?" from the guy already tipsy by noon. Between drinkers turning every holiday into a party and the religious making it a worship marathon, the real history gets lost. When did Freedom Day just become freedom from work? Let’s be honest—most of us just check if the mall’s open.</p>
-                                    <p class="post-meta">Dropping on <span class="text-warning">June 16, 2025</span></p>
-                                    <a href="#" class="btn btn-outline-warning mt-auto">Read More &raquo;</a>
-                                </div>
-                            </div>
-                        </div>
+        <!-- About Section -->
+        <section id="about" class="mt-24 py-16 glass-effect rounded-2xl">
+            <div class="text-center max-w-4xl mx-auto px-6">
+                 <img src="https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Neon%20Halo%20Portrait%20with%20Digital%20Overlays.png" alt="MoAfrika Skotch Ntilane" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-amber-400 object-cover">
+                <h2 class="text-4xl font-bold font-lora mb-4">Right, About Me...</h2>
+                <p class="text-gray-400 text-lg mb-6 italic">"In a world filled with average, I am a happily declared savage."</p>
+                <div class="text-left text-gray-300 space-y-4">
+                    <p>Alright, so they tell me I need an "About Me." Let's see... a freelance writer, you say? Check. Software whisperer? Guilty. Database tamer? I’ve wrangled a few unruly ones in my day. But if you think those labels are the whole story, you’ve barely scratched the surface. I'm less a collection of job titles and more an alchemist of code and chaos, a relentless weaver of words and worlds.</p>
+                    <p>This whole wild ride is paved with <strong>unapologetic authenticity</strong>, lessons hard-won from a spectacular portfolio of "learning experiences" (some call them mistakes, I call them plot twists), and an insatiable hunger for both the poetic elegance of a perfectly crafted sentence and the brutalist beauty of efficient code.</p>
+                    <p>I’m not here to just fill a seat; I’m here to own the stage, kick over the mic stand (metaphorically, mostly), and make sure you remember the name: <strong>MoAfrika Skotch Ntilane</strong>. It’s got a bit of thunder in it, don’t you think?</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Gemini API Feature: The Oracle -->
+        <section id="oracle" class="mt-24">
+            <h2 class="text-4xl font-bold text-center font-lora mb-4">The Oracle ✨</h2>
+            <p class="text-center text-gray-400 max-w-2xl mx-auto mb-10">Stuck for an idea? Feed a topic to the digital muse and get a MoAfrika-style blog starter pack. Unfiltered and ready to roll.</p>
+            <div class="max-w-xl mx-auto">
+                <div class="flex gap-4">
+                    <input type="text" id="oracle-topic" class="flex-grow bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:border-amber-400" placeholder="e.g., Procrastination, Kasi Logic...">
+                    <button id="oracle-button" class="bg-amber-400 text-gray-900 font-bold py-3 px-6 rounded-lg hover:bg-amber-500 transition-transform transform hover:scale-105 flex items-center justify-center">
+                        <span id="oracle-button-text">Consult</span>
+                        <div id="oracle-button-spinner" class="spinner hidden ml-2"></div>
+                    </button>
+                </div>
+                <div id="oracle-result" class="mt-8 p-6 glass-effect rounded-lg min-h-[100px] text-gray-300 hidden"></div>
+            </div>
+        </section>
 
-                                                <div class="col-12 my-4">
-                            <div class="thought-piece-card">
-                                <h3 class="text-center">A Thought on Digital Overload 🧠</h3>
-                                <p>We live in an age of infinite information, yet we seem to be getting dumber. Or at least, less curious. Our feeds are curated, our opinions are echo-chambered, and a quick "fact check" is more about reinforcing our biases than seeking truth. The internet promised a library of Alexandria, but delivered a public bathroom wall—filled with scrawled, fleeting thoughts. Maybe the real wisdom isn't in what we consume, but in the moments we intentionally disconnect. The quiet, boring moments where our own thoughts can finally be heard above the digital noise.</p>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="text-center mt-3">
-                        <a href="mywrites.html" class="btn btn-warning">See All Scribblings</a>
-                    </div>
-                </section>
+        <!-- Contact Section -->
+        <section id="contact" class="mt-24">
+            <h2 class="text-4xl font-bold text-center font-lora mb-4">Holler At Me</h2>
+            <p class="text-center text-gray-400 max-w-2xl mx-auto mb-10">Got a searing question, a wild collaboration idea, or just want to debate the existential importance of the Oxford comma? The digital void awaits your transmission.</p>
+            <form id="contact-form" class="max-w-xl mx-auto">
+                <div class="mb-6">
+                    <label for="name" class="block text-amber-400 font-bold mb-2">Your Handle / Alias</label>
+                    <input type="text" id="name" name="name" class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:border-amber-400" placeholder="e.g., The Digital Nomad" required>
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block text-amber-400 font-bold mb-2">Your Email Address</label>
+                    <input type="email" id="email" name="email" class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:border-amber-400" placeholder="So I can fire back a reply..." required>
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block text-amber-400 font-bold mb-2">Your Manifesto / Rant / Brilliant Idea</label>
+                    <textarea id="message" name="message" rows="5" class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:border-amber-400" placeholder="Don't hold back. The void is listening..." required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="bg-amber-400 text-gray-900 font-bold py-3 px-10 rounded-lg text-lg hover:bg-amber-500 transition-transform transform hover:scale-105">Send via WhatsApp</button>
+                </div>
+                <p id="form-status" class="text-center mt-4"></p>
+            </form>
+        </section>
 
-                <section class="about-cta-section text-center p-4 rounded">
-                    <h2 class="section-title">Curious About The Scribe?</h2>
-                    <p class="lead text-white-75">
-                        Learn more about the method (and madness) behind these musings. Or, if you're feeling brave, drop me a line.
-                    </p>
-                    <a href="about.html" class="btn btn-outline-light me-2">Meet MoAfrika</a>
-                    <a href="contact.html" class="btn btn-warning">Holler At Me</a>
-                </section>
+    </main>
 
-            </div>
-        </div>
-    </main>
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 mt-24">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-500">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://www.linkedin.com/in/mo-ntilanedev/" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="https://github.com/MoAfrika" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition" aria-label="GitHub"><i class="fab fa-github fa-2x"></i></a>
+                <a href="https://web.facebook.com/MR.D.3.N.Z.O" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition" aria-label="Facebook"><i class="fab fa-facebook-f fa-2x"></i></a>
+            </div>
+            <p>&copy; <span id="currentYear"></span> MoAfrika Skotch Ntilane. All rights reserved.</p>
+            <p>Still recursively typing what I like.</p>
+        </div>
+    </footer>
 
-    <footer class="site-footer py-4 text-center">
-        <div class="container">
-            <ul class="list-inline social-icons mb-3">
-                <li class="list-inline-item mx-2">
-                    <a href="https://www.linkedin.com/in/mo-ntilanedev/" aria-label="Connect on Linkedin" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin fa-2x"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item mx-2">
-                    <a href="https://web.facebook.com/MR.D.3.N.Z.O" aria-label="Find on Facebook" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-facebook-f fa-2x"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item mx-2">
-                    <a href="https://github.com/MoAfrika" aria-label="Peek at GitHub" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-github fa-2x"></i>
-                    </a>
-                </li>
-            </ul>
-            <p class="copyright-text mt-2">&copy; <span id="currentYear">2025</span> MoAfrika Skotch Ntilane. Go on, make my inbox less boring.</p>
-        </div>
-    </footer>
+    <!-- Article Modal -->
+    <div id="articleModal" class="fixed inset-0 bg-black bg-opacity-80 z-50 hidden items-center justify-center p-4">
+        <div class="glass-effect rounded-2xl w-full max-w-4xl relative shadow-2xl flex flex-col">
+            <button id="closeModal" class="absolute top-4 right-4 text-gray-400 hover:text-white text-3xl z-10">&times;</button>
+            <div id="modalContent" class="p-8 md:p-12 overflow-y-auto modal-content-area flex-grow">
+                <!-- Full article content will be loaded here -->
+            </div>
+             <div class="p-6 border-t border-gray-700">
+                <button id="riff-button" class="bg-amber-400 text-gray-900 font-bold py-2 px-5 rounded-lg hover:bg-amber-500 transition w-full flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed">
+                    <span id="riff-button-text">Keep Riffing ✨</span>
+                    <div id="riff-button-spinner" class="spinner hidden ml-2"></div>
+                </button>
+            </div>
+        </div>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const yearSpan = document.getElementById('currentYear');
-            if (yearSpan) {
-                yearSpan.textContent = new Date().getFullYear();
-            }
-        });
-    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- DATA: ARTICLES ---
+            const articles = [
+                 {
+                    title: "A Stranger Will Become a Customer Quicker Than a Friend Will",
+                    excerpt: "You’ve heard it before: a prophet is never recognized in his own land. The closer they are, the slower the applause. Why strangers support you faster than your own circle.",
+                    image: "https://placehold.co/600x400/1a1a1a/fbbF24?text=Support",
+                    date: "August 19, 2025",
+                    content: `
+                        <h3 class="text-3xl md:text-4xl font-bold font-lora text-amber-400 mb-4">A Stranger Will Become a Customer Quicker Than a Friend Will</h3>
+                        <p class="text-gray-500 mb-8">Posted on August 19, 2025</p>
+                        <div class="article-body space-y-6 text-lg text-gray-300">
+                            <p>You’ve heard it before: a prophet is never recognized in his own land. Or, as some say, a doctor heals another village before anyone praises him at home. It’s the same story in every Black neighborhood, every family, every set of friends you think you can count on. The closer they are, the slower the applause.</p>
+                            <p>You launch a project. A small business, a creative venture, a dream you dared to chase while everyone else slept. And who notices first? A stranger. Some random person online, scrolling past life like it’s TikTok, drops a heart or a like. And your friends, your cousins, your “supportive” family? Silence. Crickets. Reposts of celebrity gossip, memes, trending nonsense. That stranger becomes a customer quicker than your little sister gets a “good job.”</p>
+                            <h4 class="text-2xl font-lora text-amber-400 mt-6">Why does this happen? Let’s go there.</h4>
+                            <p><strong>Betrayal runs deep.</strong> It’s unspoken, but it’s in the air. In many Black families, there’s a learned instinct: trust cautiously. Grandma warned it. Mom whispered it. “Don’t get too close, don’t shine too bright.” Generations grew up seeing envy, manipulation, subtle cuts in the name of love. Betrayal isn’t a shock, it’s expected. And when support is conditional, hollow, or absent, the world outside your circle becomes safer to celebrate.</p>
+                            <p><strong>Limiting beliefs smother growth.</strong> Somewhere along the line, we learned to minimize ourselves. “Don’t stand out. Don’t make waves. Don’t be too successful, you might make someone jealous.” That mindset is a slow poison. And it passes down quietly. So when you rise, the people who should cheer are unsure how to respond. Shallow excitement. Polite silence. And that stranger? They don’t carry baggage. They just celebrate.</p>
+                            <p><strong>Envy hides in plain sight.</strong> Here’s the brutal truth: we’re quick to compare. And comparison breeds hesitation. When it’s someone close, it’s personal. The closer they are, the more they measure their own value against yours. And instead of celebrating, they freeze. So the applause goes elsewhere, outsiders, acquaintances, someone with nothing to do with your journey.</p>
+                            <p class="border-l-4 border-amber-400 pl-4 italic text-gray-400">Imagine this: your cousin reposts a celebrity wearing a $2,000 jacket the same week your sister launches a handmade bag business. She’ll comment “🔥🔥🔥” on the celebrity’s post and scroll past your sister’s launch like it’s nothing. The absurdity is almost comedic, until it hits your chest like a stone.</p>
+                            <p><strong>The grief is real.</strong> And yes, it’s grief. Because it teaches a harsh lesson early: family isn’t guaranteed. Friends aren’t guaranteed. The village isn’t guaranteed. The support you crave? You may have to look for it outside the familiar. And yet, this pain shapes resilience. You learn to validate yourself. You learn to applaud your own victories. You learn that strangers can be angels disguised in anonymity.</p>
+                            <p><strong>Brutal honesty: it’s not always betrayal.</strong> Sometimes it’s history. Sometimes it’s insecurity. Sometimes, it’s just the way love and support were rationed in the households we inherited. Scarcity of encouragement. Scarcity of recognition. And we grow up thinking that’s normal. We accept it. And the cycle continues, until someone decides to break it.</p>
+                            <h4 class="text-2xl font-lora text-amber-400 mt-6">Here’s the twist:</h4>
+                            <p>You don’t have to wait for your circle to catch up. You don’t have to wait for family to notice. Celebrate yourself first. Build the village you needed when no one else showed up. Clap your own hands. Pour your own wine. Cheer your own victories. And yes, let strangers cheer too, they will.</p>
+                            <p>Because here’s the miracle: some day, late or early, the right friend will appear. They’ll celebrate you in ways your family couldn’t. They’ll bring tears, laughter, and validation. And when that happens, it will hit differently. Because you already know: sometimes the village is strangers, and the strangers become the village you never had.</p>
+                        </div>
+                    `
+                },
+                {
+                    title: "The Ghost in the Machine: Battling Impostor Syndrome",
+                    excerpt: "From Soweto to Silicon Valley, the feeling of being a fraud is a universal tax on ambition. Let's talk about the ghost that haunts our code and our confidence.",
+                    image: "https://placehold.co/600x400/1a1a1a/fbbF24?text=Ghost+In+The+Machine",
+                    date: "August 18, 2025",
+                    content: `
+                        <h3 class="text-3xl md:text-4xl font-bold font-lora text-amber-400 mb-4">The Ghost in the Machine: Battling Impostor Syndrome</h3>
+                        <p class="text-gray-500 mb-8">Posted on August 18, 2025</p>
+                        <div class="article-body space-y-6 text-lg text-gray-300">
+                            <p>There’s a ghost that haunts the tech world. It doesn’t rattle chains or flicker lights. It whispers. It tells you that you’re a fraud, that your successes are flukes, and that any moment now, you’ll be exposed as the unqualified hack you truly are. This ghost is Impostor Syndrome, and from the bustling streets of Soweto to the polished corridors of Silicon Valley, it’s a tax on ambition that everyone seems to pay.</p>
+                            <p>My journey into code wasn't paved with Ivy League degrees or coding bootcamps. It was forged in the flickering light of a screen during load-shedding, pieced together from YouTube tutorials and borrowed data. Every line of code felt like an act of defiance against a world that didn’t expect me to be there. And with every small victory, the ghost’s whisper grew louder: 'You don't belong here.'</p>
+                            <p class="border-l-4 border-amber-400 pl-4 italic text-gray-400">The feeling of being an impostor is the price of admission for stepping into a new arena. It means you're pushing boundaries. It means you're growing.</p>
+                            <p>How do we fight a ghost? Not with more certifications or by memorizing more algorithms. We fight it by talking about it. By admitting to our peers, 'I feel like I'm faking it.' and hearing them say, 'Me too.' We fight it by mentoring the next generation, showing them that the path is messy and non-linear, and that feeling like an impostor is part of the process, not a sign of failure.</p>
+                            <p>We exorcise this ghost not by becoming perfect, but by embracing our imperfect journey. By understanding that our unique perspectives, our 'kasi logic,' our resilience, our unconventional paths, are not liabilities. They are our greatest strengths. They are the very things that make our contribution to the machine invaluable.</p>
+                        </div>
+                    `
+                },
+                {
+                    title: "Hustle vs. Hamba Kahle: Unplugging in a World That Never Sleeps",
+                    excerpt: "Our culture glorifies the grind. But what if the most revolutionary act is to rest? A look at the radical idea of 'going slowly' in the relentless pursuit of success.",
+                    image: "https://placehold.co/600x400/1a1a1a/fbbF24?text=Hustle+vs+Rest",
+                    date: "August 10, 2025",
+                    content: `
+                        <h3 class="text-3xl md:text-4xl font-bold font-lora text-amber-400 mb-4">Hustle vs. Hamba Kahle: Unplugging in a World That Never Sleeps</h3>
+                        <p class="text-gray-500 mb-8">Posted on August 10, 2025</p>
+                        <div class="article-body space-y-6 text-lg text-gray-300">
+                            <p>The gospel of 'hustle culture' is preached from every corner of the internet. 'Rise and grind.' 'Sleep is for the broke.' We’re told that success is a sleepless marathon, and if you’re not constantly moving, you’re falling behind. It’s a compelling narrative, especially when you come from a place where the margin for error is razor-thin. The hustle is survival.</p>
+                            <p>But I've started to question this doctrine. I've seen the burnout. The anxiety. The hollowed-out feeling of chasing a finish line that keeps moving. What if the most radical, most productive, most revolutionary act isn't to hustle harder, but to rest intentionally?</p>
+                            <p>This isn't about laziness. It's about sustainability. It's the concept of 'Hamba Kahle,' to go slowly, to go well. It's the wisdom in taking a moment to breathe, to disconnect, to allow your mind the space to process and create. My best code isn't written in a frantic 18-hour coding binge. It’s conceived on a long walk, in the quiet moments after the noise has settled.</p>
+                            <p class="border-l-4 border-amber-400 pl-4 italic text-gray-400">In a world that demands constant output, choosing to rest is an act of defiance. It's reclaiming your time, your energy, and your sanity.</p>
+                            <p>We need to redefine strength. It’s not just the ability to endure the grind; it's the wisdom to know when to step away from it. It's building a life where rest is not a luxury earned after burnout, but an integral part of the creative process. So, let them hustle. I'll be over here, going slowly, going well, and building something that lasts.</p>
+                        </div>
+                    `
+                },
+                {
+                    title: "Are We Connected or Just Caged?",
+                    excerpt: "We live in an age of infinite information, yet we seem to be getting less curious. A requiem for real conversation in the era of the echo chamber.",
+                    image: "https://placehold.co/600x400/1a1a1a/fbbF24?text=Connected+or+Caged",
+                    date: "July 28, 2025",
+                    content: `
+                        <h3 class="text-3xl md:text-4xl font-bold font-lora text-amber-400 mb-4">Are We Connected or Just Caged? A Requiem for Real Conversation</h3>
+                        <p class="text-gray-500 mb-8">Posted on July 28, 2025</p>
+                        <div class="article-body space-y-6 text-lg text-gray-300">
+                           <p>We carry the entire repository of human knowledge in our pockets, yet we seem to be getting dumber. Or at least, less curious. Our feeds are curated, our opinions are echo-chambered, and a quick "fact check" is more about reinforcing our biases than seeking truth.</p>
+                           <p>The internet promised a library of Alexandria, but delivered a public bathroom wall, filled with scrawled, fleeting thoughts, angry declarations, and memes that die in a week. We've traded deep conversation for quick comments, nuanced debate for tribal name-calling. We are more 'connected' than ever, but are we any closer?</p>
+                            <p class="border-l-4 border-amber-400 pl-4 italic text-gray-400">We've built digital cages with invisible bars, mistaking the echo of our own voices for a chorus of agreement.</p>
+                           <p>I miss the boredom. The moments of silence in a car ride that forced a real conversation. The act of having to call someone and listen, truly listen, without the distraction of a dozen other notifications vying for attention. We've optimized boredom out of our lives, and in doing so, we've optimized out the space for genuine connection to grow.</p>
+                           <p>Maybe the real wisdom isn't in what we consume, but in the moments we intentionally disconnect. The quiet, boring moments where our own thoughts can finally be heard above the digital noise. The moments where we look up from our screens and have a real, messy, unpredictable conversation with the person right in front of us. That’s where the real connection is. The rest is just static.</p>
+                        </div>
+                    `
+                },
+                {
+                    title: "From 'Aweh' to 'Algorithm': Decoding the New Mzansi Lexicon",
+                    excerpt: "Language is alive. It breathes, it evolves, and in South Africa, it moves at the speed of a minibus taxi in rush hour. A look at how our slang reflects our changing identity.",
+                    image: "https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Mzansi-Lexicon-Placeholder.png",
+                    date: "July 15, 2025",
+                    content: `
+                        <h3 class="text-3xl md:text-4xl font-bold font-lora text-amber-400 mb-4">From 'Aweh' to 'Algorithm': Decoding the New Mzansi Lexicon</h3>
+                        <p class="text-gray-500 mb-8">Posted on July 15, 2025</p>
+                        <div class="article-body space-y-6 text-lg text-gray-300">
+                           <p>Language in South Africa has never been a static thing. It’s a living, breathing, evolving beast, a beautiful mashup of cultures, histories, and struggles, all stirred together in the great potjiekos of our nation. We gave the world 'braai' and 'voetsek.' But the evolution hasn't stopped. In fact, it's accelerating.</p>
+                           <p>The modern Mzansi lexicon is a fascinating hybrid. It’s where the timeless greeting of 'Aweh!' meets the digital reality of the 'Algorithm.' It's where township slang intertwines with tech jargon. We talk about 'ghosting' someone with the same casualness as we talk about 'load-shedding.' We use 'rizz' and 'iykyk' in the same sentence as 'sharp sharp' and 'eish.'</p>
+                           <p>This isn't a corruption of language; it's a reflection of our reality. We are a nation navigating a complex identity, one foot firmly planted in our rich cultural heritage, the other stepping into a globalized, digital future. Our language is simply keeping pace.</p>
+                            <p class="border-l-4 border-amber-400 pl-4 italic text-gray-400">Slang is the diary of a nation. It's where you find the truth of how people are living, thinking, and feeling, long before it makes it into the history books.</p>
+                           <p>To understand modern South Africa, you need to listen to how we talk. Listen to the code-switching in a taxi, the memes shared on WhatsApp, the language of the youth on TikTok. It’s there, in that vibrant, chaotic, and ever-changing lexicon, that you’ll find the true story of who we are and who we are becoming. It's a language built on resilience, humor, and an incredible capacity for adaptation. It's the Mzansi dialect, and it's a thing of beauty.</p>
+                        </div>
+                    `
+                },
+                {
+                    title: "My Latest Existential Crisis (and how JavaScript made it worse)",
+                    excerpt: "A deep dive into the void where asynchronous operations meet the futility of existence. You know, the usual.",
+                    image: "https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Afro-Futuristic%20Glitch%20Walker.png",
+                    date: "June 10, 2025",
+                    content: `
+                        <h3 class="text-3xl md:text-4xl font-bold font-lora text-amber-400 mb-4">My Latest Existential Crisis (and how JavaScript made it worse)</h3>
+                        <p class="text-gray-500 mb-8">Posted on June 10, 2025</p>
+                        <div class="article-body space-y-6 text-lg text-gray-300">
+                            <p>Picture this: It's 3 AM. The only lights are the glow of my monitor and the cold, indifferent moon. I'm staring at a Promise chain that looks more tangled than my last relationship, and a thought hits me with the force of a syntax error on line 1: What if life is just an asynchronous operation with no .catch() block?</p>
+                            <p>You send out a request, for love, for success, for a decent internet connection, and you get a promise of a response. You wait. You attach a .then() block, full of optimistic plans for what you'll do when the data arrives. But there's no guarantee. The server (the universe) might time out. The request might get lost in the void. You might be left waiting forever, your callback function never to be executed.</p>
+                            <p>JavaScript, in its infinite and cruel wisdom, teaches us about the fundamental uncertainty of existence. We live in a single-threaded reality (our own consciousness), constantly pushing tasks onto the event loop, hoping that the callbacks we've set up will eventually fire. We try to avoid blocking the main thread with worry and regret, but it's hard. Sometimes, the call stack of our anxieties gets so deep we face a total system crash.</p>
+                            <p class="border-l-4 border-amber-400 pl-4 italic text-gray-400">Is free will just a callback function we wrote ourselves, or are we all just waiting for an event we didn't trigger?</p>
+                            <p>And don't even get me started on 'undefined'. That's not just a value; it's a philosophical state. It's the perfect description for that feeling of not knowing your purpose, your value, your place in the great DOM of life. We're all just variables, declared but not yet assigned, trying to find meaning in a world of nulls and NaNs.</p>
+                            <p>So yes, JavaScript is making my existential crisis worse. It's providing a far-too-accurate technical vocabulary for the chaotic, unpredictable, and often-unresponsive nature of life. Now if you'll excuse me, I'm going to go wrap my entire existence in a try...catch block and hope for the best.</p>
+                        </div>
+                    `
+                },
+                {
+                    title: "Braai Day, Pray Day, What Day?",
+                    excerpt: "The watering down of South African holidays. When did Freedom Day just become freedom from work? Let’s be honest... most of us just check if the mall’s open.",
+                    image: "https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Cascading%20Code%20and%20Contemplation.png",
+                    date: "June 16, 2025",
+                    content: `
+                        <h3 class="text-3xl md:text-4xl font-bold font-lora text-amber-400 mb-4">"Braai Day, Pray Day, What Day? The Watering Down of South African Holidays</h3>
+                        <p class="text-gray-500 mb-8">Posted on June 16, 2025</p>
+                        <div class="article-body space-y-6 text-lg text-gray-300">
+                           <p>"Ah, Youth Day... or as it’s now known, ‘National Check If the Liquor Store Is Open Day.’</p>
+                           <p>In South Africa, our public holidays, once markers of profound struggle and hard-won victory, have been diluted into little more than welcome breaks from the daily grind. The historical significance has been bleached out, replaced by the generic glow of a day off.</p>
+                           <p>Ask someone what June 16th truly commemorates, and you’re likely to get a vague answer about 'the youth,' followed swiftly by a more pressing question: 'Are the shops open?' The day Hector Pieterson and countless others faced bullets for the right to a decent education has become, for many, just another excuse for a braai. Heritage Day is 'Braai Day.' Freedom Day is freedom from emails.</p>
+                            <p class="border-l-4 border-amber-400 pl-4 italic text-gray-400">We've traded remembrance for convenience, turning days of solemn reflection into opportunities for retail therapy and revelry.</p>
+                           <p>Between the devout who turn every holiday into a marathon prayer session and the party-goers who see it as a government-sanctioned bender, the actual history gets lost in the noise. The stories fade. The sacrifices are forgotten. And we are left with a calendar full of hollowed-out holidays, their powerful meanings replaced by the mundane rhythm of a long weekend.</p>
+                           <p>Perhaps it's time we reclaimed them. Not by shunning the braai or the prayer, but by infusing them with the very meaning they were meant to celebrate. To remember, to discuss, to educate, and to ensure that these days are more than just a welcome pause, but a powerful reminder of where we come from, and the price that was paid for the very freedoms we now so casually enjoy.</p>
+                        </div>
+                    `
+                },
+            ];
+
+            // --- GEMINI API INTEGRATION ---
+            
+            // Generic function to call the Gemini API
+            async function callGemini(prompt) {
+                let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
+                const payload = { contents: chatHistory };
+                const apiKey = ""; // API key will be provided by the environment
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`API request failed with status ${response.status}`);
+                    }
+
+                    const result = await response.json();
+                    if (result.candidates && result.candidates.length > 0 &&
+                        result.candidates[0].content && result.candidates[0].content.parts &&
+                        result.candidates[0].content.parts.length > 0) {
+                        return result.candidates[0].content.parts[0].text;
+                    } else {
+                        return "The Oracle is silent. Perhaps the cosmos is busy. Try again.";
+                    }
+                } catch (error) {
+                    console.error("Gemini API Error:", error);
+                    return "A cosmic interference blocked the signal. Please check the console and try again.";
+                }
+            }
+            
+            // "The Oracle" Feature Logic
+            const oracleButton = document.getElementById('oracle-button');
+            const oracleTopicInput = document.getElementById('oracle-topic');
+            const oracleResultDiv = document.getElementById('oracle-result');
+            const oracleButtonText = document.getElementById('oracle-button-text');
+            const oracleSpinner = document.getElementById('oracle-button-spinner');
+
+            oracleButton.addEventListener('click', async () => {
+                const topic = oracleTopicInput.value.trim();
+                if (!topic) {
+                    oracleResultDiv.innerHTML = `<p class="text-red-400">The Oracle requires a topic to ponder.</p>`;
+                    oracleResultDiv.classList.remove('hidden');
+                    return;
+                }
+
+                oracleButton.disabled = true;
+                oracleButtonText.classList.add('hidden');
+                oracleSpinner.classList.remove('hidden');
+
+                const prompt = `You are MoAfrika Skotch Ntilane, a South African writer, developer, and thinker with a raw, unfiltered, and unapologetic voice. Your style is a mix of "kasi logic," tech insight, and sharp social commentary.
+
+                A user wants a blog post idea about the topic: "${topic}".
+
+                Generate a response in two parts:
+                1.  A provocative, on-brand blog post title.
+                2.  A short, edgy, and compelling introductory paragraph (2-3 sentences) that captures your unique style.
+
+                Format the response exactly like this, with no extra text:
+                TITLE: [Your generated title]
+                PARAGRAPH: [Your generated paragraph]`;
+                
+                try {
+                    const response = await callGemini(prompt);
+                    
+                    const titleMatch = response.match(/TITLE: (.*)/);
+                    const paragraphMatch = response.match(/PARAGRAPH: (.*)/);
+
+                    if (titleMatch && paragraphMatch) {
+                        const title = titleMatch[1];
+                        const paragraph = paragraphMatch[1];
+                        oracleResultDiv.innerHTML = `
+                            <h4 class="text-xl font-lora font-bold text-amber-400 mb-2">${title}</h4>
+                            <p>${paragraph}</p>
+                        `;
+                    } else {
+                        oracleResultDiv.innerHTML = `<p>${response}</p>`; // Show raw response if parsing fails
+                    }
+                    oracleResultDiv.classList.remove('hidden');
+                } finally {
+                    oracleButton.disabled = false;
+                    oracleButtonText.classList.remove('hidden');
+                    oracleSpinner.classList.add('hidden');
+                }
+            });
+
+            // "Keep Riffing" Feature Logic
+            const riffButton = document.getElementById('riff-button');
+            const riffButtonText = document.getElementById('riff-button-text');
+            const riffSpinner = document.getElementById('riff-button-spinner');
+            let currentArticleText = '';
+
+            riffButton.addEventListener('click', async () => {
+                riffButton.disabled = true;
+                riffButtonText.classList.add('hidden');
+                riffSpinner.classList.remove('hidden');
+
+                const prompt = `You are an AI assistant trained to emulate the writing style of MoAfrika Skotch Ntilane. His style is raw, unfiltered, unapologetic, and mixes South African "kasi logic" with tech insights and sharp social commentary.
+
+                Here is an excerpt from one of his blog posts:
+                ---
+                ${currentArticleText}
+                ---
+
+                Continue this train of thought. Write one more compelling paragraph in his exact style that seamlessly follows the last sentence of the excerpt. Do not repeat ideas. Do not add a title or any introductory text. Just write the paragraph.`;
+                
+                try {
+                    const generatedParagraph = await callGemini(prompt);
+                    const articleBody = modalContent.querySelector('.article-body');
+                    
+                    if (articleBody && generatedParagraph && !generatedParagraph.includes("blocked the signal")) {
+                        const p = document.createElement('p');
+                        p.className = "border-l-4 border-amber-400 pl-4 italic text-gray-400 mt-6 text-lg";
+                        p.textContent = generatedParagraph;
+                        articleBody.appendChild(p);
+                        
+                        // Scroll to the new content
+                        p.scrollIntoView({ behavior: 'smooth' });
+                        
+                        // Update button text and keep it disabled
+                        riffButtonText.textContent = 'Riffed!';
+                    }
+                } finally {
+                    // Don't re-enable the button, but hide the spinner and show the text
+                    riffButtonText.classList.remove('hidden');
+                    riffSpinner.classList.add('hidden');
+                }
+            });
+
+            // --- RENDER & FILTER ARTICLES ---
+            const articlesGrid = document.getElementById('articles-grid');
+            const searchInput = document.getElementById('search-filter');
+            const noArticlesMessage = document.getElementById('no-articles-found');
+
+            function renderArticles(filter = '') {
+                articlesGrid.innerHTML = '';
+                const lowerCaseFilter = filter.toLowerCase();
+
+                const filteredArticles = articles.filter(article => 
+                    article.title.toLowerCase().includes(lowerCaseFilter) || 
+                    article.excerpt.toLowerCase().includes(lowerCaseFilter)
+                );
+
+                if (filteredArticles.length === 0) {
+                    noArticlesMessage.classList.remove('hidden');
+                } else {
+                    noArticlesMessage.classList.add('hidden');
+                }
+
+                filteredArticles.forEach((article, index) => {
+                    // Find the original index to maintain correct modal opening
+                    const originalIndex = articles.findIndex(a => a.title === article.title);
+                    const articleEl = document.createElement('div');
+                    articleEl.className = 'glass-effect rounded-2xl overflow-hidden flex flex-col group transform hover:-translate-y-2 transition-transform duration-300';
+                    articleEl.innerHTML = `
+                        <div class="relative">
+                            <img src="${article.image}" alt="${article.title}" class="w-full h-56 object-cover">
+                            <div class="absolute inset-0 bg-black opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <p class="text-sm text-gray-500 mb-2">${article.date}</p>
+                            <h3 class="text-2xl font-bold font-lora text-amber-400 mb-3 flex-grow">${article.title}</h3>
+                            <p class="text-gray-400 mb-4">${article.excerpt}</p>
+                            <button data-index="${originalIndex}" class="read-more-btn mt-auto text-left font-semibold text-amber-400 hover:text-white transition">Read More &raquo;</button>
+                        </div>
+                    `;
+                    articlesGrid.appendChild(articleEl);
+                });
+            }
+
+            searchInput.addEventListener('input', (e) => {
+                renderArticles(e.target.value);
+            });
+
+            // Initial render
+            renderArticles();
+
+
+            // --- MODAL LOGIC (using Event Delegation) ---
+            const modal = document.getElementById('articleModal');
+            const modalContent = document.getElementById('modalContent');
+            const closeModal = document.getElementById('closeModal');
+
+            articlesGrid.addEventListener('click', function(event) {
+                const button = event.target.closest('.read-more-btn');
+                if (button) {
+                    const articleIndex = button.getAttribute('data-index');
+                    const articleData = articles[articleIndex];
+                    modalContent.innerHTML = articleData.content;
+                    
+                    // Store the text content for the "Keep Riffing" feature
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = articleData.content;
+                    currentArticleText = tempDiv.querySelector('.article-body').textContent.trim();
+
+                    // Reset riff button state
+                    riffButton.disabled = false;
+                    riffButtonText.textContent = 'Keep Riffing ✨';
+                    
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+
+            const hideModal = () => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = '';
+            };
+
+            closeModal.addEventListener('click', hideModal);
+            modal.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    hideModal();
+                }
+            });
+            document.addEventListener('keydown', function(event) {
+                if (event.key === "Escape") {
+                    hideModal();
+                }
+            });
+
+
+            // --- MOBILE MENU ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            mobileMenu.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+
+
+            // --- DYNAMIC YEAR ---
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+            // --- CONTACT FORM (WHATSAPP INTEGRATION) ---
+            document.getElementById('contact-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const formStatus = document.getElementById('form-status');
+                
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                // Format the message for WhatsApp
+                const whatsappMessage = `*New Message from I TYPE, WHAT I LIKE*
+                \n*Handle:* ${name}
+                \n*Email:* ${email}
+                \n*Message:* ${message}`;
+
+                // South African country code is 27. Remove leading 0 from local number.
+                const phoneNumber = '27682337028'; 
+
+                // Create the WhatsApp URL
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+                // Open WhatsApp in a new tab
+                formStatus.textContent = "Redirecting to WhatsApp...";
+                formStatus.className = "text-center mt-4 text-amber-400";
+                window.open(whatsappUrl, '_blank');
+                
+                this.reset();
+                setTimeout(() => { formStatus.textContent = ''; }, 5000);
+            });
+        });
+    </script>
 </body>
 </html>
