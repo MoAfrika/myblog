@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
      <style>
         body {
             background-color: #0a0a0a;
@@ -116,30 +116,64 @@
             <div class="text-center max-w-4xl mx-auto px-6">
                  <img src="https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Neon%20Halo%20Portrait%20with%20Digital%20Overlays.png" alt="MoAfrika Skotch Ntilane" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-amber-400 object-cover">
                 <h2 class="text-4xl font-bold font-lora mb-4">Right, About Me...</h2>
-                <p class="text-gray-400 text-lg mb-6 italic">"In a world filled with average, I am a happily declared savage."</p>
                 <div class="text-left text-gray-300 space-y-4">
-                    <p>Alright, so they tell me I need an "About Me." Let's see... a freelance writer, you say? Check. Software whisperer? Guilty. Database tamer? I’ve wrangled a few unruly ones in my day. But if you think those labels are the whole story, you’ve barely scratched the surface. I'm less a collection of job titles and more an alchemist of code and chaos, a relentless weaver of words and worlds.</p>
-                    <p>This whole wild ride is paved with <strong>unapologetic authenticity</strong>, lessons hard-won from a spectacular portfolio of "learning experiences" (some call them mistakes, I call them plot twists), and an insatiable hunger for both the poetic elegance of a perfectly crafted sentence and the brutalist beauty of efficient code.</p>
-                    <p>I’m not here to just fill a seat; I’m here to own the stage, kick over the mic stand (metaphorically, mostly), and make sure you remember the name: <strong>MoAfrika Skotch Ntilane</strong>. It’s got a bit of thunder in it, don’t you think?</p>
+                    <p>I’m not a résumé in motion; I’m a constellation of obsessions stitched together with stubborn grace. A freelance writer by trade, yes. A software whisperer, sometimes. A database tamer on days the digital gods demand a duel. But those titles? They’re postcards from a much larger map.</p>
+                    <p>I’m an architect of stories and systems, fluent in the language of both algorithms and allegory. The keyboard is my instrument... sometimes it hums with clean, efficient code, sometimes it howls with sentences sharp enough to draw blood.</p>
+                    <p>Every scar in my portfolio is a plot twist I refused to edit out. Mistakes? I prefer to call them experiments in becoming, each one a breadcrumb on the path to mastery.</p>
+                    <p>I move through the world with an appetite: for precision, for possibility, for the kind of beauty that lives in contradictions. The brutalist elegance of logic. The feral freedom of art.</p>
+                    <p>I’m not here to “fit in” or fill a seat. I’m here to tilt the stage, to rewire the script, to make sure when the credits roll, the name MoAfrika Skotch Ntilane rings like a war drum in your memory. Because it does have thunder in it... if you’re listening.</p>
                 </div>
             </div>
         </section>
         
-        <!-- Gemini API Feature: The Oracle -->
-        <section id="oracle" class="mt-24">
-            <h2 class="text-4xl font-bold text-center font-lora mb-4">The Oracle ✨</h2>
-            <p class="text-center text-gray-400 max-w-2xl mx-auto mb-10">Stuck for an idea? Feed a topic to the digital muse and get a MoAfrika-style blog starter pack. Unfiltered and ready to roll.</p>
-            <div class="max-w-xl mx-auto">
-                <div class="flex gap-4">
-                    <input type="text" id="oracle-topic" class="flex-grow bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:border-amber-400" placeholder="e.g., Procrastination, Kasi Logic...">
-                    <button id="oracle-button" class="bg-amber-400 text-gray-900 font-bold py-3 px-6 rounded-lg hover:bg-amber-500 transition-transform transform hover:scale-105 flex items-center justify-center">
-                        <span id="oracle-button-text">Consult</span>
-                        <div id="oracle-button-spinner" class="spinner hidden ml-2"></div>
-                    </button>
+        <!-- Premium Features Container -->
+        <div id="premium-features" class="relative mt-24">
+            <!-- Pro Wall Overlay -->
+            <div id="pro-wall" class="absolute inset-0 bg-black/70 backdrop-blur-sm flex flex-col items-center justify-center text-center p-8 rounded-2xl z-10 hidden">
+                <div class="w-16 h-16 mb-4 text-amber-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-full h-full">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                    </svg>
                 </div>
-                <div id="oracle-result" class="mt-8 p-6 glass-effect rounded-lg min-h-[100px] text-gray-300 hidden"></div>
+                <h3 class="text-3xl font-bold font-lora text-amber-400 mb-4">Unlock Pro Access</h3>
+                <p class="text-gray-300 max-w-md mb-6">These features are for subscribers only. Join the inner circle to get full access to the Oracle, the Kasi-fier, and other exclusive tools.</p>
+                <button class="bg-amber-400 text-gray-900 font-bold py-3 px-8 rounded-lg text-lg hover:bg-amber-500 transition-transform transform hover:scale-105">
+                    Subscribe Now
+                </button>
             </div>
-        </section>
+
+            <!-- Gemini API Feature: The Oracle -->
+            <section id="oracle" class="py-12">
+                <h2 class="text-4xl font-bold text-center font-lora mb-4">The Oracle ✨</h2>
+                <p class="text-center text-gray-400 max-w-2xl mx-auto mb-10">Stuck for an idea? Feed a topic to the digital muse and get a MoAfrika-style blog starter pack. Unfiltered and ready to roll.</p>
+                <div class="max-w-xl mx-auto">
+                    <div class="flex gap-4">
+                        <input type="text" id="oracle-topic" class="flex-grow bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:border-amber-400" placeholder="e.g., Procrastination, Kasi Logic...">
+                        <button id="oracle-button" class="bg-amber-400 text-gray-900 font-bold py-3 px-6 rounded-lg hover:bg-amber-500 transition-transform transform hover:scale-105 flex items-center justify-center">
+                            <span id="oracle-button-text">Consult</span>
+                            <div id="oracle-button-spinner" class="spinner hidden ml-2"></div>
+                        </button>
+                    </div>
+                    <div id="oracle-result" class="mt-8 p-6 glass-effect rounded-lg min-h-[100px] text-gray-300 hidden"></div>
+                </div>
+            </section>
+
+            <!-- Gemini API Feature: The Kasi-fier -->
+            <section id="kasifier" class="py-12">
+                <h2 class="text-4xl font-bold text-center font-lora mb-4">The Kasi-fier ✨</h2>
+                <p class="text-center text-gray-400 max-w-2xl mx-auto mb-10">Tired of corporate jargon and bland formalities? Translate that boring text into raw, kasi truth. Let's see what you've really been trying to say.</p>
+                <div class="max-w-xl mx-auto">
+                    <textarea id="kasifier-input" rows="4" class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:border-amber-400" placeholder="e.g., 'We need to leverage our synergies to optimize the workflow...'"></textarea>
+                    <div class="text-center mt-4">
+                        <button id="kasifier-button" class="bg-amber-400 text-gray-900 font-bold py-3 px-8 rounded-lg hover:bg-amber-500 transition-transform transform hover:scale-105 flex items-center justify-center mx-auto">
+                            <span id="kasifier-button-text">Kasi-fy It</span>
+                            <div id="kasifier-button-spinner" class="spinner hidden ml-2"></div>
+                        </button>
+                    </div>
+                    <div id="kasifier-result" class="mt-8 p-6 glass-effect rounded-lg min-h-[100px] text-gray-300 hidden"></div>
+                </div>
+            </section>
+        </div>
 
         <!-- Contact Section -->
         <section id="contact" class="mt-24">
@@ -198,11 +232,72 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // --- SUBSCRIPTION STATUS (SIMULATION) ---
+            // In a real app, this would be determined by a login/authentication system.
+            // Set to `true` to see the features unlocked.
+            const isSubscribed = false;
+
+            // --- PRO WALL LOGIC ---
+            const proWall = document.getElementById('pro-wall');
+            if (!isSubscribed) {
+                proWall.classList.remove('hidden');
+            }
+
             // --- DATA: ARTICLES ---
             const articles = [
+                {
+                    title: "Our Ancestors Were Time Travelers, And We Are The Echo",
+                    excerpt: "We think of time as a straight line, but our blood knows better. The fears, the triumphs, the unhealed wounds of our ancestors are not history; they are active code running in our very being.",
+                    image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/Our%20Ancestors%20Were%20Time%20Travelers%2C%20And%20We%20Are%20The%20Echo%20(1).png",
+                    date: "August 25, 2025",
+                    content: `
+                        <h3 class="text-3xl md:text-4xl font-bold font-lora text-amber-400 mb-4">Our Ancestors Were Time Travelers, And We Are The Echo</h3>
+                        <p class="text-gray-500 mb-8">Posted on August 25, 2025</p>
+                        <div class="article-body space-y-6 text-lg text-gray-300">
+                            <p>We are a culture obsessed with the fantasy of time travel. We build gleaming, chrome machines in our movies, powered by flashing lights and cryptic physics, all in the hope of skipping back to fix a mistake or leaping forward to glimpse a promise. We write intricate theories about paradoxes, the butterfly effect, and the delicate fabric of the continuum. But we are looking in the wrong place. We are staring at the sky, searching for a portal, when the machine has been inside us all along. The machine isn't built of steel and circuits; it's built of blood and bone, of memory and melanin. We are the time machines, and our DNA is the code that carries the ghosts of yesterday into the flesh of today.</p>
+                            <p>You ever feel it? That sudden, inexplicable wave of sadness that crashes over you on a perfectly sunny afternoon? A flash of white-hot anger that doesn't belong to your immediate circumstances? A deep-seated fear of something you've never personally experienced, a fear of drowning when you've never been in deep water, a fear of betrayal when you've only known loyalty? That's not just a bad mood, boet. That's not a chemical imbalance your doctor can neatly prescribe away. That's a data packet arriving from the past. It's a download from the ancestral cloud.</p>
+                            <p>That tremor in your hands is your great-grandmother's heartache, a love lost to a war she never spoke of, now echoing in the chambers of your own heart. That knot in your stomach is your grandfather's battlefield terror, the memory of a spear's shadow or a sjambok's crack, flashing behind your eyes in a moment of modern stress. Our ancestors didn't just give us their chin, their surname, or their predisposition for high blood pressure. They passed down their entire operating system: the unresolved traumas, the unfulfilled dreams, the silent vows, and the resilient victories. We are running their legacy software on our 21st-century hardware, and most of us don't even know how to read the source code.</p>
+                            <h4 class="text-2xl font-lora text-amber-400 mt-6">This isn't just poetry; it's a field of science they're now calling epigenetics, but it's a truth our sangomas have known since the beginning of time.</h4>
+                            <p>They’ve been telling us that the spirits of the old ones walk with us, that their pains are our pains, that their strength is our strength. Now, lab coats in sterile rooms are catching up, discovering that trauma and triumph can leave a tangible, chemical mark on our genes. These marks don't change the DNA itself, but they act like sticky notes, telling our bodies which parts of the code to read and which to ignore. The experiences of our ancestors, famine, war, migration, oppression, literally programmed our biology, shaping our responses to the world before we even took our first breath.</p>
+                            <p>The gnawing hunger they felt during a drought now lives in our modern anxieties about financial scarcity, making us hoard resources even in times of plenty. The systemic oppression they endured, the daily humiliation of being treated as less than human, now fuels our righteous, burning fire for justice, a rage that feels both ancient and deeply personal. They traveled through time, not by disappearing into a flashy portal, but by embedding their stories, their warnings, and their hopes directly into our cellular memory. Their journey didn't end with their last breath; it simply continued in ours.</p>
+                            <p class="border-l-4 border-amber-400 pl-4 italic text-gray-400">Think about our rituals, the ones the modern world scoffs at. When you pour libations on the soil and call the names of the departed, you're not just performing a quaint tradition for the tourists. You are a systems administrator accessing a living archive. You are running a diagnostic on the ancestral server.</p>
+                            <p>You are querying a database written in blood and experience, seeking guidance from the data points of those who navigated the wilderness before you. Each name spoken is a password, unlocking a file of wisdom, a subroutine of resilience. You are, in that sacred moment, debugging the ancestral code.</p>
+                            <p>This haunting reality forces us to re-evaluate our own lives. Our struggles are rarely just our own. That cycle of addiction in your family? It might be an echo of a great-uncle trying to numb the pain of a stolen birthright. That pattern of failed relationships? It could be the inherited script of a grandmother who was taught that love was a transaction for survival. We are wrestling with the ghosts of their choices, their circumstances, their unhealed wounds.</p>
+                            <h4 class="text-2xl font-lora text-amber-400 mt-6">Look at the haunting legacy of apartheid. It's not just in our history books; it's in our nervous systems.</h4>
+                            <p>The generation that lived through the daily terror of the pass laws, of police brutality, of forced removals, they developed a state of hyper-vigilance to survive. Their bodies were flooded with cortisol, their minds always on high alert. They passed that state down to their children, not through stories, but through the very chemistry of their being. So today, you find a generation of young Black South Africans who are brilliant, ambitious, and yet plagued by a free-floating anxiety they can't explain. It's the ghost of a police siren that never wailed for them. It's the echo of a boot that never kicked down their door. It's an inherited state of emergency, a body that is still waiting for the other shoe to drop, decades after the fact.</p>
+                            <p>But here is the crucial, empowering truth: we are not merely passive vessels for this ancestral data. We are not doomed to endlessly repeat the cycles. If we are the time machines, then we are also the pilots. We have the ability to confront the ghosts, to understand the code, and even, to rewrite it. This is the sacred, terrifying work of our generation. Healing is no longer a personal, selfish act; it is a profound, communal responsibility. When you go to therapy to break a cycle of anger, you are not just healing yourself; you are healing the grandfather who was never allowed to show his vulnerability. When you build a successful, ethical business, you are not just creating wealth for yourself; you are healing the ancestor whose entrepreneurial spirit was crushed by racist laws. When you learn to love yourself unconditionally, you are healing the grandmother who was taught her worth was conditional.</p>
+                            <p>This is the work. It's the painful, beautiful, haunting reality of our existence. To listen to the echoes of the past without being consumed by them. To acknowledge the ghosts without letting them steer. To take the incredible resilience, the unshakeable spirit, the profound wisdom passed down to us, and use it to patch the bugs, to update the system, to write a new, more liberated chapter for the ones who will inherit our code.</p>
+                            <p>So, the next time you feel that strange pull, that echo of a feeling you can't place, don't dismiss it. Don't numb it. Don't medicate it away. Listen. It is the sound of your ancestors speaking. They are reminding you that your life is not a solo performance; it's the current chapter in an epic saga that started centuries ago. You are the echo of their journey, the vessel of their dreams, and your choices are the whispers they are sending into the future. You are a time traveler. The question is, where will you take them next?</p>
+                        </div>
+                    `
+                },
+                {
+                    title: "DStv, MacG, and the Age of Famous Nobodies",
+                    excerpt: "The mainstream is dying, and in its desperation, it's grabbing the loudest, not the best. Having MacG as Africa's biggest podcaster is a symptom, not a victory.",
+                    image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/DStv%2C%20MacG%2C%20and%20the%20Age%20of%20Famous%20Nobodies%20(1).png",
+                    date: "August 24, 2025",
+                    content: `
+                        <h3 class="text-3xl md:text-4xl font-bold font-lora text-amber-400 mb-4">DStv, MacG, and the Age of Famous Nobodies</h3>
+                        <p class="text-gray-500 mb-8">Posted on August 24, 2025</p>
+                        <div class="article-body space-y-6 text-lg text-gray-300">
+                            <p>Let’s be brutally, painfully honest. Watching DStv desperately scoop up podcasters to put on television is like watching a dinosaur, moments after the meteor has hit, trying to catch a fly with its tiny, useless arms. It’s a clumsy, pathetic, and deeply revealing spectacle. It is the death rattle of the mainstream, a final, panicked attempt to stay relevant in a world that has already rendered it a fossil. And in their panic, in their blind desperation to capture the lightning of the internet in their dusty old bottle, they didn't go for the sharpest minds, the most insightful commentators, or the most innovative creators. No. They went for the bottom of the barrel. They went for the loudest, the crudest, the most controversial. They went for the noise, because they have forgotten how to recognize the signal.</p>
+                            <p>We are living in the age of the Famous Nobody. A cultural wasteland where clout is mistaken for talent, where controversy is a substitute for substance, and where audience size is the only metric of worth. And there is no greater, more garish monument to this new mediocrity than the coronation of MacG as the “biggest podcaster in Africa.” This is not a milestone to be celebrated. It is a diagnosis of a terminal illness. It is a symptom of a deep-seated cultural rot that we are all pretending not to smell.</p>
+                            <h4 class="text-2xl font-lora text-amber-400 mt-6">Celebrating MacG’s success is exactly like celebrating Baragwanath Hospital.</h4>
+                            <p>Yes, Baragwanath is one of the biggest and most famous hospitals in the world. But *why* is it so big? Is it because we are a nation of exceptionally healthy people who enjoy world-class preventative care? No. It’s because we have a catastrophic number of sick, injured, and dying people. It is a world-class institution born of our world-class societal ills. Its size is a testament to our trauma, our violence, our poverty... not our vitality.</p>
+                            <p>In the very same way, MacG’s astronomical success is not a sign of a healthy, vibrant media landscape. It is a sign that our collective intellectual immune system has collapsed. It proves that the audience is so starved for a shred of authenticity, so utterly betrayed by the sterile, corporate-sanitized drivel of the mainstream, that they will eagerly accept the raw, unfiltered, and often toxic ramblings of the lowest common denominator as gospel. We have been fed plastic fruit for so long that we now celebrate the man who offers us a greasy, deep-fried packet of slap chips, simply because it’s the only thing that tastes real. We champion misogynistic locker-room talk and call it 'unfiltered truth,' because we've forgotten what actual intellectual bravery, nuance, and insight sound like.</p>
+                            <p class="border-l-4 border-amber-400 pl-4 italic text-gray-400">The old guards, the gatekeepers like DStv, have committed the ultimate sin: they have abdicated their responsibility.</p>
+                            <p>For decades, they held the keys to the kingdom. They were the tastemakers, the curators of culture. To get on their platform, you had to have talent, you had to hone your craft, you had to pass through a series of filters designed, at least in theory, to uphold a certain standard. But they grew lazy, arrogant, and disconnected. The internet came and built a whole new kingdom outside their castle walls, and now, instead of building a better castle, they are simply trying to buy the loyalty of the loudest peasants. They no longer cultivate talent; they just buy audience numbers, hoping to leech off the relevance of a digital world they fundamentally do not understand. They are not tastemakers anymore; they are clout-chasers, and their currency is our attention.</p>
+                            <h4 class="text-2xl font-lora text-amber-400 mt-6">This leads us to the haunting reality of the new media economy.</h4>
+                            <p>In this economy, value is not determined by quality, but by engagement. And what generates engagement most efficiently? Outrage. Controversy. Tribalism. A thoughtful, nuanced argument requires effort from the creator and the consumer. It is a low-ROI asset. A crass joke, a transphobic comment, a salacious piece of gossip? That is high-octane fuel for the algorithm. It generates clicks, shares, comments, and arguments. It feeds the machine. In this brutal marketplace, substance is a liability. It is slow. It is complex. It doesn't fit neatly into a viral clip. MacG and his ilk are not geniuses; they are simply masters of this new, toxic economy. They understand that the easiest way to get a million people to look at you is not to build a beautiful cathedral, but to set a dumpster on fire.</p>
+                            <p>And what is the cost? What is the haunting reality of what we are losing in this grand celebration of mediocrity? We are losing our ability to think. We are losing our appreciation for nuance. We are losing the aspiration for excellence. When we elevate the Famous Nobody, we are telling an entire generation that expertise is worthless, that research is for fools, and that the only thing that matters is having a strong, loud, and preferably offensive opinion. We create a deadly feedback loop: the media platforms reward the dumbest, loudest voices with attention, and the audience, in turn, learns to value those qualities above all others. This isn't just about bad podcasts or bad television. It is the slow, grinding death of our collective intelligence. It is the willful erosion of our cultural foundations.</p>
+                            <p>But the blame does not lie solely with DStv or MacG. The final, most brutal truth is that the power has always been with us. The gatekeepers are only as powerful as we allow them to be. The Famous Nobodies are only as famous as we make them. We vote with our clicks, our subscriptions, our attention. We have the power to starve the dumpster fires and to nurture the slow-growing gardens of genuine thought and creativity. We can choose to seek out the difficult, the challenging, the substantive. We can choose to reward the artists, writers, and thinkers who respect our intelligence instead of pandering to our basest instincts.</p>
+                            <p>We get the media landscape we deserve. And right now, we are collectively choosing the gutter. It is a choice we make every day, with every click, with every share. And it is a choice we can, and must, change. The haunting reality is not that the barbarians are at the gates... it's that we've opened the gates, invited them in, and are now cheering as they burn the whole damn place down.</p>
+                        </div>
+                    `
+                },
                  {
                     title: "A Stranger Will Become a Customer Quicker Than a Friend Will",
-                    excerpt: "You’ve heard it before: a prophet is never recognized in his own land. The closer they are, the slower the applause. Why strangers support you faster than your own circle.",
+                    excerpt: "You’veheard it before: a prophet is never recognized in his own land. The closer they are, the slower the applause. Why strangers support you faster than your own circle.",
                     image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/I%20write%20what%20i%20like%20thumnail.1.png",
                     date: "August 19, 2025",
                     content: `
@@ -416,6 +511,40 @@
                     oracleButton.disabled = false;
                     oracleButtonText.classList.remove('hidden');
                     oracleSpinner.classList.add('hidden');
+                }
+            });
+
+            // "The Kasi-fier" Feature Logic
+            const kasifierButton = document.getElementById('kasifier-button');
+            const kasifierInput = document.getElementById('kasifier-input');
+            const kasifierResultDiv = document.getElementById('kasifier-result');
+            const kasifierButtonText = document.getElementById('kasifier-button-text');
+            const kasifierSpinner = document.getElementById('kasifier-button-spinner');
+
+            kasifierButton.addEventListener('click', async () => {
+                const textToTranslate = kasifierInput.value.trim();
+                if (!textToTranslate) {
+                    kasifierResultDiv.innerHTML = `<p class="text-red-400">Sharp sharp, but you need to give me something to translate first.</p>`;
+                    kasifierResultDiv.classList.remove('hidden');
+                    return;
+                }
+
+                kasifierButton.disabled = true;
+                kasifierButtonText.classList.add('hidden');
+                kasifierSpinner.classList.remove('hidden');
+
+                const prompt = `You are a 'Kasi-fier,' an expert translator from standard/formal/corporate English into authentic, modern South African township slang (kasi taal). Your tone is raw, witty, and brutally honest, just like the writer MoAfrika Skotch Ntilane. You don't just translate words; you translate the *vibe*. Convert the following text into something you'd actually hear on the streets of Soweto or Thembisa. Keep it sharp and punchy. Don't add any explanations, just give the translated text.
+
+                Text to translate: '${textToTranslate}'`;
+
+                try {
+                    const translatedText = await callGemini(prompt);
+                    kasifierResultDiv.innerHTML = `<p>${translatedText}</p>`;
+                    kasifierResultDiv.classList.remove('hidden');
+                } finally {
+                    kasifierButton.disabled = false;
+                    kasifierButtonText.classList.remove('hidden');
+                    kasifierSpinner.classList.add('hidden');
                 }
             });
 
