@@ -31,7 +31,7 @@
 
 
         .hero-bg {
-            background-image: url('https://raw.githubusercontent.com/MoAfrika/my-images/main/Neon%20Halo%20Portrait%20with%20Digital%20Overlays.png');
+            background-image: url('https://raw.githubusercontent.com/MoAfrika/my-images/main/Futuristic%20AR%20Portrait%20in%20Neon%20Blues.png');
             background-size: cover;
             background-position: center top;
         }
@@ -69,21 +69,35 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             border: 1px solid rgba(255, 255, 255, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
         .article-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
         }
+        .article-card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+         .article-card img {
+            object-position: center; /* Ensures the image is centered */
+        }
         .article-card h2 {
-            font-size: 2.5rem;
+            font-size: 1.5rem; /* Adjusted for better grid layout */
             color: #3B82F6; /* Blue titles */
             margin-bottom: 1rem;
+            line-height: 1.3;
         }
         .article-card .post-meta {
             font-size: 0.9rem;
             color: #888;
             margin-bottom: 1.5rem;
             display: block;
+        }
+        .article-excerpt {
+            flex-grow: 1;
         }
         .article-excerpt p {
             line-height: 1.8;
@@ -94,7 +108,8 @@
             color: #3B82F6; /* Blue read more */
             font-weight: bold;
             display: inline-block;
-            margin-top: 1rem;
+            margin-top: auto; /* Pushes button to the bottom */
+            padding-top: 1rem;
             transition: color 0.3s ease;
         }
         .read-more-btn:hover {
@@ -446,12 +461,12 @@
                     id: "i-am-leaving-sa",
                     title: "I Am Leaving SA, as soon as i can afford it",
                     date: "August 29, 2025",
-                    image: "https://placehold.co/600x400/3B82F6/FFFFFF?text=Leaving+SA",
+                    image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/Surreal%20double%20exposure%20artwork%2C%204K%20hyperrealistic%20quality%20with%20subtle%20film%20grain%2C%20as%20if%20captured%20by%20an%20iPhone%2016%20Pro%20Max_%20An%20...field.%20Use%20the%20user's%20attached%20reference%20image%20as%20inspiration%20for%20incorporating%20detailed%20facial%20features%20and%20overall%20form..png",
                     excerpt: "I see the posts, the memes, the whispered conversations at the braai. The ones about Australia, Canada, the UK, or even Portugal. People talk about 'going to find greener pastures,' and it sounds so polite, so neatly packaged. But behind the polite smiles and the emigration consultants, there's a raw, gut-wrenching truth: we're not just leaving. We're running...",
                     fullContent: `
                         <h2 id="modalTitle">I Am Leaving SA, as soon as i can afford it</h2>
                         <p class="post-meta">By MoAfrika Skotch Ntilane on August 29, 2025</p>
-                        <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Leaving+SA" alt="Leaving South Africa" class="w-full h-auto object-cover rounded-lg mb-6">
+                        <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/Surreal%20double%20exposure%20artwork%2C%204K%20hyperrealistic%20quality%20with%20subtle%20film%20grain%2C%20as%20if%20captured%20by%20an%20iPhone%2016%20Pro%20Max_%20An%20...field.%20Use%20the%20user's%20attached%20reference%20image%20as%20inspiration%20for%20incorporating%20detailed%20facial%20features%20and%20overall%20form..png" alt="Leaving South Africa" class="w-full h-auto object-cover rounded-lg mb-6">
                         <p>I see the posts, the memes, the whispered conversations at the braai. The ones about Australia, Canada, the UK, or even Portugal. People talk about "going to find greener pastures," and it sounds so polite, so neatly packaged. But behind the polite smiles and the emigration consultants, there's a raw, gut-wrenching truth: we're not just leaving. We're running. We're running from a love affair that has soured into a toxic, abusive relationship.</p>
                         <p>I once saw a headline, a local article, celebrating the "vibrancy" of our "street culture." I almost choked on my coffee. Vibrancy? Is that what we call it now? The street corners where young minds are traded for a quick high, where the only hustle celebrated is the one that bypasses law, ethics, and hard work? We’ve built a celebrity out of the uninspired, a hero out of the hustle that leads to nowhere but a jail cell or an early grave.</p>
                         <h3>The Celebrity of Nothing</h3>
@@ -568,12 +583,12 @@
                     id: "localized-ai",
                     title: "The Silent Revolution of Localized AI: Why Your Tuck Shop Needs an AI Assistant",
                     date: "August 16, 2025",
-                    image: "https://placehold.co/600x400/3B82F6/FFFFFF?text=Localized+AI",
+                    image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/3D%20Pixar-style%20artwork_%20A%20creative%20representation%20of%20the%20user%20as%20a%20hacker%20in%20the%20Matrix.%20The%20character%20is%20depicted%20with%20iconic...s.%20The%20scene%20is%20rendered%20with%20Pixar-style%20charm%20and%20detail%2C%20emphasizing%20the%20user's%20role%20as%20a%20confident%2C%20tech-savvy%20hacker..png",
                     excerpt: "What happens when global tech meets local hustle, A revolution. This isn't just about big companies, it's about the small, vibrant businesses that form the heartbeat of our communities. I’ve been thinking a lot about the tuck shop on my street corner...",
                     fullContent: `
                         <h2 id="modalTitle">The Silent Revolution of Localized AI: Why Your Tuck Shop Needs an AI Assistant</h2>
                         <p class="post-meta">By MoAfrika Skotch Ntilane on August 16, 2025</p>
-                        <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Localized+AI" alt="Localized AI" class="w-full h-auto object-cover rounded-lg mb-6">
+                        <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/3D%20Pixar-style%20artwork_%20A%20creative%20representation%20of%20the%20user%20as%20a%20hacker%20in%20the%20Matrix.%20The%20character%20is%20depicted%20with%20iconic...s.%20The%20scene%20is%20rendered%20with%20Pixar-style%20charm%20and%20detail%2C%20emphasizing%20the%20user's%20role%20as%20a%20confident%2C%20tech-savvy%20hacker..png" alt="Localized AI" class="w-full h-auto object-cover rounded-lg mb-6">
                         <p>What happens when global tech meets local hustle, A revolution. This isn't just about big companies, it's about the small, vibrant businesses that form the heartbeat of our communities. I’ve been thinking a lot about the tuck shop on my street corner, the one with the handwritten menu and the owner who remembers every regular's order. What if that tuck shop had a secret weapon, an AI assistant?</p>
                         <h3>AI isn't just for the C-suite.</h3>
                         <p>It’s a tool for everyone. Imagine a simple AI system, built on a local language model, designed to manage inventory for the tuck shop owner. It could track what's selling fast (that extra-spicy chili sauce) and what's collecting dust (the imported sugar-free sodas). It could send an SMS reminder to the supplier when stock is low. It's not about replacing the human touch, it's about freeing the owner to focus on what matters, the customers, the community, and the perfect balance of flavors in their bunny chow.</p>
@@ -606,12 +621,12 @@
                     id: "surviving-man-drought",
                     title: "The Unspoken Rules of Surviving a Modern 'Man-Drought' in South Africa",
                     date: "August 14, 2025",
-                    image: "https://placehold.co/600x400/3B82F6/FFFFFF?text=Man-Drought",
+                    image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/me%20side%20front%20pic.jpg",
                     excerpt: "I've been watching the cultural landscape of my home country, South Africa, and I've noticed something, a subtle, yet pervasive shift. A kind of 'man-drought' has set in, not just in terms of numbers, but in terms of quality...",
                     fullContent: `
                         <h2 id="modalTitle">The Unspoken Rules of Surviving a Modern 'Man-Drought' in South Africa</h2>
                         <p class="post-meta">By MoAfrika Skotch Ntilane on August 14, 2025</p>
-                        <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Man-Drought" alt="Man Drought" class="w-full h-auto object-cover rounded-lg mb-6">
+                        <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/me%20side%20front%20pic.jpg" alt="Man Drought" class="w-full h-auto object-cover rounded-lg mb-6">
                         <p>I've been watching the cultural landscape of my home country, South Africa, and I've noticed something, a subtle, yet pervasive shift. A kind of 'man-drought' has set in, not just in terms of numbers, but in terms of quality. Men who are emotionally available, financially responsible, and psychologically mature seem to be a rare and endangered species. And the women, They're left to navigate a dating scene that feels more like a desert than a fertile field.</p>
                         <h3>The Mirage of Modern Masculinity</h3>
                         <p>We're sold a mirage of modern masculinity that's all about bravado and swagger, but very little substance. It's a culture of 'talking a big game' without ever stepping onto the field. Men who are more concerned with their online persona than their real-life character. And it's left a lot of women feeling abandoned, resentful, and utterly exhausted.</p>
@@ -721,12 +736,12 @@
                     id: "ai-driven-marketing-journey",
                     title: "Embracing AI-Driven Marketing: A Personal Journey into the Future",
                     date: "May 31, 2025",
-                    image: "https://placehold.co/600x400/3B82F6/FFFFFF?text=AI+Marketing",
+                    image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/Neon%20Halo%20Portrait%20with%20Digital%20Overlays.png",
                     excerpt: "I never thought an algorithm could humble me, but then again, I never met <strong>GG</strong>... the AI agent introduced at the 2025 <em>Mastermind Thrive</em> event. As a South African entrepreneur rooted in community, creativity, and code, I’ve always kept one foot in tech, the other in the soil...",
                     fullContent: `
                         <h2 id="modalTitle">Embracing AI-Driven Marketing: A Personal Journey into the Future</h2>
                         <p class="post-meta">By MoAfrika Skotch Ntilane on May 31, 2025</p>
-                        <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=AI+Marketing" alt="AI Marketing" class="w-full h-auto object-cover rounded-lg mb-6">
+                        <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/Neon%20Halo%20Portrait%20with%20Digital%20Overlays.png" alt="AI Marketing" class="w-full h-auto object-cover rounded-lg mb-6">
                         <p>I never thought an algorithm could humble me, but then again, I never met <strong>GG</strong>... the AI agent introduced at the 2025 <em>Mastermind Thrive</em> event hosted by Tony Robbins and Dean Graziosi.</p>
                         <p>As a South African entrepreneur rooted in community, creativity, and code, I’ve always kept one foot in tech, the other in the soil. I’ve played with GPT, crafted content, coded campaigns... but GG was different. It wasn’t just responsive, it was responsive with intent, surgical, soulful, and startlingly human.</p>
                         <p>Over those three days, surrounded by visionary speakers and transformational insights, something deeper cracked open in me. Not just inspiration, but interrogation. I saw the power of AI to dissect behavior, predict needs, and tailor content with frightening precision. It’s not just personalized marketing anymore... it’s predictive empathy, and brands are wielding it like a scalpel.</p>
@@ -812,12 +827,12 @@
                     id: "javascript-in-the-trenches",
                     title: "JavaScript in the Trenches: Code Like Kasi Does, Think Like a Genius",
                     date: "May 31, 2025",
-                    image: "https://placehold.co/600x400/3B82F6/FFFFFF?text=JS+Trenches",
+                    image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/3D%20Pixar-style%20artwork_%20A%20creative%20representation%20of%20the%20user%20as%20a%20hacker%20in%20the%20Matrix.%20The%20character%20is%20depicted%20with%20iconic...s.%20The%20scene%20is%20rendered%20with%20Pixar-style%20charm%20and%20detail%2C%20emphasizing%20the%20user's%20role%20as%20a%20confident%2C%20tech-savvy%20hacker..png",
                     excerpt: "Let me begin with no filters and no fluff. We're tackling JavaScript where form follows function enough for lead engineers but is understood by your cousin in the backseat of the Quantum. This is cutting-edge, passionate, technical, and unapologetically <strong>real</strong>.",
                     fullContent: `
                         <h2 id="modalTitle">JavaScript in the Trenches: Code Like Kasi Does, Think Like a Genius</h2>
                         <p class="post-meta">By MoAfrika Skotch Ntilane on May 31, 2025</p>
-                        <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=JS+Trenches" alt="JS in the Trenches" class="w-full h-auto object-cover rounded-lg mb-6">
+                        <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/3D%20Pixar-style%20artwork_%20A%20creative%20representation%20of%20the%20user%20as%20a%20hacker%20in%20the%20Matrix.%20The%20character%20is%20depicted%20with%20iconic...s.%20The%20scene%20is%20rendered%20with%20Pixar-style%20charm%20and%20detail%2C%20emphasizing%20the%20user's%20role%20as%20a%20confident%2C%20tech-savvy%20hacker..png" alt="JS in the Trenches" class="w-full h-auto object-cover rounded-lg mb-6">
                         <p>Let me begin with no filters and no fluff. We're tackling JavaScript where form follows function enough for lead engineers but is understood by your cousin in the backseat of the Quantum. This is cutting-edge, passionate, technical, and unapologetically <strong>real</strong>.</p>
                         <h3>My JavaScript Origin Story</h3>
                         <p>My JavaScript education didn't happen in air-conditioned classrooms with neat chairs. I learned JavaScript during load-shedding with a cellphone and from downloaded Free Coursera short courses and a thousand Youtube lessons I couldn't afford to stream. I discovered variables by candlelight, debugged during power cuts, and wrote most of my functions on an empty stomach and reloading data with borrowed airtime...and the public Library.</p>
@@ -1104,12 +1119,12 @@ No hard feelings... just a closed door.
                     id: "mayday-tribute",
                     title: "Mayday: The Day My Mother Died (And I Woke the Hell Up)",
                     date: "May 26, 2025",
-                    image: "https://placehold.co/600x400/3B82F6/FFFFFF?text=Mayday",
+                    image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/mom%20and%20i.png",
                     excerpt: "24 May. A day the world did forget, but I never will. They say that time heals. Time, and maybe Rooibos tea. Lies. Time just teaches you how to wear the pain like a frayed old hoodie. Still bloody. Still frayed. But it fits now.",
                     fullContent: `
                         <h2 id="modalTitle">Mayday: The Day My Mother Died (And I Woke the Hell Up)</h2>
                         <p class="post-meta">By MoAfrika Skotch Ntilane on May 26, 2025</p>
-                        <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Mayday" alt="Mayday" class="w-full h-auto object-cover rounded-lg mb-6">
+                        <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/mom%20and%20i.png" alt="Mayday" class="w-full h-auto object-cover rounded-lg mb-6">
                         <p><em>24 May. A day the world did forget, but I never will.</em></p>
                         <p>They say that time heals. Time, and maybe Rooibos tea. Lies. Time just teaches you how to wear the pain like a frayed old hoodie. Still bloody. Still frayed. But it fits now.</p>
                         <p>It's one year. One year since my mum died. One year since cancer cleared the ground away from under my already precarious existence. One year since the woman who raised me, struggled for me, gave up bits of herself for me, breathed no longer. And I'm just supposed to what, then? "Move on"? No. I moved with. Icing along alongside the sorrow like a trolley with one wheel that won't turn.</p>
@@ -1170,12 +1185,12 @@ No hard feelings... just a closed door.
                     id: "legendary-rebuild",
                     title: "Build Yourself Into a Legend (And Let the Rest Regret Their Role)",
                     date: "May 27, 2025",
-                    image: "https://placehold.co/600x400/3B82F6/FFFFFF?text=Legendary+Rebuild",
+                    image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/me%20side%20front%20pic.jpg",
                     excerpt: "Not every door is closed because of bad luck. Some doors are closed because the person you are today isn't the one who deserves to walk through them yet. That's the part they never tell you about becoming.",
                     fullContent: `
                         <h2 id="modalTitle">Build Yourself Into a Legend (And Let the Rest Regret Their Role)</h2>
                         <p class="post-meta">By MoAfrika Skotch Ntilane on May 27, 2025</p>
-                        <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Legendary+Rebuild" alt="Legendary Rebuild" class="w-full h-auto object-cover rounded-lg mb-6">
+                        <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/me%20side%20front%20pic.jpg" alt="Legendary Rebuild" class="w-full h-auto object-cover rounded-lg mb-6">
                         <p>Not every door is closed because of bad luck. Some doors are closed because the person you are today isn't the one who deserves to walk through them yet. That's the part they never tell you about becoming.</p>
                         <p>You can't fake readiness. You can’t tweet your way into evolution. Growth doesn’t care about your intentions. It only answers to transformation. Real, uncomfortable, lonely transformation.</p>
                         <p>I know because I’ve lived through it, the burn of betrayal, the silence of fake friends, the weight of starting over with nothing but ambition and spite.</p>
@@ -1224,12 +1239,14 @@ No hard feelings... just a closed door.
                     articleCard.setAttribute('aria-labelledby', `article-title-${article.id}`);
                     articleCard.innerHTML = `
                         <img src="${article.image}" alt="${article.title}" class="w-full h-48 object-cover rounded-t-lg mb-4" onerror="this.onerror=null;this.src='https://placehold.co/600x400/3B82F6/FFFFFF?text=Image+Error';">
-                        <h2 id="article-title-${article.id}">${article.title}</h2>
-                        <p class="post-meta">By MoAfrika Skotch Ntilane on ${article.date}</p>
-                        <div class="article-excerpt">
-                            <p>${article.excerpt}</p>
+                        <div class="article-card-content">
+                            <h2 id="article-title-${article.id}">${article.title}</h2>
+                            <p class="post-meta">By MoAfrika Skotch Ntilane on ${article.date}</p>
+                            <div class="article-excerpt">
+                                <p>${article.excerpt}</p>
+                            </div>
+                            <button class="read-more-btn" data-id="${article.id}" aria-controls="articleModal">Read More &raquo;</button>
                         </div>
-                        <button class="read-more-btn" data-id="${article.id}" aria-controls="articleModal">Read More &raquo;</button>
                     `;
                     allArticlesContainer.appendChild(articleCard);
                 });
