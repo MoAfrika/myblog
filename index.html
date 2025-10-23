@@ -1316,136 +1316,138 @@
                 // End of articlesData array. Add additional articles below if needed.
             ];
             
-            // ======== Renderer & Filters ========
-            const articlesGrid = document.getElementById('articles-grid');
-            const noArticlesMessage = document.getElementById('no-articles-message');
-            const searchInput = document.getElementById('search-input');
-            const dateFilter = document.getElementById('date-filter');
-            const modal = document.getElementById('article-modal');
-            const modalContent = document.getElementById('modal-article-content');
-            const closeModalTop = document.getElementById('close-modal-top');
-            const closeModalBottom = document.getElementById('close-modal-bottom');
-            const scrollToTopBtn = document.getElementById('scroll-to-top');
-
-            // Helper to safely escape text used in attributes
-            function escapeHtml(str) {
-                if (!str) return '';
-                return String(str).replace(/[&<>"']/g, function (s) {
-                    return ({
-                        '&': '&amp;',
-                        '<': '&lt;',
-                        '>': '&gt;',
-                        '"': '&quot;',
-                        "'": '&#39;'
-                    })[s];
-                });
+           // Render article cards
+            function createArticleCard(article) {
+                const card = document.createElement('article');
+                card.className = 'bg-[#1a1a1a] rounded-2xl overflow-hidden border border-gray-800/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1';
+                card.innerHTML = `
+                    <div class="relative aspect-[16/10] overflow-hidden bg-gray-800">
+                        <img src="${article.image}" alt="${article.title}" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" loading="lazy" />
+                    </div>
+                    <div class="p-4 md:p-6">
+                        <p class="text-sm text-gray-400 mb-3">${article.date}</p>
+                        <h3 class="text-xl md:text-2xl font-serif font-semibold mb-3 line-clamp-2 hover:text-blue-400 transition-colors">${article.title}</h3>
+                        <p class="text-gray-300 line-clamp-3 mb-4">${article.excerpt}</p>
+                        <button data-id="${article.id}" class="open-article inline-block px-4 py-2 md:px-6 md:py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all touch-target">Read More</button>
+                    </div>
+                `;
+                return card;
             }
 
-            function renderArticles(list) {
-                articlesGrid.innerHTML = '';
-                if (!Array.isArray(list) || list.length === 0) {
-                    noArticlesMessage.classList.remove('hidden');
+            function renderArticlesGrid(list) {
+                const grid = document.getElementById('articles-grid');
+                const noArticles = document.getElementById('no-articles-message');
+                
+                grid.innerHTML = '';
+                
+                if (!list || list.length === 0) {
+                    noArticles.classList.remove('hidden');
                     return;
                 }
-                noArticlesMessage.classList.add('hidden');
-
-                list.forEach(article => {
-                    const card = document.createElement('article');
-                    card.className = 'bg-[#1a1a1a] rounded-2xl p-4 border border-gray-800/50 transition transform hover:shadow-lg';
-                    card.innerHTML = `
-                        <img src="${escapeHtml(article.image)}" alt="${escapeHtml(article.title)}" class="w-full h-44 object-cover rounded-lg mb-4">
-                        <h3 class="text-lg font-semibold mb-1">${escapeHtml(article.title)}</h3>
-                        <p class="text-sm text-gray-400 mb-3">${escapeHtml(article.date)}</p>
-                        <p class="text-gray-300 mb-4 line-clamp-3">${escapeHtml(article.excerpt)}</p>
-                        <div class="flex items-center justify-between">
-                            <button class="open-article px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg touch-target" data-id="${escapeHtml(article.id)}">Read</button>
-                            <a href="#${encodeURIComponent(article.id)}" class="text-sm text-gray-400 hover:text-gray-200">Permalink</a>
-                        </div>
-                    `;
-                    articlesGrid.appendChild(card);
-
-                    // Attach event to open modal
-                    card.querySelector('.open-article').addEventListener('click', () => {
-                        openModal(article);
+                
+                noArticles.classList.add('hidden');
+                list.forEach(article => grid.appendChild(createArticleCard(article)));
+                
+                // Attach click handlers for modal
+                grid.querySelectorAll('.open-article').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const id = e.currentTarget.getAttribute('data-id');
+                        const article = articlesData.find(a => a.id === id);
+                        if (article) openModal(article);
                     });
                 });
             }
 
+            // Enhanced Modal Functions
             function openModal(article) {
-                modalContent.innerHTML = article.fullContent || `<h2>${escapeHtml(article.title)}</h2><p>No content available.</p>`;
+                const modal = document.getElementById('article-modal');
+                const modalContent = document.getElementById('modal-article-content');
+                
+                // Inject article content
+                modalContent.innerHTML = article.fullContent;
+                
+                // Show modal
                 modal.classList.remove('hidden');
-                // prevent body scroll when modal open
                 document.body.style.overflow = 'hidden';
-                // focus for accessibility
-                closeModalTop.focus();
+                
+                // Scroll modal to top smoothly
+                setTimeout(() => {
+                    modal.scrollTo({ top: 0, behavior: 'smooth' });
+                }, 100);
             }
 
             function closeModal() {
+                const modal = document.getElementById('article-modal');
                 modal.classList.add('hidden');
-                modalContent.innerHTML = '';
-                document.body.style.overflow = '';
+                document.body.style.overflow = 'auto';
             }
 
-            closeModalTop.addEventListener('click', closeModal);
-            closeModalBottom.addEventListener('click', closeModal);
+            function scrollModalToTop() {
+                const modal = document.getElementById('article-modal');
+                modal.scrollTo({ top: 0, behavior: 'smooth' });
+            }
 
-            // Close modal when clicking outside content
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) closeModal();
+            // Top close button
+            document.getElementById('close-modal-top').addEventListener('click', closeModal);
+            
+            // Bottom close button
+            document.getElementById('close-modal-bottom').addEventListener('click', closeModal);
+            
+            // Scroll to top button
+            document.getElementById('scroll-to-top').addEventListener('click', scrollModalToTop);
+            
+            // Close on outside click
+            document.getElementById('article-modal').addEventListener('click', (e) => {
+                if (e.target.id === 'article-modal') closeModal();
             });
 
-            // Escape key to close
+            // Close with Escape key
             document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-                    closeModal();
+                if (e.key === 'Escape') {
+                    const modal = document.getElementById('article-modal');
+                    if (!modal.classList.contains('hidden')) closeModal();
                 }
             });
 
-            // Back to top inside modal
-            scrollToTopBtn.addEventListener('click', () => {
-                modalContent.scrollTo({ top: 0, behavior: 'smooth' });
+            // Search functionality
+            const searchInput = document.getElementById('search-input');
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase().trim();
+                if (!query) {
+                    renderArticlesGrid(articlesData);
+                    return;
+                }
+                const filtered = articlesData.filter(a =>
+                    a.title.toLowerCase().includes(query) ||
+                    a.excerpt.toLowerCase().includes(query) ||
+                    a.fullContent.toLowerCase().includes(query)
+                );
+                renderArticlesGrid(filtered);
             });
 
-            // Build date filter options (unique months/dates)
-            (function populateDateFilter() {
-                const dates = articlesData.map(a => a.date).filter(Boolean);
-                // Use a Set to keep unique values in insertion order
-                const unique = Array.from(new Set(dates));
-                unique.forEach(d => {
-                    const opt = document.createElement('option');
-                    opt.value = d;
-                    opt.textContent = d;
-                    dateFilter.appendChild(opt);
-                });
-            })();
-
-            // Filtering logic
-            function applyFilters() {
-                const q = searchInput.value.trim().toLowerCase();
-                const dateVal = dateFilter.value;
-                let filtered = articlesData.filter(a => {
-                    const inDate = dateVal === 'all' ? true : (a.date === dateVal);
-                    const inQuery = q === '' ? true : (
-                        (a.title && a.title.toLowerCase().includes(q)) ||
-                        (a.excerpt && a.excerpt.toLowerCase().includes(q)) ||
-                        (a.fullContent && a.fullContent.toLowerCase().includes(q))
-                    );
-                    return inDate && inQuery;
-                });
-                renderArticles(filtered);
-            }
-
-            searchInput.addEventListener('input', () => {
-                applyFilters();
+            // Date filter
+            const dateFilter = document.getElementById('date-filter');
+            const uniqueDates = [...new Set(articlesData.map(a => a.date))].sort((a, b) => new Date(b) - new Date(a));
+            uniqueDates.forEach(date => {
+                const option = document.createElement('option');
+                option.value = date;
+                option.textContent = date;
+                dateFilter.appendChild(option);
             });
-            dateFilter.addEventListener('change', () => {
-                applyFilters();
+
+            dateFilter.addEventListener('change', (e) => {
+                const value = e.target.value;
+                if (value === 'all') {
+                    renderArticlesGrid(articlesData);
+                } else {
+                    renderArticlesGrid(articlesData.filter(a => a.date === value));
+                }
             });
 
             // Initial render
-            renderArticles(articlesData);
+            renderArticlesGrid(articlesData);
         });
     </script>
+
 </body>
 </html>
-
