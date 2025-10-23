@@ -3,129 +3,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Unfiltered thoughts from the digital wilderness. Code confessions, mind dumps, and raw truths.">
     <title>I TYPE, WHAT I LIKE</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
     <style>
+        /* Mobile-First Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             background-color: #0a0a0a;
             color: #e5e7eb;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
+
+        /* Responsive Typography */
+        @media (min-width: 768px) {
+            body {
+                font-size: 17px;
+                line-height: 1.65;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            body {
+                font-size: 18px;
+                line-height: 1.7;
+            }
+        }
+
         .font-serif {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Playfair Display', Georgia, serif;
         }
+
+        /* Text Utilities */
         .line-clamp-2 {
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
+
         .line-clamp-3 {
             display: -webkit-box;
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
-        .prose-invert a {
-           color: #60a5fa;
+
+        /* Touch-Friendly Targets (minimum 44px) */
+        .touch-target {
+            min-height: 44px;
+            min-width: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
-        .prose-invert a:hover {
+
+        /* Links */
+        a {
+            color: #60a5fa;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
             color: #93c5fd;
+        }
+
+        /* Images - Lazy Loading Support */
+        img {
+            max-width: 100%;
+            height: auto;
+            background: #1a1a1a;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #374151;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4b5563;
+        }
+
+        /* Smooth Transitions */
+        .transition-smooth {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Modal Improvements */
+        .modal-content {
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-content::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        /* Article Content Styling */
+        .prose {
+            max-width: 65ch;
+        }
+
+        .prose p {
+            margin-bottom: 1.25em;
+        }
+
+        .prose h2 {
+            font-size: 1.875rem;
+            margin-top: 2em;
+            margin-bottom: 1em;
+            line-height: 1.2;
+        }
+
+        .prose img {
+            margin: 2em 0;
+            border-radius: 0.5rem;
+        }
+
+        /* Mobile Menu Animation */
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .mobile-menu-open {
+            animation: slideDown 0.3s ease-out;
+        }
+
+        /* Loading States */
+        .skeleton {
+            background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s ease-in-out infinite;
+        }
+
+        @keyframes loading {
+            0% {
+                background-position: 200% 0;
+            }
+            100% {
+                background-position: -200% 0;
+            }
+        }
+
+        /* Reduced Motion Support */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* Focus Styles for Accessibility */
+        *:focus-visible {
+            outline: 2px solid #60a5fa;
+            outline-offset: 2px;
         }
     </style>
 </head>
 <body class="antialiased">
 
     <!-- Header -->
-    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-xl border-b border-gray-800/50">
-        <div class="container mx-auto px-4 sm:px-6 py-4">
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-xl border-b border-gray-800/50 transition-smooth">
+        <div class="container mx-auto px-4 sm:px-6 py-3 md:py-4">
             <div class="flex items-center justify-between">
                 <!-- Logo -->
-                <a href="#home" class="flex items-center gap-2 group">
-                    <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center transform transition-transform group-hover:scale-105">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><!-- svg content --></svg>
+                <a href="#home" class="flex items-center gap-2 group touch-target">
+                    <div class="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center transform transition-transform group-hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                            <path d="M2 2l7.586 7.586"></path>
+                            <circle cx="11" cy="11" r="2"></circle>
+                        </svg>
                     </div>
-                    <span class="text-xl font-serif font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent hidden sm:block">
+                    <span class="hidden sm:block text-lg md:text-xl font-serif font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
                         I TYPE, WHAT I LIKE
                     </span>
                 </a>
 
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center gap-1">
-                    <a href="#home" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 flex items-center gap-2 text-gray-400 hover:text-gray-200 hover:bg-gray-800/50">Home</a>
-                    <a href="#articles" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 flex items-center gap-2 text-gray-400 hover:text-gray-200 hover:bg-gray-800/50">Articles</a>
-                    <a href="#about" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 flex items-center gap-2 text-gray-400 hover:text-gray-200 hover:bg-gray-800/50">About</a>
-                    <a href="#contact" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 flex items-center gap-2 text-gray-400 hover:text-gray-200 hover:bg-gray-800/50">Contact</a>
+                    <a href="#home" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 text-gray-400 hover:text-gray-200 hover:bg-gray-800/50 touch-target">Home</a>
+                    <a href="#articles" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 text-gray-400 hover:text-gray-200 hover:bg-gray-800/50 touch-target">Articles</a>
+                    <a href="#about" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 text-gray-400 hover:text-gray-200 hover:bg-gray-800/50 touch-target">About</a>
+                    <a href="#contact" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 text-gray-400 hover:text-gray-200 hover:bg-gray-800/50 touch-target">Contact</a>
                 </nav>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800/50">
-                    <svg id="menu-open-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><!-- open icon --></svg>
-                    <svg id="menu-close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><!-- close icon --></svg>
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800/50 touch-target" aria-label="Toggle menu">
+                    <svg id="menu-open-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg id="menu-close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
                 </button>
             </div>
         </div>
+        
         <!-- Mobile Navigation -->
-        <div id="mobile-menu" class="hidden md:hidden">
-            <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800/50">Home</a>
-                <a href="#articles" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800/50">Articles</a>
-                <a href="#about" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800/50">About</a>
-                <a href="#contact" class="nav-link-mobile block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800/50">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-800/50">
+            <nav class="px-4 py-3 space-y-1">
+                <a href="#home" class="nav-link-mobile block px-3 py-3 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800/50 touch-target">Home</a>
+                <a href="#articles" class="nav-link-mobile block px-3 py-3 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800/50 touch-target">Articles</a>
+                <a href="#about" class="nav-link-mobile block px-3 py-3 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800/50 touch-target">About</a>
+                <a href="#contact" class="nav-link-mobile block px-3 py-3 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800/50 touch-target">Contact</a>
             </nav>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden" style="background-image: url('https://raw.githubusercontent.com/MoAfrika/my-images/main/Futuri[...].png')">
-            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-[#0a0a0a]"></div>
-            <div class="relative z-10 container mx-auto px-4 sm:px-6 text-center">
-                <div class="max-w-4xl mx-auto space-y-8">
-                    <h1 class="text-4xl sm:text-5xl md:text-7xl font-serif font-bold leading-tight">
+        <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden" style="background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(10,10,10,0.9)), url('https://raw.githubusercontent.com/MoAfrika/my-images/main/Futuristic%20Cityscape%20with%20Neon%20Glow.png') center/cover no-repeat;">
+            <div class="relative z-10 container mx-auto px-4 sm:px-6 text-center py-20">
+                <div class="max-w-4xl mx-auto space-y-6 md:space-y-8">
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-serif font-bold leading-tight">
                         <span class="bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
                             I TYPE, WHAT I LIKE.
                         </span>
                     </h1>
-                    <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                    <p class="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
                         Unfiltered thoughts from the digital wilderness. Code confessions, mind dumps, and raw truths. Brace yourself.
                     </p>
-                    <a href="#articles" class="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 hover:shadow-lg">
+                    <a href="#articles" class="inline-block px-6 md:px-8 py-3 md:py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 hover:shadow-lg touch-target">
                         Explore The Scribblings
                     </a>
-                </div>
-                <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-                    <svg class="w-8 h-8 text-gray-400 animate-bounce" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><!-- arrow icon --></svg>
                 </div>
             </div>
         </section>
 
         <!-- Articles Section -->
-        <section id="articles" class="py-16 sm:py-24">
+        <section id="articles" class="py-12 sm:py-16 md:py-24">
             <div class="container mx-auto px-4 sm:px-6">
                 <!-- Section Header -->
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white mb-4">
+                <div class="text-center mb-8 md:mb-12">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-4">
                         Archived Scribbles
                     </h2>
-                    <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    <p class="text-gray-400 text-base md:text-lg max-w-2xl mx-auto">
                         All my articles, unfiltered and raw
                     </p>
                 </div>
 
                 <!-- Filters -->
-                <div class="max-w-4xl mx-auto mb-12">
-                     <div class="bg-[#1a1a1a] rounded-2xl p-6 border border-gray-800/50">
+                <div class="max-w-4xl mx-auto mb-8 md:mb-12">
+                     <div class="bg-[#1a1a1a] rounded-2xl p-4 md:p-6 border border-gray-800/50">
                         <div class="flex flex-col sm:flex-row gap-4">
                             <div class="relative flex-grow">
-                                <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><!-- search icon --></svg>
-                                <input id="search-input" type="text" placeholder="Search articles..." class="pl-10 w-full bg-[#0a0a0a] border-gray-800 text-white placeholder:text-gray-500 focus:border-blue-500 h-12 rounded-lg px-3">
+                                <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <path d="m21 21-4.35-4.35"></path>
+                                </svg>
+                                <input id="search-input" type="text" placeholder="Search articles..." class="pl-10 w-full bg-[#0a0a0a] border border-gray-800 text-white placeholder:text-gray-500 focus:border-blue-500 h-12 rounded-lg px-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
                             </div>
                             <div class="w-full sm:w-48">
-                                <select id="date-filter" class="w-full bg-[#0a0a0a] border-gray-800 text-white h-12 rounded-lg px-3">
+                                <select id="date-filter" class="w-full bg-[#0a0a0a] border border-gray-800 text-white h-12 rounded-lg px-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                     <option value="all">All Dates</option>
                                 </select>
                             </div>
@@ -134,88 +302,102 @@
                 </div>
 
                 <!-- Articles Grid -->
-                <div id="articles-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div id="articles-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                     <!-- Articles will be injected here by JavaScript -->
                 </div>
-                 <div id="no-articles-message" class="text-center py-16 hidden">
-                    <svg class="w-16 h-16 text-gray-600 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><!-- icon --></svg>
-                    <p class="text-gray-500 text-lg">No articles match your filters. The void stares back...</p>
+                
+                <div id="no-articles-message" class="text-center py-12 md:py-16 hidden">
+                    <svg class="w-12 h-12 md:w-16 md:h-16 text-gray-600 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                    <p class="text-gray-500 text-base md:text-lg">No articles match your filters. The void stares back...</p>
                 </div>
             </div>
         </section>
         
         <!-- Modal for Article View -->
-        <div id="article-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
-            <div id="modal-content" class="bg-[#1a1a1a] rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto border border-gray-800/50 relative">
-                <!-- Content will be injected here -->
-                 <button id="close-modal-button" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors z-10">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><!-- close icon --></svg>
+        <div id="article-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4 overflow-y-auto">
+            <div id="modal-content" class="bg-[#1a1a1a] rounded-2xl w-full max-w-4xl my-8 border border-gray-800/50 relative modal-content">
+                <button id="close-modal-button" class="sticky top-4 right-4 float-right text-gray-400 hover:text-white transition-colors z-10 bg-[#0a0a0a] rounded-full p-2 touch-target" aria-label="Close modal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
                 </button>
+                <div id="modal-article-content" class="p-6 md:p-8 lg:p-12 prose prose-invert max-w-none">
+                    <!-- Article content will be injected here -->
+                </div>
             </div>
         </div>
 
-
         <!-- About Section -->
-        <section id="about" class="py-16 sm:py-24 bg-[#111]">
+        <section id="about" class="py-12 sm:py-16 md:py-24 bg-[#111]">
             <div class="container mx-auto px-4 sm:px-6 max-w-4xl">
-                <div class="bg-[#1a1a1a] rounded-2xl p-8 sm:p-12 border border-gray-800/50">
-                    <div class="flex justify-center mb-8">
-                        <img src="https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Neon%20Halo%20Portrait%20with%20Digital%20Overlays.png" alt="MoAfrika Skotch Ntilane" class="w-32 h-32 rounded-full object-cover border-2 border-gray-800/50">
+                <div class="bg-[#1a1a1a] rounded-2xl p-6 sm:p-8 md:p-12 border border-gray-800/50">
+                    <div class="flex justify-center mb-6 md:mb-8">
+                        <img src="https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Neon%20Halo%20Portrait%20with%20Digital%20Overlays.png" alt="MoAfrika Skotch Ntilane" class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-2 border-gray-800/50" loading="lazy">
                     </div>
-                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white text-center mb-8">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white text-center mb-6 md:mb-8">
                         Right, About Me...
-                    </h1>
-                    <div class="prose prose-invert prose-lg max-w-none prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-6">
-                        <p>I'm not a résumé in motion, I'm a constellation of obsessions stitched together with stubborn grace. A freelance writer by trade, yes. A software whisperer, sometimes. A dreamer who likes to break things to see how they sing.</p>
-                        <p>I'm an architect of stories and systems, fluent in the language of both algorithms and allegory. The keyboard is my instrument... sometimes it hums with clean, efficient code; other times it bellows like a typewriter in a small apartment where big plants go to die.</p>
-                        <p>Every scar in my portfolio is a plot twist I refused to edit out. Mistakes? I prefer to call them experiments in becoming, each one a breadcrumb on the path to mastery.</p>
-                        <p>I move through the world with an appetite: for precision, for possibility, for the kind of beauty that lives in contradictions. The brutalist elegance of logic. The feral freedom of a wild idea put into motion.</p>
-                        <p>I'm not here to "fit in" or fill a seat. I'm here to tilt the stage, to rewire the script, to make sure when the credits roll, the name MoAfrika Skotch Ntilane rings like a bell someone can't ignore.</p>
+                    </h2>
+                    <div class="space-y-4 md:space-y-6 text-gray-300 text-base md:text-lg leading-relaxed">
+                        <p>
+                            I'm MoAfrika Skotch Ntilane. Developer, writer, thinker, and occasional chaos architect. I type what I like because filters are for coffee, not thoughts.
+                        </p>
+                        <p>
+                            This blog is where I dump everything that doesn't fit neatly into a LinkedIn post or a polite conversation. Code rants, life observations, cultural commentary, and the occasional existential crisis—all served raw.
+                        </p>
+                        <p>
+                            If you're looking for motivational quotes and feel-good fluff, you're in the wrong place. But if you want real talk from someone who's been in the trenches of code, life, and South African reality, stick around.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-16 sm:py-24">
+        <section id="contact" class="py-12 sm:py-16 md:py-24">
             <div class="container mx-auto px-4 sm:px-6 max-w-2xl">
-                <div class="bg-[#1a1a1a] rounded-2xl border border-gray-800/50">
-                    <div class="p-8 text-center">
-                        <h2 class="text-3xl sm:text-4xl font-serif text-white mb-4">
-                            Holler At Me
-                        </h2>
-                        <p class="text-gray-400 leading-relaxed max-w-xl mx-auto">
-                            Got a searing question, a wild collaboration idea, or just want to debate the existential importance of the Oxford comma? The digital void awaits your transmission.
-                        </p>
-                    </div>
-                    <div class="p-8 border-t border-gray-800/50">
-                        <form id="contact-form" class="space-y-6">
-                            <div>
-                                <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Handle</label>
-                                <input type="text" id="name" name="name" required class="w-full bg-[#0a0a0a] border-gray-800 text-white placeholder:text-gray-500 focus:border-blue-500 h-12 rounded-lg px-3">
-                            </div>
-                             <div>
-                                <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
-                                <input type="email" id="email" name="email" required class="w-full bg-[#0a0a0a] border-gray-800 text-white placeholder:text-gray-500 focus:border-blue-500 h-12 rounded-lg px-3">
-                            </div>
-                            <div>
-                                <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Transmission</label>
-                                <textarea id="message" name="message" rows="4" required class="w-full bg-[#0a0a0a] border-gray-800 text-white placeholder:text-gray-500 focus:border-blue-500 rounded-lg px-3 py-2"></textarea>
-                            </div>
-                            <button type="submit" class="w-full inline-flex items-center justify-center gap-2 px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all">
-                                Send Transmission
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><!-- send icon --></svg>
-                            </button>
-                        </form>
-                        <p id="form-status" class="text-center text-gray-400 mt-4"></p>
-                    </div>
+                <div class="text-center mb-8 md:mb-12">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-4">
+                        Send a Transmission
+                    </h2>
+                    <p class="text-gray-400 text-base md:text-lg">
+                        Got something to say? Fire away.
+                    </p>
+                </div>
+                <div class="bg-[#1a1a1a] rounded-2xl p-6 sm:p-8 md:p-10 border border-gray-800/50">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" required class="w-full bg-[#0a0a0a] border border-gray-800 text-white placeholder:text-gray-500 focus:border-blue-500 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required class="w-full bg-[#0a0a0a] border border-gray-800 text-white placeholder:text-gray-500 focus:border-blue-500 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required class="w-full bg-[#0a0a0a] border border-gray-800 text-white placeholder:text-gray-500 focus:border-blue-500 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all touch-target">
+                            Send Message
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </form>
+                    <p id="form-status" class="text-center text-gray-400 mt-4"></p>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-[#111] border-t border-gray-800/50 py-8">
+    <footer class="bg-[#111] border-t border-gray-800/50 py-6 md:py-8">
         <div class="container mx-auto px-4 sm:px-6 text-center text-gray-500">
             <p>&copy; <span id="current-year"></span> MoAfrika Skotch Ntilane. All rights reserved.</p>
             <p class="text-sm mt-2">Crafted with code and contradictions.</p>
@@ -224,16 +406,69 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // --- Data ---
-            // =========================================================================
-            // == ARTICLES DATA (FIXED)                                               ==
-            // =========================================================================
+            // Initialize year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
 
-            // Fix summary:
-            // - Removed stray / malformed object braces that caused a syntax error in the original articlesData array.
-            // - Replaced the Joseph article image URL to the raw.githubusercontent URL so the image loads in the browser.
-            // - Left placeholder images (placehold.co) in place where your original file used them; replace before deploying if you want final assets.
+            // Mobile menu toggle
+            const mobileBtn = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuOpenIcon = document.getElementById('menu-open-icon');
+            const menuCloseIcon = document.getElementById('menu-close-icon');
+            
+            mobileBtn.addEventListener('click', () => {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                if (isHidden) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenu.classList.add('mobile-menu-open');
+                    menuOpenIcon.classList.add('hidden');
+                    menuCloseIcon.classList.remove('hidden');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    menuOpenIcon.classList.remove('hidden');
+                    menuCloseIcon.classList.add('hidden');
+                }
+            });
 
+            // Close mobile menu when clicking nav links
+            document.querySelectorAll('.nav-link-mobile').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuOpenIcon.classList.remove('hidden');
+                    menuCloseIcon.classList.add('hidden');
+                });
+            });
+
+            // Contact form handling (localStorage - no API)
+            const contactForm = document.getElementById('contact-form');
+            const formStatus = document.getElementById('form-status');
+            
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    message: document.getElementById('message').value,
+                    timestamp: new Date().toISOString()
+                };
+                
+                // Save to localStorage
+                const messages = JSON.parse(localStorage.getItem('contactMessages') || '[]');
+                messages.push(formData);
+                localStorage.setItem('contactMessages', JSON.stringify(messages));
+                
+                // Show success message
+                formStatus.textContent = 'Message received! I\'ll get back to you soon.';
+                formStatus.classList.add('text-green-400');
+                contactForm.reset();
+                
+                setTimeout(() => {
+                    formStatus.textContent = '';
+                    formStatus.classList.remove('text-green-400');
+                }, 5000);
+            });
+
+            // Articles data - keeping your original content
             const articlesData = [
                 {
                     id: "Joseph",
@@ -648,27 +883,20 @@
                 // End of articlesData array. Add additional articles below if needed.
             ];
 
-            // --- Rendering & UI Logic (assumes original functions exist below in your file) ---
-            // The rest of your script (rendering grid, search, date filter, modal open/close, duplicate removal, event handlers)
-            // should consume 'articlesData' as before. I did not modify your app logic, only corrected the data syntax and image URL.
-            //
-            // If your file included inline rendering code below the articlesData in the original file, it will continue to work.
-            // Example: if you have a function renderArticles(articlesData) defined later, it will now receive a valid array.
-
-            // Initialize year in footer
-            const yearEl = document.getElementById('current-year');
-            if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-            // Basic example render (if original renderer not present). This is conservative and minimal:
+            // Render article cards
             function createArticleCard(article) {
                 const card = document.createElement('article');
-                card.className = 'bg-[#1a1a1a] rounded-2xl p-4 border border-gray-800/50';
+                card.className = 'bg-[#1a1a1a] rounded-2xl overflow-hidden border border-gray-800/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1';
                 card.innerHTML = `
-                    <img src="${article.image}" alt="${article.title}" class="w-full h-48 object-cover rounded-lg mb-4" />
-                    <h3 class="text-xl font-semibold mb-2">${article.title}</h3>
-                    <p class="text-gray-400 text-sm mb-3">${article.date}</p>
-                    <p class="text-gray-300 line-clamp-3 mb-4">${article.excerpt}</p>
-                    <button data-id="${article.id}" class="open-article inline-block px-4 py-2 bg-blue-600 text-white rounded-lg">Read</button>
+                    <div class="relative aspect-[16/10] overflow-hidden bg-gray-800">
+                        <img src="${article.image}" alt="${article.title}" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" loading="lazy" />
+                    </div>
+                    <div class="p-4 md:p-6">
+                        <p class="text-sm text-gray-400 mb-3">${article.date}</p>
+                        <h3 class="text-xl md:text-2xl font-serif font-semibold mb-3 line-clamp-2 hover:text-blue-400 transition-colors">${article.title}</h3>
+                        <p class="text-gray-300 line-clamp-3 mb-4">${article.excerpt}</p>
+                        <button data-id="${article.id}" class="open-article inline-block px-4 py-2 md:px-6 md:py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all touch-target">Read More</button>
+                    </div>
                 `;
                 return card;
             }
@@ -676,107 +904,97 @@
             function renderArticlesGrid(list) {
                 const grid = document.getElementById('articles-grid');
                 const noArticles = document.getElementById('no-articles-message');
-                if (!grid) return;
+                
                 grid.innerHTML = '';
+                
                 if (!list || list.length === 0) {
-                    if (noArticles) noArticles.classList.remove('hidden');
+                    noArticles.classList.remove('hidden');
                     return;
-                } else {
-                    if (noArticles) noArticles.classList.add('hidden');
                 }
-                list.forEach(a => grid.appendChild(createArticleCard(a)));
-                // Attach click handlers for modal open
+                
+                noArticles.classList.add('hidden');
+                list.forEach(article => grid.appendChild(createArticleCard(article)));
+                
+                // Attach click handlers for modal
                 grid.querySelectorAll('.open-article').forEach(btn => {
                     btn.addEventListener('click', (e) => {
                         const id = e.currentTarget.getAttribute('data-id');
-                        const article = articlesData.find(x => x.id === id);
-                        if (!article) return;
-                        const modal = document.getElementById('article-modal');
-                        const modalContent = document.getElementById('modal-content');
-                        if (modal && modalContent) {
-                            modalContent.querySelectorAll(':scope > *:not(#close-modal-button)').forEach(n => n.remove());
-                            const wrapper = document.createElement('div');
-                            wrapper.className = 'p-8 prose prose-invert';
-                            wrapper.innerHTML = article.fullContent;
-                            modalContent.appendChild(wrapper);
-                            modal.classList.remove('hidden');
-                        }
+                        const article = articlesData.find(a => a.id === id);
+                        if (article) openModal(article);
                     });
                 });
             }
 
-            // close modal button
-            const closeBtn = document.getElementById('close-modal-button');
-            if (closeBtn) {
-                closeBtn.addEventListener('click', () => {
-                    const modal = document.getElementById('article-modal');
-                    if (modal) modal.classList.add('hidden');
-                });
+            // Modal functions
+            function openModal(article) {
+                const modal = document.getElementById('article-modal');
+                const modalContent = document.getElementById('modal-article-content');
+                
+                modalContent.innerHTML = article.fullContent;
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
             }
 
-            // initial render
-            renderArticlesGrid(articlesData);
+            function closeModal() {
+                const modal = document.getElementById('article-modal');
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            }
 
-            // Minimal search implementation (keeps original filtering behavior simple)
+            document.getElementById('close-modal-button').addEventListener('click', closeModal);
+            
+            // Close modal when clicking outside
+            document.getElementById('article-modal').addEventListener('click', (e) => {
+                if (e.target.id === 'article-modal') closeModal();
+            });
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeModal();
+            });
+
+            // Search functionality
             const searchInput = document.getElementById('search-input');
-            if (searchInput) {
-                searchInput.addEventListener('input', (e) => {
-                    const q = e.target.value.toLowerCase().trim();
-                    if (!q) {
-                        renderArticlesGrid(articlesData);
-                        return;
-                    }
-                    const filtered = articlesData.filter(a =>
-                        (a.title && a.title.toLowerCase().includes(q)) ||
-                        (a.excerpt && a.excerpt.toLowerCase().includes(q)) ||
-                        (a.fullContent && a.fullContent.toLowerCase().includes(q))
-                    );
-                    renderArticlesGrid(filtered);
-                });
-            }
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase().trim();
+                if (!query) {
+                    renderArticlesGrid(articlesData);
+                    return;
+                }
+                const filtered = articlesData.filter(a =>
+                    a.title.toLowerCase().includes(query) ||
+                    a.excerpt.toLowerCase().includes(query) ||
+                    a.fullContent.toLowerCase().includes(query)
+                );
+                renderArticlesGrid(filtered);
+            });
 
-            // date filter population (simple unique date list)
+            // Date filter
             const dateFilter = document.getElementById('date-filter');
-            if (dateFilter) {
-                const dates = Array.from(new Set(articlesData.map(a => a.date))).sort((a,b) => new Date(b) - new Date(a));
-                dates.forEach(d => {
-                    const opt = document.createElement('option');
-                    opt.value = d;
-                    opt.textContent = d;
-                    dateFilter.appendChild(opt);
-                });
-                dateFilter.addEventListener('change', (e) => {
-                    const v = e.target.value;
-                    if (v === 'all') {
-                        renderArticlesGrid(articlesData);
-                    } else {
-                        renderArticlesGrid(articlesData.filter(a => a.date === v));
-                    }
-                });
-            }
+            const uniqueDates = [...new Set(articlesData.map(a => a.date))].sort((a, b) => new Date(b) - new Date(a));
+            uniqueDates.forEach(date => {
+                const option = document.createElement('option');
+                option.value = date;
+                option.textContent = date;
+                dateFilter.appendChild(option);
+            });
 
-            // Mobile menu toggle (basic)
-            const mobileBtn = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuOpenIcon = document.getElementById('menu-open-icon');
-            const menuCloseIcon = document.getElementById('menu-close-icon');
-            if (mobileBtn && mobileMenu) {
-                mobileBtn.addEventListener('click', () => {
-                    const isHidden = mobileMenu.classList.contains('hidden');
-                    if (isHidden) {
-                        mobileMenu.classList.remove('hidden');
-                        if (menuOpenIcon) menuOpenIcon.classList.add('hidden');
-                        if (menuCloseIcon) menuCloseIcon.classList.remove('hidden');
-                    } else {
-                        mobileMenu.classList.add('hidden');
-                        if (menuOpenIcon) menuOpenIcon.classList.remove('hidden');
-                        if (menuCloseIcon) menuCloseIcon.classList.add('hidden');
-                    }
-                });
-            }
+            dateFilter.addEventListener('change', (e) => {
+                const value = e.target.value;
+                if (value === 'all') {
+                    renderArticlesGrid(articlesData);
+                } else {
+                    renderArticlesGrid(articlesData.filter(a => a.date === value));
+                }
+            });
 
+            // Initial render
+            renderArticlesGrid(articlesData);
         });
     </script>
 
 </body>
 </html>
+
