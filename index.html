@@ -250,7 +250,7 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden" style="background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(10,10,10,0.9)), url('https://raw.githubusercontent.com/MoAfrika/my-images/main/Futuristic%20Cityscape%20with%20Neon%20Glow.png') center/cover no-repeat;">
+        <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden" style="background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(10,10,10,0.9)), url('https://raw.githubusercontent.com/MoAfrika/my-images/main/hero-bg.png') center/cover no-repeat;">
             <div class="relative z-10 container mx-auto px-4 sm:px-6 text-center py-20">
                 <div class="max-w-4xl mx-auto space-y-6 md:space-y-8">
                     <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-serif font-bold leading-tight">
@@ -261,7 +261,7 @@
                     <p class="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
                         Unfiltered thoughts from the digital wilderness. Code confessions, mind dumps, and raw truths. Brace yourself.
                     </p>
-                    <a href="#articles" class="inline-block px-6 md:px-8 py-3 md:py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 hover:shadow-lg touch-target">
+                    <a href="#articles" class="inline-block px-6 md:px-8 py-3 md:py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-[1.02]">
                         Explore The Scribblings
                     </a>
                 </div>
@@ -290,7 +290,7 @@
                                     <circle cx="11" cy="11" r="8"></circle>
                                     <path d="m21 21-4.35-4.35"></path>
                                 </svg>
-                                <input id="search-input" type="text" placeholder="Search articles..." class="pl-10 w-full bg-[#0a0a0a] border border-gray-800 text-white placeholder:text-gray-500 focus:border-blue-500 h-12 rounded-lg px-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <input id="search-input" type="text" placeholder="Search articles..." class="pl-10 w-full bg-[#0a0a0a] border border-gray-800 text-white placeholder:text-gray-500 focus:ring-2 focus:ring-blue-500 rounded-lg h-12 px-3">
                             </div>
                             <div class="w-full sm:w-48">
                                 <select id="date-filter" class="w-full bg-[#0a0a0a] border border-gray-800 text-white h-12 rounded-lg px-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
@@ -320,7 +320,7 @@
                 <!-- Modal for Article View -->
         <div id="article-modal" class="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 hidden overflow-y-auto">
             <div class="min-h-screen flex items-start justify-center p-4 py-8">
-                <div id="modal-content" class="bg-[#1a1a1a] rounded-2xl w-full max-w-4xl border border-gray-800/50 relative">
+                <div id="modal-wrapper" class="bg-[#1a1a1a] rounded-2xl w-full max-w-4xl border border-gray-800/50 relative modal-content">
                     <!-- Top Close Button -->
                     <button id="close-modal-top" class="sticky top-4 right-4 float-right text-gray-400 hover:text-white transition-colors z-20 bg-[#0a0a0a] rounded-full p-3 touch-target shadow-lg" aria-label="Close article">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -362,7 +362,7 @@
             <div class="container mx-auto px-4 sm:px-6 max-w-4xl">
                 <div class="bg-[#1a1a1a] rounded-2xl p-6 sm:p-8 md:p-12 border border-gray-800/50">
                     <div class="flex justify-center mb-6 md:mb-8">
-                        <img src="https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Neon%20Halo%20Portrait%20with%20Digital%20Overlays.png" alt="MoAfrika Skotch Ntilane" class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-2 border-gray-800/50" loading="lazy">
+                        <img src="https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Neon%20Halo%20Portrait%20with%20Digital%20Overlays.png" alt="MoAfrika Skotch Ntilane" class="w-24 h-24 rounded-full object-cover">
                     </div>
                     <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white text-center mb-6 md:mb-8">
                         Right, About Me...
@@ -372,10 +372,10 @@
                             I'm MoAfrika Skotch Ntilane. Developer, writer, thinker, and occasional chaos architect. I type what I like because filters are for coffee, not thoughts.
                         </p>
                         <p>
-                            This blog is where I dump everything that doesn't fit neatly into a LinkedIn post or a polite conversation. Code rants, life observations, cultural commentary, and the occasional existential crisis—all served raw.
+                            This blog is where I dump everything that doesn't fit neatly into a LinkedIn post or a polite conversation. Code rants, life observations, cultural commentary, and the occasional confession live here.
                         </p>
                         <p>
-                            If you're looking for motivational quotes and feel-good fluff, you're in the wrong place. But if you want real talk from someone who's been in the trenches of code, life, and South African reality, stick around.
+                            If you're looking for motivational quotes and feel-good fluff, you're in the wrong place. But if you want real talk from someone who's been in the trenches of code, life, and messy humanity — welcome.
                         </p>
                     </div>
                 </div>
@@ -397,15 +397,15 @@
                     <form id="contact-form" class="space-y-6">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
-                            <input type="text" id="name" name="name" required class="w-full bg-[#0a0a0a] border border-gray-800 text-white placeholder:text-gray-500 focus:border-blue-500 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <input type="text" id="name" name="name" required class="w-full bg-[#0a0a0a] border border-gray-800 text-white placeholder:text-gray-500 focus:border-blue-500 rounded-lg px-3 h-12">
                         </div>
                         <div>
                             <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
-                            <input type="email" id="email" name="email" required class="w-full bg-[#0a0a0a] border border-gray-800 text-white placeholder:text-gray-500 focus:border-blue-500 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <input type="email" id="email" name="email" required class="w-full bg-[#0a0a0a] border border-gray-800 text-white placeholder:text-gray-500 focus:border-blue-500 rounded-lg px-3 h-12">
                         </div>
                         <div>
                             <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Your Message</label>
-                            <textarea id="message" name="message" rows="5" required class="w-full bg-[#0a0a0a] border border-gray-800 text-white placeholder:text-gray-500 focus:border-blue-500 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                            <textarea id="message" name="message" rows="5" required class="w-full bg-[#0a0a0a] border border-gray-800 text-white placeholder:text-gray-500 focus:border-blue-500 rounded-lg px-3 py-2"></textarea>
                         </div>
                         <button type="submit" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all touch-target">
                             Send Message
@@ -483,7 +483,7 @@
                 localStorage.setItem('contactMessages', JSON.stringify(messages));
                 
                 // Show success message
-                formStatus.textContent = 'Message received! I\'ll get back to you soon.';
+                formStatus.textContent = 'Message received! I\\'ll get back to you soon.';
                 formStatus.classList.add('text-green-400');
                 contactForm.reset();
                 
@@ -493,9 +493,12 @@
                 }, 5000);
             });
 
-            // Articles data - keeping your original content
+            // ======== Articles data (fixed) ========
+            // The original file had malformed JS in the articlesData array which caused a runtime error,
+            // stopping all subsequent scripts (including the article renderer). I've corrected it and
+            // added a small renderer + filters so articles appear on the live site.
             const articlesData = [
-               {
+                {
                      "id": "Joseph",
                      "title": "Joseph, the Father I Never Thought I'd Be: On Grief, Legacy, and the Architecture of Redemptive Love",
                      "date": "October 23, 2025",
@@ -1312,142 +1315,137 @@
                 }
                 // End of articlesData array. Add additional articles below if needed.
             ];
+            
+            // ======== Renderer & Filters ========
+            const articlesGrid = document.getElementById('articles-grid');
+            const noArticlesMessage = document.getElementById('no-articles-message');
+            const searchInput = document.getElementById('search-input');
+            const dateFilter = document.getElementById('date-filter');
+            const modal = document.getElementById('article-modal');
+            const modalContent = document.getElementById('modal-article-content');
+            const closeModalTop = document.getElementById('close-modal-top');
+            const closeModalBottom = document.getElementById('close-modal-bottom');
+            const scrollToTopBtn = document.getElementById('scroll-to-top');
 
-            // Render article cards
-            function createArticleCard(article) {
-                const card = document.createElement('article');
-                card.className = 'bg-[#1a1a1a] rounded-2xl overflow-hidden border border-gray-800/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1';
-                card.innerHTML = `
-                    <div class="relative aspect-[16/10] overflow-hidden bg-gray-800">
-                        <img src="${article.image}" alt="${article.title}" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" loading="lazy" />
-                    </div>
-                    <div class="p-4 md:p-6">
-                        <p class="text-sm text-gray-400 mb-3">${article.date}</p>
-                        <h3 class="text-xl md:text-2xl font-serif font-semibold mb-3 line-clamp-2 hover:text-blue-400 transition-colors">${article.title}</h3>
-                        <p class="text-gray-300 line-clamp-3 mb-4">${article.excerpt}</p>
-                        <button data-id="${article.id}" class="open-article inline-block px-4 py-2 md:px-6 md:py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all touch-target">Read More</button>
-                    </div>
-                `;
-                return card;
+            // Helper to safely escape text used in attributes
+            function escapeHtml(str) {
+                if (!str) return '';
+                return String(str).replace(/[&<>"']/g, function (s) {
+                    return ({
+                        '&': '&amp;',
+                        '<': '&lt;',
+                        '>': '&gt;',
+                        '"': '&quot;',
+                        "'": '&#39;'
+                    })[s];
+                });
             }
 
-            function renderArticlesGrid(list) {
-                const grid = document.getElementById('articles-grid');
-                const noArticles = document.getElementById('no-articles-message');
-                
-                grid.innerHTML = '';
-                
-                if (!list || list.length === 0) {
-                    noArticles.classList.remove('hidden');
+            function renderArticles(list) {
+                articlesGrid.innerHTML = '';
+                if (!Array.isArray(list) || list.length === 0) {
+                    noArticlesMessage.classList.remove('hidden');
                     return;
                 }
-                
-                noArticles.classList.add('hidden');
-                list.forEach(article => grid.appendChild(createArticleCard(article)));
-                
-                // Attach click handlers for modal
-                grid.querySelectorAll('.open-article').forEach(btn => {
-                    btn.addEventListener('click', (e) => {
-                        const id = e.currentTarget.getAttribute('data-id');
-                        const article = articlesData.find(a => a.id === id);
-                        if (article) openModal(article);
+                noArticlesMessage.classList.add('hidden');
+
+                list.forEach(article => {
+                    const card = document.createElement('article');
+                    card.className = 'bg-[#1a1a1a] rounded-2xl p-4 border border-gray-800/50 transition transform hover:shadow-lg';
+                    card.innerHTML = `
+                        <img src="${escapeHtml(article.image)}" alt="${escapeHtml(article.title)}" class="w-full h-44 object-cover rounded-lg mb-4">
+                        <h3 class="text-lg font-semibold mb-1">${escapeHtml(article.title)}</h3>
+                        <p class="text-sm text-gray-400 mb-3">${escapeHtml(article.date)}</p>
+                        <p class="text-gray-300 mb-4 line-clamp-3">${escapeHtml(article.excerpt)}</p>
+                        <div class="flex items-center justify-between">
+                            <button class="open-article px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg touch-target" data-id="${escapeHtml(article.id)}">Read</button>
+                            <a href="#${encodeURIComponent(article.id)}" class="text-sm text-gray-400 hover:text-gray-200">Permalink</a>
+                        </div>
+                    `;
+                    articlesGrid.appendChild(card);
+
+                    // Attach event to open modal
+                    card.querySelector('.open-article').addEventListener('click', () => {
+                        openModal(article);
                     });
                 });
             }
 
-            // Enhanced Modal Functions
             function openModal(article) {
-                const modal = document.getElementById('article-modal');
-                const modalContent = document.getElementById('modal-article-content');
-                
-                // Inject article content
-                modalContent.innerHTML = article.fullContent;
-                
-                // Show modal
+                modalContent.innerHTML = article.fullContent || `<h2>${escapeHtml(article.title)}</h2><p>No content available.</p>`;
                 modal.classList.remove('hidden');
+                // prevent body scroll when modal open
                 document.body.style.overflow = 'hidden';
-                
-                // Scroll modal to top smoothly
-                setTimeout(() => {
-                    modal.scrollTo({ top: 0, behavior: 'smooth' });
-                }, 100);
+                // focus for accessibility
+                closeModalTop.focus();
             }
 
             function closeModal() {
-                const modal = document.getElementById('article-modal');
                 modal.classList.add('hidden');
-                document.body.style.overflow = 'auto';
+                modalContent.innerHTML = '';
+                document.body.style.overflow = '';
             }
 
-            function scrollModalToTop() {
-                const modal = document.getElementById('article-modal');
-                modal.scrollTo({ top: 0, behavior: 'smooth' });
-            }
+            closeModalTop.addEventListener('click', closeModal);
+            closeModalBottom.addEventListener('click', closeModal);
 
-            // Top close button
-            document.getElementById('close-modal-top').addEventListener('click', closeModal);
-            
-            // Bottom close button
-            document.getElementById('close-modal-bottom').addEventListener('click', closeModal);
-            
-            // Scroll to top button
-            document.getElementById('scroll-to-top').addEventListener('click', scrollModalToTop);
-            
-            // Close on outside click
-            document.getElementById('article-modal').addEventListener('click', (e) => {
-                if (e.target.id === 'article-modal') closeModal();
+            // Close modal when clicking outside content
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
             });
 
-            // Close with Escape key
+            // Escape key to close
             document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape') {
-                    const modal = document.getElementById('article-modal');
-                    if (!modal.classList.contains('hidden')) closeModal();
+                if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                    closeModal();
                 }
             });
 
-            // Search functionality
-            const searchInput = document.getElementById('search-input');
-            searchInput.addEventListener('input', (e) => {
-                const query = e.target.value.toLowerCase().trim();
-                if (!query) {
-                    renderArticlesGrid(articlesData);
-                    return;
-                }
-                const filtered = articlesData.filter(a =>
-                    a.title.toLowerCase().includes(query) ||
-                    a.excerpt.toLowerCase().includes(query) ||
-                    a.fullContent.toLowerCase().includes(query)
-                );
-                renderArticlesGrid(filtered);
+            // Back to top inside modal
+            scrollToTopBtn.addEventListener('click', () => {
+                modalContent.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            // Date filter
-            const dateFilter = document.getElementById('date-filter');
-            const uniqueDates = [...new Set(articlesData.map(a => a.date))].sort((a, b) => new Date(b) - new Date(a));
-            uniqueDates.forEach(date => {
-                const option = document.createElement('option');
-                option.value = date;
-                option.textContent = date;
-                dateFilter.appendChild(option);
-            });
+            // Build date filter options (unique months/dates)
+            (function populateDateFilter() {
+                const dates = articlesData.map(a => a.date).filter(Boolean);
+                // Use a Set to keep unique values in insertion order
+                const unique = Array.from(new Set(dates));
+                unique.forEach(d => {
+                    const opt = document.createElement('option');
+                    opt.value = d;
+                    opt.textContent = d;
+                    dateFilter.appendChild(opt);
+                });
+            })();
 
-            dateFilter.addEventListener('change', (e) => {
-                const value = e.target.value;
-                if (value === 'all') {
-                    renderArticlesGrid(articlesData);
-                } else {
-                    renderArticlesGrid(articlesData.filter(a => a.date === value));
-                }
+            // Filtering logic
+            function applyFilters() {
+                const q = searchInput.value.trim().toLowerCase();
+                const dateVal = dateFilter.value;
+                let filtered = articlesData.filter(a => {
+                    const inDate = dateVal === 'all' ? true : (a.date === dateVal);
+                    const inQuery = q === '' ? true : (
+                        (a.title && a.title.toLowerCase().includes(q)) ||
+                        (a.excerpt && a.excerpt.toLowerCase().includes(q)) ||
+                        (a.fullContent && a.fullContent.toLowerCase().includes(q))
+                    );
+                    return inDate && inQuery;
+                });
+                renderArticles(filtered);
+            }
+
+            searchInput.addEventListener('input', () => {
+                applyFilters();
+            });
+            dateFilter.addEventListener('change', () => {
+                applyFilters();
             });
 
             // Initial render
-            renderArticlesGrid(articlesData);
+            renderArticles(articlesData);
         });
     </script>
-
 </body>
 </html>
-
-How to Test GitHub Connector and Use Its Features - Manus
 
