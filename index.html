@@ -422,14 +422,7 @@
  </div>
 
  <script>
- document.addEventListener('DOMContentLoaded', function() {
- // --- PRO WALL LOGIC ---
- const isSubscribed = false; // Define here to avoid redeclaration issues
- const proWall = document.getElementById('pro-wall');
- if (!isSubscribed) {
- proWall.classList.remove('hidden');
- }
-const articles = [
+  const articles = [
 {
   "id": "imagine-blocking-people-in-real-life",
   "title": "Imagine If We Could Block Each Other in Real Life",
@@ -569,7 +562,7 @@ const articles = [
 <p>To refuse to turn a human being into background noise.</p>
 `
 }
-`,
+,
   {
     "id": "new-years-resolutions-too-small",
     "title": "Your New Year’s Resolutions Are Too Small for the Person You Are Becoming",
@@ -2077,6 +2070,13 @@ console.log(flattenArrayLikeMyPatience(nestedArrayFromHeck));
  `
  }
  ];
+ document.addEventListener('DOMContentLoaded', function() {
+ // --- PRO WALL LOGIC ---
+ const isSubscribed = false; // Define here to avoid redeclaration issues
+ const proWall = document.getElementById('pro-wall');
+ if (!isSubscribed) {
+ proWall.classList.remove('hidden');
+ };
 
  // ... (rest of the script is the same)
  const allArticlesContainer = document.getElementById('all-articles-container');
@@ -2345,6 +2345,7 @@ console.log(flattenArrayLikeMyPatience(nestedArrayFromHeck));
  </script>
 </body>
 </html>
+
 
 
 
