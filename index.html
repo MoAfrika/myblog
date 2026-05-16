@@ -10,7 +10,6 @@
     <!-- End Google Tag Manager -->
 
     <meta charset="UTF-8">
-    <!-- CRITICAL MOBILE TAG: Ensures the site doesn't zoom out on phones -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>I TYPE, WHAT I LIKE | MoAfrika Skotch Ntilane</title>
     <meta name="description" content="Essays, reflections, digital philosophy, and technological survival notes from a South African mind navigating AI, culture, systems, and modern life in real time.">
@@ -18,9 +17,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -28,16 +27,19 @@
                 extend: {
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
-                        serif: ['Lora', 'serif'],
+                        lora: ['Lora', 'serif'],
                     },
                     colors: {
                         brand: {
-                            500: '#f59e0b', // Amber/Gold Accent
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            500: '#f59e0b', // Amber/Gold accent
                             600: '#d97706',
+                            900: '#78350f',
                         },
                         dark: {
-                            bg: '#09090b',
-                            card: '#18181b',
+                            bg: '#0a0a0a',
+                            card: '#121212',
                             border: '#27272a'
                         }
                     }
@@ -47,55 +49,60 @@
     </script>
 
     <style>
-        /* --- MOBILE ROBUSTNESS --- */
-        html, body { 
-            overflow-x: hidden; 
-            width: 100%; 
-            -webkit-font-smoothing: antialiased;
-        }
-        body { transition: background-color 0.3s ease, color 0.3s ease; }
-
-        h1, h2, h3, h4, .font-serif { font-family: 'Lora', serif; }
-
-        /* Hero Backgrounds */
-        .hero-bg-dark {
-            background-image: linear-gradient(to bottom, rgba(9,9,11,0.5), rgba(9,9,11,1)), url('https://raw.githubusercontent.com/MoAfrika/my-images/main/blog_profile1.png');
-            background-size: cover; background-position: center top;
-        }
-        .hero-bg-light {
-            background-image: linear-gradient(to bottom, rgba(255,255,255,0.7), rgba(255,255,255,1)), url('https://raw.githubusercontent.com/MoAfrika/my-images/main/blog_profile1.png');
-            background-size: cover; background-position: center top;
+        /* Mobile Robustness Fixes */
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
         }
 
-        /* Glass Header */
-        .glass-header-dark { background: rgba(9, 9, 11, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
-        .glass-header-light { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
-
-        /* Card Hover Effects */
-        .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
-
-        /* ========================================================
-           AUTO-STYLING ENGINE FOR YOUR PASTED ESSAYS
-           (This forces your raw text to look like a premium blog)
-           ======================================================== */
-        .reader-content { font-family: 'Inter', sans-serif; font-size: 1.125rem; line-height: 1.8; }
-        .reader-content h2, .reader-content h3 { font-family: 'Lora', serif; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; }
-        .reader-content h2 { font-size: 2rem; }
-        .reader-content h3 { font-size: 1.5rem; color: #f59e0b; }
-        .reader-content p { margin-bottom: 1.5rem; }
-        .reader-content blockquote, .reader-content .border-l-4 {
-            border-left: 4px solid #f59e0b; padding-left: 1.25rem; font-style: italic; margin: 2rem 0; font-family: 'Lora', serif; font-size: 1.25rem; color: #a1a1aa;
+        body {
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
-        html:not(.dark) .reader-content h3 { color: #d97706; }
-        html:not(.dark) .reader-content blockquote { color: #52525b; }
-        .poetry-text { font-family: 'Lora', serif; font-size: 1.15rem; line-height: 1.9; white-space: pre-wrap; }
 
-        /* Lock scroll on mobile inside modal */
-        .mobile-modal-scroll { -webkit-overflow-scrolling: touch; }
+        /* Typography & Reading Experience */
+        h1, h2, h3, h4, .font-lora { font-family: 'Lora', serif; }
+        
+        .prose-reading p { margin-bottom: 1.5rem; line-height: 1.8; font-size: 1.125rem; }
+        .prose-reading h3 { font-size: 1.75rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: #f59e0b; }
+        .prose-reading h4 { font-size: 1.25rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .prose-reading blockquote, .prose-reading .border-l-4 { 
+            border-left: 4px solid #f59e0b; 
+            padding-left: 1rem; 
+            font-style: italic; 
+            margin: 2rem 0; 
+            color: #a1a1aa; /* zinc-400 */
+        }
+        
+        /* Light mode specific prose overrides */
+        html:not(.dark) .prose-reading h3 { color: #d97706; }
+        html:not(.dark) .prose-reading blockquote { color: #52525b; }
+
+        /* Smooth Card Hovers */
+        .article-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Poetry Formatting */
+        .poetry-text {
+            white-space: pre-wrap;
+            font-family: 'Lora', serif;
+            font-size: 1.125rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        /* Modal specific scroll fixes for mobile/iOS */
+        .mobile-modal-scroll {
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+        }
     </style>
 </head>
-<body class="bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-200">
+<body class="bg-gray-50 text-gray-900 dark:bg-dark-bg dark:text-gray-200 antialiased selection:bg-brand-500 selection:text-white">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSFG45C7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
@@ -107,219 +114,202 @@
       gtag('js', new Date());
       gtag('config', 'G-44LNL1B5XP');
     </script>
-
-    <!-- HEADER -->
-    <header class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 glass-header-light dark:glass-header-dark">
+    
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-40 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-gray-200 dark:border-dark-border transition-colors duration-300">
         <div class="container mx-auto px-4 md:px-6 py-4">
             <nav class="flex items-center justify-between">
-                <a href="#home" class="text-xl md:text-2xl font-serif font-bold tracking-tight text-zinc-900 dark:text-white truncate">
-                    I TYPE, <span class="text-brand-500">WHAT I LIKE</span>
+                <a href="#home" class="text-xl md:text-2xl font-lora font-bold text-brand-600 dark:text-brand-500 tracking-tight truncate mr-4">
+                    I TYPE, WHAT I LIKE
                 </a>
                 
-                <!-- Desktop Nav -->
                 <div class="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wide">
-                    <a href="#essays" class="hover:text-brand-500 transition-colors">Essays</a>
-                    <a href="#poetry" class="hover:text-brand-500 transition-colors">Poetry</a>
-                    <a href="#about" class="hover:text-brand-500 transition-colors">About</a>
-                    <a href="#contact" class="hover:text-brand-500 transition-colors">Contact</a>
+                    <a href="#essays" class="text-gray-600 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Essays</a>
+                    <a href="#poetry" class="text-gray-600 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Poetry</a>
+                    <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-500 transition-colors">About</a>
                     
-                    <button id="theme-toggle" class="p-2 rounded-full bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-brand-500 transition-all">
-                        <i class="fas fa-moon dark:hidden"></i>
-                        <i class="fas fa-sun hidden dark:block"></i>
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-full bg-gray-100 dark:bg-zinc-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-zinc-700 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="Toggle Theme">
+                        <i id="theme-icon" class="fas fa-sun"></i>
                     </button>
                 </div>
-                
-                <!-- Mobile Nav -->
-                <div class="flex items-center gap-4 md:hidden">
-                    <button id="theme-toggle-mobile" class="p-2 rounded-full text-zinc-600 dark:text-brand-500">
-                        <i class="fas fa-moon dark:hidden text-xl"></i>
-                        <i class="fas fa-sun hidden dark:block text-xl"></i>
+
+                <!-- Mobile Menu & Theme Toggle -->
+                <div class="flex md:hidden items-center space-x-2">
+                    <button id="mobile-theme-toggle" class="p-2 rounded-full text-gray-600 dark:text-gray-300 focus:outline-none" aria-label="Toggle Theme">
+                         <i id="mobile-theme-icon" class="fas fa-sun"></i>
                     </button>
-                    <button id="mobile-menu-button" class="text-zinc-600 dark:text-zinc-300 focus:outline-none">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    <button id="mobile-menu-button" class="p-2 text-gray-600 dark:text-gray-300 focus:outline-none" aria-label="Toggle mobile menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                     </button>
                 </div>
             </nav>
         </div>
-        <!-- Mobile Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 absolute w-full shadow-xl">
-            <a href="#essays" class="block py-3 font-semibold border-b border-zinc-100 dark:border-zinc-800">Essays</a>
-            <a href="#poetry" class="block py-3 font-semibold border-b border-zinc-100 dark:border-zinc-800">Poetry</a>
-            <a href="#about" class="block py-3 font-semibold border-b border-zinc-100 dark:border-zinc-800">About</a>
-            <a href="#contact" class="block py-3 font-semibold">Contact</a>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white dark:bg-black border-b border-gray-200 dark:border-dark-border shadow-xl">
+            <div class="flex flex-col px-6 py-4 space-y-4 font-semibold">
+                <a href="#essays" class="mobile-link text-gray-700 dark:text-gray-300 hover:text-brand-500">Essays & Systems</a>
+                <a href="#poetry" class="mobile-link text-gray-700 dark:text-gray-300 hover:text-brand-500">Poetry</a>
+                <a href="#about" class="mobile-link text-gray-700 dark:text-gray-300 hover:text-brand-500">About</a>
+                <a href="#contact" class="mobile-link text-gray-700 dark:text-gray-300 hover:text-brand-500">Contact</a>
+            </div>
         </div>
     </header>
 
-    <!-- HERO -->
-    <section id="hero-section" class="min-h-[85vh] flex items-center justify-center pt-24 pb-12 relative transition-all duration-500 hero-bg-dark">
-        <div class="text-center px-4 relative z-10 max-w-4xl mx-auto">
-            <h1 class="text-5xl sm:text-6xl md:text-8xl font-bold font-serif leading-tight mb-6 text-zinc-900 dark:text-white">
-                I TYPE, <br/><span class="text-brand-500">WHAT I LIKE.</span>
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 md:pt-48 md:pb-32 px-4">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold font-lora leading-tight mb-6 text-gray-900 dark:text-white">
+                I TYPE, WHAT I LIKE.
             </h1>
-            <p class="text-lg md:text-xl text-zinc-700 dark:text-zinc-300 max-w-2xl mx-auto leading-relaxed font-light mb-10">
-                This is where ideas get written before they become systems.<br class="hidden md:block"/>
-                Essays, reflections, digital philosophy, and technological survival notes from a South African mind navigating AI, culture, and modern life.
+            <p class="text-lg md:text-2xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed mb-10">
+                This is where ideas get written before they become systems. Essays, reflections, digital philosophy, and technological survival notes from a South African mind navigating AI, culture, and modern life in real time.
             </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#essays" class="w-full sm:w-auto bg-brand-500 text-white dark:text-zinc-950 font-bold py-3 px-8 rounded-full text-lg hover:bg-brand-600 transition-all shadow-lg">Read Essays</a>
-                <a href="#poetry" class="w-full sm:w-auto bg-white dark:bg-transparent border border-zinc-300 dark:border-zinc-600 text-zinc-800 dark:text-zinc-300 font-bold py-3 px-8 rounded-full text-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all">Explore Poetry</a>
-            </div>
+            <a href="#essays" class="inline-flex items-center justify-center bg-brand-600 hover:bg-brand-500 text-white font-bold py-3 px-8 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-brand-500/25">
+                Read the Archives
+            </a>
         </div>
     </section>
 
-    <main class="container mx-auto px-4 sm:px-6 py-16">
+    <main class="container mx-auto px-4 md:px-6 pb-24">
         
         <!-- ESSAYS SECTION -->
-        <section id="essays">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-5xl font-bold font-serif mb-4">Essays, Systems & Reflections</h2>
-                <div class="w-20 h-1 bg-brand-500 mx-auto rounded-full"></div>
-            </div>
-            
-            <div class="max-w-4xl mx-auto mb-10 p-4 bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800 flex flex-col sm:flex-row gap-4 shadow-sm">
-                <div class="relative flex-grow">
-                    <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-zinc-400"></i>
-                    <input type="text" id="article-search" class="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl py-3 pl-12 pr-4 focus:outline-none focus:border-brand-500 transition-colors" placeholder="Search essays...">
+        <section id="essays" class="pt-16">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-12 border-b border-gray-200 dark:border-dark-border pb-6">
+                <h2 class="text-3xl md:text-4xl font-bold font-lora text-gray-900 dark:text-white mb-4 md:mb-0">Essays, Systems & Reflections</h2>
+                
+                <!-- Filters -->
+                <div class="w-full md:w-auto flex flex-col sm:flex-row gap-3">
+                    <select id="category-filter" class="bg-white dark:bg-dark-card border border-gray-300 dark:border-dark-border text-gray-700 dark:text-gray-300 text-sm rounded-lg focus:ring-brand-500 focus:border-brand-500 block w-full p-2.5 outline-none">
+                        <option value="All">All Categories</option>
+                    </select>
+                    <input type="text" id="search-input" placeholder="Search essays..." class="bg-white dark:bg-dark-card border border-gray-300 dark:border-dark-border text-gray-900 dark:text-white text-sm rounded-lg focus:ring-brand-500 focus:border-brand-500 block w-full p-2.5 outline-none">
                 </div>
-                <select id="article-category-filter" class="bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl py-3 px-4 focus:outline-none focus:border-brand-500 transition-colors sm:w-48">
-                    <option value="">All Categories</option>
-                </select>
             </div>
 
-            <div id="all-articles-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-                <!-- Injected via JS -->
+            <div id="articles-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Articles injected here via JS -->
             </div>
-            <div id="no-articles-found" class="text-center py-16 hidden">
-                <p class="text-zinc-500 text-lg">No essays found matching your search.</p>
+            
+            <div id="no-results" class="hidden text-center py-12 text-gray-500 dark:text-gray-400 font-lora text-xl">
+                The void stares back... No essays found for that search.
             </div>
         </section>
 
         <!-- POETRY SECTION -->
-        <section id="poetry" class="mt-24 pt-16 border-t border-zinc-200 dark:border-zinc-800">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-5xl font-bold font-serif mb-4">Poetry & Fragments</h2>
-                <p class="text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto text-lg px-4">Fragments, reflections, emotional architecture, and unfinished conversations written between systems, survival, memory, and becoming.</p>
-                <div class="w-20 h-1 bg-brand-500 mx-auto rounded-full mt-6"></div>
+        <section id="poetry" class="pt-32">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold font-lora text-gray-900 dark:text-white mb-4">Poetry</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
+                    Fragments, reflections, emotional architecture, and unfinished conversations written between systems, survival, memory, and becoming.
+                </p>
             </div>
-            <div id="poetry-container" class="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
-                <!-- Injected via JS -->
+
+            <div id="poetry-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Poetry injected here via JS -->
             </div>
         </section>
 
         <!-- ABOUT SECTION -->
-        <section id="about" class="mt-24 pt-16">
-            <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-3xl overflow-hidden shadow-xl max-w-5xl mx-auto flex flex-col md:flex-row">
-                <div class="md:w-2/5 h-64 md:h-auto relative">
-                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Neon%20Halo%20Portrait%20with%20Digital%20Overlays.png" alt="MoAfrika Skotch Ntilane" class="absolute inset-0 w-full h-full object-cover">
-                </div>
-                <div class="md:w-3/5 p-8 md:p-12">
-                    <h2 class="text-3xl font-bold font-serif mb-6">Right, About Me...</h2>
-                    <div class="space-y-4 text-zinc-700 dark:text-zinc-300 text-lg font-light leading-relaxed">
-                        <p>I build things that carry weight in the real world. Ideas, systems, businesses, and digital structures that are meant to function under pressure, not just look good on paper.</p>
-                        <p class="pl-4 border-l-4 border-brand-500 font-medium italic">I do not separate creativity from logic. In practice, they solve the same problems from different angles.</p>
-                        <p>My approach is to test ideas quickly, refine them through reality, and remove anything that does not serve the outcome. I have learned more from execution than theory.</p>
-                        <p>This space reflects that process. Not finished statements, but working thoughts. Not polished answers, but active development.</p>
+        <section id="about" class="mt-32 pt-16 border-t border-gray-200 dark:border-dark-border">
+            <div class="max-w-4xl mx-auto bg-white dark:bg-dark-card rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 dark:border-dark-border">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Neon%20Halo%20Portrait%20with%20Digital%20Overlays.png" alt="MoAfrika Skotch Ntilane" class="w-32 h-32 md:w-48 md:h-48 rounded-full border-4 border-brand-500 object-cover flex-shrink-0 shadow-lg">
+                    <div class="text-center md:text-left">
+                        <h2 class="text-3xl font-bold font-lora text-gray-900 dark:text-white mb-4">Right, About Me...</h2>
+                        <div class="text-gray-600 dark:text-gray-300 space-y-4 text-lg leading-relaxed">
+                            <p>I build things that carry weight in the real world. Ideas, systems, businesses, and digital structures that are meant to function under pressure, not just look good on paper.</p>
+                            <p>My work sits between strategy, technology, and storytelling. I move between writing, building, and problem-solving depending on what the situation needs. Sometimes that is code. Sometimes it is structure. Sometimes it is clarity where there is confusion.</p>
+                            <p>This space reflects that process. Not finished statements, but working thoughts. Not polished answers, but active development. If you are here, you are seeing how things are built before they become stable.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- CONTACT SECTION -->
-        <section id="contact" class="mt-24 mb-8">
-            <div class="max-w-xl mx-auto text-center">
-                <h2 class="text-3xl font-bold font-serif mb-4">Holler At Me</h2>
-                <p class="text-zinc-600 dark:text-zinc-400 mb-8">Got a searing question or a wild collaboration idea? The digital void awaits your transmission.</p>
-                <form id="contact-form" class="bg-white dark:bg-zinc-900 p-6 md:p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-lg text-left">
-                    <div class="mb-4">
-                        <label class="block text-sm font-bold mb-2 uppercase text-zinc-700 dark:text-zinc-300">Your Handle</label>
-                        <input type="text" id="name" required class="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl py-3 px-4 focus:outline-none focus:border-brand-500">
-                    </div>
-                    <div class="mb-6">
-                        <label class="block text-sm font-bold mb-2 uppercase text-zinc-700 dark:text-zinc-300">Your Idea</label>
-                        <textarea id="message" rows="4" required class="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl py-3 px-4 focus:outline-none focus:border-brand-500 resize-none"></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-brand-500 text-white dark:text-zinc-950 font-bold py-3 rounded-xl text-lg hover:bg-brand-600 transition-colors">
-                        Transmit via WhatsApp
-                    </button>
-                    <p id="form-status" class="text-center mt-3 text-sm text-brand-500 font-medium"></p>
-                </form>
-            </div>
+        <section id="contact" class="mt-32 max-w-2xl mx-auto text-center">
+            <h2 class="text-4xl font-bold font-lora text-gray-900 dark:text-white mb-6">Holler At Me</h2>
+            <p class="text-gray-600 dark:text-gray-400 mb-8 text-lg">Got a searing question, a wild collaboration idea, or just want to debate the existential importance of the Oxford comma? The digital void awaits your transmission.</p>
+            
+            <form id="contact-form" class="space-y-6 text-left">
+                <div>
+                    <label for="name" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Your Handle / Alias</label>
+                    <input type="text" id="name" required class="w-full bg-gray-50 dark:bg-dark-card border border-gray-300 dark:border-dark-border rounded-lg py-3 px-4 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Your Manifesto / Rant / Brilliant Idea</label>
+                    <textarea id="message" rows="4" required class="w-full bg-gray-50 dark:bg-dark-card border border-gray-300 dark:border-dark-border rounded-lg py-3 px-4 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors shadow-lg">
+                    Send via WhatsApp <i class="fab fa-whatsapp ml-2"></i>
+                </button>
+                <p id="form-status" class="text-center mt-4 text-sm font-semibold text-brand-600 dark:text-brand-500"></p>
+            </form>
         </section>
+
     </main>
 
-    <footer class="bg-zinc-100 dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800 py-10 text-center text-zinc-500 dark:text-zinc-400">
-        <div class="flex justify-center space-x-6 mb-6">
-            <a href="https://www.linkedin.com/in/mo-ntilanedev/" class="hover:text-brand-500 transition-colors"><i class="fab fa-linkedin fa-2x"></i></a>
-            <a href="https://github.com/MoAfrika" class="hover:text-brand-500 transition-colors"><i class="fab fa-github fa-2x"></i></a>
+    <footer class="border-t border-gray-200 dark:border-dark-border mt-12 bg-white dark:bg-dark-bg">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <div class="flex justify-center space-x-8 mb-8">
+                <a href="https://www.linkedin.com/in/mo-ntilanedev/" target="_blank" class="text-gray-400 hover:text-brand-500 transition-colors"><i class="fab fa-linkedin fa-2xl"></i></a>
+                <a href="https://github.com/MoAfrika" target="_blank" class="text-gray-400 hover:text-brand-500 transition-colors"><i class="fab fa-github fa-2xl"></i></a>
+                <a href="https://web.facebook.com/MR.D.3.N.Z.O" target="_blank" class="text-gray-400 hover:text-brand-500 transition-colors"><i class="fab fa-facebook-f fa-2xl"></i></a>
+            </div>
+            <p class="text-gray-500 dark:text-gray-400 font-medium">&copy; <span id="currentYear"></span> MoAfrika Skotch Ntilane. All rights reserved.</p>
+            <p class="text-gray-400 dark:text-gray-500 text-sm mt-2">Still recursively typing what I like.</p>
         </div>
-        <p class="text-sm">&copy; <span id="currentYear"></span> MoAfrika Skotch Ntilane. All rights reserved.</p>
     </footer>
 
-    <!-- MOBILE-PERFECT READER MODAL -->
-    <!-- Note: Fixed inset-0 covers whole screen on mobile, flex-col layout handles internal scrolling -->
-    <div id="articleModal" class="fixed inset-0 z-[100] hidden flex-col opacity-0 transition-opacity duration-300 bg-white dark:bg-zinc-950 md:bg-white/95 md:dark:bg-black/90 md:backdrop-blur-sm md:p-6" role="dialog" aria-modal="true">
+    <!-- Full-Screen/Centered Reading Modal -->
+    <div id="readerModal" class="fixed inset-0 z-50 hidden" aria-modal="true" role="dialog">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-gray-900/60 dark:bg-black/80 backdrop-blur-sm transition-opacity opacity-0" id="modalBackdrop"></div>
         
-        <div id="modalContainer" class="relative w-full h-full md:max-w-4xl md:mx-auto md:bg-white md:dark:bg-zinc-950 md:rounded-2xl md:shadow-2xl flex flex-col overflow-hidden transform scale-95 transition-transform duration-300">
-            
-            <!-- Sticky Header for Close Button (Stays at top while scrolling) -->
-            <div class="sticky top-0 w-full z-10 bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800 p-4 flex justify-between items-center shadow-sm">
-                <span id="modalCategoryTag" class="text-xs font-bold uppercase tracking-widest text-brand-500">Category</span>
-                <button id="closeModal" class="bg-zinc-100 dark:bg-zinc-800 hover:bg-brand-500 hover:text-white text-zinc-700 dark:text-zinc-300 rounded-full w-10 h-10 flex items-center justify-center transition-colors focus:outline-none">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
+        <!-- Modal Container (Full screen on mobile, centered box on desktop) -->
+        <div class="fixed inset-0 flex items-center justify-center md:p-6 pointer-events-none">
+            <div id="modalContainer" class="bg-white dark:bg-dark-bg w-full h-full md:h-[90vh] md:max-w-4xl md:rounded-2xl shadow-2xl flex flex-col pointer-events-auto transform scale-95 opacity-0 transition-all duration-300">
+                
+                <!-- Sticky Header & Close Button inside the modal -->
+                <div class="flex items-center justify-between px-4 py-3 md:px-8 md:py-4 border-b border-gray-100 dark:border-dark-border bg-white dark:bg-dark-bg z-10 sticky top-0 md:rounded-t-2xl">
+                    <span class="text-xs font-bold uppercase tracking-wider text-brand-500 font-sans" id="modalCategoryTag">Category</span>
+                    <button id="closeReader" class="p-2 -mr-2 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white bg-gray-100 dark:bg-dark-card hover:bg-gray-200 dark:hover:bg-zinc-800 rounded-full transition-colors" aria-label="Close article">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                </div>
 
-            <!-- Scrollable Content Area -->
-            <div class="flex-1 overflow-y-auto mobile-modal-scroll px-5 md:px-12 py-8 text-zinc-800 dark:text-zinc-200" id="modalScrollArea">
-                <div class="max-w-prose mx-auto">
-                    <header class="mb-8 text-center">
-                        <h1 id="modalTitleText" class="text-3xl md:text-5xl font-bold font-serif leading-tight mb-4">Title</h1>
-                        <p id="modalMeta" class="text-zinc-500 text-sm font-medium uppercase tracking-wide">Date</p>
-                    </header>
-                    <img id="modalImage" src="" alt="Cover" class="w-full h-auto rounded-xl shadow-sm mb-10 hidden object-cover max-h-[50vh]">
-                    
-                    <!-- Content injected here. The CSS Auto-Styling engine formats it automatically -->
-                    <div id="modalBody" class="reader-content"></div>
+                <!-- Scrollable Article Content -->
+                <div class="flex-1 overflow-y-auto mobile-modal-scroll px-4 py-6 md:px-12 md:py-10">
+                    <article class="max-w-prose mx-auto">
+                        <header class="mb-8 md:mb-10 text-center">
+                            <h1 id="modalTitle" class="text-3xl md:text-5xl font-bold font-lora text-gray-900 dark:text-white leading-tight mb-4">Title</h1>
+                            <p id="modalMeta" class="text-gray-500 dark:text-gray-400 text-sm font-medium uppercase tracking-wide">Date</p>
+                        </header>
+                        
+                        <img id="modalImage" src="" alt="Cover" class="w-full h-auto rounded-xl shadow-md mb-10 object-cover max-h-[50vh]">
+                        
+                        <!-- Content -->
+                        <div id="modalBody" class="prose-reading text-gray-800 dark:text-gray-300">
+                            <!-- Injected HTML -->
+                        </div>
+                    </article>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        // --- 1. THEME TOGGLE ---
-        const htmlElement = document.documentElement;
-        const themeToggleBtns = [document.getElementById('theme-toggle'), document.getElementById('theme-toggle-mobile')];
-        const heroSection = document.getElementById('hero-section');
-
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            htmlElement.classList.add('dark');
-        } else {
-            htmlElement.classList.remove('dark');
-        }
-
-        function updateHeroBackground() {
-            if (htmlElement.classList.contains('dark')) {
-                heroSection.classList.add('hero-bg-dark'); heroSection.classList.remove('hero-bg-light');
-            } else {
-                heroSection.classList.add('hero-bg-light'); heroSection.classList.remove('hero-bg-dark');
-            }
-        }
-        updateHeroBackground();
-
-        themeToggleBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                htmlElement.classList.toggle('dark');
-                localStorage.theme = htmlElement.classList.contains('dark') ? 'dark' : 'light';
-                updateHeroBackground();
-            });
-        });
-
-        // --- 2. POETRY DATA ---
+        // --- POETRY DATA ---
         const poetryData = [
             {
-                id: "poem-shame", title: "Shame Speaks With Other People’s Voices", date: "May 2026",
-                excerpt: "Most people confuse shame with guilt because both wounds bruise the soul in similar places...",
-                fullContent: `<div class="poetry-text">Most people confuse shame with guilt
+                id: "poem-shame", type: "poetry", category: "Philosophy",
+                title: "Shame Speaks With Other People’s Voices", date: "May 2026",
+                image: "https://images.unsplash.com/photo-1518599904199-0ca897819ddb?auto=format&fit=crop&q=80&w=800",
+                excerpt: "Most people confuse shame with guilt because both wounds bruise the soul in similar places. But they are not twins. Not even cousins.",
+                fullContent: `
+                    <div class="poetry-text">Most people confuse shame with guilt
 because both wounds bruise the soul in similar places.
 But they are not twins.
 Not even cousins.
@@ -364,9 +354,12 @@ Shame learns how to wear your own face
 and speak in your own voice.</div>`
             },
             {
-                id: "poem-ancestors", title: "The Things The Ancestors Said To Me", date: "May 2026",
-                excerpt: "I told the ancestors I was exhausted. Not the kind of tired sleep can fix...",
-                fullContent: `<div class="poetry-text">I told the ancestors I was exhausted.
+                id: "poem-ancestors", type: "poetry", category: "Culture",
+                title: "The Things The Ancestors Said To Me", date: "May 2026",
+                image: "https://images.unsplash.com/photo-1478147424036-cb7c3fdf0814?auto=format&fit=crop&q=80&w=800",
+                excerpt: "I told the ancestors I was exhausted. Not the kind of tired sleep can fix. The kind that settles behind the eyes.",
+                fullContent: `
+                    <div class="poetry-text">I told the ancestors I was exhausted.
 Not the kind of tired sleep can fix.
 The kind that settles behind the eyes.
 The kind that makes breathing feel like labor.
@@ -459,11 +452,13 @@ Then:
 “You are evidence that we survived.”</div>`
             },
             {
-                id: "poem-receipts", title: "Receipts", date: "May 2026",
+                id: "poem-receipts", type: "poetry", category: "Survival",
+                title: "Receipts", date: "May 2026",
+                image: "https://images.unsplash.com/photo-1506459225024-14c11eb58a43?auto=format&fit=crop&q=80&w=800",
                 excerpt: "The painful thing about being a struggling father is learning that people only respect your love when it comes with money.",
-                fullContent: `<div class="poetry-text">The painful thing about being a struggling father is learning that people only respect your love when it comes with money.
+                fullContent: `
+                    <div class="poetry-text">The painful thing about being a struggling father is learning that people only respect your love when it comes with money.
 If you are broke, suddenly your presence means less. Your effort means less. Your sacrifices become invisible.
-
 Nobody talks about that part.
 Nobody talks about what it does to a man when he genuinely loves his child but cannot provide the way people expect him to.
 
@@ -1644,181 +1639,216 @@ But he was fighting very hard not to disappear.</div>`
         ];
         // 👆🏾 END OF ESSAYS ARRAY 👆🏾
 
+        // Make sure missing categories default to "Essay" and type to "essay"
+        const formattedEssays = essays.map(item => ({
+            ...item,
+            type: item.type || 'essay', 
+            category: item.category || 'Essay' 
+        }));
 
-        // --- 4. APP LOGIC ---
-        const allArticlesContainer = document.getElementById('all-articles-container');
-        const poetryContainer = document.getElementById('poetry-container');
-        const articleModal = document.getElementById('articleModal');
-        const modalContainer = document.getElementById('modalContainer');
-        const modalBackdrop = document.getElementById('modalBackdrop');
-        const modalContent = document.getElementById('modalBody'); // Fixed ID targeting
-        const modalScrollArea = document.getElementById('modalScrollArea');
-        const closeModalBtn = document.getElementById('closeModal');
-        const articleSearchInput = document.getElementById('article-search');
-        const categoryFilter = document.getElementById('article-category-filter');
-        const noArticlesFoundMessage = document.getElementById('no-articles-found');
-        const mobileMenuBtn = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+        // --- APP LOGIC ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const articlesGrid = document.getElementById('articles-grid');
+            const poetryGrid = document.getElementById('poetry-grid');
+            const noResultsMsg = document.getElementById('no-results');
+            const categoryFilter = document.getElementById('category-filter');
+            const searchInput = document.getElementById('search-input');
+            
+            // Modal Elements
+            const readerModal = document.getElementById('readerModal');
+            const modalBackdrop = document.getElementById('modalBackdrop');
+            const modalContainer = document.getElementById('modalContainer');
+            const closeReaderBtn = document.getElementById('closeReader');
+            
+            // Theme Elements
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
+            const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
+            const mobileThemeIcon = document.getElementById('mobile-theme-icon');
+            
+            // Mobile Menu
+            const mobileMenuBtn = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
 
-        // Extract Categories
-        function populateCategories() {
-            const categories = [...new Set(essays.map(article => article.category || "Uncategorized"))].sort();
-            categories.forEach(cat => {
-                const option = document.createElement('option');
-                option.value = cat;
-                option.textContent = cat;
-                categoryFilter.appendChild(option);
-            });
-        }
-
-        // Render Essays
-        function renderEssays(filtered = essays) {
-            allArticlesContainer.innerHTML = '';
-            if (filtered.length === 0) {
-                noArticlesFoundMessage.classList.remove('hidden');
-                return;
-            } else {
-                noArticlesFoundMessage.classList.add('hidden');
+            // --- THEME TOGGLE LOGIC ---
+            function updateThemeIcon(isDark) {
+                const iconClass = isDark ? 'fas fa-moon' : 'fas fa-sun';
+                themeIcon.className = iconClass;
+                mobileThemeIcon.className = iconClass;
             }
 
-            filtered.forEach(article => {
-                const card = document.createElement('article');
-                card.className = 'bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden card-hover flex flex-col h-full cursor-pointer border border-zinc-200 dark:border-zinc-800';
-                card.onclick = () => openModal(article, 'essay');
-                
-                card.innerHTML = `
-                    <div class="relative h-48 overflow-hidden bg-zinc-100 dark:bg-zinc-800">
-                        <img src="${article.image || ''}" alt="" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy" onerror="this.src='https://placehold.co/600x400/18181b/ffffff?text=Image+Unavailable'">
-                        <div class="absolute top-3 left-3 bg-brand-500 text-white text-[10px] font-bold uppercase tracking-wider py-1 px-3 rounded-full shadow-sm">
-                            ${article.category || 'Essay'}
-                        </div>
-                    </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-xl font-serif font-bold text-zinc-900 dark:text-zinc-100 mb-2 leading-snug">${article.title}</h3>
-                        <p class="text-zinc-500 text-xs font-semibold mb-3 uppercase tracking-wide">${article.date}</p>
-                        <p class="text-zinc-600 dark:text-zinc-400 text-sm mb-4 flex-grow line-clamp-3">${article.excerpt}</p>
-                        <div class="mt-auto text-brand-600 dark:text-brand-500 text-sm font-bold flex items-center">
-                            Read Essay <i class="fas fa-arrow-right ml-2 text-xs"></i>
-                        </div>
-                    </div>
-                `;
-                allArticlesContainer.appendChild(card);
-            });
-        }
-
-        // Render Poetry
-        function renderPoetry() {
-            poetryContainer.innerHTML = '';
-            poetryData.forEach(poem => {
-                const card = document.createElement('article');
-                card.className = 'bg-zinc-50 dark:bg-zinc-900 p-8 rounded-2xl card-hover cursor-pointer border border-zinc-200 dark:border-zinc-800 flex flex-col';
-                card.onclick = () => openModal(poem, 'poetry');
-                
-                card.innerHTML = `
-                    <h3 class="text-2xl font-serif font-bold text-zinc-900 dark:text-white mb-2">${poem.title}</h3>
-                    <span class="text-xs text-brand-500 uppercase font-bold tracking-widest mb-6 block">Poem</span>
-                    <p class="mb-6 text-zinc-600 dark:text-zinc-400 font-serif italic text-lg leading-relaxed line-clamp-4 border-l-4 border-brand-500 pl-4">
-                        "${poem.excerpt}"
-                    </p>
-                    <div class="mt-auto text-zinc-800 dark:text-zinc-200 text-sm font-bold uppercase tracking-wide hover:text-brand-500 transition-colors">
-                        Read Fragment
-                    </div>
-                `;
-                poetryContainer.appendChild(card);
-            });
-        }
-
-        // Filters
-        function handleFilters() {
-            const search = articleSearchInput.value.toLowerCase();
-            const category = categoryFilter.value;
-            const filtered = essays.filter(article => {
-                const matchesSearch = article.title.toLowerCase().includes(search) || article.excerpt.toLowerCase().includes(search);
-                const matchesCat = category === "" || (article.category || "Uncategorized") === category;
-                return matchesSearch && matchesCat;
-            });
-            renderEssays(filtered);
-        }
-
-        // Modal Open/Close
-        function openModal(data, type) {
-            // Set Headers
-            document.getElementById('modalTitleText').textContent = data.title;
-            document.getElementById('modalMeta').textContent = data.date;
-            document.getElementById('modalCategoryTag').textContent = data.category || (type === 'poetry' ? 'Poem' : 'Essay');
-            
-            // Set Image (if essay)
-            const imgEl = document.getElementById('modalImage');
-            if (type === 'essay' && data.image) {
-                imgEl.src = data.image;
-                imgEl.classList.remove('hidden');
-            } else {
-                imgEl.classList.add('hidden');
+            function toggleTheme() {
+                const htmlClasses = document.documentElement.classList;
+                htmlClasses.toggle('dark');
+                const isDark = htmlClasses.contains('dark');
+                updateThemeIcon(isDark);
             }
 
-            // Set Content
-            modalContent.innerHTML = data.fullContent;
-
-            // Show UI
-            articleModal.classList.remove('hidden');
-            articleModal.classList.add('flex');
+            themeToggleBtn.addEventListener('click', toggleTheme);
+            mobileThemeToggleBtn.addEventListener('click', toggleTheme);
             
-            // Force reflow for animation
-            void articleModal.offsetWidth;
+            // Init theme icon based on default class
+            updateThemeIcon(document.documentElement.classList.contains('dark'));
+
+            // --- MOBILE MENU LOGIC ---
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Extract unique categories for the filter
+            function populateCategories() {
+                const categories = [...new Set(formattedEssays.map(article => article.category))].sort();
+                categories.forEach(cat => {
+                    const option = document.createElement('option');
+                    option.value = cat;
+                    option.textContent = cat;
+                    categoryFilter.appendChild(option);
+                });
+            }
+
+            // --- RENDER CONTENT ---
+            function createCardHTML(item) {
+                return `
+                    <article class="article-card flex flex-col h-full bg-white dark:bg-dark-card rounded-2xl shadow-sm border border-gray-100 dark:border-dark-border overflow-hidden cursor-pointer group" onclick="openReader('${item.id}')">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x400/121212/FFFFFF?text=Image';">
+                            <div class="absolute top-3 left-3 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-md">
+                                ${item.category || item.type}
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold font-lora text-gray-900 dark:text-white mb-2 group-hover:text-brand-600 dark:group-hover:text-brand-500 transition-colors line-clamp-2">${item.title}</h3>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 font-medium uppercase tracking-wide">${item.date}</p>
+                            <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed line-clamp-3 mb-6 flex-grow">${item.excerpt}</p>
+                            <div class="mt-auto flex items-center text-brand-600 dark:text-brand-500 font-semibold group-hover:translate-x-2 transition-transform">
+                                Read Piece <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </div>
+                        </div>
+                    </article>
+                `;
+            }
+
+            function renderContent() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const selectedCategory = categoryFilter.value;
+
+                let visibleEssays = 0;
+                articlesGrid.innerHTML = '';
+                poetryGrid.innerHTML = '';
+
+                formattedEssays.forEach(item => {
+                    const matchesSearch = item.title.toLowerCase().includes(searchTerm) || item.excerpt.toLowerCase().includes(searchTerm);
+                    const matchesCategory = selectedCategory === 'All' || item.category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        const card = createCardHTML(item);
+                        articlesGrid.insertAdjacentHTML('beforeend', card);
+                        visibleEssays++;
+                    }
+                });
+                
+                poetryData.forEach(item => {
+                    const matchesSearch = item.title.toLowerCase().includes(searchTerm) || item.excerpt.toLowerCase().includes(searchTerm);
+                    if (matchesSearch) {
+                        const card = createCardHTML(item);
+                        poetryGrid.insertAdjacentHTML('beforeend', card);
+                    }
+                });
+
+                if (visibleEssays === 0 && formattedEssays.length > 0) {
+                    noResultsMsg.classList.remove('hidden');
+                } else {
+                    noResultsMsg.classList.add('hidden');
+                }
+            }
+
+            categoryFilter.addEventListener('change', renderContent);
+            searchInput.addEventListener('input', renderContent);
+
+            // --- READER MODAL LOGIC (Mobile Robust) ---
+            window.openReader = function(id) {
+                // Find item in either array
+                let item = formattedEssays.find(i => i.id === id);
+                if (!item) item = poetryData.find(i => i.id === id);
+                if (!item) return;
+
+                document.getElementById('modalTitle').textContent = item.title;
+                document.getElementById('modalMeta').textContent = item.date;
+                document.getElementById('modalCategoryTag').textContent = item.category || item.type;
+                
+                const imgEl = document.getElementById('modalImage');
+                if(item.image) {
+                     imgEl.src = item.image;
+                     imgEl.classList.remove('hidden');
+                } else {
+                     imgEl.classList.add('hidden');
+                }
+                
+                document.getElementById('modalBody').innerHTML = item.fullContent;
+
+                // Show Modal
+                readerModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Lock background scroll
+                
+                // Animate In
+                setTimeout(() => {
+                    modalBackdrop.classList.remove('opacity-0');
+                    modalContainer.classList.remove('scale-95', 'opacity-0');
+                    modalContainer.classList.add('scale-100', 'opacity-100');
+                }, 10);
+            };
+
+            function closeReader() {
+                // Animate Out
+                modalBackdrop.classList.add('opacity-0');
+                modalContainer.classList.remove('scale-100', 'opacity-100');
+                modalContainer.classList.add('scale-95', 'opacity-0');
+                
+                setTimeout(() => {
+                    readerModal.classList.add('hidden');
+                    document.body.style.overflow = ''; // Restore background scroll
+                    document.getElementById('modalBody').innerHTML = ''; // Clear memory
+                }, 300);
+            }
+
+            closeReaderBtn.addEventListener('click', closeReader);
+            modalBackdrop.addEventListener('click', closeReader);
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !readerModal.classList.contains('hidden')) {
+                    closeReader();
+                }
+            });
+
+            // --- WHATSAPP FORM LOGIC ---
+            document.getElementById('contact-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const formStatus = document.getElementById('form-status');
+                const name = document.getElementById('name').value;
+                const message = document.getElementById('message').value;
+
+                const whatsappMessage = `*New Message from I TYPE, WHAT I LIKE*\n\n*Alias:* ${name}\n*Message:* ${message}`;
+                const phoneNumber = '27682337028'; 
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+                formStatus.textContent = "Redirecting to WhatsApp...";
+                window.open(whatsappUrl, '_blank');
+                this.reset();
+                setTimeout(() => { formStatus.textContent = ''; }, 3000);
+            });
+
+            // Initial Render
+            populateCategories();
+            renderContent();
             
-            // Animate In
-            articleModal.classList.remove('opacity-0');
-            modalContainer.classList.remove('scale-95');
-            modalContainer.classList.add('scale-100');
-            document.body.style.overflow = 'hidden'; // Lock background
-            modalScrollArea.scrollTop = 0; // Reset scroll
-        }
-
-        function closeModal() {
-            // Animate Out
-            articleModal.classList.add('opacity-0');
-            modalContainer.classList.remove('scale-100');
-            modalContainer.classList.add('scale-95');
-            
-            setTimeout(() => {
-                articleModal.classList.add('hidden');
-                articleModal.classList.remove('flex');
-                document.body.style.overflow = ''; // Unlock background
-                modalContent.innerHTML = ''; 
-            }, 300);
-        }
-
-        // Listeners
-        closeModalBtn.addEventListener('click', closeModal);
-        modalBackdrop.addEventListener('click', closeModal);
-        document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !articleModal.classList.contains('hidden')) closeModal(); });
-        articleSearchInput.addEventListener('input', handleFilters);
-        categoryFilter.addEventListener('change', handleFilters);
-        
-        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-        mobileMenu.addEventListener('click', (e) => { if (e.target.tagName === 'A') mobileMenu.classList.add('hidden'); });
-
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const status = document.getElementById('form-status');
-            const name = document.getElementById('name').value;
-            const msg = document.getElementById('message').value;
-
-            const whatsappMessage = `*TRANSMISSION FROM DIGITAL PORTAL*\n\n*Alias:* ${name}\n*Signal:* ${msg}`;
-            const phone = '27682337028'; 
-            
-            status.textContent = "Redirecting to WhatsApp...";
-            window.open(`https://wa.me/${phone}?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
-            this.reset();
-            setTimeout(() => { status.textContent = ''; }, 5000);
+            // Set dynamic year
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
         });
-
-        // Initialize
-        populateCategories();
-        renderEssays();
-        renderPoetry();
     </script>
 </body>
 </html>
