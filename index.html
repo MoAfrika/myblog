@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NSFG45C7');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <!-- CRITICAL MOBILE TAG: Ensures the site doesn't zoom out on phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>I TYPE, WHAT I LIKE | MoAfrika Skotch Ntilane</title>
+    <meta name="description" content="Essays, reflections, digital philosophy, and technological survival notes from a South African mind navigating AI, culture, systems, and modern life in real time.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Lora', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            500: '#f59e0b', // Amber/Gold Accent
+                            600: '#d97706',
+                        },
+                        dark: {
+                            bg: '#09090b',
+                            card: '#18181b',
+                            border: '#27272a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* --- MOBILE ROBUSTNESS --- */
+        html, body { 
+            overflow-x: hidden; 
+            width: 100%; 
+            -webkit-font-smoothing: antialiased;
+        }
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+
+        h1, h2, h3, h4, .font-serif { font-family: 'Lora', serif; }
+
+        /* Hero Backgrounds */
+        .hero-bg-dark {
+            background-image: linear-gradient(to bottom, rgba(9,9,11,0.5), rgba(9,9,11,1)), url('https://raw.githubusercontent.com/MoAfrika/my-images/main/blog_profile1.png');
+            background-size: cover; background-position: center top;
+        }
+        .hero-bg-light {
+            background-image: linear-gradient(to bottom, rgba(255,255,255,0.7), rgba(255,255,255,1)), url('https://raw.githubusercontent.com/MoAfrika/my-images/main/blog_profile1.png');
+            background-size: cover; background-position: center top;
+        }
+
+        /* Glass Header */
+        .glass-header-dark { background: rgba(9, 9, 11, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .glass-header-light { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+
+        /* Card Hover Effects */
+        .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+
+        /* ========================================================
+           AUTO-STYLING ENGINE FOR YOUR PASTED ESSAYS
+           (This forces your raw text to look like a premium blog)
+           ======================================================== */
+        .reader-content { font-family: 'Inter', sans-serif; font-size: 1.125rem; line-height: 1.8; }
+        .reader-content h2, .reader-content h3 { font-family: 'Lora', serif; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; }
+        .reader-content h2 { font-size: 2rem; }
+        .reader-content h3 { font-size: 1.5rem; color: #f59e0b; }
+        .reader-content p { margin-bottom: 1.5rem; }
+        .reader-content blockquote, .reader-content .border-l-4 {
+            border-left: 4px solid #f59e0b; padding-left: 1.25rem; font-style: italic; margin: 2rem 0; font-family: 'Lora', serif; font-size: 1.25rem; color: #a1a1aa;
+        }
+        html:not(.dark) .reader-content h3 { color: #d97706; }
+        html:not(.dark) .reader-content blockquote { color: #52525b; }
+        .poetry-text { font-family: 'Lora', serif; font-size: 1.15rem; line-height: 1.9; white-space: pre-wrap; }
+
+        /* Lock scroll on mobile inside modal */
+        .mobile-modal-scroll { -webkit-overflow-scrolling: touch; }
+    </style>
+</head>
+<body class="bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-200">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSFG45C7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-44LNL1B5XP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-44LNL1B5XP');
+    </script>
+
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 glass-header-light dark:glass-header-dark">
+        <div class="container mx-auto px-4 md:px-6 py-4">
+            <nav class="flex items-center justify-between">
+                <a href="#home" class="text-xl md:text-2xl font-serif font-bold tracking-tight text-zinc-900 dark:text-white truncate">
+                    I TYPE, <span class="text-brand-500">WHAT I LIKE</span>
+                </a>
+                
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wide">
+                    <a href="#essays" class="hover:text-brand-500 transition-colors">Essays</a>
+                    <a href="#poetry" class="hover:text-brand-500 transition-colors">Poetry</a>
+                    <a href="#about" class="hover:text-brand-500 transition-colors">About</a>
+                    <a href="#contact" class="hover:text-brand-500 transition-colors">Contact</a>
+                    
+                    <button id="theme-toggle" class="p-2 rounded-full bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-brand-500 transition-all">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                </div>
+                
+                <!-- Mobile Nav -->
+                <div class="flex items-center gap-4 md:hidden">
+                    <button id="theme-toggle-mobile" class="p-2 rounded-full text-zinc-600 dark:text-brand-500">
+                        <i class="fas fa-moon dark:hidden text-xl"></i>
+                        <i class="fas fa-sun hidden dark:block text-xl"></i>
+                    </button>
+                    <button id="mobile-menu-button" class="text-zinc-600 dark:text-zinc-300 focus:outline-none">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </nav>
+        </div>
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 absolute w-full shadow-xl">
+            <a href="#essays" class="block py-3 font-semibold border-b border-zinc-100 dark:border-zinc-800">Essays</a>
+            <a href="#poetry" class="block py-3 font-semibold border-b border-zinc-100 dark:border-zinc-800">Poetry</a>
+            <a href="#about" class="block py-3 font-semibold border-b border-zinc-100 dark:border-zinc-800">About</a>
+            <a href="#contact" class="block py-3 font-semibold">Contact</a>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="hero-section" class="min-h-[85vh] flex items-center justify-center pt-24 pb-12 relative transition-all duration-500 hero-bg-dark">
+        <div class="text-center px-4 relative z-10 max-w-4xl mx-auto">
+            <h1 class="text-5xl sm:text-6xl md:text-8xl font-bold font-serif leading-tight mb-6 text-zinc-900 dark:text-white">
+                I TYPE, <br/><span class="text-brand-500">WHAT I LIKE.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-zinc-700 dark:text-zinc-300 max-w-2xl mx-auto leading-relaxed font-light mb-10">
+                This is where ideas get written before they become systems.<br class="hidden md:block"/>
+                Essays, reflections, digital philosophy, and technological survival notes from a South African mind navigating AI, culture, and modern life.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#essays" class="w-full sm:w-auto bg-brand-500 text-white dark:text-zinc-950 font-bold py-3 px-8 rounded-full text-lg hover:bg-brand-600 transition-all shadow-lg">Read Essays</a>
+                <a href="#poetry" class="w-full sm:w-auto bg-white dark:bg-transparent border border-zinc-300 dark:border-zinc-600 text-zinc-800 dark:text-zinc-300 font-bold py-3 px-8 rounded-full text-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all">Explore Poetry</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-4 sm:px-6 py-16">
+        
+        <!-- ESSAYS SECTION -->
+        <section id="essays">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-bold font-serif mb-4">Essays, Systems & Reflections</h2>
+                <div class="w-20 h-1 bg-brand-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto mb-10 p-4 bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800 flex flex-col sm:flex-row gap-4 shadow-sm">
+                <div class="relative flex-grow">
+                    <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-zinc-400"></i>
+                    <input type="text" id="article-search" class="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl py-3 pl-12 pr-4 focus:outline-none focus:border-brand-500 transition-colors" placeholder="Search essays...">
+                </div>
+                <select id="article-category-filter" class="bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl py-3 px-4 focus:outline-none focus:border-brand-500 transition-colors sm:w-48">
+                    <option value="">All Categories</option>
+                </select>
+            </div>
+
+            <div id="all-articles-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                <!-- Injected via JS -->
+            </div>
+            <div id="no-articles-found" class="text-center py-16 hidden">
+                <p class="text-zinc-500 text-lg">No essays found matching your search.</p>
+            </div>
+        </section>
+
+        <!-- POETRY SECTION -->
+        <section id="poetry" class="mt-24 pt-16 border-t border-zinc-200 dark:border-zinc-800">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-bold font-serif mb-4">Poetry & Fragments</h2>
+                <p class="text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto text-lg px-4">Fragments, reflections, emotional architecture, and unfinished conversations written between systems, survival, memory, and becoming.</p>
+                <div class="w-20 h-1 bg-brand-500 mx-auto rounded-full mt-6"></div>
+            </div>
+            <div id="poetry-container" class="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
+                <!-- Injected via JS -->
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="mt-24 pt-16">
+            <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-3xl overflow-hidden shadow-xl max-w-5xl mx-auto flex flex-col md:flex-row">
+                <div class="md:w-2/5 h-64 md:h-auto relative">
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Neon%20Halo%20Portrait%20with%20Digital%20Overlays.png" alt="MoAfrika Skotch Ntilane" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div class="md:w-3/5 p-8 md:p-12">
+                    <h2 class="text-3xl font-bold font-serif mb-6">Right, About Me...</h2>
+                    <div class="space-y-4 text-zinc-700 dark:text-zinc-300 text-lg font-light leading-relaxed">
+                        <p>I build things that carry weight in the real world. Ideas, systems, businesses, and digital structures that are meant to function under pressure, not just look good on paper.</p>
+                        <p class="pl-4 border-l-4 border-brand-500 font-medium italic">I do not separate creativity from logic. In practice, they solve the same problems from different angles.</p>
+                        <p>My approach is to test ideas quickly, refine them through reality, and remove anything that does not serve the outcome. I have learned more from execution than theory.</p>
+                        <p>This space reflects that process. Not finished statements, but working thoughts. Not polished answers, but active development.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="mt-24 mb-8">
+            <div class="max-w-xl mx-auto text-center">
+                <h2 class="text-3xl font-bold font-serif mb-4">Holler At Me</h2>
+                <p class="text-zinc-600 dark:text-zinc-400 mb-8">Got a searing question or a wild collaboration idea? The digital void awaits your transmission.</p>
+                <form id="contact-form" class="bg-white dark:bg-zinc-900 p-6 md:p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-lg text-left">
+                    <div class="mb-4">
+                        <label class="block text-sm font-bold mb-2 uppercase text-zinc-700 dark:text-zinc-300">Your Handle</label>
+                        <input type="text" id="name" required class="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl py-3 px-4 focus:outline-none focus:border-brand-500">
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-sm font-bold mb-2 uppercase text-zinc-700 dark:text-zinc-300">Your Idea</label>
+                        <textarea id="message" rows="4" required class="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl py-3 px-4 focus:outline-none focus:border-brand-500 resize-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-brand-500 text-white dark:text-zinc-950 font-bold py-3 rounded-xl text-lg hover:bg-brand-600 transition-colors">
+                        Transmit via WhatsApp
+                    </button>
+                    <p id="form-status" class="text-center mt-3 text-sm text-brand-500 font-medium"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-zinc-100 dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800 py-10 text-center text-zinc-500 dark:text-zinc-400">
+        <div class="flex justify-center space-x-6 mb-6">
+            <a href="https://www.linkedin.com/in/mo-ntilanedev/" class="hover:text-brand-500 transition-colors"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://github.com/MoAfrika" class="hover:text-brand-500 transition-colors"><i class="fab fa-github fa-2x"></i></a>
+        </div>
+        <p class="text-sm">&copy; <span id="currentYear"></span> MoAfrika Skotch Ntilane. All rights reserved.</p>
+    </footer>
+
+    <!-- MOBILE-PERFECT READER MODAL -->
+    <!-- Note: Fixed inset-0 covers whole screen on mobile, flex-col layout handles internal scrolling -->
+    <div id="articleModal" class="fixed inset-0 z-[100] hidden flex-col opacity-0 transition-opacity duration-300 bg-white dark:bg-zinc-950 md:bg-white/95 md:dark:bg-black/90 md:backdrop-blur-sm md:p-6" role="dialog" aria-modal="true">
+        
+        <div id="modalContainer" class="relative w-full h-full md:max-w-4xl md:mx-auto md:bg-white md:dark:bg-zinc-950 md:rounded-2xl md:shadow-2xl flex flex-col overflow-hidden transform scale-95 transition-transform duration-300">
+            
+            <!-- Sticky Header for Close Button (Stays at top while scrolling) -->
+            <div class="sticky top-0 w-full z-10 bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800 p-4 flex justify-between items-center shadow-sm">
+                <span id="modalCategoryTag" class="text-xs font-bold uppercase tracking-widest text-brand-500">Category</span>
+                <button id="closeModal" class="bg-zinc-100 dark:bg-zinc-800 hover:bg-brand-500 hover:text-white text-zinc-700 dark:text-zinc-300 rounded-full w-10 h-10 flex items-center justify-center transition-colors focus:outline-none">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Scrollable Content Area -->
+            <div class="flex-1 overflow-y-auto mobile-modal-scroll px-5 md:px-12 py-8 text-zinc-800 dark:text-zinc-200" id="modalScrollArea">
+                <div class="max-w-prose mx-auto">
+                    <header class="mb-8 text-center">
+                        <h1 id="modalTitleText" class="text-3xl md:text-5xl font-bold font-serif leading-tight mb-4">Title</h1>
+                        <p id="modalMeta" class="text-zinc-500 text-sm font-medium uppercase tracking-wide">Date</p>
+                    </header>
+                    <img id="modalImage" src="" alt="Cover" class="w-full h-auto rounded-xl shadow-sm mb-10 hidden object-cover max-h-[50vh]">
+                    
+                    <!-- Content injected here. The CSS Auto-Styling engine formats it automatically -->
+                    <div id="modalBody" class="reader-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- 1. THEME TOGGLE ---
+        const htmlElement = document.documentElement;
+        const themeToggleBtns = [document.getElementById('theme-toggle'), document.getElementById('theme-toggle-mobile')];
+        const heroSection = document.getElementById('hero-section');
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+        } else {
+            htmlElement.classList.remove('dark');
+        }
+
+        function updateHeroBackground() {
+            if (htmlElement.classList.contains('dark')) {
+                heroSection.classList.add('hero-bg-dark'); heroSection.classList.remove('hero-bg-light');
+            } else {
+                heroSection.classList.add('hero-bg-light'); heroSection.classList.remove('hero-bg-dark');
+            }
+        }
+        updateHeroBackground();
+
+        themeToggleBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                htmlElement.classList.toggle('dark');
+                localStorage.theme = htmlElement.classList.contains('dark') ? 'dark' : 'light';
+                updateHeroBackground();
+            });
+        });
+
+        // --- 2. POETRY DATA ---
+        const poetryData = [
+            {
+                id: "poem-shame", title: "Shame Speaks With Other People’s Voices", date: "May 2026",
+                excerpt: "Most people confuse shame with guilt because both wounds bruise the soul in similar places...",
+                fullContent: `<div class="poetry-text">Most people confuse shame with guilt
+because both wounds bruise the soul in similar places.
+But they are not twins.
+Not even cousins.
+
+Guilt is personal.
+Guilt happens when you betray your own moral code.
+When your spirit looks at your actions and quietly says:
+“That was beneath me.”
+
+Guilt says:
+“I made a mistake.”
+And strangely enough, guilt can still heal you.
+Because it assumes there is still a self worth returning to.
+
+But shame…
+Shame is far more invasive.
+Shame is what happens when the world hands you a script
+and punishes you for refusing to perform it correctly.
+
+Shame says:
+“You are the mistake.”
+
+Guilt comes from conscience.
+Shame comes from audience.
+One is born inside integrity.
+The other is manufactured through fear of rejection.
+
+Guilt asks for accountability.
+Shame demands disappearance.
+
+That is why so many people spend their entire lives
+trying to become acceptable
+instead of becoming honest.
+
+They are not living.
+They are negotiating with spectators.
+
+And the terrifying part?
+Many people no longer know which voice inside them is truly theirs.
+Because after years of punishment, religion, culture, performance, comparison, family expectation, and survival…
+Shame learns how to wear your own face
+and speak in your own voice.</div>`
+            },
+            {
+                id: "poem-ancestors", title: "The Things The Ancestors Said To Me", date: "May 2026",
+                excerpt: "I told the ancestors I was exhausted. Not the kind of tired sleep can fix...",
+                fullContent: `<div class="poetry-text">I told the ancestors I was exhausted.
+Not the kind of tired sleep can fix.
+The kind that settles behind the eyes.
+The kind that makes breathing feel like labor.
+The kind carried by people chosen for roads they never asked to walk.
+
+I said:
+“I do not want this life anymore.”
+
+The fire cracked softly between us.
+Then the oldest voice answered:
+“You speak as though the path found you by accident.”
+
+I looked away.
+Because anger is easier than surrender.
+“I did not ask for visions,” I whispered.
+“I did not ask for dreams that feel more real than daylight.
+I did not ask to feel watched by things older than language.”
+
+The darkness around us shifted.
+Not threatening.
+Listening.
+
+Then my grandmother’s spirit laughed gently.
+Not mockingly.
+The way elders laugh when children complain about rain
+while standing in a field that desperately needs water.
+
+“You think awakening is comfort?” she asked.
+“No child. Awakening is disruption.”
+
+The wind moved through the trees like unseen people passing by.
+I swallowed hard.
+“But why me?”
+Silence.
+Then:
+“Because your spirit could carry what your flesh fears.”
+
+I hated that answer.
+I wanted pity.
+An apology.
+A divine misunderstanding.
+Instead they handed me responsibility.
+
+I stared into the fire.
+“I feel alone.”
+Another laugh.
+Softer this time.
+“You are speaking to the dead while claiming loneliness.”
+
+The flames bent suddenly.
+For a moment I could almost see faces inside them.
+Ancient.
+Patient.
+Watching me the way mountains watch storms.
+
+“I’m scared,” I admitted quietly.
+That truth tasted different.
+More honest.
+The air became warmer.
+
+Then the voice returned:
+“You keep calling this a curse because it interrupted the life you were trying to build.”
+
+I felt something inside me tighten.
+Because it was true.
+I wanted ordinary dreams.
+Ordinary ambitions.
+Ordinary sleep.
+Instead my spirit kept knocking on doors
+my mind was too afraid to open.
+
+“What if I fail this calling?” I asked.
+The fire crackled violently.
+Then came the answer:
+“You are confusing discomfort with failure.”
+
+I closed my eyes.
+And suddenly I understood something terrifying:
+The ancestors were never haunting me.
+They were raising me.
+
+All this time I thought I was being chased
+when I was actually being summoned.
+
+The night grew still.
+Then my grandmother’s voice spoke one final time:
+“You keep asking who you are.”
+A long pause.
+Then:
+“You are evidence that we survived.”</div>`
+            },
+            {
+                id: "poem-receipts", title: "Receipts", date: "May 2026",
+                excerpt: "The painful thing about being a struggling father is learning that people only respect your love when it comes with money.",
+                fullContent: `<div class="poetry-text">The painful thing about being a struggling father is learning that people only respect your love when it comes with money.
+If you are broke, suddenly your presence means less. Your effort means less. Your sacrifices become invisible.
+
+Nobody talks about that part.
+Nobody talks about what it does to a man when he genuinely loves his child but cannot provide the way people expect him to.
+
+You remember everything though.
+You remember the first time you held your child and how scared you were to even breathe too hard near them.
+You remember the late nights.
+The sicknesses.
+The small laughs.
+The way they used to run to you like you were the safest place in the world.
+You remember skipping meals sometimes so they could eat properly.
+You remember acting strong when life was busy crushing you behind closed doors.
+
+You remember trying.
+That’s the thing people don’t see.
+The trying.
+
+Because to some people, if the money is not enough, then nothing else counts.
+Suddenly every conversation becomes about money.
+“How much can you send?”
+“When are you paying?”
+“What are you buying?”
+
+Never:
+“Are you okay?”
+Never:
+“Your child misses you.”
+Just pressure.
+Just judgement.
+
+And yes, money matters. Children need support. Nobody is denying that.
+But some people turn fatherhood into a financial contract only.
+As if love can be measured by EFT notifications.
+As if bedtime talks, hugs, advice, protection, presence and consistency mean nothing if a man is struggling financially.
+
+Some fathers are not absent.
+Some fathers are exhausted.
+Some fathers are fighting unemployment, depression, debt, shame and life itself while still trying to remain emotionally present for their children.
+
+And the painful part is how easy it becomes for people to keep the child away from the father once money becomes the centre of everything.
+Access becomes punishment.
+Love becomes conditional.
+A father starts feeling like a visitor in his own child’s life.
+
+That pain is difficult to explain.
+Imagine loving your child deeply but feeling like every visit must first pass through a financial approval process.
+Imagine missing milestones because you could not afford transport.
+Imagine hearing your child slowly become distant while you are already drowning inside.
+
+Then people say:
+“If he cared, he would make a plan.”
+Not understanding that some men are making plans every single day just to survive.
+
+People forget that poor fathers cry too.
+Just quietly.
+In taxis.
+In rented rooms.
+In silence after phone calls.
+In cars before going inside the house.
+
+Because South African men are taught to suffer privately.
+To keep moving even when they feel like failures.
+
+And still, despite the humiliation, despite the blocked access, despite the judgement, despite being made to feel small, many struggling fathers still show up.
+Still call.
+Still try.
+Still send what little they can.
+Still carry love bigger than their circumstances.
+
+Because children remember something deeper than money.
+They remember who was present.
+Who listened.
+Who made them laugh.
+Who kept trying even when life was beating them properly.
+
+One day that child will grow up and realise something painful:
+Their father was not perfect.
+But he was fighting very hard not to disappear.</div>`
+            }
+        ];
+        const essays = [
+            {
+                id: "why-i-build-things-before-i-feel-ready",
+                title: "Why I Build Things Before I Feel Ready",
+                date: "06 May 2026",
+                category: "Learning in Public",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/build_before_ready.png",
+                excerpt: "A raw South African reflection on self-taught coding, unfinished projects, AI, resilience, and the strange psychology of building before feeling ready.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Learning in Public</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">Why I Build Things Before I Feel Ready</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 06 May 2026</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/build_before_ready.png" alt="Building before ready">
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Graveyard of Open Tabs</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">My browser is basically a graveyard of unfinished projects, broken tutorials, abandoned ideas and error messages that look like demonic scripture translated through a microwave.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">Some nights I genuinely cannot tell whether coding is a career path or a hostage situation.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">And somehow I still keep coming back.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">That is the strange part. I keep returning. Not because I always enjoy it. Not because I always understand it. Definitely not because I always feel confident.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">I return because somewhere between the frustration, the confusion, the bugs, the late-night Googling and the emotional damage caused by JavaScript, I realised something important.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300 font-bold text-xl">Ready is not a real place.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Myth of Readiness</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">I used to think readiness was waiting for me somewhere in the future. Like eventually I would reach this magical point where I finally felt qualified enough, skilled enough, disciplined enough and financially stable enough to start taking myself seriously.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">But every time I got closer to that feeling, the target moved.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">I would finish one course. Then discover ten more things I did not know.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">I would finally understand one concept. Then another tutorial would arrive and humble me like Eskom during winter.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Learning South African Style</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">People online romanticise self-teaching because they only show the aesthetic version of it. The clean desk setup. The certificates. The motivational quotes.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">They rarely show the actual reality. The unstable internet. The price of data. The downloading of tutorials before the connection disappears. The switching between free trials because funding simply is not there.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">I learned coding the same way many South Africans learn survival. Piece by piece. YouTube. Coursera. LinkedIn Learning. NetAcad. Random forums. Free PDFs. And stubbornness.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Building the Builder</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Sometimes you are not building the app.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300 font-bold">You are building the version of yourself capable of building the app later.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">That distinction changed everything for me. Because once I understood that, failure stopped feeling so personal. The abandoned projects were not proof that I was incapable. They were proof that I was attempting things beyond my current level.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Final Reflection</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">At some point you must move anyway. Build anyway. Apply anyway. Learn publicly anyway. Risk embarrassment anyway. Because action creates clarity far more often than overthinking does.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">The people doing meaningful things are usually not the people who feel fully prepared. They are the people willing to look stupid long enough to become capable.</p>
+                `
+            },
+            {
+                id: "when-everything-you-believe-in-starts-delaying-you",
+                title: "When Everything You Believe In Starts Delaying You",
+                date: "18 April 2026",
+                category: "Philosophy",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/belief_delay1.png",
+                excerpt: "A raw, philosophical reflection on belief, effort, delay, and the quiet discipline of continuing when life stops responding the way you expected.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Philosophy</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">When Everything You Believe In Starts Delaying You</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 18 April 2026</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/belief_delay1.png" alt="Belief, delay, and the discipline of continuing">
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Quiet Signal</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">There is a specific kind of silence that shows up when life stops responding the way you expected it to. Not the peaceful kind. Not the meditative, soft sunrise kind. The other one. The one that feels like your prayers are going into voicemail.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">You begin to notice small things first. Delays. Missed opportunities that you were sure were meant for you. Conversations that should have led somewhere but suddenly end with "we will get back to you". And they never do.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Illusion of Immediate Return</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Modern thinking trains us to expect response. You send a message, you expect a reply. You work, you expect money. You pray, you expect clarity. You plant, you expect harvest.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">But life does not always behave like a system built for convenience. Sometimes you plant in winter and spend the entire season convinced you failed. Only to realise later that growth was happening underground where you could not see it.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">What If Delay Is Not Rejection</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">There is a shift in thinking that does not remove pain but changes its meaning. What if delay is not rejection? What if it is not punishment either? What if it is simply misalignment between human urgency and whatever system reality is running on?</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Quiet Discipline of Continuing Anyway</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">At some point, every person who survives long enough through uncertainty learns one thing. You continue anyway.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">Not because you are guaranteed results. Not because you are fully confident. But because stopping does not actually solve the mystery either.</p>
+                `
+            },
+            {
+                id: "never-drop-your-standards-in-love",
+                title: "Never Drop Your Standards in Love",
+                date: "09 April 2026",
+                category: "Identity",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/standards_love1.png",
+                excerpt: "A brutally honest, deeply philosophical reflection on standards, attraction, loneliness, and the hidden cost of settling in love.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Identity</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">Never Drop Your Standards in Love</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 09 April 2026</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/standards_love1.png" alt="Standards in love, discipline and emotional integrity">
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Introduction: The Quiet Collapse</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">There is a moment most people never talk about. It does not arrive with noise or drama. It arrives quietly, inside you, when you realise the person in front of you is not aligned with what you truly want. But you stay anyway.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">Not because you are confused, but because you are tired. Tired of being alone. Tired of waiting. Tired of watching life move forward for others while you feel stuck in place. So you adjust your standards just enough to make it work. And that is where the collapse begins slowly.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The First Compromise</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">It never starts as betrayal. It starts as something small. You ignore a behaviour that unsettles you. You rationalise a pattern you would normally reject. You call it maturity. But deep down, you know you are negotiating with yourself.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Being Single Is Not Failure</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Being single is not lack. It is discipline. It is clarity. It is refusing to betray yourself for temporary comfort. Most people avoid it because silence forces honesty. But silence is where standards are strengthened.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Mirror Principle</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">You do not attract what you want. You attract what you tolerate. If you demand depth, you must live with depth. If you demand discipline, you must embody discipline.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Final Verdict</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Do not drop your standards. Not for loneliness. Not for pressure. Not for fear of time. Be willing to stand alone. Because what is meant for you will meet you at your level. Not beneath it.</p>
+                `
+            },
+            {
+                id: "the-unseen-weight",
+                title: "The Unseen Weight: Why the Most Valuable Parts of You Cannot Be Measured",
+                date: "31 March 2026",
+                category: "Digital Psychology",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/unseen_weight.png",
+                excerpt: "A grounded but powerful reflection on identity, spirit, and the unseen forces that shape human value beyond metrics, platforms, and performance.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Digital Psychology</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">The Unseen Weight: Why the Most Valuable Parts of You Cannot Be Measured</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 31 March 2026</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/unseen_weight.png" alt="Unseen weight">
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Beyond the Measurable</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">There is a quiet tension in the modern world. Everything is being measured. Views. Likes. Followers. Revenue. Reach. Performance.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">Every action leaves a trace. Every output becomes a number. Every number becomes a judgment. And somewhere in that system, a subtle distortion begins to take hold.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">People start to believe that what can be measured is what matters most. But there is a deeper truth most systems cannot capture. The most important parts of a human being have no metric.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Identity That Cannot Be Branded</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">There is increasing pressure to turn yourself into something marketable. A personal brand. A digital identity. A curated persona. People are encouraged to package their lives into something consumable.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">But a human being is not a product. There are layers to you that cannot be simplified into a profile. Your thoughts before you speak. Your intentions before you act. Your silent battles that no one applauds. Your private growth that no one documents.</p>
+                    
+                    <blockquote class="border-brand-500 text-zinc-600 dark:text-zinc-400">When identity becomes performance, something essential gets lost. Not immediately. Not obviously. But slowly.</blockquote>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Power of What Cannot Be Taken</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Anything built on external validation can be removed. Platforms change. Audiences shift. Attention moves. But what is built internally remains. Skill. Discipline. Character. Clarity.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">These are assets that cannot be erased by an algorithm. They are not dependent on visibility. They are transferable across any environment. This is where real leverage exists. Not in being seen. But in being solid.</p>
+                `
+            },
+            {
+                id: "algorithmic-decay",
+                title: "When Everything Becomes Content: How Algorithm Culture Is Quietly Rewiring Society",
+                date: "06 March 2026",
+                category: "Technology & Society",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/everything_is_content.png",
+                excerpt: "A deep reflection on how algorithm driven platforms turned attention into currency, blurred the line between dignity and performance, and reshaped culture...",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Technology & Society</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">When Everything Becomes Content: How Algorithm Culture Is Quietly Rewiring Society</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 06 March 2026</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/everything_is_content.png" alt="Algorithm Culture">
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Introduction: The Age of Endless Content</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">There was a time when attention had weight. If someone wanted to publish something, they needed a printing press, a radio licence, a television station or a newspaper editor willing to stake their reputation on it. Culture moved slower. Gatekeepers existed. Standards, even if imperfect, still mattered.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">Today anyone with a smartphone can broadcast themselves to the world. That shift alone is not the problem. In fact, the democratisation of media once looked like liberation.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300 font-bold">But the promise of digital freedom quietly evolved into something else entirely. What began as communication slowly turned into performance.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">When the Algorithm Became the Editor</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Now invisible mathematical systems decide what billions of people consume every single day. Algorithms are not moral beings. They are optimisation systems. Their job is simple: maximise engagement.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">If outrage keeps people watching longer, outrage spreads. If scandal keeps people scrolling, scandal multiplies. Over time, the system begins to reward the most extreme versions of human behaviour. Calm thought struggles to compete with spectacle.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Performance of the Self</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">In earlier eras, people performed roles on stage, in cinema or in music. Now people perform their own lives. Daily routines become content. Personal struggles become content. Relationships become content.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">Young people grow up observing this pattern and quickly learn an unspoken rule of the digital world: Visibility equals relevance. If you are not visible, you feel invisible.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Conclusion: The Choice Behind the Screen</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Technology did not invent human impulses. It simply accelerated them. If society wants a healthier digital environment, the solution will not come only from engineers or regulators. It will come from millions of individuals quietly changing what they choose to watch, share and reward.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">Every scroll is a vote. Every click is cultural feedback. And every generation eventually decides what kind of culture it wants to amplify.</p>
+                `
+            },
+            {
+                id: "making-it-out-of-the-furnace",
+                title: "When the Heat Is Real: Making It Out of Uncomfortable, Dangerous and Unhealthy Situations",
+                date: "24 February 2026",
+                category: "Philosophy",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/the_dangerous_war.png",
+                excerpt: "Unemployment. Addiction. Toxic relationships. Some fires you cannot walk out of alone. This is a deep reflection on modern furnaces and the ancient story of Meshach, Shadrach and Abednego walking out unburned.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Philosophy</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">When the Heat Is Real: Making It Out of Uncomfortable, Dangerous and Unhealthy Situations</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 24 February 2026</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/the_dangerous_war.png" alt="Making it out of difficult situations">
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Introduction: Some Seasons Feel Like Fire</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">There are seasons in life that do not feel like inconvenience. They feel like heat.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">Unemployment that stretches longer than your savings. Debt that multiplies faster than opportunity. A relationship that slowly erodes your dignity. Addiction that begins as relief and becomes a ruler.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">And here is the truth most people do not say openly: there are fires you cannot walk out of alone.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Modern Furnaces Do Not Use Flames</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Today’s furnaces are not built from bricks and coals. They are built from pressure, shame and desperation. When you are unemployed long enough, something shifts internally. At first there is confidence. Then frustration. Then embarrassment. Then desperation. And desperation negotiates with your values.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Fourth Presence</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">In Daniel chapter 3, we read about Shadrach, Meshach and Abednego. The furnace was heated seven times hotter than usual. Yet when the king looked inside, he saw four men walking freely. They entered bound. They were walking unbound.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">Sometimes rescue sounds like someone calling your name. A job call. A wake up call. A mentor saying, “Come here.” A door opening where there was none.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">You Must Allow Yourself to Be Fetched</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">There are seasons where therapy saves you. Education redirects you. Faith sustains you. Community strengthens you. Pride keeps people burning. Humility opens the furnace door.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">Reach out. Call out. Allow yourself to be fetched. Because sometimes the difference between destruction and deliverance is the fourth presence in the fire.</p>
+                `
+            },
+            {
+                id: "tribute-kitso-kazner-mohobela",
+                title: "The Smile We Never Questioned: A Tribute to Kitso “Kazner” Mohobela",
+                date: "09 February 2026",
+                category: "Identity",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/the_silent_war.png",
+                excerpt: "He taught us how to laugh without cruelty, how to stand without apology, and how to wear faith and humour like armour. This is a tribute to Kitso “Kazner” Mohobela, a man whose presence shaped voices, confidence, and courage.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Identity</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">The Smile We Never Questioned: A Tribute to Kitso “Kazner” Mohobela</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 09 February 2026</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/the_silent_war.png" alt="Tribute to Kitso Kazner Mohobela">
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Introduction: Some People Become Part of Your Voice</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">There are people who pass through your life quietly. And then there are people who leave fingerprints on your personality. People who shape how you speak, how you laugh, how you defend yourself, how you stand.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">Kitso “Kazner” Mohobela was one of those people for me. Even now, saying his name pulls up an entire atmosphere. Blyvoor Gold Mine streets. Dust in the air. Familiar corners. That small circle of people always around him, always laughing.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The First Comedian I Ever Saw</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Before stand up comedy had stages. Before battle rap had crowds. Before social media had comment sections. I had Kazner. He was the first stand up comedian I ever saw in real life. No microphone. No spotlight. Just timing, intelligence and fearlessness.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">He taught me how to make fun of almost anything without being offensive. That is a rare craft. It requires emotional intelligence, not just wit.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Faith Worn With Pride</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">One of the things that stood out most about Kazner was his faith. He wore it openly. Proudly. Without apology. He was under the congregation of Prophet Bushiri, and many of us mocked him for it. But he was never easy to verbally shoot down. He stood firm in what he believed. Calm. Unshaken.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Conclusion: The Man Beyond the Laughter</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">We will remember your laughter. We will remember your debates. We will remember your faith. We will remember your presence. You were not just funny. You were formative. Rest well, Kitso “Kazner” Mohobela.</p>
+                `
+            },
+            {
+                id: "imagine-blocking-people-in-real-life",
+                title: "Imagine If We Could Block Each Other in Real Life",
+                date: "17 January 2026",
+                category: "Digital Psychology",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/Blocked image.png",
+                excerpt: "If blocking left the internet and entered the street, South Africa would get quieter fast. A haunting look at what we would gain and lose.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Digital Psychology</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">Imagine If We Could Block Each Other in Real Life</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 17 January 2026</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/Blocked image.png" alt="Visibility, silence, and modern society">
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Day South Africa Gets Quiet</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">South Africa is many things, but quiet is not one of them. Our country is a full time soundscape. It is taxis hooting. It is aunties calling you by your entire government name across the street. It is the neighbourhood WhatsApp group arguing about dogs and potholes.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">Now imagine this. You tap your wrist and block the person behind you in a queue. Not online. In real life. They become a shadow. No face. No details. Their voice becomes a muffled hum.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">What We Really Mean When We Say "Block"</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">On the internet, blocking looks neat. You are protecting your peace. But blocking is also a shortcut. It is the ability to remove someone without dealing with the messy work of conflict, repair, or closure.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">Imagine that power entering the physical world. You are not just saying, "I do not want to talk to you." You are saying, "I do not want you to exist in my version of reality."</p>
+
+                    <blockquote class="border-brand-500 text-zinc-600 dark:text-zinc-400">A country does not heal by becoming quieter. It heals by learning how to face what is loud and painful without pretending it does not exist.</blockquote>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Who Gets Blocked First</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Technology always arrives wearing the clothes of power. Who gets blocked first? Whoever is already treated as "background" in society. People who are poor. People who ask for help. People who make the suburb feel uncomfortable.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">Real life blocking would turn social prejudice into a simple gesture. Instead of confronting bias, you would remove the human being that triggers it.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Cost of a Quiet Country</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">If we could block each other in real life, the country would get quieter. But a society that can edit out human beings will eventually edit out responsibility. It will edit out empathy. It will edit out the friction that forces growth.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">We would become individuals walking through a crowd of shadows, protected, but alone. To stay present, to keep seeing, to refuse to turn a human being into background noise—that is the real radical act.</p>
+                `
+            },
+            {
+                id: "new-years-resolutions-too-small",
+                title: "Your New Year’s Resolutions Are Too Small for the Person You Are Becoming",
+                date: "09 January 2026",
+                category: "Philosophy",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/new_year_identity.png",
+                excerpt: "Most people set goals that fit their fear, not their future. This is a funny, honest, and challenging manifesto for builders who know they were made for more than survival.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Philosophy</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">Your New Year’s Resolutions Are Too Small for the Person You Are Becoming</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 09 January 2026</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/new_year_identity.png" alt="Future, identity and growth">
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Introduction: The Quiet Lie We All Tell Ourselves</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Every January the same strange ritual happens across South Africa and across the world. People buy new diaries, download new apps, and swear that this year is the year. They promise to wake up earlier, eat better, save money, exercise, start a business, read more books, and finally become the person they keep seeing in their imagination.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">The truth is uncomfortable. Most people do not fail because they are lazy. They fail because their goals are too small. They set resolutions that fit inside their fear, not inside their future. They write lists that allow them to stay the same person with a few new habits. They do not write goals that require them to change who they believe they are.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Identity Comes Before Achievement</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">We live in a world obsessed with habits. Wake up earlier. Drink more water. Use a planner. Track your steps. All of that is useful, but it is not the engine. Identity is the engine. You do not become successful because you have good habits. You have good habits because you see yourself as someone who is building something important.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">If you see yourself as someone who is just trying to survive, your goals will always be about getting through the month. If you see yourself as someone meant to create, lead, and build, your goals stretch further. You start thinking in years, not weeks. You start thinking about impact, not just income.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Conclusion: Choose the Bigger Story</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">This year you can write another small list. Or you can choose a bigger story. One where you grow into the person your future is waiting for. Your new year’s resolutions should not be about comfort. They should be about becoming.</p>
+                `
+            },
+            {
+                id: "reflecting-on-2025",
+                title: "Reflecting on 2025: A Year of Sacrifices, Lessons, and Returning Home",
+                date: "28 December 2025",
+                category: "Identity",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/2025_reflection_cover.png",
+                excerpt: "2025 was a year of deep learning, personal growth, and returning home. Amidst grief, business trials, and life’s uncertainties, I found calm, clarity, and alignment.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Identity</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">Reflecting on 2025: A Year of Sacrifices, Lessons, and Returning Home</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 28 December 2025</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/2025_reflection_cover.png" alt="Reflection and personal growth">
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Introduction: The Weight of Beginnings</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">2025 began quietly but not softly. There was a tension in the air I could not ignore, a constant hum of expectation and pressure. I carried more than my own ambitions. There were ghosts I had not fully faced, remnants of wounds that refused to close. Mama's absence lingered.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Grief and Resilience</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Mama's passing has been a shadow over these years, but 2025 forced me to live in the shadow long enough to understand it. I am still not healed and maybe I never will be. But I have learned to carry it differently. Instead of allowing grief to dictate my steps, I let it sharpen my focus.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Business, Risk, and Learning Curves</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">If 2025 was a classroom, it was one without walls. I started businesses with names I barely believed in and closed ventures I once loved passionately. Failure is not fatal. It is part of the architecture of growth. I have learned more from closed doors than open ones. Each attempt forced me to confront weaknesses, blind spots, and the stubborn illusions of control.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Conclusion: Lessons of 2025</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">The year ends not with certainty but with clarity, not with exhaustion but with anticipation. My past is lighter, my future is brighter, and my present is mine to give fully. 2025 will remain a year I remember for its lessons, its trials, and its proof that growth is possible even amidst grief, chaos, and uncertainty. And as I look ahead, I do so with a quiet confidence that the best is yet to come.</p>
+                `
+            },
+            {
+                id: "the-math-of-monsters-collective",
+                title: "The Math of Monsters: A Manifesto on the Men Who Break Women",
+                date: "21 December 2025",
+                category: "Masculinity",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/shadow_broken_glass.png",
+                excerpt: "The statistics say 1 in 3 women will experience sexual violence. Every woman knows a victim. Yet, if you ask 100 men, not one knows a rapist. This is the uncomfortable, violent math of our society.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Masculinity</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">The Math of Monsters: A Manifesto on the Men Who Break Women</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 21 December 2025</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/shadow_broken_glass.png" alt="A shattered mirror reflecting a dark silhouette">
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Invisible War</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">There is a war happening in this country. It is not fought with tanks or fighter jets. It is a quiet war. It is a war fought in bedrooms, in backseats of cars, in offices after hours, and in the trusted spaces of family homes. The casualties are walking among us every day.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">I write this as a father. I write this as a man standing at the gates of a society that seems determined to hunt what it should be protecting. When you look at the life of the Girl Child in South Africa, you are looking at a life lived under siege.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Impossible Mathematics</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">If you gather a group of women in a room, any room in South Africa... and you ask a simple question: "Raise your hand if you have been sexually violated, harassed, touched without consent, or lived in terror of a man." The result is always the same. A forest of hands rises.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">Now, take that same magnifying glass and turn it onto the men. Gather one hundred men and ask them: "Raise your hand if you know a rapist. Raise your hand if one of your friends is a predator." Silence. Absolute, deafening silence.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">If nearly every woman has been harmed, but no man knows a perpetrator, where are these men coming from? The math is impossible unless we accept a terrifying truth: Men are lying. We are lying to ourselves, and we are lying to each other.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Cult of the 'Good Man'</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">I used to call myself a good man. I think most of us do. We pay our taxes. We provide for our families. We don't hit women. We don't catcall. We think that is enough. But the "Good Man" is the greatest ally of the predator. The "Good Man" is the silence that allows the violence to continue.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Call to Action</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">To the men reading this: Stop protecting them. Just stop. If your friend is abusive, cut him off. If your cousin is a creep, tell him. If you see something happening at a club, intervene. Put your body between the predator and the prey. We need to make it socially expensive to be a predator.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">Kill the monster. Or admit that you are one.</p>
+                `
+            },
+            {
+                id: "the-nature-of-outgrowing-others",
+                title: "The Nature of Outgrowing Others: Why Growth Turns You Into A Stranger",
+                date: "23 November 2025",
+                category: "Identity",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/outgrowing_article_cover.png",
+                excerpt: "I grew up having to dim my mind to make others comfortable. Now the dimming switch is broken. The more I grow, the more I see how shallow, stagnant and unambitious many people are.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Identity</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">The Nature of Outgrowing Others: Why Growth Turns You Into A Stranger</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 23 November 2025</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/outgrowing_article_cover.png" alt="Man walking through a quiet street, symbolising personal transformation">
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Introduction: When Your Mind Stops Fitting Into Old Rooms</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">I have always been a deep thinker. Even as a child I could feel my mind chewing on things other kids never noticed. But the world teaches you early to dim your light. So I learned to shrink. To act ordinary. To pretend I did not think too much.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">But adulthood has no patience for pretending. Somewhere along the journey, that dimming switch finally broke. My intelligence stopped being something I could tuck away. And with that elephant came a strange and painful realisation: I had outgrown most of the people I grew up around.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Moment You Realise You Are Changing</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">The shift often begins quietly. One day you look around and realise the conversations you used to enjoy now feel like homework. People you once admired now feel stuck in loops.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">That is when you discover that outgrowing others is not a gentle process. It is a dangerous transition. You start shedding old beliefs, old friendships, old ways of thinking. It is like removing a shell you have lived in for years.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Final Realisation</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Outgrowing others is not the danger. Staying small for their comfort is. The real threat is betraying your potential just to maintain a fake sense of belonging. Growth asks for courage. It demands honesty. It insists on authenticity.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">If outgrowing others is the price of becoming myself, then it is a price I am willing to pay. Gladly.</p>
+                `
+            },
+            {
+                id: "short-year-long-days",
+                title: "How Short a Year Can Be, While Having Long Days",
+                date: "20 November 2025",
+                category: "Philosophy",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/short-year-long-days.png",
+                excerpt: "The year felt both endless and fleeting. Between the quiet of my cellphone, the pain of searching for work, and the slow farewell to my mother, time became a strange companion.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Philosophy</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">How Short a Year Can Be, While Having Long Days</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 20 November 2025</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/short-year-long-days.png" alt="Sunlight through window, reflective mood">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">Time is a peculiar thing. I have felt it stretch, pull, and collapse all within a single year. There is a paradox in living a year that feels impossibly short, yet contains days that unfold like centuries. I remember this most vividly in the months leading up to my mother’s passing, when the clock seemed to slow its tick only to hurl me forward without warning.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Conversations at the Edge of Silence</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Her voice, frail yet unyielding, carried lessons I did not fully appreciate at the time. We spoke often in the quiet spaces of her room: mornings with sunlight spilling over the hospital sheets, evenings when the dim light of the lamp softened her face and her fears. I listened more than I spoke.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">“Mo,” she would say, “you plan too much. Life doesn’t care for your Excel columns.” In her laughter was both admonishment and affection, a reminder that my life, measured in tasks and outcomes, was never the whole story.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Measuring Life Beyond Hours</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">In retrospect, the year felt impossibly short and interminably long all at once. Weeks raced past when life was moving in momentum, yet individual days stretched under the weight of waiting, uncertainty, and sorrow. I found that true measurement of life is not in hours, but in human presence, in love exchanged, in patience with oneself, in the quiet courage to face each day with clarity and integrity.</p>
+                `
+            },
+            {
+                id: "joseph-father-i-never-thought-id-be",
+                title: "Joseph, the Father I Never Thought I'd Be",
+                date: "27 October 2025",
+                category: "Masculinity",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/Joseph_%20The%20Stepfather%20Portrait%20(1).png",
+                excerpt: "I never imagined loving children who were not mine. Joseph’s quiet courage taught me that fatherhood is not lineage... it’s the decision to stay, protect and teach.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Masculinity</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">Joseph, the Father I Never Thought I'd Be</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 27 October 2025</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/Joseph_%20The%20Stepfather%20Portrait%20(1).png" alt="Symbolic portrait of Joseph as a stepfather figure">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">I remember the exact shade of paint we chose for the nursery... a hopeful, steady grey that promised mornings that would drift into decades. We believed in that future the way people believe in mortgages and old photographs: it felt inevitable. And then we weren’t.</p>
+
+                    <p class="text-zinc-700 dark:text-zinc-300">Amid the rubble of that life, she appeared. I had made a promise to myself after the divorce: never fall in love again. And yet, here she was ....recently divorced, carrying her own history, her children not mine. The word stepfather pressed cold against my ribs, foreign and heavy.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Logic of Joseph</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">It was in that wild, restless stomach of the new life that I kept returning to Joseph. Not the picturesque nativity figure on paper, but the actual man from the gospel who wakes up to a reality he did not plan. Joseph chooses to stay. He chooses to become father in deed rather than in blood.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">Understanding Joseph that way changed the argument in my head. Fatherhood is not an archive of DNA. It is an ethic of presence. It is the willingness to be inconvenienced for someone else’s good. It’s the hard, boring work of showing up.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Legacy of Action</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Legacy in that home did not become genetic. It became instructional and moral. I could not pass on my exact face or my DNA, but I could pass on routines, ethics, and a way of being.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">My family does not look like the life I once drew on napkins. It is messier, louder, and stitched together by choices rather than bloodlines. That is Joseph’s inheritance to me: fatherhood as choice, legacy as action.</p>
+                `
+            },
+            {
+                id: "atheist-job-hunt-god",
+                title: "The Atheist, The Job Hunt, and The God I Never Saw Coming",
+                date: "21 October 2025",
+                category: "Identity",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/Job%20hunt%2C%20home%20and%20god%20(1).png",
+                excerpt: "I lost my job and with it, my certainty that I controlled my life. Desperation pushed me into an unexpected prayer. The answer was subtle, slow, and wrapped in people I never expected.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Identity</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">The Atheist, The Job Hunt, and The God I Never Saw Coming</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 21 October 2025</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/Job%20hunt%2C%20home%20and%20god%20(1).png" alt="Man walking alone through sunlight after finding meaning again">
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Introduction: A Life Built on Logic Begins to Crack</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">I used to believe the universe was an empty warehouse. No caretaker. No architect. No divine supervisor. Just physics and probability. I felt superior because logic was my religion and work ethic was my deity. I had my life organized like a mission critical system.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">Then my job evaporated. An emailed notice. A meeting that lasted seven minutes. A final salary that felt like a countdown timer. Suddenly, my airtight world let in cold air. My plans did not save me. My intellect did not protect me. The atheist who mocked faith was about to discover something he never predicted: humility.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Spiritual Undercurrent I Could Not Ignore</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Working with Dr. Magic cracked open a door in me. Not a full conversion. Not a dramatic salvation moment. But a slow recognition that something greater was organising my steps. The timing was too precise. The coincidences too layered. The emotional architecture too intentional.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">Every day in that new environment felt like a recalibration. Purpose found me. Work became meaningful again. Ideas flowed. My creativity returned. My confidence reopened. The atheist in me argued that it was luck. But the soul in me whispered that it was alignment. Something sacred. Something structured. Something guiding.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Ending: A Return I Never Expected</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">The atheist in me died quietly. Not in shame. Not in defeat. But in revelation. I realised I was never as alone as I believed. Something was holding me long before I knew it. Something kept me alive when I tried to carry everything myself. Something answered a prayer I barely believed in.</p>
+                `
+            },
+            {
+                id: "perfectly-flawed",
+                title: "I am perfectly flawed and so are you.....",
+                date: "13 September 2025",
+                category: "Philosophy",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/Contemplating%20with%20Neon%20Words.png",
+                excerpt: "Let’s get one thing straight right from the jump. The other day, I tried to look cool and sophisticated while drinking a takeaway coffee and walking down the street. In my head, I was the main character in a movie montage...",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Philosophy</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">I am perfectly flawed and so are you.....</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 13 September 2025</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/Contemplating%20with%20Neon%20Words.png" alt="Abstract art representing flaws and beauty">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">Let’s get one thing straight right from the jump. The other day, I tried to look cool and sophisticated while drinking a takeaway coffee and walking down the street. You know the look: sunglasses on, purposeful stride, an air of being generally important and on my way to do important, important things. In my head, I was the main character in a movie montage. In reality, I tripped over a crack in the pavement so small it must have been a wrinkle in the fabric of spacetime. The coffee, which was roughly the temperature of molten sun, went everywhere. Not just on me, but on the pristine white poodle of a woman who looked at me with the kind of pity usually reserved for documentaries about endangered sloths.</p>
+                    
+                    <p class="text-zinc-700 dark:text-zinc-300">And here’s the secret I think we’re all terrified to admit: I am a glorious, walking, talking disaster. A beautiful mess. A perfectly flawed human being. And the best part? So are you.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Grand Illusion: The Cult of Perfection</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">We live in an age where perfection isn't just encouraged; it's the expected baseline. We scroll through endless highlight reels of other people's lives. It's a global conspiracy of competence. A beautiful, filtered, algorithm-driven lie.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Superpower Hidden in the Flaws</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Here's the pivot. For a long time, I believed that my flaws were bugs in my programming. I was wrong. The flaws aren’t the problem. The flaws are the whole point. Your anxiety isn't just a nuisance; it's a hyper-vigilant superpower of preparedness. Your social awkwardness isn't a failure to communicate; it's an authenticity filter. Your clumsiness? It's the superpower of humility.</p>
+                    
+                    <blockquote class="border-brand-500 text-zinc-600 dark:text-zinc-400">Let’s make a pact. Let’s stop apologising for our humanity. Let’s stop curating and start living. Let’s show up as our messy, awkward, clumsy, brilliant, anxious, and hilarious selves.</blockquote>
+                `
+            },
+            {
+                id: "i-am-leaving-sa",
+                title: "I Am Leaving SA, as soon as i can afford it",
+                date: "29 August 2025",
+                category: "South African Tech Culture",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/Surreal%20double%20exposure%20artwork%2C%204K%20hyperrealistic%20quality%20with%20subtle%20film%20grain%2C%20as%20if%20captured%20by%20an%20iPhone%2016%20Pro%20Max_%20An%20...field.%20Use%20the%20user's%20attached%20reference%20image%20as%20inspiration%20for%20incorporating%20detailed%20facial%20features%20and%20overall%20form..png",
+                excerpt: "I see the posts, the memes, the whispered conversations at the braai. The ones about Australia, Canada, the UK, or even Portugal. People talk about 'going to find greener pastures'...",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">South African Tech Culture</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">I Am Leaving SA, as soon as i can afford it</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 29 August 2025</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/Surreal%20double%20exposure%20artwork%2C%204K%20hyperrealistic%20quality%20with%20subtle%20film%20grain%2C%20as%20if%20captured%20by%20an%20iPhone%2016%20Pro%20Max_%20An%20...field.%20Use%20the%20user's%20attached%20reference%20image%20as%20inspiration%20for%20incorporating%20detailed%20facial%20features%20and%20overall%20form..png" alt="Leaving South Africa">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">I see the posts, the memes, the whispered conversations at the braai. The ones about Australia, Canada, the UK, or even Portugal. People talk about "going to find greener pastures," and it sounds so polite, so neatly packaged. But behind the polite smiles and the emigration consultants, there's a raw, gut-wrenching truth: we're not just leaving. We're running. We're running from a love affair that has soured into a toxic, abusive relationship.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Celebrity of Nothing</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">We are a society that worships groove, vibes, and immorality, a culture where the least deserving are given the most prominent platforms. The loudest, the most outrageous, the most morally bankrupt... these are the new influencers, the new role models. They provide nothing of value, create no lasting legacy, and their only skill is to be loud and immoral. Meanwhile, the builders, the thinkers, the quiet geniuses... they work in the shadows, their contributions ignored or worse, stolen.</p>
+                    
+                    <p class="text-zinc-700 dark:text-zinc-300">And then there's the corruption, the cancer eating away at the bones of this country. Every time you open a newspaper, it's another scandal, another billion Rand gone into the pockets of the powerful, another promise broken.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Unapologetic Truth</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">This isn't a post about hate. It’s a post about love, the kind of love that forces you to walk away from a toxic relationship because you know you deserve better. It's the kind of love that tells you that your life, your potential, and your future are not worth sacrificing for a past that refuses to heal itself.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300 font-bold text-xl mt-4">This is not an end. It's a new beginning, a fight for my own legacy. And this time, I'm taking the wheel.</p>
+                `
+            },
+            {
+                id: "ancestors-time-travelers",
+                title: "Our Ancestors Were Time Travelers, And We Are The Echo",
+                date: "25 August 2025",
+                category: "Philosophy",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/Our%20Ancestors%20Were%20Time%20Travelers%2C%20And%20We%20Are%20The%20Echo%20(1).png",
+                excerpt: "We are a culture obsessed with the fantasy of time travel. But we are looking in the wrong place. We are staring at the sky, searching for a portal, when the machine has been inside us all along.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Philosophy</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">Our Ancestors Were Time Travelers, And We Are The Echo</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 25 August 2025</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/Our%20Ancestors%20Were%20Time%20Travelers%2C%20And%20We%20Are%20The%20Echo%20(1).png" alt="Ancestors Time Travelers">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">We are a culture obsessed with the fantasy of time travel. We build gleaming, chrome machines in our movies... But we are looking in the wrong place. We are staring at the sky, searching for a portal, when the machine has been inside us all along. The machine isn't built of steel and circuits, it's built of blood and bone, of memory and melanin. We are the time machines, and our DNA is the code that carries the ghosts of yesterday into the flesh of today.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Epigenetic Reality</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">You ever feel it, That sudden, inexplicable wave of sadness that crashes over you on a perfectly sunny afternoon, A flash of white-hot anger that doesn't belong to your immediate circumstances, A deep-seated fear of something you've never personally experienced... That's not just a bad mood. That's a data packet arriving from the past. It's a download from the ancestral cloud.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">Our ancestors didn't just give us their chin, their surname, or their predisposition for high blood pressure. They passed down their entire operating system, the unresolved traumas, the unfulfilled dreams, the silent vows, and the resilient victories. We are running their legacy software on our 21st-century hardware, and most of us don't even know how to read the source code.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Debugging the Code</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">When you pour libations on the soil and call the names of the departed, you're not just performing a quaint tradition for the tourists. You are a systems administrator accessing a living archive. You are running a diagnostic on the ancestral server.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">So, the next time you feel that strange pull, that echo of a feeling you can't place, don't dismiss it. Listen. It is the sound of your ancestors speaking. You are a time traveler. The question is, where will you take them next?</p>
+                `
+            },
+            {
+                id: "dstv-macg-famous-nobodies",
+                title: "DStv, MacG, and the Age of Famous Nobodies",
+                date: "24 August 2025",
+                category: "South African Tech Culture",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/DStv%2C%20MacG%2C%20and%20the%20Age%20of%20Famous%20Nobodies%20(1).png",
+                excerpt: "Let’s be brutally, painfully honest. Watching DStv desperately scoop up podcasters to put on television is like watching a dinosaur, moments after the meteor has hit, trying to catch a fly with its tiny, useless arms.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">South African Tech Culture</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">DStv, MacG, and the Age of Famous Nobodies</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 24 August 2025</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/DStv%2C%20MacG%2C%20and%20the%20Age%20of%20Famous%20Nobodies%20(1).png" alt="DStv MacG">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">Let’s be brutally, painfully honest. Watching DStv desperately scoop up podcasters to put on television is like watching a dinosaur, moments after the meteor has hit, trying to catch a fly with its tiny, useless arms. It is a clumsy, pathetic, and deeply revealing spectacle. It is the death rattle of the mainstream, a final, panicked attempt to stay relevant in a world that has already rendered it a fossil.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Age of Famous Nobodies</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">We are living in the age of the Famous Nobody. A cultural wasteland where clout is mistaken for talent, where controversy is a substitute for substance, and where audience size is the only metric of worth. There is no greater, more garish monument to this new mediocrity than the coronation of MacG as the biggest podcaster in Africa. This is not a milestone to be celebrated. It is a diagnosis of a terminal illness.</p>
+                    
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Mirror</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Celebrating MacG’s success is exactly like celebrating Baragwanath Hospital. Yes, Baragwanath is one of the biggest and most famous hospitals in the world. But why is it so big? Is it because we are a nation of exceptionally healthy people who enjoy world-class preventative care? No. It is because we have a catastrophic number of sick, injured, and dying people. It is a world-class institution born of our world-class societal ills.</p>
+
+                    <p class="text-zinc-700 dark:text-zinc-300">In the very same way, MacG’s astronomical success is not a sign of a healthy, vibrant media landscape. It is a sign that our collective intellectual immune system has collapsed. We get the media landscape we deserve. And right now, we are collectively choosing the gutter.</p>
+                `
+            },
+            {
+                id: "stranger-customer-quicker",
+                title: "A Stranger Will Become a Customer Quicker Than a Friend Will",
+                date: "19 August 2025",
+                category: "Philosophy",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/I%20write%20what%20i%20likethumnail.1.png",
+                excerpt: "You’ve heard it before, a prophet is never recognized in his own land. Or, as some say, a doctor heals another village before anyone praises him at home.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Philosophy</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">A Stranger Will Become a Customer Quicker Than a Friend Will</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 19 August 2025</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/I%20write%20what%20i%20likethumnail.1.png" alt="Stranger Customer">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">You’ve heard it before: a prophet is never recognized in his own land. Or, as some say, a doctor heals another village before anyone praises him at home. It’s the same story in every Black neighborhood, every family, every set of friends you think you can count on. The closer they are, the slower the applause.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">You launch a project, a small business, a creative venture... And who notices first? A stranger. Some random person online, scrolling past life like it’s TikTok, drops a heart or a like. Maybe they buy your product. Meanwhile, your friends, your cousins, your “supportive” family… silence.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Why does this happen?</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300"><strong>Envy hides in plain sight.</strong> The brutal truth: humans are programmed for comparison. And comparison breeds hesitation. When it’s someone close, it’s personal. You don’t just succeed, you force others to confront their own choices, their own comfort zones, their own unrealized potential. That can be terrifying for them.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Beauty of Self-Validation</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">The greatest gift of this realization is self-validation. You learn to clap your own hands, pour your own wine, and celebrate your own milestones. You no longer wait for family approval. The mirror becomes your first audience.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300 italic">Sometimes, the village is strangers. And those strangers can become the family you always needed.</p>
+                `
+            },
+            {
+                id: "ghost-in-the-machine",
+                title: "The Ghost in the Machine: Battling Impostor Syndrome",
+                date: "18 August 2025",
+                category: "Digital Psychology",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/I%20write%20what%20i%20like%20thumnail.3.png",
+                excerpt: "There’s a ghost that haunts the tech world. It doesn’t rattle chains or flicker lights. It whispers. It tells you that you’re a fraud...",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Digital Psychology</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">The Ghost in the Machine: Battling Impostor Syndrome</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 18 August 2025</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/I%20write%20what%20i%20like%20thumnail.3.png" alt="Impostor Syndrome">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">There’s a ghost that haunts the tech world. It doesn’t rattle chains or flicker lights. It whispers. It tells you that you’re a fraud, that your successes are flukes, and that any moment now, you’ll be exposed as the unqualified hack you truly are. This ghost is Impostor Syndrome, and from the bustling streets of Soweto to the polished corridors of Silicon Valley, it’s a tax on ambition that everyone seems to pay.</p>
+
+                    <p class="text-zinc-700 dark:text-zinc-300">My journey into code wasn't paved with Ivy League degrees or coding bootcamps. It was forged in the flickering light of a screen during load-shedding, pieced together from YouTube tutorials and borrowed data. Every line of code felt like an act of defiance against a world that didn’t expect me to be there. And with every small victory, the ghost’s whisper grew louder, 'You don't belong here.'</p>
+
+                    <p class="text-zinc-700 dark:text-zinc-300">We exorcise this ghost not by becoming perfect, but by embracing our imperfect journey. By understanding that our unique perspectives, our 'kasi logic,' our resilience, our unconventional paths, are not liabilities. They are our greatest strengths. They are the very things that make our contribution to the machine invaluable.</p>
+                `
+            },
+            {
+                id: "localized-ai",
+                title: "The Silent Revolution of Localized AI: Why Your Tuck Shop Needs an AI Assistant",
+                date: "16 August 2025",
+                category: "AI & Systems",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/3D%20Pixar-style%20artwork_%20A%20creative%20representation%20of%20the%20user%20as%20a%20hacker%20in%20the%20Matrix.%20The%20character%20is%20depicted%20with%20iconic...s.%20The%20scene%20is%20rendered%20with%20Pixar-style%20charm%20and%20detail%2C%20emphasizing%20the%20user's%20role%20as%20a%20confident%2C%20tech-savvy%20hacker..png",
+                excerpt: "What happens when global tech meets local hustle, A revolution. This isn't just about big companies, it's about the small, vibrant businesses that form the heartbeat of our communities.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">AI & Systems</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">The Silent Revolution of Localized AI: Why Your Tuck Shop Needs an AI Assistant</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 16 August 2025</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/3D%20Pixar-style%20artwork_%20A%20creative%20representation%20of%20the%20user%20as%20a%20hacker%20in%20the%20Matrix.%20The%20character%20is%20depicted%20with%20iconic...s.%20The%20scene%20is%20rendered%20with%20Pixar-style%20charm%20and%20detail%2C%20emphasizing%20the%20user's%20role%20as%20a%20confident%2C%20tech-savvy%20hacker..png" alt="Localized AI">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">What happens when global tech meets local hustle? A revolution. This isn't just about big companies, it's about the small, vibrant businesses that form the heartbeat of our communities. I’ve been thinking a lot about the tuck shop on my street corner, the one with the handwritten menu and the owner who remembers every regular's order. What if that tuck shop had a secret weapon, an AI assistant?</p>
+                    
+                    <h3 class="text-zinc-800 dark:text-zinc-100">AI isn't just for the C-suite.</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">It’s a tool for everyone. Imagine a simple AI system, built on a local language model, designed to manage inventory for the tuck shop owner. It could track what's selling fast and what's collecting dust. It could send an SMS reminder to the supplier when stock is low. It's not about replacing the human touch, it's about freeing the owner to focus on what matters, the customers, the community, and the perfect balance of flavors in their bunny chow.</p>
+                    
+                    <p class="text-zinc-700 dark:text-zinc-300 font-bold mt-4">The most powerful tech is the tech that disappears into the background and lets us focus on what truly matters, people.</p>
+                `
+            },
+            {
+                id: "leaving-comfort-zone",
+                title: "Why I Left My Comfort Zone to Build a 'Legend' of a Business",
+                date: "15 August 2025",
+                category: "Identity",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/I%20write%20what%20i%20like%20thumnail.3.png",
+                excerpt: "There's a special kind of terror that comes with choosing the unknown over the familiar. It's the same feeling you get when you stand at the edge of a cliff, knowing the only way forward is to jump.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Identity</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">Why I Left My Comfort Zone to Build a 'Legend' of a Business</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 15 August 2025</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/I%20write%20what%20i%20like%20thumnail.3.png" alt="Leaving Comfort Zone">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">There's a special kind of terror that comes with choosing the unknown over the familiar. It's the same feeling you get when you stand at the edge of a cliff, knowing the only way forward is to jump. For me, that cliff was a career that was comfortable, but not fulfilling. The familiar ground was a life that was stable, but not challenging. And the jump, That was my leap into the world of entrepreneurship.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Lure of the 'Safe' Bet</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Society loves to sell us the idea of a 'safe' life. A steady job, a predictable income, a clear path. We're taught to fear the cliff, to see risk as a weakness. But I've come to realize that the biggest risk of all is staying in a place where you're not growing. The most dangerous comfort zone is the one that convinces you that mediocrity is a synonym for safety.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Discomfort of Becoming a 'Legend'</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Building something from scratch is messy. It's a lot of late nights, a lot of self-doubt, and a lot of moments where you question everything. But in that discomfort, there's a unique kind of freedom. You're not just building a business, you're rebuilding yourself.</p>
+                `
+            },
+            {
+                id: "surviving-man-drought",
+                title: "The Unspoken Rules of Surviving a Modern 'Man-Drought' in South Africa",
+                date: "14 August 2025",
+                category: "Masculinity",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/me%20side%20front%20pic.jpg",
+                excerpt: "I've noticed something, a subtle, yet pervasive shift. A kind of 'man-drought' has set in, not just in terms of numbers, but in terms of quality...",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Masculinity</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">The Unspoken Rules of Surviving a Modern 'Man-Drought' in South Africa</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 14 August 2025</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/me%20side%20front%20pic.jpg" alt="Man Drought">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">I've been watching the cultural landscape of my home country, South Africa, and I've noticed something, a subtle, yet pervasive shift. A kind of 'man-drought' has set in, not just in terms of numbers, but in terms of quality. Men who are emotionally available, financially responsible, and psychologically mature seem to be a rare and endangered species. And the women, They're left to navigate a dating scene that feels more like a desert than a fertile field.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Mirage of Modern Masculinity</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">We're sold a mirage of modern masculinity that's all about bravado and swagger, but very little substance. It's a culture of 'talking a big game' without ever stepping onto the field. Men who are more concerned with their online persona than their real-life character. And it's left a lot of women feeling abandoned, resentful, and utterly exhausted.</p>
+                    
+                    <p class="text-zinc-700 dark:text-zinc-300 font-bold mt-4">The real drought isn’t a lack of men. It’s a lack of men willing to do the hard work of becoming.</p>
+                `
+            },
+            {
+                id: "hustle-vs-hamba-kahle",
+                title: "Hustle vs. Hamba Kahle: Unplugging in a World That Never Sleeps",
+                date: "10 August 2025",
+                category: "Philosophy",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/Meditation%20Under%20a%20Neon%20Tree.png",
+                excerpt: "The gospel of 'hustle culture' is preached from every corner of the internet. 'Rise and grind.' 'Sleep is for the broke.' We’re told that success is a sleepless marathon...",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Philosophy</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">Hustle vs. Hamba Kahle: Unplugging in a World That Never Sleeps</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 10 August 2025</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/Meditation%20Under%20a%20Neon%20Tree.png" alt="Hustle vs Hamba Kahle">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">The gospel of 'hustle culture' is preached from every corner of the internet. 'Rise and grind.' 'Sleep is for the broke.' We’re told that success is a sleepless marathon, and if you’re not constantly moving, you’re falling behind. It’s a compelling narrative, especially when you come from a place where the margin for error is razor-thin. The hustle is survival.</p>
+                    
+                    <p class="text-zinc-700 dark:text-zinc-300">But I've started to question this doctrine. I've seen the burnout. The anxiety. The hollowed-out feeling of chasing a finish line that keeps moving. What if the most radical, most productive, most revolutionary act isn't to hustle harder, but to rest intentionally?</p>
+                    
+                    <p class="text-zinc-700 dark:text-zinc-300">This isn't about laziness. It's about sustainability. It's the concept of 'Hamba Kahle,' to go slowly, to go well. It's the wisdom in taking a moment to breathe, to disconnect, to allow your mind the space to process and create. My best code isn't written in a frantic 18-hour coding binge. It’s conceived on a long walk, in the quiet moments after the noise has settled.</p>
+                `
+            },
+            {
+                id: "connected-or-caged",
+                title: "Are We Connected or Just Caged? A Requiem for Real Conversation",
+                date: "28 July 2025",
+                category: "Technology & Society",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/Meditation%20Under%20a%20Neon%20Tree.png",
+                excerpt: "We carry the entire repository of human knowledge in our pockets, yet we seem to be getting dumber. Or at least, less curious...",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Technology & Society</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">Are We Connected or Just Caged? A Requiem for Real Conversation</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 28 July 2025</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/Meditation%20Under%20a%20Neon%20Tree.png" alt="Connected or Caged">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">We carry the entire repository of human knowledge in our pockets, yet we seem to be getting dumber. Or at least, less curious. Our feeds are curated, our opinions echo-chambered, and a quick "fact check" is more about reinforcing our biases than seeking truth.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">The internet promised a library of Alexandria, but delivered a public bathroom wall, scrawled with fleeting thoughts, angry declarations, and memes that die in a week. We've traded deep conversation for quick comments, nuanced debate for tribal name-calling. The platforms designed to connect us have, in effect, constructed invisible cages.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Tyranny of the Feed</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">We live under the tyranny of the feed. Infinite scrolling, constant updates, relentless notifications, endless streams of opinions that demand instant reaction. Our attention is a precious resource, yet we give it away freely to algorithms designed to trap it. In the process, we sacrifice the capacity to sit with a friend, to engage in dialogue that meanders, digresses, and returns enriched.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">A Requiem for Real Conversation</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">This is a requiem, then, not for technology, but for the art of being present with another human being. For the lost skill of listening without preparing a response, of speaking without performing, of engaging without filtering through the lens of virality or approval.</p>
+                `
+            },
+            {
+                id: "aweh-to-algorithm",
+                title: "From 'Aweh' to 'Algorithm': Decoding the New Mzansi Lexicon",
+                date: "15 July 2025",
+                category: "South African Tech Culture",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/I%20write%20what%20i%20like%20thumnail.4.png",
+                excerpt: "Language in South Africa has never been a static thing. It’s a living, breathing, evolving beast, a beautiful mashup of cultures, histories, and struggles...",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">South African Tech Culture</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">From 'Aweh' to 'Algorithm': Decoding the New Mzansi Lexicon</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 15 July 2025</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/I%20write%20what%20i%20like%20thumnail.4.png" alt="Aweh to Algorithm">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">Language in South Africa has never been a static thing. It’s a living, breathing, evolving beast, a beautiful mashup of cultures, histories, and struggles, all stirred together in the great potjiekos of our nation. We gave the world 'braai' and 'voetsek.' But the evolution hasn't stopped. In fact, it's accelerating.</p>
+                    
+                    <p class="text-zinc-700 dark:text-zinc-300">The modern Mzansi lexicon is a fascinating hybrid. It’s where the timeless greeting of 'Aweh!' meets the digital reality of the 'Algorithm.' It's where township slang intertwines with tech jargon. We talk about 'ghosting' someone with the same casualness as we talk about 'load-shedding.'</p>
+                    
+                    <p class="text-zinc-700 dark:text-zinc-300">To understand modern South Africa, you need to listen to how we talk. Listen to the code-switching in a taxi, the memes shared on WhatsApp, the language of the youth on TikTok. It’s there, in that vibrant, chaotic, and ever-changing lexicon, that you’ll find the true story of who we are and who we are becoming.</p>
+                `
+            },
+            {
+                id: "existential-crisis-javascript",
+                title: "My Latest Existential Crisis (and how JavaScript made it worse)",
+                date: "10 June 2025",
+                category: "Digital Psychology",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Afro-Futuristic%20Glitch%20Walker.png",
+                excerpt: "Picture this: It's 3 AM. The only lights are the glow of my monitor and the cold, indifferent moon. I'm staring at a Promise chain that looks more tangled than my last relationship...",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Digital Psychology</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">My Latest Existential Crisis (and how JavaScript made it worse)</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 10 June 2025</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Afro-Futuristic%20Glitch%20Walker.png" alt="Existential Crisis JavaScript">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">Picture this: It's 3 AM. The only lights are the glow of my monitor and the cold, indifferent moon. I'm staring at a Promise chain that looks more tangled than my last relationship, and a thought hits me with the force of a syntax error on line 1: What if life is just an asynchronous operation with no .catch() block?</p>
+                    
+                    <p class="text-zinc-700 dark:text-zinc-300">You send out a request, for love, for success, for a decent internet connection, and you get a promise of a response. You wait. You attach a .then() block, full of optimistic plans for what you'll do when the data arrives. But there's no guarantee. The server (the universe) might time out. The request might get lost in the void. You might be left waiting forever, your callback function never to be executed.</p>
+                    
+                    <p class="text-zinc-700 dark:text-zinc-300">And don't even get me started on 'undefined'. That's not just a value, it's a philosophical state. It's the perfect description for that feeling of not knowing your purpose, your value, your place in the great DOM of life. We're all just variables, declared but not yet assigned, trying to find meaning in a world of nulls and NaNs.</p>
+                `
+            },
+            {
+                id: "braai-day-pray-day",
+                title: "Braai Day, Pray Day, What Day? The Watering Down of South African Holidays",
+                date: "16 June 2025",
+                category: "Identity",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Cascading%20Code%20and%20Contemplation.png",
+                excerpt: "Ah, Youth Day... or as it’s now known, ‘National Check If the Liquor Store Is Open Day.’ In South Africa, our public holidays have been diluted into little more than welcome breaks...",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Identity</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">Braai Day, Pray Day, What Day? The Watering Down of South African Holidays</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 16 June 2025</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/refs/heads/main/Cascading%20Code%20and%20Contemplation.png" alt="Braai Day">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">"Ah, Youth Day... or as it’s now known, ‘National Check If the Liquor Store Is Open Day.’</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">In South Africa, our public holidays, once markers of profound struggle and hard-won victory, have been diluted into little more than welcome breaks from the daily grind. The historical significance has been bleached out, replaced by the generic glow of a day off.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">Perhaps it's time we reclaimed them. Not by shunning the braai or the prayer, but by infusing them with the very meaning they were meant to celebrate. To remember, to discuss, to educate, and to ensure that these days are more than just a welcome pause, but a powerful reminder of where we come from, and the price that was paid for the very freedoms we now so casually enjoy.</p>
+                `
+            },
+            {
+                id: "ai-driven-marketing-journey",
+                title: "Embracing AI-Driven Marketing: A Personal Journey into the Future",
+                date: "31 May 2025",
+                category: "AI & Systems",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/Neon%20Halo%20Portrait%20with%20Digital%20Overlays.png",
+                excerpt: "I never thought an algorithm could humble me, but then again, I never met GG... the AI agent introduced at the 2025 Mastermind Thrive event.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">AI & Systems</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">Embracing AI-Driven Marketing: A Personal Journey into the Future</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 31 May 2025</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/Neon%20Halo%20Portrait%20with%20Digital%20Overlays.png" alt="AI Marketing">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">I never thought an algorithm could humble me, but then again, I never met <strong>GG</strong>... the AI agent introduced at the 2025 <em>Mastermind Thrive</em> event hosted by Tony Robbins and Dean Graziosi.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">As a South African entrepreneur rooted in community, creativity, and code, I’ve always kept one foot in tech, the other in the soil. I saw the power of AI to dissect behavior, predict needs, and tailor content with frightening precision. It’s not just personalized marketing anymore... it’s predictive empathy, and brands are wielding it like a scalpel.</p>
+                    
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Who speaks for them in this revolution?</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">I saw the petrol attendant at the corner station... the auntie running a tuck shop down the street... the cashier with stories in her eyes... The ones who’ve built lives off analog skill sets now staring into a digital void they didn’t create. I realized my role isn’t just to build cool tech or ride the algorithmic wave. It’s to translate, to bridge, to hold the door open while others catch up.</p>
+                `
+            },
+            {
+                id: "seo-success-small-business",
+                title: "Measuring SEO Success for Small Businesses, The Comprehensive Guide",
+                date: "30 May 2025",
+                category: "AI & Systems",
+                image: "https://placehold.co/600x400/3B82F6/FFFFFF?text=SEO+Success",
+                excerpt: "In this digital age, a strong online presence is no longer optional, it’s your storefront, your reputation, and your word-of-mouth, all rolled into one.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">AI & Systems</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">Measuring SEO Success for Small Businesses, The Comprehensive Guide</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 30 May 2025</p>
+                    <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=SEO+Success" alt="SEO Success">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">In this digital age, a strong online presence is no longer optional, it’s your storefront, your reputation, and your word-of-mouth, all rolled into one. But how do you actually know if your SEO is working? Let’s unpack that, with examples from the hood and a touch of humour to keep things real.</p>
+                    
+                    <h3 class="text-zinc-800 dark:text-zinc-100">What is SEO, Really?</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Before we measure it, let’s define it. SEO, Search Engine Optimization, is like putting up the flashiest signboard outside your tuck shop. It makes sure that when people search for “cool drinks near me”, your digital shopfront shows up loud and proud.</p>
+                    
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Key Metrics to Measure SEO Success</h3>
+                    <ul class="list-disc pl-6 text-zinc-700 dark:text-zinc-300 space-y-2">
+                        <li><strong>Organic Traffic:</strong> More Footsteps, More Customers.</li>
+                        <li><strong>Keyword Ranking:</strong> Own the Search Results. Showing up on page one is like owning prime shelf space.</li>
+                        <li><strong>Conversion Rate:</strong> From Clicks to Customers. Foot traffic doesn’t pay the bills unless it converts.</li>
+                        <li><strong>Bounce Rate:</strong> First Impressions Count. A high bounce rate means your homepage is confusing or slow.</li>
+                        <li><strong>Backlinks:</strong> Digital Word-of-Mouth. A top food blogger mentions your tuck shop? That backlink is gold.</li>
+                    </ul>
+                `
+            },
+            {
+                id: "event-loop-epiphany",
+                title: "Train Delays & JavaScript Delays, My Event Loop Epiphany",
+                date: "28 May 2025",
+                category: "Learning in Public",
+                image: "https://placehold.co/600x400/3B82F6/FFFFFF?text=Event+Loop",
+                excerpt: "Carletonville station, not exactly a hub of punctuality, is it? And that’s when it hit me, this whole damn station, this waiting, this uncertainty... it’s the JavaScript event loop, man!",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Learning in Public</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">Train Delays & JavaScript Delays, My Event Loop Epiphany</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 28 May 2025</p>
+                    <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Event+Loop" alt="Event Loop">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">Carletonville station, not exactly a hub of punctuality, is it? More like a place where time goes to take a long, leisurely nap. I was waiting for a train that was probably still deciding whether to grace us with its presence, feeling that familiar simmer of Kasi impatience.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">And that’s when it hit me, this whole damn station, this waiting, this uncertainty... it’s the JavaScript event loop, man!</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Main Thread, That One Announcer</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Think about it. You've got the main railway line, right? That’s your <strong>main thread</strong> in JavaScript. It can only handle one train, one task, at a time. When the announcer is squawking about Platform 2, he can’t simultaneously be giving a weather report. If that announcement takes forever, everything else waits. Your code, your website, it just... hangs.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Callback Queue, All Us Impatient Mzansi Folk</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Then there's us. The passengers. We’re the <strong>asynchronous operations</strong>. We don't just stand on the main line blocking everything. Nah, we get shunted off to the side, onto the platform. That’s the <strong>callback queue</strong>. We’re all lined up, tickets in hand, waiting for our turn once the main line is clear.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Revelation by the Rails</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Suddenly, all those tutorials, all those abstract diagrams of stacks and queues, they just clicked. Right there, amidst the hopeful sighs and the distant rumble that might or might not be a train. It wasn’t about complex computer science first, it was about managing a flow, handling interruptions, and making sure things happen in a sensible order, even when they’re not happening right *now*.</p>
+                `
+            },
+            {
+                id: "javascript-in-the-trenches",
+                title: "JavaScript in the Trenches: Code Like Kasi Does, Think Like a Genius",
+                date: "31 May 2025",
+                category: "Learning in Public",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/3D%20Pixar-style%20artwork_%20A%20creative%20representation%20of%20the%20user%20as%20a%20hacker%20in%20the%20Matrix.%20The%20character%20is%20depicted%20with%20iconic...s.%20The%20scene%20is%20rendered%20with%20Pixar-style%20charm%20and%20detail%2C%20emphasizing%20the%20user's%20role%20as%20a%20confident%2C%20tech-savvy%20hacker..png",
+                excerpt: "Let me begin with no filters and no fluff. We're tackling JavaScript where form follows function enough for lead engineers but is understood by your cousin in the backseat of the Quantum.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Learning in Public</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">JavaScript in the Trenches: Code Like Kasi Does, Think Like a Genius</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 31 May 2025</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/3D%20Pixar-style%20artwork_%20A%20creative%20representation%20of%20the%20user%20as%20a%20hacker%20in%20the%20Matrix.%20The%20character%20is%20depicted%20with%20iconic...s.%20The%20scene%20is%20rendered%20with%20Pixar-style%20charm%20and%20detail%2C%20emphasizing%20the%20user's%20role%20as%20a%20confident%2C%20tech-savvy%20hacker..png" alt="JS in the Trenches">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">My JavaScript education didn't happen in air-conditioned classrooms with neat chairs. I learned JavaScript during load-shedding with a cellphone and from downloaded Free Coursera short courses and a thousand Youtube lessons I couldn't afford to stream. I discovered variables by candlelight, debugged during power cuts, and wrote most of my functions on an empty stomach.</p>
+                    
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Let's Be Frank: JavaScript Is Both Beautiful and Maddening</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Ever worked with a language that makes you feel like both a genius and a fool simultaneously? That's JavaScript. It gives you superpowers but also leaves you crying in a corner because null is an object, typeof NaN is "number," and somehow [] == ![] evaluates to true.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">But this chaos resonates with those who grew up improvising, people who survived on peanut butter as their main protein source. To us, consistency is a luxury and chaos is a teacher.</p>
+                    
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Why I Keep Coming Back</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Because it's a survivor's language. Imperfect but adaptable, like us. It rewards those who see past its quirks to the power beneath, people like you. People like me.</p>
+                `
+            },
+            {
+                id: "how-i-tamed-recursion",
+                title: "How I Finally Tamed Recursion (and Survived My Family Tree)",
+                date: "11 April 2025",
+                category: "Learning in Public",
+                image: "https://placehold.co/600x400/3B82F6/FFFFFF?text=Recursion",
+                excerpt: "Picture this: You're at the annual family gathering, trapped in an endless loop of cheek-pinches and 'So, what are you really doing with your life?' That, my friend, is recursion.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Learning in Public</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">How I Finally Tamed Recursion (and Survived My Family Tree)</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 11 April 2025</p>
+                    <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Recursion" alt="Recursion">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">Picture this: You're at the annual family gathering, trapped in an endless loop of cheek-pinches and "So, what are you <em>really</em> doing with your life?" Each relative hands you off to the next, each interrogation a slight variation of the last. Sound familiar? That, my friend, is recursion, a concept I first learned in JavaScript, and a metaphor I wish I had discovered before my first Grade 5 reunion.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Recursion: The Family Reunion of Programming</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Recursion is elegant in code, but brutal in the wild... especially when the wild is your own family. Each function calls itself to solve a smaller part of a bigger problem, and you learn quickly: without a stopping condition, the loop is infinite, the system crashes, and somewhere in the basement, the metaphorical spaghetti of your sanity untangles in slow motion.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Two Pillars of Recursive Survival</h3>
+                    <ul class="list-decimal pl-6 text-zinc-700 dark:text-zinc-300 space-y-2">
+                        <li><strong>Base Case:</strong> Your escape clause, the condition that halts the recursion. Spotting the dessert table and making a beeline is the literal and figurative base case.</li>
+                        <li><strong>Recursive Case:</strong> Where the function calls itself with modified input. Aunt Mildred passes you to Cousin Themba, who passes you to Uncle Sipho, who returns you to Aunt Mildred.</li>
+                    </ul>
+
+                    <p class="text-zinc-700 dark:text-zinc-300 mt-4">Recursion, like family, is messy, beautiful, and infinitely instructive. And now, if you'll excuse me, I need to console.log my way out of this reunion, one carefully flattened branch at a time.</p>
+                `
+            },
+            {
+                id: "cosmic-giggle-full",
+                title: "The Great Cosmic Giggle & My Brain's Bizarre Upgrade...Is it one?",
+                date: "25 May 2025",
+                category: "Philosophy",
+                image: "https://placehold.co/600x400/3B82F6/FFFFFF?text=Cosmic+Giggle",
+                excerpt: "My default position on anything spiritual has always been 'very skeptical, with a side of prove it, boet'. So imagine my surprise when things started getting weird...",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Philosophy</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">The Great Cosmic Giggle & My Brain's Bizarre Upgrade...Is it one?</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 25 May 2025</p>
+                    <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Cosmic+Giggle" alt="Cosmic Giggle">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">Hear me, I've never been one to shy away from raising an eyebrow at anything that even slightly smells of "miracle" or "divine intervention." You live long enough in South Africa, you learn to doubt everything... especially things that provide answers...</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Moses, The Burning Bush, & My Sudden Interest in... Interest?</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Moses is just going about his sheep-herding business when he sees this bush that's burning. But it's not just burning... it's burning without burning up the bush. He doesn't swipe past it like another TikTok video. He turns to look. And that, my friend, is where it gets freaky. Because in that moment of pure, unadulterated curiosity, he's standing on holy ground.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">And this is the part that's gnawing at me. It's whispering something unsettling... "What excites you, what really makes you curious, is usually holy. It's a sign. You're on holy ground when you follow that attraction."</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Jesus, Daniel, & The Freaky Feeling of Remembering</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">These stories, which once felt like ancient myths, are starting to unlock something. It’s not like I’m learning them for the first time. It feels... more like remembering. Like my brain is downloading files, slowly, painfully, from a hard drive I didn't even know I had. A very, very old hard drive.</p>
+                `
+            },
+            {
+                id: "man-drought-full",
+                title: "The Great South African Man-Drought: Are We Still Here, Or Just Taking Up Space?",
+                date: "24 May 2025",
+                category: "Masculinity",
+                image: "https://placehold.co/600x400/3B82F6/FFFFFF?text=Man+Drought",
+                excerpt: "Our townships are experiencing a bad dose of 'Leadership Vapour-Lock' among the brothers right now. It's as though someone has pushed the panic button on the self-actualization train.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Masculinity</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">The Great South African Man-Drought: Are We Still Here, Or Just Taking Up Space?</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 24 May 2025</p>
+                    <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Man+Drought" alt="Man Drought">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">Let's call a spade a spade, our townships, from windblown Khayelitsha flats to Thembisa's sprawling concrete jungle, are experiencing a bad dose of "Leadership Vapour-Lock" among the brothers right now. It's as though someone has pushed the panic button on the self-actualization train for half the brothers. The air is filled with... well, with anything but actual, good leadership.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The WiFi Zoo, The Soapie Sages & The Silence of Real Life</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Then you come to town, or even just the taxi rank locally with a router that works. Our men, clustered together like stunned, great baboons at the nearest available WiFi node. Their faces illuminated by blue light of a screen, totally immersed in the virtual reality. We've learned to be spectators of our own lives, deeply interested in artificial drama and pompous glory, while real survival and progress go on about us.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Stepping Into Leadership</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">It is in this void that I feel compelled to act. Not to occupy a pedestal, not to claim glory, but to model what has been absent. To speak, to teach, to intervene, to be present in ways that counteract the emptiness. The pull I feel is not ego. It is responsibility. It is the internal recognition that standing still, silent, is no longer acceptable.</p>
+                `
+            },
+            {
+                id: "siren-song-full",
+                title: "The Siren Song of the Shaky Ground",
+                date: "23 May 2025",
+                category: "Identity",
+                image: "https://placehold.co/600x400/3B82F6/FFFFFF?text=Siren+Song",
+                excerpt: "There’s a little energy in the nightlife here, isn’t there? Especially with our “Groovists and DJs.” These aren’t just people... they’re the architects of atmosphere.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Identity</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">The Siren Song of the Shaky Ground</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 23 May 2025</p>
+                    <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Siren+Song" alt="Siren Song">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">Let’s get brutally frank. There’s a little energy in the nightlife here, isn’t there? Especially with our “Groovists and DJs.” These aren’t just people... they’re the architects of atmosphere, the maestros of mood, the ones who get your hips moving when you thought they’d retired their dancing shoes. And every now and then, bless their cotton socks, they become the accidental guides straight into the fast lane to Troubleville.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The One-Way Ticket to "Oops"</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Here’s the unvarnished reality, fresh from the school of hard knocks: that “dabbling” phase? It’s briefer than a politician’s promise. The playful splash turns into an outright dunk. The joke starts to sound a little tinny, the eyes go a little too wide, and the mood slides from “party” to “panic.”</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">I Am the Mirror</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">I am not just a voice. I am the Mirror of Merafong. My hometown. If you see me, you see the streets. If you hear me, you hear the echoes of our collective heartbeat. Every twitch of a dancer’s smile, every corner where laughter hides desperation, is a story I cannot ignore. We must see it. Name it. Widen the road to redemption. Light the damn path.</p>
+                `
+            },
+            {
+                id: "word-limit-full",
+                title: "The Great Word Limit: A Post From the Other Side of Thirty-Something (and Diapers)",
+                date: "22 May 2025",
+                category: "Philosophy",
+                image: "https://placehold.co/600x400/3B82F6/FFFFFF?text=Word+Limit",
+                excerpt: "In hindsight, from this place on the verge of 40, with a couple little ones surrounding me who require my every moment and word, I can promise you this: we chatter too much.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Philosophy</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">The Great Word Limit: A Post From the Other Side of Thirty-Something (and Diapers)</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 22 May 2025</p>
+                    <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Word+Limit" alt="Word Limit">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">Come on, friend. In hindsight, from this place on the verge of 40, with a couple little ones surrounding me who require my every moment and word, I can promise you this: we chatter too much. Like, for real, too much. It's not the youthfulness of it, it's the sheer, uncensored quantity of words we spew out on a daily basis, typically about nothing whatsoever of significance.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Great Purge of Pointless Prose</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">But what if, just imagine, one day we woke up and found out there was a word limit... 1000 words. That's your daily allowance, no top-ups, no dipping into tomorrow. Imagine the beautiful, eerie silence. Meetings would transform from rambling, multi-hour sagas into tight, mean, laser-like conversation.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Silent Revolution</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">We’d start noticing subtler things: the tilt of a partner’s eyebrow, the shift in posture when someone is weary, the quick flicker of a child's emotions before they speak. Words, suddenly, would be a luxury, not a crutch. We'd learn to act, to observe, to witness. We'd learn to speak with intention, to let silence carry the weight of meaning.</p>
+                `
+            },
+            {
+                id: "sonic-wallpaper-full",
+                title: "The Sonic Wallpaper of My Skull",
+                date: "21 May 2025",
+                category: "Identity",
+                image: "https://placehold.co/600x400/3B82F6/FFFFFF?text=Sonic+Wallpaper",
+                excerpt: "Since the start, I've enjoyed 'the wrong ear' that my cousins used to call mine. While they were out there dancing to whatever Metro FM was serving, I was crouched in a corner somewhere with my Discman...",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Identity</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">The Sonic Wallpaper of My Skull</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 21 May 2025</p>
+                    <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Sonic+Wallpaper" alt="Sonic Wallpaper">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">Since the start, I've enjoyed "the wrong ear" that my cousins used to call mine. While they were out there dancing to whatever Metro FM was serving, or yelling boy band choruses along the school corridor, I was crouched in a corner somewhere with my Discman, yelling out The Offspring's <em>Self Esteem</em>.</p>
+                    
+                    <p class="text-zinc-700 dark:text-zinc-300">I chose the underground ones because they spoke to me. I wasn't chart-in-love. That wasn't my life. I ached for the late-night confessionals, the rage diary-writing turned into music, the broken person's desperate poetry that continues to strive.</p>
+                    
+                    <p class="text-zinc-700 dark:text-zinc-300">For me, music wasn’t just music. It was medicine. Mirror. Rebellion and comfort at the same time. It wasn't just noise, it was proof I wasn't alone. It was the audio wallpaper of my cranium, layered, louder, and carrying hidden messages that only the freaks could read.</p>
+                `
+            },
+            {
+                id: "two-altars-full",
+                title: "Two Altars, One Truth!",
+                date: "20 May 2025",
+                category: "Philosophy",
+                image: "https://placehold.co/600x400/3B82F6/FFFFFF?text=Two+Altars",
+                excerpt: "I have stood in the smoke of burning incense, watching blood darken the soil as elders murmured the names of those who came before me. I have lifted a calabash to my lips...",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Philosophy</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">Two Altars, One Truth!</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 20 May 2025</p>
+                    <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Two+Altars" alt="Two Altars">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">I have stood in the smoke of burning incense, watching blood darken the soil as elders murmured the names of those who came before me. I have lifted a calabash to my lips, felt the thick, bitter taste of umqombothi coat my tongue, and swallowed the weight of tradition. I have clapped my hands, stomped my feet, and called on ancestors whose names live only in the mouths of the old.</p>
+                    
+                    <p class="text-zinc-700 dark:text-zinc-300">And then, just as the fire cracked and the meat sizzled, someone started a hymn. “There is power in the blood of the Lamb!” The same hands that held the blade to a goat’s throat now raised themselves in worship. Drunken voices, thick with belief and contradiction, declared that Jesus is the only way.</p>
+                    
+                    <p class="text-zinc-700 dark:text-zinc-300">I grew up here. Between two worlds. Between libations poured for those beneath the soil and prayers whispered to the man who walked on water. What are we? A people torn between who we were and who we were forced to become. A people who fear turning our backs on the old ways but also fear hell for not embracing the new. We are a prayer with two tongues, a faith split down the middle, bleeding both ways.</p>
+                `
+            },
+            {
+                id: "the-lesson-full",
+                title: "The Lesson",
+                date: "15 May 2025",
+                category: "Identity",
+                image: "https://placehold.co/600x400/3B82F6/FFFFFF?text=The+Lesson",
+                excerpt: "I’m not angry... not at you, not at fate, not at the knife you slid between my ribs, slow, deliberate, like a lover’s hand tracing the spine of a dying romance.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Identity</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">The Lesson</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 15 May 2025</p>
+                    <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=The+Lesson" alt="The Lesson">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">I’m not angry... not at you, not at fate, not at the knife you slid between my ribs, slow, deliberate, like a lover’s hand tracing the spine of a dying romance. Each movement, precise, measured, and yet somehow intimate. You did not scream, nor shout, nor demand, you merely existed in that moment, and I felt the echo of your presence more than the pain itself.</p>
+
+                    <p class="text-zinc-700 dark:text-zinc-300">You only taught me what I needed to know, that trust is a borrowed cigarette, lit in the wind, smoked too fast, burning out before warmth ever settles. I thought I could hold it longer... I thought I could bend your heart to the rhythm of mine, like water shaping stone. But water, as gentle as it is, cannot force stone to yield. And you were stone. And I... I was only ever water.</p>
+
+                    <p class="text-zinc-700 dark:text-zinc-300">I should’ve known better... now I do. Your betrayal wasn’t a wound, it was a mirror, showing me where I had built walls too high, where I had given love in silence, where I had sacrificed presence for endurance.</p>
+
+                    <p class="text-zinc-700 dark:text-zinc-300">So I stand, finally, unburdened, in the stillness of my own being, a witness to my own survival. The lesson is no longer yours to deliver... it has become mine to embrace. And in this, I have found peace, not triumph, not victory, but a gentle, enduring quiet that speaks louder than any anger ever could.</p>
+                `
+            },
+            {
+                id: "faithful-failing-full",
+                title: "Faithful, but Failing",
+                date: "10 May 2025",
+                category: "Masculinity",
+                image: "https://placehold.co/600x400/3B82F6/FFFFFF?text=Faithful+Failing",
+                excerpt: "You don’t cheat, congratulations. You kept your hands to yourself, but did you keep your heart open? You stayed, but did you show up? Love is not a courtroom where fidelity is your only defense.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Masculinity</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">Faithful, but Failing</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 10 May 2025</p>
+                    <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Faithful+Failing" alt="Faithful but Failing">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">You don’t cheat, congratulations. You kept your hands to yourself, but did you keep your heart open? You stayed, but did you show up? You were present, but did you participate? Because love is not a courtroom where fidelity is your only defense. You think not stepping out makes you step up? No. You can be faithful and still be a storm your partner has to survive.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Myth of “At Least I’m Faithful”</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">There’s a generation of people who measure their relationships by what they didn’t do wrong instead of what they actively did right. They think absence of betrayal equals presence of love. But those two things are not the same.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">Not cheating is not the same as being emotionally safe. Silence can be as cruel as infidelity. Neglect can cut deeper than lies. Emotional unavailability can starve a person faster than distance ever could. You can stay in the same house and still be gone.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Love as Participation</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Love requires participation. Real, uncomfortable, vulnerable participation. It’s work. It’s listening when you’d rather be scrolling. It’s forgiving before you feel like it. It’s showing up to the argument not to win, but to understand. It’s admitting when you’re emotionally tired and still choosing to be gentle.</p>
+
+                    <p class="text-zinc-700 dark:text-zinc-300 font-bold mt-4">Because love without participation is just polite decay... and faithfulness without love is failure disguised as virtue.</p>
+                `
+            },
+            {
+                id: "mayday-tribute",
+                title: "Mayday: The Day My Mother Died (And My Ambition Lost Its Brakes)",
+                date: "26 May 2025",
+                category: "Identity",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/mom%20and%20i.png",
+                excerpt: "24 May. The world forgot the date. I didn’t. Grief didn’t make me softer. It made me limitless. Not healed. Not gentler. It sharpened my hunger and stripped away the nonsense.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Identity</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">Mayday: The Day My Mother Died (And My Ambition Lost Its Brakes)</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 26 May 2025</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/mom%20and%20i.png" alt="Mayday">
+
+                    <p class="text-zinc-700 dark:text-zinc-300"><em>24 May. A date the world forgot. I did not. It split my life into before and after.</em></p>
+
+                    <p class="text-zinc-700 dark:text-zinc-300">People say time heals. People say grief softens. For me, time did not heal. Time just taught me how to function with an open wound. How to move with pain as if it is an accessory rather than a burden.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Explosion: When Grief Ignites Purpose</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">No one warns you that losing a parent rewires your whole operating system. Not gently, not slowly, not like a software update. It is more like someone ripped out the motherboard and replaced it with a version that does not allow for hesitation or excuses. It only knows one speed, and that is forward.</p>
+
+                    <p class="text-zinc-700 dark:text-zinc-300">I opened online stores like a man running from something invisible. Momentum became my medicine, and work became my therapy. Every launch was like a small rebellion against the quiet that had taken my mother from me.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">WWMD: The Brand I Refuse to Bury</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Out of all my ventures, there is one that I refuse to abandon: my clothing label, WWMD, What Would Mama Do. This brand carries her voice, her courage, her stubbornness, her love. It is every lesson she taught me condensed into cloth and print.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">The Year I Became Someone Else</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">I am not the person I was. I am better in ways that count. I have more clarity. More fire. More focus. I see through people’s façades. I see who deserves my energy and who does not. I have less tolerance for excuses, for nonsense, for those who drain without giving back. I move faster, harder, sharper, and with a single-mindedness that is frightening even to me at times.</p>
+                `
+            },
+            {
+                id: "legendary-rebuild",
+                title: "Build Yourself Into a Legend (And Let the Rest Regret Their Role)",
+                date: "27 May 2025",
+                category: "Philosophy",
+                image: "https://raw.githubusercontent.com/MoAfrika/my-images/main/me%20side%20front%20pic.jpg",
+                excerpt: "Not every door is closed because of bad luck. Some doors are closed because the person you are today isn't the one who deserves to walk through them yet. That's the part they never tell you about becoming.",
+                fullContent: `
+                    <p class="text-brand-500 font-semibold tracking-widest uppercase text-sm mb-4">Philosophy</p>
+                    <h2 id="modalTitle" class="text-zinc-900 dark:text-white">Build Yourself Into a Legend (And Let the Rest Regret Their Role)</h2>
+                    <p class="text-zinc-500 mb-8 border-b border-zinc-200 dark:border-zinc-800 pb-4">By MoAfrika Skotch Ntilane &mdash; 27 May 2025</p>
+                    <img src="https://raw.githubusercontent.com/MoAfrika/my-images/main/me%20side%20front%20pic.jpg" alt="Legendary Rebuild">
+
+                    <p class="text-zinc-700 dark:text-zinc-300">Not every door is closed because of bad luck. Some doors are closed because the person you are today isn't the one who deserves to walk through them yet. That's the part they never tell you about becoming.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">You can't fake readiness. You can’t tweet your way into evolution. Growth doesn’t care about your intentions. It only answers to transformation. Real, uncomfortable, lonely transformation.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">I Don’t Do Second Chances Anymore</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">I used to be forgiving. Maybe too forgiving. I used to believe in reconciliation, in “talking it out,” in “they didn’t mean it.” Now? I believe in receipts. In red flags. In cutting the cord and keeping it cut.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">There’s Power in Walking Alone</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">There’s a version of you that only emerges in solitude. The legendary version. The one that doesn’t need validation, doesn’t chase apologies, doesn’t make space for the people who made you question your worth.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300">You become a legend in the shadows. You sharpen your vision in silence. You outgrow explanations, and you let your glow-up speak fluent revenge.</p>
+
+                    <h3 class="text-zinc-800 dark:text-zinc-100">Be Loud With Your Becoming</h3>
+                    <p class="text-zinc-700 dark:text-zinc-300">Document it. Share it. Don’t wait until you’ve “made it” to show up online. Talk while it’s still messy. Share while it still hurts. Let the real ones find you through the cracks. That’s how you build your true tribe, not by pleasing, but by being.</p>
+                    <p class="text-zinc-700 dark:text-zinc-300 font-bold mt-4">Build yourself like your future is watching. Because it is.</p>
+                `
+            }
+        ];
+        // 👆🏾 END OF ESSAYS ARRAY 👆🏾
+
+
+        // --- 4. APP LOGIC ---
+        const allArticlesContainer = document.getElementById('all-articles-container');
+        const poetryContainer = document.getElementById('poetry-container');
+        const articleModal = document.getElementById('articleModal');
+        const modalContainer = document.getElementById('modalContainer');
+        const modalBackdrop = document.getElementById('modalBackdrop');
+        const modalContent = document.getElementById('modalBody'); // Fixed ID targeting
+        const modalScrollArea = document.getElementById('modalScrollArea');
+        const closeModalBtn = document.getElementById('closeModal');
+        const articleSearchInput = document.getElementById('article-search');
+        const categoryFilter = document.getElementById('article-category-filter');
+        const noArticlesFoundMessage = document.getElementById('no-articles-found');
+        const mobileMenuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Extract Categories
+        function populateCategories() {
+            const categories = [...new Set(essays.map(article => article.category || "Uncategorized"))].sort();
+            categories.forEach(cat => {
+                const option = document.createElement('option');
+                option.value = cat;
+                option.textContent = cat;
+                categoryFilter.appendChild(option);
+            });
+        }
+
+        // Render Essays
+        function renderEssays(filtered = essays) {
+            allArticlesContainer.innerHTML = '';
+            if (filtered.length === 0) {
+                noArticlesFoundMessage.classList.remove('hidden');
+                return;
+            } else {
+                noArticlesFoundMessage.classList.add('hidden');
+            }
+
+            filtered.forEach(article => {
+                const card = document.createElement('article');
+                card.className = 'bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden card-hover flex flex-col h-full cursor-pointer border border-zinc-200 dark:border-zinc-800';
+                card.onclick = () => openModal(article, 'essay');
+                
+                card.innerHTML = `
+                    <div class="relative h-48 overflow-hidden bg-zinc-100 dark:bg-zinc-800">
+                        <img src="${article.image || ''}" alt="" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy" onerror="this.src='https://placehold.co/600x400/18181b/ffffff?text=Image+Unavailable'">
+                        <div class="absolute top-3 left-3 bg-brand-500 text-white text-[10px] font-bold uppercase tracking-wider py-1 px-3 rounded-full shadow-sm">
+                            ${article.category || 'Essay'}
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-serif font-bold text-zinc-900 dark:text-zinc-100 mb-2 leading-snug">${article.title}</h3>
+                        <p class="text-zinc-500 text-xs font-semibold mb-3 uppercase tracking-wide">${article.date}</p>
+                        <p class="text-zinc-600 dark:text-zinc-400 text-sm mb-4 flex-grow line-clamp-3">${article.excerpt}</p>
+                        <div class="mt-auto text-brand-600 dark:text-brand-500 text-sm font-bold flex items-center">
+                            Read Essay <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </div>
+                    </div>
+                `;
+                allArticlesContainer.appendChild(card);
+            });
+        }
+
+        // Render Poetry
+        function renderPoetry() {
+            poetryContainer.innerHTML = '';
+            poetryData.forEach(poem => {
+                const card = document.createElement('article');
+                card.className = 'bg-zinc-50 dark:bg-zinc-900 p-8 rounded-2xl card-hover cursor-pointer border border-zinc-200 dark:border-zinc-800 flex flex-col';
+                card.onclick = () => openModal(poem, 'poetry');
+                
+                card.innerHTML = `
+                    <h3 class="text-2xl font-serif font-bold text-zinc-900 dark:text-white mb-2">${poem.title}</h3>
+                    <span class="text-xs text-brand-500 uppercase font-bold tracking-widest mb-6 block">Poem</span>
+                    <p class="mb-6 text-zinc-600 dark:text-zinc-400 font-serif italic text-lg leading-relaxed line-clamp-4 border-l-4 border-brand-500 pl-4">
+                        "${poem.excerpt}"
+                    </p>
+                    <div class="mt-auto text-zinc-800 dark:text-zinc-200 text-sm font-bold uppercase tracking-wide hover:text-brand-500 transition-colors">
+                        Read Fragment
+                    </div>
+                `;
+                poetryContainer.appendChild(card);
+            });
+        }
+
+        // Filters
+        function handleFilters() {
+            const search = articleSearchInput.value.toLowerCase();
+            const category = categoryFilter.value;
+            const filtered = essays.filter(article => {
+                const matchesSearch = article.title.toLowerCase().includes(search) || article.excerpt.toLowerCase().includes(search);
+                const matchesCat = category === "" || (article.category || "Uncategorized") === category;
+                return matchesSearch && matchesCat;
+            });
+            renderEssays(filtered);
+        }
+
+        // Modal Open/Close
+        function openModal(data, type) {
+            // Set Headers
+            document.getElementById('modalTitleText').textContent = data.title;
+            document.getElementById('modalMeta').textContent = data.date;
+            document.getElementById('modalCategoryTag').textContent = data.category || (type === 'poetry' ? 'Poem' : 'Essay');
+            
+            // Set Image (if essay)
+            const imgEl = document.getElementById('modalImage');
+            if (type === 'essay' && data.image) {
+                imgEl.src = data.image;
+                imgEl.classList.remove('hidden');
+            } else {
+                imgEl.classList.add('hidden');
+            }
+
+            // Set Content
+            modalContent.innerHTML = data.fullContent;
+
+            // Show UI
+            articleModal.classList.remove('hidden');
+            articleModal.classList.add('flex');
+            
+            // Force reflow for animation
+            void articleModal.offsetWidth;
+            
+            // Animate In
+            articleModal.classList.remove('opacity-0');
+            modalContainer.classList.remove('scale-95');
+            modalContainer.classList.add('scale-100');
+            document.body.style.overflow = 'hidden'; // Lock background
+            modalScrollArea.scrollTop = 0; // Reset scroll
+        }
+
+        function closeModal() {
+            // Animate Out
+            articleModal.classList.add('opacity-0');
+            modalContainer.classList.remove('scale-100');
+            modalContainer.classList.add('scale-95');
+            
+            setTimeout(() => {
+                articleModal.classList.add('hidden');
+                articleModal.classList.remove('flex');
+                document.body.style.overflow = ''; // Unlock background
+                modalContent.innerHTML = ''; 
+            }, 300);
+        }
+
+        // Listeners
+        closeModalBtn.addEventListener('click', closeModal);
+        modalBackdrop.addEventListener('click', closeModal);
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !articleModal.classList.contains('hidden')) closeModal(); });
+        articleSearchInput.addEventListener('input', handleFilters);
+        categoryFilter.addEventListener('change', handleFilters);
+        
+        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        mobileMenu.addEventListener('click', (e) => { if (e.target.tagName === 'A') mobileMenu.classList.add('hidden'); });
+
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const status = document.getElementById('form-status');
+            const name = document.getElementById('name').value;
+            const msg = document.getElementById('message').value;
+
+            const whatsappMessage = `*TRANSMISSION FROM DIGITAL PORTAL*\n\n*Alias:* ${name}\n*Signal:* ${msg}`;
+            const phone = '27682337028'; 
+            
+            status.textContent = "Redirecting to WhatsApp...";
+            window.open(`https://wa.me/${phone}?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
+            this.reset();
+            setTimeout(() => { status.textContent = ''; }, 5000);
+        });
+
+        // Initialize
+        populateCategories();
+        renderEssays();
+        renderPoetry();
+    </script>
+</body>
+</html>
